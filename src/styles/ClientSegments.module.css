@@ -1,0 +1,115 @@
+/* Section in white like your screenshot */
+.section {
+  background: #ffffff;
+  padding: 56px 16px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Heading */
+.h3 {
+  font-size: clamp(1.15rem, .9rem + 1.2vw, 1.6rem);
+  font-weight: 800;
+  color: #0f172a; /* slate-900 */
+  margin: 0 0 22px;
+}
+
+/* Grid of cards */
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Each card */
+.card {
+  grid-column: span 6;         /* 2 in a row on desktop */
+  background: #f7f7fb;         /* soft white tile */
+  border-radius: 16px;
+  padding: 18px 18px 18px 16px;
+  box-shadow: 0 1px 0 rgba(15,23,42,.04), 0 8px 24px rgba(2,6,23,.06);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 34px rgba(2,6,23,.10);
+  background: #ffffff;
+}
+
+/* Icon / image circle */
+.iconCircle {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  box-shadow:
+    inset 0 0 0 1px rgba(15,23,42,.08),
+    0 8px 18px rgba(2,6,23,.06);
+  flex: none;
+}
+
+/* Text block */
+.texts { flex: 1; min-width: 0; }
+
+/* Colored heading like screenshot */
+.title {
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: .2px;
+  font-size: 1.05rem;
+}
+
+/* 3 subtle bullet points with arrow */
+.points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #334155; /* slate-700 */
+  font-size: .95rem;
+}
+.points li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.55;
+}
+.points li + li { margin-top: 4px; }
+.points li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #94a3b8; /* slate-400 */
+  font-weight: 700;
+}
+
+/* Color utilities for heading + ring accents */
+.clr_indigo { color: #6366f1; }
+.clr_purple { color: #8b5cf6; }
+.clr_orange { color: #f97316; }
+.clr_green  { color: #22c55e; }
+.clr_blue   { color: #3b82f6; }
+.clr_rose   { color: #f43f5e; }
+.clr_teal   { color: #14b8a6; }
+.clr_amber  { color: #f59e0b; }
+
+.ring_indigo { box-shadow: inset 0 0 0 2px rgba(99,102,241,.25), 0 8px 18px rgba(99,102,241,.15); }
+.ring_purple { box-shadow: inset 0 0 0 2px rgba(139,92,246,.25), 0 8px 18px rgba(139,92,246,.15); }
+.ring_orange { box-shadow: inset 0 0 0 2px rgba(249,115,22,.25), 0 8px 18px rgba(249,115,22,.15); }
+.ring_green  { box-shadow: inset 0 0 0 2px rgba(34,197,94,.25), 0 8px 18px rgba(34,197,94,.15); }
+.ring_blue   { box-shadow: inset 0 0 0 2px rgba(59,130,246,.25), 0 8px 18px rgba(59,130,246,.15); }
+.ring_rose   { box-shadow: inset 0 0 0 2px rgba(244,63,94,.25), 0 8px 18px rgba(244,63,94,.15); }
+.ring_teal   { box-shadow: inset 0 0 0 2px rgba(20,184,166,.25), 0 8px 18px rgba(20,184,166,.15); }
+.ring_amber  { box-shadow: inset 0 0 0 2px rgba(245,158,11,.25), 0 8px 18px rgba(245,158,11,.15); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card { grid-column: span 12; } /* 1 per row on tablet/mobile */
+}

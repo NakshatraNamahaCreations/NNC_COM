@@ -1,0 +1,125 @@
+/* Section container (light, professional) */
+.wrap {
+  background: #f6f8ff;                 /* light brand-friendly backdrop (not black) */
+  padding: 56px 0;
+  color: #111;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin: 0 0 24px;
+  font-weight: 800;
+  color: #0e1a44;
+  font-size: clamp(26px, 3vw, 40px);
+}
+
+/* Tabs row (icons + labels) */
+.tabRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.tab {
+  --card-bg: #ffffff;
+  --card-bd: rgba(15, 36, 84, 0.12);
+  --card-tx: #22314d;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--card-bg);
+  color: var(--card-tx);
+  border: 1px solid var(--card-bd);
+  border-radius: 10px;
+  text-align: left;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor: pointer;
+}
+.tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(10, 34, 77, .12);
+  border-color: rgba(15, 36, 84, 0.25);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0b84ff 0%, #1f3af0 100%);
+  color: #fff;
+  font-size: 20px;
+  flex: 0 0 38px;
+  box-shadow: 0 6px 14px rgba(31, 58, 240, .25);
+}
+
+.tabTitle {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+/* Active tab */
+.active {
+  border-color: rgba(31, 58, 240, 0.6);
+  box-shadow: 0 12px 26px rgba(31, 58, 240, .18);
+}
+.active .icon {
+  background: #fff;
+  color: #1f3af0;
+  border: 2px solid rgba(31, 58, 240, .35);
+}
+
+/* Detail panel under the row */
+.panel {
+  background: #0e1a44;                 /* brand navy */
+  color: #e8eeff;
+  border-radius: 12px;
+  padding: 22px 22px;
+  border: 1px solid rgba(219, 230, 255, .16);
+  box-shadow: 0 14px 30px rgba(0, 20, 60, .25);
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.panelIcon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #78b0ff, #1f3af0);
+  color: #fff;
+  font-size: 18px;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  color: #fff;
+}
+
+.panelDesc {
+  margin: 6px 0 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 70ch;
+  opacity: .95;
+}
+
+/* Responsive spacing */
+@media (max-width: 575.98px) {
+  .wrap { padding: 44px 0; }
+  .panel { padding: 18px; }
+}

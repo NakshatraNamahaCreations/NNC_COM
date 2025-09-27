@@ -1,0 +1,275 @@
+/* Section spacing */
+.section {
+  padding: 28px 16px;
+  margin-top: 30px;
+}
+
+/* The pill row wrapper to match the rounded strip */
+.rowPill {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: var(--green);
+  border-radius: var(--radius-xxl);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  position: relative;
+}
+
+/* ---------- Cards with shared state via CSS variables ---------- */
+.card {
+  /* default (dark strip) state */
+  --card-bg: var(--green);
+  --card-fg: var(--text);
+  --card-radius: var(--radius-xl);
+  --card-shadow: none;
+
+  background: var(--card-bg);
+  color: var(--card-fg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+
+  padding: 32px 28px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease,
+    background 220ms ease,
+    color 220ms ease,
+    border-radius 220ms ease;
+  will-change: transform;
+}
+
+/* First (intro) card gets the left pill rounding */
+.cardIntro {
+  border-top-left-radius: var(--radius-xxl);
+  border-bottom-left-radius: var(--radius-xxl);
+}
+
+/* Thin vertical divider after the first card (like screenshot) */
+.vRule {
+  position: absolute;
+  top: 12px;
+  right: -14px;
+  bottom: 12px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  content: "";
+}
+
+/* Accent look (used by the real accent card and by any card on hover) */
+.cardAccent,
+.card:hover:not(.cardAccent) {
+  --card-bg: var(--accent);
+  --card-fg: var(--white);
+  --card-radius: 32px;
+  --card-shadow: 0 18px 42px rgba(255, 106, 0, 0.35);
+
+  transform: translateY(-6px);
+}
+
+/* Elevated hover for both the real accent and hovered cards */
+.cardAccent:hover,
+.card:hover:not(.cardAccent) {
+  transform: translateY(-10px);
+  box-shadow: 0 26px 64px rgba(255, 106, 0, 0.45);
+}
+
+/* Icon circle and svg */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 220ms ease, background 220ms ease, color 220ms ease;
+}
+.cardAccent .icon,
+.card:hover .icon {
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px) scale(1.06);
+}
+
+.svg {
+  width: 34px;
+  height: 34px;
+}
+
+/* Typo */
+.title {
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 8px 0 12px;
+}
+
+.body {
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+.cardAccent .body,
+.card:hover .body {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* AOS fallback: mimic zoom-out-up once on mount */
+.aosKick {
+  animation: zoomOutUp 400ms ease both;
+}
+
+/* ---------- Accent interplay ----------
+   When ANY card is hovered, gently relax the orange accent card,
+   unless the accent itself is hovered. Requires :has() support. */
+.rowPill:has(.card:hover) .cardAccent:not(:hover) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 106, 0, 0.28);
+  filter: saturate(0.95) brightness(0.98);
+}
+
+/* Also slightly mute non-hovered siblings for focus */
+.rowPill:has(.card:hover) .card:not(:hover) {
+  filter: saturate(0.92) brightness(0.98);
+}
+
+/* Divider highlight when intro card is hovered (nice detail) */
+.cardIntro:hover ~ .vRule {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  --hero-h: 280px;
+  position: relative;
+  height: var(--hero-h);
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: hue-rotate(205deg) saturate(200%) brightness(60%) contrast(60%) !important;
+}
+
+/* subtle blue wash to ensure consistent brand color */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,123,255,0.60), rgba(0,123,255,0.35));
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title1 {
+  color: #fff;
+  margin: 0 0 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  font-size: clamp(20px, 3.2vw, 40px);
+}
+
+/* CTA matches the screenshot: orange pill, bold, shadow */
+.cta {
+  display: inline-block;
+  background: #f4504d;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  letter-spacing: 0.25px;
+
+  box-shadow:
+    0 12px 20px rgba(255, 106, 0, 0.45),
+    0 3px 6px rgba(0, 0, 0, 0.10);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 24px rgba(255, 138, 0, 0.45),
+    0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes zoomOutUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .icon,
+  .cardAccent {
+    transition: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .rowPill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vRule {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .rowPill {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .card,
+  .cardAccent,
+  .cardIntro {
+    border-radius: 22px;
+    min-height: auto;
+  }
+}

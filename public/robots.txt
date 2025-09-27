@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block query parameter pages to prevent duplicates
+Disallow: /*?n=
+
+# Sitemap
+Sitemap: https://www.nakshatranamahacreations.com/sitemap.xml

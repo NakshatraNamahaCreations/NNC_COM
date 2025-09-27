@@ -1,0 +1,69 @@
+  .glassFormWrapper {
+    /* card look on light background */
+    background: #ffffff;
+    color: #111;                 /* darker text for contrast */
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #eaeaea;   /* subtle edge */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: none;       /* no blur on solid white */
+    
+  }
+
+
+  .glassFormTitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  /* Scope Bootstrap internals via :global */
+  .glassForm :global(.form-control),
+  .glassForm :global(.form-select) {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+  }
+
+  .glassForm :global(.form-control::placeholder) {
+    color: #888;
+  }
+
+  .glassForm :global(.form-control:focus),
+  .glassForm :global(.form-select:focus) {
+    background: #ffffff;
+    color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+  }
+
+  /* .glassInput {
+  
+  } */
+
+  .glassSubmitBtn {
+    background: #ff4d4f;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: background 0.3s;
+  }
+
+  .glassSubmitBtn:hover {
+    background: #e63946;
+  }
+
+  .errorText {
+    font-size: 11px;
+    color: #d90000;
+  }
+
+  /* Fix dropdown option colors */
+  .glassForm :global(.form-select option) {
+    background-color: #fff;
+    color: #000;
+  }

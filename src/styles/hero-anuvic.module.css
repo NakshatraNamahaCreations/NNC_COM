@@ -1,0 +1,190 @@
+/* Tokens */
+.wrap {
+  --hero-bg: #e9f1f8;
+  --text: #0c1b2a;
+  --muted: #5b6773;
+  --accent: #007BFF;
+  --highlight: #188ebd;
+  background: var(--hero-bg);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(48px, 7vw, 96px) 24px;
+  
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) 1fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+
+}
+
+/* Left */
+.left { max-width: 560px; position: relative; }
+.observeAnchor { position: absolute; inset: 0 auto auto 0; width: 1px; height: 1px; }
+
+.title {
+  color: var(--text);
+  line-height: 1.18;
+  font-weight: 800;
+  font-size: clamp(32px, 4.6vw, 64px);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+.title mark {
+  background: none;
+  color: var(--highlight);
+  font-weight: inherit;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: clamp(16px, 1.2vw, 20px);
+  margin: 10px 0 28px;
+}
+
+.ctas {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.btnAccent {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 14px;
+  padding: 12px 22px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 123, 255, .32);
+  transition: transform .12s ease, opacity .12s ease, box-shadow .12s ease;
+}
+.btnAccent:hover {
+  transform: translateY(-2px);
+  opacity: .95;
+  box-shadow: 0 10px 22px rgba(0, 123, 255, .32);
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin: 6px 0 0 0;
+  list-style: none;
+}
+.socialLink {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(13, 27, 42, .07);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.socialLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(13, 27, 42, .12);
+}
+.socialLink svg { width: 20px; height: 20px; fill: currentColor; }
+.socialItem:nth-child(1) .socialLink { color: #e1306c; }
+.socialItem:nth-child(2) .socialLink { color: #1877f2; }
+.socialItem:nth-child(3) .socialLink { color: #0a66c2; }
+.socialItem:nth-child(4) .socialLink { color: #e60023; }
+.socialItem:nth-child(5) .socialLink { color: #ff0000; }
+.socialItem:nth-child(6) .socialLink { color: #111; }
+
+/* Right / carousels */
+.right { position: relative; min-height: 520px; }
+.slopy,
+.slopy2 {
+  position: absolute;
+  right: -90px;
+  left: 10%;
+  transform: rotate(28deg);
+  transform-origin: center;
+}
+.slopy  { top: 30px; }
+.slopy2 { bottom: 0; left: 12%; }
+
+.carouselTrack {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  will-change: transform;
+  animation: hero-scroll 38s linear infinite;
+}
+.slopy2 .carouselTrack {
+  animation-duration: 44s;
+  animation-direction: reverse;
+  animation-delay: -6s;
+}
+@keyframes hero-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.tile {
+  background: #fff;
+  border-radius: 22px;
+  padding: 10px;
+  box-shadow: 0 10px 24px rgba(10, 34, 64, .10);
+  flex: 0 0 auto;
+}
+.tile img {
+  display: block;
+  height: 140px;
+  width: auto;
+  border-radius: 16px;
+}
+
+/* Blobs */
+.blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(40px);
+  opacity: .35;
+  pointer-events: none;
+}
+.blobA {
+  right: 60px; top: 60px;
+  width: 380px; height: 380px;
+  background: radial-gradient(circle at 30% 30%, #cdb6ff, transparent 60%);
+}
+.blobB {
+  right: 260px; bottom: 0;
+  width: 460px; height: 460px;
+  background: radial-gradient(circle at 40% 40%, #b8e1ff, transparent 60%);
+}
+
+/* AOS-like */
+.aosFadeRight {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.isVisible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Responsive */
+@media (max-width: 1140px){
+  .right { min-height: 480px; }
+  .tile img { height: 128px; }
+}
+@media (max-width: 1024px){
+  .inner { grid-template-columns: 1fr; gap: 28px; }
+  .slopy, .slopy2 { transform: rotate(18deg); left: -10px; right: -10px; }
+  .right { min-height: 420px; }
+}
+@media (max-width: 640px){
+  .title { font-size: clamp(28px, 8vw, 38px); }
+  .socials { gap: 8px; }
+  .socialLink { width: 38px; height: 38px; }
+  .tile img { height: 110px; }
+  .slopy, .slopy2 { left: -40px; right: -40px; }
+}

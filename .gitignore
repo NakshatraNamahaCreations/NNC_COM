@@ -1,0 +1,9 @@
+﻿node_modules/
+.next/
+.env
+*.zip
+*.rar
+*.exe
+*.mp4
+*.pdf
+NNCNew-Clone/

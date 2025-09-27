@@ -1,0 +1,61 @@
+.servicesSection {
+  padding: 60px 0;
+  background: #e7f1f8;
+  text-align: center;
+}
+
+.heading {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.card {
+  padding: 15px;
+}
+
+.cardInner {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.cardInner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.desc {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.readMore {
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}

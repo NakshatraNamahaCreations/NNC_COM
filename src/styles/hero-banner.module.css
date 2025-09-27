@@ -1,0 +1,121 @@
+/* Ensure your existing variables/colors are kept consistent */
+
+/* HERO */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+
+  /* darker background */
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),      /* dark overlay – adjust opacity to taste */
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/techbackground16.jpg") center/cover no-repeat,
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(255,255,255,0.04) 0%,
+      rgba(255,255,255,0) 60%
+    ),
+    linear-gradient(
+      135deg,
+      #0b1625 0%,
+      #0f2036 55%,
+      #152a43 100%
+    );
+}
+
+
+
+.heroTitle {
+  color: #fff;
+}
+
+.heroSubtitle {
+  color: #8cc6ff;
+  font-weight: 700;
+}
+
+/* Breadcrumbs */
+.breadcrumbWrap {
+  --crumbColor: rgba(255,255,255,0.8);
+  --crumbActive: #ffffff;
+  --divider: rgba(255,255,255,0.35);
+}
+
+.breadcrumb {
+  padding: 0;
+  background: transparent;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: var(--divider);
+}
+
+.crumbLink {
+  color: var(--crumbColor);
+  text-decoration: none;
+}
+
+.crumbLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.crumbActive {
+  color: var(--crumbActive) !important;
+  font-weight: 600;
+}
+
+/* Stat cards */
+.statCard {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+/* Form card */
+.formCard {
+  background: #ffffff;
+  border: 1px solid rgba(20, 39, 66, 0.06);
+}
+
+/* Floating labels: tweak contrast */
+.form-floating > label {
+  color: #6b7280; /* muted */
+}
+
+/* Inputs focus */
+.form-control:focus, .form-select:focus, .form-check-input:focus {
+  border-color: #2a74ff;
+  box-shadow: 0 0 0 0.2rem rgba(42, 116, 255, 0.15);
+}
+
+/* CTA button */
+.ctaBtn {
+  background: linear-gradient(90deg, #246BFD, #5AA6FF);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.75rem;
+}
+
+.ctaBtn:hover {
+  filter: brightness(1.05);
+}
+
+/* Decorative diagonal stripes – keep from your original if present */
+.stripes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgba(255,255,255,0.06) 12%, transparent 12% 18%, rgba(255,255,255,0.04) 18% 24%, transparent 24% 30%),
+    linear-gradient(120deg, transparent 0% 40%, rgba(255,255,255,0.03) 40% 46%, transparent 46% 52%);
+  background-size: 48px 48px, 64px 64px;
+  opacity: .35;
+}

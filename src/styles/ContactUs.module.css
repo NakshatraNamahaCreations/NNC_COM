@@ -1,0 +1,99 @@
+.contactSection {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.formBox {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #002147;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #f3f3f3;
+  font-size: 15px;
+  outline: none;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.captchaBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #0046b8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #003494;
+}
+
+.imageBox {
+  flex: 1;
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0046b8;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto 0;
+  background: #0046b8;
+  border-radius: 2px;
+}
+
+.imageBox img {
+  max-width: 100%;
+  height: auto;
+}

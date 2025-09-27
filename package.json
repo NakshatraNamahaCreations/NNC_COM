@@ -1,0 +1,49 @@
+{
+  "name": "nncnextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/react-fontawesome": "^0.2.3",
+    "@react-spring/web": "^10.0.1",
+    "axios": "^1.11.0",
+    "bootstrap": "^5.3.7",
+    "framer-motion": "^12.23.12",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.536.0",
+    "next": "^15.5.2",
+    "react": "^19.1.1",
+    "react-bootstrap": "^2.10.10",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-leaflet": "^5.0.0",
+    "react-modal": "^3.16.3",
+    "react-player": "^3.3.1",
+    "react-simple-typewriter": "^5.0.1",
+    "react-slick": "^0.30.3",
+    "react-spring": "^10.0.1",
+    "react-type-animation": "^3.2.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@netlify/plugin-nextjs": "^5.12.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.5",
+    "netlify-cli": "^23.1.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}

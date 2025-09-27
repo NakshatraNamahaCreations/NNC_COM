@@ -1,0 +1,354 @@
+.heroCarouselWrapper {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.heroBannerWrapper {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.carouselSlide {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+.carouselBannerSlide {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* merged both .carousel-bg-image rules */
+.carouselBgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blackOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.carouselCaptionLeft {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  z-index: 2;
+  color: white;
+  max-width: 700px;
+}
+
+.carouselBannerLeft {
+  position: absolute;
+  top: 23%;
+  left: 7%;
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+}
+
+/* Typography for both left caption variants */
+.carouselCaptionLeft h2,
+.carouselBannerLeft h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.carouselCaptionLeft p,
+.carouselBannerLeft p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.outlineBtn {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 24px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outlineBtn:hover {
+  background: white;
+  color: black;
+}
+
+.customIndicators {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 2;
+}
+
+.indicatorDot {
+  width: 40px;
+  height: 4px;
+  background-color: #444;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ff4040;
+  width: 0%;
+}
+
+.fill {
+  animation: fillBar 4s linear forwards;
+}
+
+.bounceIcon {
+  animation: bounceUpDown 1s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes bounceUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.scrollExplore {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.carouselCaptionRight {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  z-index: 2;
+  padding: 10px 10px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.carouselBannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerButtons {
+  margin-top: 60px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.carousalButtons {
+  margin-top: 80px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.callBtn {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.callBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.contactBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.contactBtn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9); /* designed for dark hero */
+}
+
+.breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumbs li + li::before {
+  content: "›";
+  opacity: 0.7;
+  margin: 0 6px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.breadcrumbs a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbsCurrent {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* (optional) smaller on mobile */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 13px;
+  }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .carouselCaptionRight {
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .carouselCaptionLeft {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroCarouselWrapper {
+    position: relative;
+    height: 580px;
+    overflow: visible;
+  }
+
+  .heroBannerWrapper {
+    position: relative;
+    height: 1000px;
+    overflow: visible;
+  }
+
+  .carouselSlide {
+    position: relative;
+    height: 500px;
+    width: 100%;
+  }
+
+  .carouselBannerSlide {
+    position: relative;
+    height: 580px;
+    width: 100%;
+  }
+
+  .carouselBannerImage {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+  }
+
+  .carouselCaptionLeft {
+    top: 10%;
+    padding: 0 4px;
+  }
+
+  .carouselBannerLeft {
+    top: 10%;
+    padding: 0 4px;
+  }
+
+  .carouselCaptionLeft h1,
+  .carouselBannerLeft h1 {
+    font-size: 1.5rem;
+  }
+
+  .carouselCaptionLeft p,
+  .carouselBannerLeft p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .bannerButtons {
+    margin-top: 40px;
+  }
+
+  .customIndicators {
+    bottom: 70px;
+  }
+
+  .carouselCaptionRight {
+    position: static;
+    margin: 20px auto 0;
+    width: 90%;
+    transform: none;
+    top: auto;
+    left: auto;
+    box-shadow: none;
+  }
+
+  .carousalButtons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
