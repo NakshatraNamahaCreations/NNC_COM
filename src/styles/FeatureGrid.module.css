@@ -96,3 +96,11 @@
     height: 80px;
   }
 }
+.sec3Text {
+  text-align: center;
+  opacity: .8;
+  max-width: 70%;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+

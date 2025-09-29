@@ -261,3 +261,12 @@
   .serveClients_hub { width: 72%; }
   .serveClients_pill { font-size: 13px; }
 }
+
+
+.sec3Text {
+  text-align: center;
+  opacity: .8;
+  max-width: 80%;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}

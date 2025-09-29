@@ -12,7 +12,7 @@ export default function CoveredSection() {
         <div className="row align-items-center g-5">
           {/* Left copy */}
           <div className="col-lg-7">
-            <h2 className={styles.title}>Best Website Development Company</h2>
+            <h2 className={styles.title}>Top Website Development Company</h2>
             <p className={styles.lead}>
               Professional website development company that can help you develop a powerful digital platform to get noticed and grow your business. A competitive online environment means that your website is now the starting point for the success of your brand. We have the proficiency and experience to work with contemporary frameworks, create responsive designs and implement secure coding practices. Therefore, we create websites that are not only aesthetically pleasing but also perform their functions efficiently.
             </p>

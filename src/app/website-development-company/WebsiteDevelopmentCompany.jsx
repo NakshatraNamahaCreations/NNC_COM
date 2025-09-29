@@ -10,8 +10,7 @@ import IndustriesSlider from "./IndustriesSlider";
 import Trusted from "./Trusted";
 import styles from "../../styles/covered-section.module.css";
 import ServeClients from "./ServeClients";
-import ServiceExcellence from "./ServiceExcellence";
-import ClientSegments from "./ClientSegments";
+
 import WhyChooseUs from "./WhyChooseUs";
 import FaqSection from './FaqSection';
 

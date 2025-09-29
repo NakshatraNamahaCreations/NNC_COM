@@ -76,6 +76,19 @@ else if (
 ) {
   service = "Web Development";
 }
+else if (
+  currentPath === "/mobile-app-development-company" ||
+  currentPath === "/mobile-app-development-company"
+) {
+  service = "App Development";
+}
+else if (
+  currentPath === "/2d-animation-studio" ||
+  currentPath === "/2d-animation-studio"
+) {
+  service = "2D Animations";
+}
+
 
     setFormData((prev) => ({
       ...prev,

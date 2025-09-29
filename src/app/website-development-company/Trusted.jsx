@@ -40,7 +40,7 @@ export default function Trusted() {
         
           {/* Right image */}
                <div className="col-lg-7">
-            <h2 className={styles.title}>Trying to Find the Best Website Development Company?</h2>
+            <h2 className={styles.title}>Trying to Find the Website Development Company?</h2>
             <p className={styles.lead}>
               Finding a credible Website Development Company is what separates an average online presence from a highly interactive digital platform that can ensure the increase of your business. The technical side of things, paired with the artistic side of things, is what sets us apart. It results in websites that are visually stunning, tightly secured, and perform well. The team here is able to adapt the style of every project to your goals whether first website of the startup or complete brand revamp.
               </p>

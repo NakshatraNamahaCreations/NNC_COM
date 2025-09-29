@@ -1,4 +1,4 @@
-/* Section (plain white, like screenshot) */
+/* Section */
 .section {
   background: #fff;
   padding: 48px 16px;
@@ -8,13 +8,12 @@
   margin: 0 auto;
 }
 
-
 /* Heading */
 .heading {
   text-align: center;
   font-weight: 700;
   color: #111827;
-   font-size: clamp(22px, 2.5vw, 32px);
+  font-size: clamp(22px, 2.5vw, 32px);
   line-height: clamp(28px, 3vw, 38px);
   margin: 0 0 28px;
 }
@@ -23,15 +22,20 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px;
-  align-items: start;
-  text-align: center;
+  gap: 28px 32px;
+  align-items: stretch;
 }
 @media (max-width: 992px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
 
-/* Item (no card box; just icon + title) */
-.item { padding: 4px; }
+/* Item as a centered vertical stack; equal heights via stretch + padding */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 6px;
+}
 
 /* Icon */
 .iconWrap {
@@ -41,21 +45,21 @@
 }
 .icon { display: block; }
 
-/* Title only (no description) */
+/* Title */
 .title {
-  margin: 0;
+  margin: 4px 0 6px;
   font-weight: 700;
   letter-spacing: .2px;
   font-size: clamp(1rem, .9rem + .4vw, 1.15rem);
-  color: #1f2937; /* default if no color class */
+  color: #1f2937; /* fallback */
 }
 
-/* Color utilities for titles (same palette you used) */
-.clr_indigo { color: #6366f1; }
-.clr_purple { color: #8b5cf6; }
-.clr_orange { color: #f97316; }
-.clr_green  { color: #22c55e; }
-.clr_blue   { color: #3b82f6; }
-.clr_rose   { color: #f43f5e; }
-.clr_teal   { color: #14b8a6; }
-.clr_amber  { color: #f59e0b; }
+/* Description */
+.desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #4b5563;
+  max-width: 26ch;        /* keeps columns visually balanced */
+}
+
