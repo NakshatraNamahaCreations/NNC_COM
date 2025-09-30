@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "../../styles/covered-section.module.css";
 
+
 const ITEMS = [
   "Website Designing and Development",
   "Custom Designed Websites",
@@ -27,15 +28,18 @@ export default function Trusted() {
      
           <div className="col-lg-5">
             <div className={styles.imageCard}>
-              <Image
-                src="/tech12banner.jpg"
-                alt="Ionic app development — UI graph and neural network illustration"
-                fill
-                sizes="(max-width: 992px) 100vw, 520px"
-                priority
-                className="object-fit-cover"
-              />
-            </div>
+  <Image
+    src="/tech12banner.jpg"
+    alt="Ionic app development — UI graph and neural network illustration"
+    fill
+    sizes="(max-width: 992px) 100vw, 520px"
+    priority
+    className="object-fit-cover"
+  />
+
+
+</div>
+
           </div>
         
           {/* Right image */}

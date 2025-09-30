@@ -52,7 +52,7 @@ export default function MobileAppDevelopmentCompany() {
       <FeatureGrid />
       <IndustriesSlider />
       <CTASection />
-      <Trusted />
+
       <br /> <br />
            <div className="container">
   <h2 className="text-center fw-bold mb-2">
@@ -63,7 +63,7 @@ From startups to enterprises, our website development company has delivered succ
         </p>
            </div>
     <Our_Service cardData={ourworkData} />
-
+      <Trusted />
       <FeaturesGrid2 />
       {/* <ServeClients/> */}
       {/* <ServiceExcellence/> */}

@@ -11,7 +11,7 @@ export default function CTASection() {
       {/* Background video */}
       <video
         className={styles.bgVideo}
-        src="/BananerVideo.mp4" // ⬅️ replace with your path
+        src="/BananerVideo.mp4" 
         autoPlay
         muted
         loop

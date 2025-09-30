@@ -26,15 +26,18 @@ export default function CTASection() {
       <div className={styles.inner}>
         <span className={styles.pill}>Talk to our Experts</span>
 
-        <h2 className={styles.title}>
-          Partner with the Best Website Development Company
-        </h2>
+      <h2 className={styles.title}>
+  Partner with the Best 2D Animation Company
+</h2>
 
-        <p className={styles.sub}>
-          Looking for the most reliable website development company to build
-          your online presence? We create custom, responsive, and
-          business-driven websites that deliver results.
-        </p>
+<p className={styles.sub}>
+  Looking for a professional 2D animation company to tell your story in a 
+  creative and engaging way? We create stunning 2D animations that simplify 
+  complex ideas, captivate your audience, and bring your brand, products, 
+  and services to life with visually appealing motion graphics and character 
+  designs.
+</p>
+
 
         <div className={styles.actions}>
           {/* ✅ Only one button visible */}

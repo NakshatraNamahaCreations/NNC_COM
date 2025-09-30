@@ -4,15 +4,19 @@ import Image from "next/image";
 import styles from "../../styles/covered-section.module.css";
 
 const ITEMS = [
-  "Website Designing and Development",
-  "Custom Designed Websites",
-  "Revamping Existing Websites",
-  "Responsive Web Design",
-  "Domain Name Management",
-  "E-commerce Website Development",
-  "Web Hosting Services",
-  "Content Management System (CMS)",
-  "Website Maintenance",
+  "2D Character Animation",
+  "Explainer Videos",
+  "Motion Graphics & Infographics",
+  "Cartoon Animation",
+  "Whiteboard Animation",
+  "Product Demo Animations",
+  "Corporate Presentations",
+  "Educational & E-learning Videos",
+  "Animated Advertisements",
+  "Logo Animation",
+  "Storyboard Development",
+  "2D Visual Effects (VFX)",
+  "Social Media Animation Content",
 ];
 
 

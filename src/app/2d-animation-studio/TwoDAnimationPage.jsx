@@ -21,8 +21,9 @@ export default function TwoDAnimationPage() {
       <FeatureGrid />
       <IndustriesSlider />
       <CTASection />
-      <Trusted />
+     
       <CoveredSection1/>
+       <Trusted />
       {/* <ServeClients /> */}
       <FeaturesGrid2/>
       <WhyChooseUs />

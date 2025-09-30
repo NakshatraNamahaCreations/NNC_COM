@@ -26,15 +26,17 @@ export default function CTASection() {
       <div className={styles.inner}>
         <span className={styles.pill}>Talk to our Experts</span>
 
-        <h2 className={styles.title}>
-          Partner with the Best Website Development Company
-        </h2>
+      <h2 className={styles.title}>
+  Partner with the Best Mobile App Development Company
+</h2>
 
-        <p className={styles.sub}>
-          Looking for the most reliable website development company to build
-          your online presence? We create custom, responsive, and
-          business-driven websites that deliver results.
-        </p>
+<p className={styles.sub}>
+  Looking for a trusted mobile app development company to bring your ideas to life? 
+  We design and build scalable, user-friendly, and performance-driven mobile applications 
+  that help businesses connect with customers and achieve growth on iOS, Android, 
+  and cross-platform solutions.
+</p>
+
 
         <div className={styles.actions}>
           {/* ✅ Only one button visible */}
