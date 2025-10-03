@@ -833,7 +833,7 @@ const ServicesDropdown = ({ textColor }) => {
               {/* Column 2: Web Development */}
               <div style={{ flex: "1 1 20%", marginBottom: "20px" }}>
                 <Link
-                  href="/website-development-company-in-bangalore"
+                  href="/website-development-company"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >
@@ -905,7 +905,7 @@ const ServicesDropdown = ({ textColor }) => {
                 </ul>
 
                 <Link
-                  href="/2d-animation-studio-in-bangalore"
+                  href="/2d-animation-studio"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >
@@ -937,7 +937,7 @@ const ServicesDropdown = ({ textColor }) => {
               {/* Column 4: Mobile App Development & Corporate Video Production */}
               <div style={{ flex: "1 1 23%", marginBottom: "20px" }}>
                 <Link
-                  href="/mobile-app-development-company-in-bangalore"
+                  href="/mobile-app-development-company"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >
