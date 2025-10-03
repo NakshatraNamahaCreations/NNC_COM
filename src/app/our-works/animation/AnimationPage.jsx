@@ -243,6 +243,7 @@ fbq('track', 'PageView');`}
           width: "100%",
           height: "auto",
           marginTop: "10%",
+    
         }}
         className="bottom-banner"
       >
@@ -254,6 +255,7 @@ fbq('track', 'PageView');`}
             height: "auto",
             objectFit: "cover",
             ...imageAnimation,
+    
           }}
         />
       </div>

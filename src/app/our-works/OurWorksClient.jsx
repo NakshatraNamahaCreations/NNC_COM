@@ -246,6 +246,7 @@ export default function Works_Page() {
                   size="xs"
                   style={{ color: "#000000", width: "20px", height: "20px" }}
                   className="h1-banner-icon-work"
+              
                 />
               )}{" "}
             </animated.span>
@@ -263,6 +264,7 @@ export default function Works_Page() {
         ref={imageRef}
         style={{ backgroundColor: "#FFEB9C", width: "100%", height: "auto", marginTop: "10%" }}
         className="bottom-banner"
+      
       >
         <animated.div style={imageAnimation}>
           <Image
@@ -270,6 +272,7 @@ export default function Works_Page() {
             alt="banner1"
             width={1920}
             height={600}
+        
             style={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
         </animated.div>

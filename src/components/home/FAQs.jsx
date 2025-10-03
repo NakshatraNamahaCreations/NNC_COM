@@ -80,6 +80,7 @@ export default function FAQs({ faqs }) {
                 className="img-fluid img-FAQs"
                 width={200}
                 height={200}
+                unoptimized
               />
             </animated.div>
           </Col>

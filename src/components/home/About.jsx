@@ -202,11 +202,12 @@ export default function About() {
               }
             >
               <Image
-                src="/media/teams/NNCGRPPHOTO.jpg"
+                src="/media/teams/NNCGRPPHOTO.avif"
                 alt="About visual background"
                 width={440}
                 height={210}
                 className="about-img1"
+              
                 style={{ borderRadius: "20px 0px" }}
               />
             </animated.div>
@@ -236,12 +237,13 @@ export default function About() {
             >
               <Image
                 // src="/media/aboutImg4.webp"
-                src="/media/teams/nncImg3.png"
+                src="/media/teams/nncImg3.avif"
                 alt="About visual foreground"
                 width={440}
                 height={210}
                 className="about-img2"
                 style={{ borderRadius: "0px 20px" }}
+              
               />
             </animated.div>
           </div>

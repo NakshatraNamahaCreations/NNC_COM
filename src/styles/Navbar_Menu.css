@@ -14,7 +14,7 @@
     max-width: 1300px !important;
     margin: 0 auto;
     padding: 0;
-    width: 90%;
+    width: 80%;
   }
   
   .navbar__logo-image {
@@ -59,9 +59,15 @@
     color: #007bff;
   }
   
+.navbar__quote {
+  display: inline-block; /* default visible */
+}
 
-
-
+@media (max-width: 768px) {
+  .navbar__quote {
+    display: none; /* hide on small screens */
+  }
+}
   @media (max-width: 768px) {
     .navbar__logo-image{
       display: none;

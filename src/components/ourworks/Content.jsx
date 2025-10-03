@@ -66,6 +66,7 @@ export default function Content() {
             width={300}
             height={300}
             layout="responsive"
+            unoptimized
             // className="img-leftcartoon"
             // style={{ width: "100%", height: "auto" }}
           />
@@ -104,6 +105,7 @@ export default function Content() {
             width={200}
             height={200}
             layout="responsive"
+            unoptimized
             // className="img-rightcartoon"
             // style={{ width: "100%", height: "auto" }}
           />

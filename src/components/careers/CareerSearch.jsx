@@ -46,6 +46,7 @@ export default function CareerSearch() {
           // layout="responsive"
           width={300} // realistic for desktop
           height={400}
+
           priority
         />
       </animated.div>

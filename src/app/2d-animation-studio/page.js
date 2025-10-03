@@ -1,20 +1,20 @@
 import TwoDAnimationPage from "./TwoDAnimationPage";
 
 export const metadata = {
-  title: "2D Animation Studio in Bangalore | Motion Graphics & Animations",
+  title: "2D Animation Studios – Visual Storytelling for Brands",
   description:
-    "2D animation studio in Bangalore offering character animation, motion graphics, explainer videos and more to bring your ideas to life with creative storytelling.",
+    "Expert 2D Animation Studios delivering explainer videos, product demos, and brand storytelling. High-quality animations to engage audience and drive results.",
   keywords:
-    "2D Animation Studio in Bangalore, 2D Animation Studio Near Me, 2D Animation Company in Bangalore, 2D Animation Company Near Me, 2D Animation Service in Bangalore, 2D Animation Company in Bangalore",
+    "2D Animation Studio, 2D Animation Studio Near Me, 2D Animation Company, 2D Animation Company Near Me, 2D Animation Service, 2D Animation Company",
   alternates: {
     canonical:
-      "https://www.nakshatranamahacreations.com/2d-animation-studio-in-bangalore",
+      "https://www.nakshatranamahacreations.com/2d-animation-studio",
   },
   openGraph: {
-    title: "2D Animation Studio in Bangalore | Motion Graphics & Animations",
+    title: "2D Animation Studios – Visual Storytelling for Brands",
     description:
-      "2D animation studio in Bangalore offering character animation, motion graphics, explainer videos and more to bring your ideas to life with creative storytelling.",
-    url: "https://www.nakshatranamahacreations.com/2d-animation-studio-in-bangalore",
+      "Expert 2D Animation Studios delivering explainer videos, product demos, and brand storytelling. High-quality animations to engage audience and drive results.",
+    url: "https://www.nakshatranamahacreations.com/2d-animation-studio",
     images: [
       {
         url: "https://www.nakshatranamahacreations.com/media/2DAnimation/2D%20Animation%20image.png",
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "2D Animation Studio in Bangalore | Motion Graphics & Animations",
+    title: "2D Animation Studios – Visual Storytelling for Brands",
     description:
-      "2D animation studio in Bangalore offering character animation, motion graphics, explainer videos and more to bring your ideas to life with creative storytelling.",
+      "Expert 2D Animation Studios delivering explainer videos, product demos, and brand storytelling. High-quality animations to engage audience and drive results.",
     images: [
       "https://www.nakshatranamahacreations.com/media/2DAnimation/2D%20Animation%20image.png",
     ],

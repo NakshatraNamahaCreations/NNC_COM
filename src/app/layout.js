@@ -80,7 +80,7 @@ export const metadata = {
   metadataBase: new URL("https://www.nakshatranamahacreations.com"),
   title: {
     default: "Nakshatra Namaha Creations | Website Developers in Bangalore",
-    template: "%s | Nakshatra Namaha Creations",
+    // template: "%s | Nakshatra Namaha Creations",
   },
   description:
     "Nakshatra Namaha Creations is best website developers in Bangalore, specializes in creating custom, user-friendly and responsive websites for your online presence.",

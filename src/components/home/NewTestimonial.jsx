@@ -54,6 +54,7 @@ const NewTestimonial = () => {
                   alt="user"
                   width={40}
                   height={30}
+                  unoptimized
                 />
               </div>
               <div className={styles.detbox}>

@@ -75,6 +75,7 @@ export default function Mission_Vision() {
                   width={60}
                   height={60}
                   className="img-mission"
+           
                 />
               </div>
             </animated.div>

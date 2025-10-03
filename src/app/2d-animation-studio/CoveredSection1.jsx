@@ -12,7 +12,7 @@ export default function CoveredSection1() {
         <div className="row align-items-center g-5">
           {/* Left copy */}
           <div className="col-lg-7">
-            <h1 className={styles.title}>Leading 2D Animation Studios for Creative Storytelling</h1>
+            <h2 className={styles.title}>Leading 2D Animation Studios for Creative Storytelling</h2>
             <p className={styles.lead}>
          Visual storytelling is among the best means that can attract the attention of people and establish valuable relationships with them. As one of the most reliable 2D animation studios, we concentrate on the creation of animations that only attract the eye of the viewers but also have the practical use, thus helping businesses and brands to easily communicate complex ideas.
                          </p>

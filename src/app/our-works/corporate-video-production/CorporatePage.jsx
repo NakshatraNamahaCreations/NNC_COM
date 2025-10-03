@@ -250,16 +250,19 @@ fbq('track', 'PageView');`}
           width: "100%",
           height: "auto",
           marginTop: "10%",
+   
         }}
         className="bottom-banner"
       >
         <animated.img
           src={workbannerbottom}
           alt="banner"
+  
           style={{
             width: "100%",
             height: "auto",
             objectFit: "cover",
+            
             ...imageAnimation,
           }}
         />

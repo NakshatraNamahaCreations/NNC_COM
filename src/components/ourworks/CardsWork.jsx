@@ -34,6 +34,7 @@ export default function CardsWork({ filterData }) {
                   width={500}
                   height={300}
                   className="w-100"
+                  unoptimized
                   style={{ objectFit: "cover" }}
                 />
                 <div className="our-card-content">

@@ -40,6 +40,7 @@ const IndustryCard = ({ industry, index }) => {
           className="industry-Img"
           width={120}
           height={40}
+        
         />
       </animated.div>
     </div>

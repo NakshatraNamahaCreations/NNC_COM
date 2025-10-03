@@ -12,7 +12,7 @@ export default function CoveredSection() {
         <div className="row align-items-center g-5">
           {/* Left copy */}
           <div className="col-lg-7">
-            <h2 className={styles.title}>Mobile App Development Company</h2>
+            <h1 className={styles.title}>Mobile App Development Company</h1>
             <p className={styles.lead}>
              In today’s digital-first world, every business needs an app to stay connected with its audience. If you are searching for a mobile app development company that combines innovation with functionality, you are in the right place. Our team of experts specializes in creating feature-rich, scalable, and user-friendly applications that help brands reach new heights. As a top mobile app development company, we ensure every project is aligned with your business goals.
                     </p>

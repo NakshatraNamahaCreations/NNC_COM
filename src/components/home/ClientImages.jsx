@@ -69,6 +69,7 @@ const ClientImages = () => {
           color: "#1f2937",
           fontWeight: "600",
           fontSize: "14px",
+          
         }}
       >
         Join with us
@@ -122,9 +123,11 @@ const ClientImages = () => {
               alt={`client-${index}`}
               width={80}
               height={80}
+        
               style={{
                 margin: "0 16px",
                 objectFit: "contain",
+               
               }}
             />
           ))}
@@ -143,6 +146,7 @@ const ClientImages = () => {
               src={logo}
               alt={`client-${index}`}
               width={80}
+               unoptimized
               height={80}
               style={{
                 margin: "0 16px",
@@ -161,6 +165,7 @@ const ClientImages = () => {
               alt={`client-${index}`}
               width={80}
               height={80}
+               unoptimized
               style={{
                 margin: "0 16px",
                 objectFit: "contain",

@@ -42,6 +42,7 @@ export default function Search({ cardData, setFilterData }) {
           height={100}
           style={{ width: "20%", height: "auto", objectFit: "cover" }}
           className="img-groups"
+          unoptimized
         />
       </animated.div>
 

@@ -293,6 +293,7 @@ export default function Business_Notice() {
             <animated.img
               src={difference}
               alt="difference"
+         
               style={{
                 ...shakeAnimation,
                 width: "35%",

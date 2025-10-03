@@ -87,6 +87,7 @@ export default function NNC_Company() {
                 height={300} // Specify the height of the image
                 layout="responsive"  // This ensures the image is responsive
                 className="img-building"
+                unoptimized
               />
             </animated.div>
 

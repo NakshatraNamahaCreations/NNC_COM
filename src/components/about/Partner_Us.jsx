@@ -206,6 +206,7 @@ export default function Partner_Us() {
                 layout="responsive" // This makes the image responsive
                 style={{ borderRadius: "8px", width: "100%", height: "auto" }}
                 className="img-partner"
+       
               />
             </animated.div>
           </Col>

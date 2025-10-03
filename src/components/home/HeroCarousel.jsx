@@ -14,22 +14,26 @@ export default function HeroCarousel() {
 
   const slides = [
     {
-      image: "/media/websiteBengaluru/slidee1.jpg",
+      image: "/media/websiteBengaluru/slidee1.avif",
+      alt:"Best Website Development Company in Bangalore",
       title: "Best Website Development Company in Bangalore",
       desc: "Creating modern, responsive, and high-performing websites that are tailored to your goals. Our in-house team of experts and highly skilled developers bring your vision to life through well-designed sites that are easily navigable and optimized for all devices. We are proud to be trusted by startups to enterprises across industries.",
     },
     {
-      image: "/media/websiteBengaluru/slidee2.jpg",
+      image: "/media/websiteBengaluru/slidee2.avif",
+      alt:"Leading Static Website Development Company in Bangalore",
       title: "Leading Static Website Development Company in Bangalore",
       desc: "Our static sites are thoughtfully constructed for speed, security, and simplicity – perfect for organizations that want to be found online. Our static sites are developed with the best practices of SEO and mobile responsiveness. Our static sites perform well with great SEO. We ensure that our code is clean, the design is easy on the eyes, and the visitors are left leaning about your organization.",
     },
     {
-      image: "/media/websiteBengaluru/slidee3.jpg",
+      image: "/media/websiteBengaluru/slidee3.avif",
+      alt:"Reliable E-Commerce Website Development Company in Bangalore",
       title: "Reliable E-Commerce Website Development Company in Bangalore",
       desc: "We create strong e-commerce systems capable of handling payment gateways, product listings, and inventory management letting our customers operate their e-commerce platforms effortlessly. Ensuring a fast and smooth shopping experience is our gold standard for quality assurance and we strive for easy navigation, swift checkout and simple dashboards. With a focus on converting visitors to buyers, we can help you sell more online.",
     },
     {
-      image: "/media/websiteBengaluru/slidee4.jpg",
+      image: "/media/websiteBengaluru/slidee4.avif",
+      alt:"Hire Website Developers in Bangalore",
       title: "Hire Website Developers in Bangalore",
       desc: "Our professional website developers and creative thinkers bring technical expertise to every project. We can support projects that are built from scratch or build upon existing web platforms to scale. Our businesses benefit from having a dedicated development resource focused specifically on delivering websites on time, and to a quality standard.",
     },
@@ -56,14 +60,18 @@ export default function HeroCarousel() {
           <div key={i}>
             <div className="carousel-banner-slide">
               {/* Use Next.js Image for optimization */}
-              <Image
-                src={slide.image}
-                alt={`Slide ${i + 1}`}
-                className="carousel-banner-image"
-                width={1920}
-                height={800}
-                priority={i === 0}
-              />
+             <Image
+  src={slide.image}
+  alt={`Slide ${i + 1}`}
+  fill
+  sizes="100vw"
+  priority={i === 0} // ✅ only first slide is priority
+  loading={i === 0 ? "eager" : "lazy"} // ✅ lazy load others
+  className="carousel-banner-image"
+  quality={40} 
+  unoptimized
+/>
+
               <div className="black-overlay" />
               <div className="carousel-caption-left" >
              

@@ -89,7 +89,7 @@ export default function Teams() {
       </animated.h2>
 
       <div style={{ width: "20%", margin: "0 auto", marginTop: "-1%" }}>
-        <Image src={line} alt="line" width={200} height={20} layout="responsive" />
+        <Image src={line} alt="line" width={200} height={20} layout="responsive" unoptimized/>
       </div>
 
       <animated.p
@@ -122,6 +122,7 @@ export default function Teams() {
                     width={300} // Specify width
                     height={300} // Specify height
                     layout="responsive" // Ensures responsive layout
+                  
                     // style={{ borderRadius: "50%" }}
                   />
                   {/* <div

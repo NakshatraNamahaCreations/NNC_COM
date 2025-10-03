@@ -3,23 +3,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import RequestQuote from "./RequestQuote"; // adjust path if needed
+import RequestQuote from "./RequestQuote";
 import ServicesDropdown from "./ServicesDropdown";
 import "@/styles/Navbar_Menu.css";
 import { useState, useEffect } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function Navbar_Menu({ isHomePage }) {
   const pathname = usePathname();
-
-  // start correct to avoid flash of wrong color
   const [linkColor, setLinkColor] = useState(isHomePage ? "white" : "black");
+  const [showQuote, setShowQuote] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     setLinkColor(isHomePage ? "white" : "black");
   }, [isHomePage]);
 
-  // helper: treat /x and /x/... as active
-  const isActive = (p) => (p === "/" ? pathname === "/" : pathname === p || pathname.startsWith(p + "/"));
+  const isActive = (p) =>
+    p === "/" ? pathname === "/" : pathname === p || pathname.startsWith(p + "/");
 
   const linkStyle = (p) => ({
     color: isActive(p) ? "#007bff" : linkColor,
@@ -35,6 +36,13 @@ export default function Navbar_Menu({ isHomePage }) {
     { path: "/contact-us", label: "Contact Us" },
   ];
 
+  // ✅ Same hover animation from RequestQuote
+  const springProps = useSpring({
+    transform: hovered ? "scale(1.1)" : "scale(1)",
+    opacity: hovered ? 1 : 0.9,
+    config: { tension: 300, friction: 20 },
+  });
+
   return (
     <header
       className="navbar"
@@ -45,7 +53,8 @@ export default function Navbar_Menu({ isHomePage }) {
         left: 0,
         width: "100%",
         zIndex: 10,
-        padding: "10px 0",
+  
+        padding: "10px 40px",
         boxShadow: isHomePage ? "none" : "0px 1px 10px rgba(0,0,0,0.1)",
         transition: "all 0.3s ease",
       }}
@@ -83,7 +92,6 @@ export default function Navbar_Menu({ isHomePage }) {
               </li>
             ))}
 
-            {/* Dropdown stays where you want it between groups */}
             <li className="navbar__item">
               <ServicesDropdown textColor={linkColor} />
             </li>
@@ -101,12 +109,48 @@ export default function Navbar_Menu({ isHomePage }) {
               </li>
             ))}
 
+            {/* ✅ Animated Request Quote Button */}
             <li className="navbar__item">
-              <RequestQuote textColor={linkColor} />
+              <animated.button
+                style={springProps}
+                className="navbar__quote-btn"
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                onClick={() => setShowQuote(true)}
+              >
+                Request A Quote
+              </animated.button>
             </li>
           </ul>
         </nav>
       </div>
+
+      {/* Popup Form */}
+      <RequestQuote showPopup={showQuote} setShowPopup={setShowQuote} />
+
+      <style jsx global>{`
+        .navbar__quote-btn {
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 14px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          font-size: 14px;
+          box-shadow: 2px 2px 1px 0px rgb(0, 0, 0);
+          cursor: pointer;
+          background-color: white;
+          color: black;
+          border: 1px solid black;
+             display: none !important;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar__quote-btn:hover {
+          background-color: black;
+          color: white;
+        }
+      `}</style>
     </header>
   );
 }

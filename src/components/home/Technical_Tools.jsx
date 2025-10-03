@@ -94,6 +94,7 @@ export default function Technical_Tools() {
                 className="handIcons"
                 width={500}
                 height={400}
+                unoptimized
               />
             </animated.div>
           </Col>

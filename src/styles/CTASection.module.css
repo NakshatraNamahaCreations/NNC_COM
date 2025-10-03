@@ -41,12 +41,13 @@
 /* Top pill */
 .pill {
   display: inline-block;
-  background: #ffffff;
-  color: #0e1a44;
+  /* background: #ffffff; */
+  color: #fff;
   border-radius: 999px;
   font-weight: 600;
   padding: 10px 16px;
-  margin-bottom: 18px;
+  font-size: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 8px 18px rgba(0,0,0,.18);
 }
 

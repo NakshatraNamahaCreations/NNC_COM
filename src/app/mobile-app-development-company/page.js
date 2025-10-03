@@ -2,21 +2,21 @@ import MobileAppDevelopmentCompany from "./MobileAppDevelopmentCompany"
 
 
 export const metadata = {
-  title: "Mobile App Development Company in Bangalore | Innovative Apps",
+  title: "Mobile App Development Company – Android & iOS App Services",
   description:
-    "Hire the top mobile app development company in Bangalore to build user-friendly, scalable mobile apps. Get a custom app that boosts your business today!",
+    "Hire a trusted Mobile App Development Company offering end-to-end Android and iOS app development and support. We build secure, scalable, and user-friendly apps",
   keywords:
-    "Mobile App Development Company in Bangalore, Mobile App Development Company Near Me, Mobile App Developers in Bangalore, Mobile App Developers Near Me, Mobile App Designers in Bangalore",
+    "Mobile App Development Company, Mobile App Development Company Near Me, Mobile App Developers, Mobile App Developers Near Me, Mobile App Designers",
   alternates: {
     canonical:
-      "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
+      "https://www.nakshatranamahacreations.com/mobile-app-development-company",
   },
   openGraph: {
-    title: "Mobile App Development Company in Bangalore | Innovative Apps",
+    title: "Mobile App Development Company – Android & iOS App Services",
     description:
-      "Hire the top mobile app development company in Bangalore to build user-friendly, scalable mobile apps. Get a custom app that boosts your business today!",
+      "Hire a trusted Mobile App Development Company offering end-to-end Android and iOS app development and support. We build secure, scalable, and user-friendly apps",
     type: "website", // Changed from "Mobile App" to "website" for better OG compatibility
-    url: "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
+    url: "https://www.nakshatranamahacreations.com/mobile-app-development-company",
     images: [
       {
         url: "https://www.nakshatranamahacreations.com/media/OBJECTS.png",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile App Development Company in Bangalore | Innovative Apps",
+    title: "Mobile App Development Company – Android & iOS App Services",
     description:
-      "Hire the top mobile app development company in Bangalore to build user-friendly, scalable mobile apps. Get a custom app that boosts your business today!",
+      "Hire a trusted Mobile App Development Company offering end-to-end Android and iOS app development and support. We build secure, scalable, and user-friendly apps",
     images: ["https://www.nakshatranamahacreations.com/media/OBJECTS.png"],
     site: "@nncbengaluru",
     creator: "@nncbengaluru",

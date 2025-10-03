@@ -184,6 +184,7 @@ export default function Icons() {
                 alt={items[index].text}
                 width={70}
                 height={70}
+             
               />
               <h2 className="fw-bold mt-2" style={{ fontSize: "40px" }}>
                 {items[index].heading}
@@ -212,6 +213,7 @@ export default function Icons() {
             alt="person"
             fluid
             className="cursor-pointer"
+        
             onClick={() => setShowPopup(true)}
           />
         </Col>

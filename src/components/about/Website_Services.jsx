@@ -144,6 +144,7 @@ export default function Website_Services() {
   layout="responsive" // Ensures responsiveness
   style={{ width: "100%", height: "auto" }}
   className="img-fluid"
+
 />
 
           </div>

@@ -99,6 +99,7 @@ export default function CardsWorkAnimation({ filterData }) {
                     <img
                       src={item.imgPics}
                       alt={item.title}
+                      unoptimized
                       style={{
                         width: "100%",
                         height: "100%",

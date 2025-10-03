@@ -108,6 +108,7 @@ const Our_Service = ({ cardData }) => {
                   alt={card.title}
                   width={400}
                   height={480}
+                  unoptimized
                   className="card-img-top"
                   style={{
                     height: "509px",
