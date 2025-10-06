@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import "@/styles/HeroCarousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaPhoneAlt } from "react-icons/fa";
+
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 export default function HeroCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -69,7 +71,7 @@ export default function HeroCarousel() {
   loading={i === 0 ? "eager" : "lazy"} // ✅ lazy load others
   className="carousel-banner-image"
   quality={40} 
-  unoptimized
+
 />
 
               <div className="black-overlay" />

@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import Navbar_Menu from "@/components/Navbar_Menu";
 import MobileNavbar from "@/components/MobileNavbar";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
 import WhatsAppButtons from "@/components/WhatsApp";
+import Navbar_Menu1 from "@/components/Navbar_Menu1";
 // import LoaderGate from "@/components/LoaderGate";
 
 export default function ClientShell({ children }) {
@@ -63,7 +63,7 @@ export default function ClientShell({ children }) {
 
   return (
     <>
-      {!hideLayout && <Navbar_Menu />}
+      {!hideLayout && <Navbar_Menu1 />}
       {!hideLayout && (
         <MobileNavbar /* ensure logo uses src="/media/nnclogo.png" */ />
       )}
