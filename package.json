@@ -46,5 +46,10 @@
     "netlify-cli": "^23.1.4",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12"
-  }
+  },
+    "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not op_mini all"
+  ]
 }

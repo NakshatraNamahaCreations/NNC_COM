@@ -1,9 +1,9 @@
 // src/app/layout.jsx
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
-
+import { Poppins, DM_Serif_Text } from "next/font/google";
 import Script from "next/script";
 import ClientShell from "./ClientShell";
 // import LoaderGate from "@/components/LoaderGate";
@@ -139,6 +139,21 @@ export const metadata = {
   },
 };
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300","400","500","600","700"],   // only the weights you use
+  display: "swap",                          // shows fallback text immediately
+  variable: "--font-poppins",
+});
+
+const dmSerif = DM_Serif_Text({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal","italic"],
+  display: "swap",
+  variable: "--font-dmserif",
+});
+
 
 // Viewport/meta tag (themeColor here)
 export const viewport = {
@@ -150,7 +165,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={`${poppins.variable} ${dmSerif.variable}`}>
       <body suppressHydrationWarning>
         {/* SITE UI */}
         <ClientShell>{children}</ClientShell>

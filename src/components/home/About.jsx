@@ -202,7 +202,7 @@ export default function About() {
               }
             >
               <Image
-                src="/media/teams/NNCGRPPHOTO.avif"
+                src="/media/teams/NNCGRPPHOT.avif"
                 alt="About visual background"
                 width={440}
                 height={210}
@@ -237,7 +237,7 @@ export default function About() {
             >
               <Image
                 // src="/media/aboutImg4.webp"
-                src="/media/teams/nncImg3.avif"
+                src="/media/teams/nncImg.avif"
                 alt="About visual foreground"
                 width={440}
                 height={210}
