@@ -1,80 +1,11 @@
 // src/app/layout.jsx
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Poppins, DM_Serif_Text } from "next/font/google";
 import Script from "next/script";
 import ClientShell from "./ClientShell";
 // import LoaderGate from "@/components/LoaderGate";
-
-{/*export const metadata = {
-  metadataBase: new URL("https://www.nakshatranamahacreations.com"),
-  title: {
-    default: "Nakshatra Namaha Creations | Website Developers in Bangalore",
-    template: "%s | Nakshatra Namaha Creations",
-  },
-  description:
-    "Nakshatra Namaha Creations is best website developers in Bangalore, specializes in creating custom, user-friendly and responsive websites for your online presence.",
-  alternates: {
-    canonical: "/", // exactly one canonical
-    languages: {
-      "en-IN": "/",   // exactly one en-IN
-      "x-default": "/", // and one x-default
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    maxImagePreview: "large",
-    googleBot: { index: true, follow: true, maxImagePreview: "large" },
-  },
-  other: {
-    bingbot: "index,follow",
-    "format-detection": "telephone=no",
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/favicon-16x16.png", sizes: "16x16" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png" }],
-    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0d0d0d" }],
-  },
-  manifest: "/site.webmanifest",
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    siteName: "Nakshatra Namaha Creations",
-    url: "/", // relative is fine with metadataBase
-    title: "Website Developers in Bangalore | Custom Web Development",
-    description:
-      "Expert website developers in Bangalore creating user-friendly, SEO-friendly and high-performance custom websites to grow your business online effectively.",
-    images: [
-      {
-        url: "/media/og/og-1200x630.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Nakshatra Namaha Creations — Website & App Development Company in Bangalore",
-      },
-      {
-        url: "/media/og/og-1200x1200.jpg",
-        width: 1200,
-        height: 1200,
-        alt: "Nakshatra Namaha Creations — Brand preview (square)",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nncbengaluru",
-    creator: "@nncbengaluru",
-    title: "Website Developers in Bangalore | Custom Web Development",
-    description:
-      "Expert website developers in Bangalore creating user-friendly, SEO-friendly and high-performance custom websites to grow your business online effectively.",
-    images: ["/media/og/og-1200x630.jpg", "/media/og/og-1200x1200.jpg"],
-  },
-};*/}
 
 export const metadata = {
   metadataBase: new URL("https://www.nakshatranamahacreations.com"),

@@ -13,6 +13,8 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.vectorstock.com' },
       { protocol: 'https', hostname: 'api.nakshatranamahacreations.in' },
     ],
+     deviceSizes: [360, 414, 640, 768, 1024, 1280, 1536],
+    imageSizes: [16, 24, 32, 48, 64, 96, 128, 256],
   },
 
   // Modern-only build => trims “Legacy JavaScript” polyfills
