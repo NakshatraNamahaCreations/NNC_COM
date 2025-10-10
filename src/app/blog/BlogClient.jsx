@@ -14,16 +14,18 @@ import ViewAllBtn from "@/components/ourworks/ViewAllBtn";
 import { useRouter } from "next/navigation";
 import Breadcrumbs from "@/components/BreadCrumbs";
 import ShimmerCard from "@/components/ShimmerCard";
+import BlogCategoryFilter from "./BlogCategoryFilter.jsx";
 
 // ✅ call your Next proxy route (no CORS/CSP headaches)
-const API_URL = "/api/blogs";
+const API_URL = "https://api.nakshatranamahacreations.in/api/blogs";
+
 // used only for building image URLs
 const ASSET_BASE = "https://api.nakshatranamahacreations.in";
 // Static blog data
 const blogData = [
     {
         id: 1,
-        title: "Difference between React and Next.js in 2025",
+        title: "Difference Between React And Nextjs in 2025",
         description:
             "Learn how investing in mobile app development can help businesses stay competitive in the market and connect with their audience better.",
         date: "March 25, 2025",
@@ -38,7 +40,7 @@ const blogData = [
             "Learn how investing in mobile app development can help businesses stay competitive in the market and connect with their audience better.",
         date: "April 30, 2025",
         category: "Mobile App Development",
-        link: "/blog/top10-mobile-app-dev-companies-in-bangalore",
+        link: "/blog/top-10-mobile-app-development-companies-in-bangalore", //top-10-mobile-app-development-companies-in-bangalore
         banner: "/media/blogs/Top10MobileappCompanies.png",
     },
     {
@@ -145,7 +147,7 @@ const blogData = [
         id: 13,
         title: "Landing Page vs. Homepage: Key Differences Explained",
         description:
-            "Understand the real difference between a landing page and a homepage, when to use each, and how to boost conversions by guiding visitors the right way.",
+            "Understand the real between a landing page and a homepage, when to use each, and how to boost conversions by guiding visitors the right way.",
         date: "April 30, 2025",
         category: "Landing Page vs. Homepage: Key Differences Explained",
         link: "/blog/landing-page-vs-homepage/",
@@ -218,7 +220,7 @@ const blogData = [
             "Discover how 2D animation for websites can boost user engagement, explain products better, and drive higher conversions with visual storytelling.",
         date: "July 5, 2025",
         category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/importance-of-responsive-design-in-modern-web-development",
+        link: "/blog/importance-of-responsive-design-in-modern-web-development", //importance-of-responsive-design-in-modern-web-development
         banner: "/media/blogs/18.png",
     },
     {
@@ -298,7 +300,11 @@ const normalizeApi = (blog) => {
     title,
     description: (blog?.description || "").replace(/<[^>]+>/g, "").slice(0, 150),
     date: pickBestDate(blog),        // <— important: no Date.now() fallback
-    category: blog?.metaTitle || blog?.category || "General",
+    category:
+  blog?.services?.length > 0
+    ? blog.services.join(", ") // combine multiple services as readable string
+    : blog?.category || "General",
+
     link: `/blog/${slug}`,
     banner,
     _slug: slug,
@@ -323,12 +329,15 @@ const normalizeStatic = (blog) => {
 
 
 const BlogClient = () => {
+  const [allBlogs, setAllBlogs] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [visibleCards, setVisibleCards] = useState(9);
   const [totalPages, setTotalPages] = useState(1); // if backend paginates
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+const [activeCategory, setActiveCategory] = useState("All");
+const [categories, setCategories] = useState([]);
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
   const router = useRouter();
@@ -364,10 +373,16 @@ const BlogClient = () => {
   return Array.from(map.values());
 };
 
-const fetchBlogs = async () => {
+const fetchBlogs = async (service = "All") => {
   setLoading(true);
   try {
-    const res = await axios.get(API_URL);
+    // build URL based on selected service
+    const url =
+      service === "All"
+        ? API_URL
+        : `${API_URL}?service=${encodeURIComponent(service)}`;
+
+    const res = await axios.get(url);
 
     const apiListRaw = Array.isArray(res?.data?.data)
       ? res.data.data
@@ -377,7 +392,6 @@ const fetchBlogs = async () => {
 
     const apiCards = apiListRaw.map(normalizeApi);
     const staticCards = blogData.map(normalizeStatic);
-
     const merged = mergeBySlug(apiCards, staticCards);
 
     merged.sort((a, b) => {
@@ -390,12 +404,39 @@ const fetchBlogs = async () => {
       ...b,
       date:
         b.date instanceof Date
-          ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
+          ? b.date.toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })
           : "",
     }));
 
+    // ✅ build category list from API services
+    const allServices = Array.from(
+      new Set(
+        apiListRaw.flatMap((b) => b.services || []).filter(Boolean)
+      )
+    );
+
+    setCategories(
+      allServices.length
+        ? allServices
+        : [
+            "Web Development",
+            "App Development",
+            "Corporate Video Production",
+            "Digital Marketing",
+            "Graphic Designing",
+            "3D Animations",
+            "B2B Marketing Service",
+            "Others",
+          ]
+    );
+
     setBlogs(finalCards);
-    setTotalPages(1);
+    if (service === "All") setAllBlogs(finalCards);
+
     setError(null);
   } catch (err) {
     console.error("Failed to fetch blogs:", err);
@@ -412,10 +453,16 @@ const fetchBlogs = async () => {
         ...b,
         date:
           b.date instanceof Date
-            ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
+            ? b.date.toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })
             : "",
       }));
 
+    setCategories([]);
+    setAllBlogs(staticOnly);
     setBlogs(staticOnly);
   } finally {
     setLoading(false);
@@ -431,6 +478,14 @@ const fetchBlogs = async () => {
     // and pass it as axios params above.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [/* currentPage */]);
+
+const handleFilterChange = (cat) => {
+  setActiveCategory(cat);
+  setVisibleCards(9);
+  fetchBlogs(cat); // ✅ now fetches directly from backend
+};
+
+
 
   const handleViewMore = () => {
     // client-side "load more" from the merged list
@@ -456,7 +511,7 @@ const fetchBlogs = async () => {
       <Breadcrumbs paths={breadcrumbPaths} />
 
       <div style={{ height: "90vh" }} className="blogBanner d-flex align-items-center justify-content-center px-4">
-        <div style={{ marginTop: "15%", marginBottom: "12%", textAlign: "center" }}>
+        <div style={{ marginTop: "15%", marginBottom: "4%", textAlign: "center" }}>
           <h1
             style={{ fontWeight: "900", fontSize: "65px",  marginBottom: "1%" }}
             className="h1-careers"
@@ -485,8 +540,16 @@ const fetchBlogs = async () => {
           Discover the latest news, trends and innovative cultural trends brought to you by Nakshatra Namaha Creations.
         </animated.h2>
       </Container>
+<Container style={{ marginTop: "20px", marginBottom: "30px" }}>
+   <BlogCategoryFilter
+  // items={["All", ...categories]}   
+  onChange={handleFilterChange}
+/>
 
+</Container>
       <Container>
+
+  {/* Blog Listing Section */}
            {loading ? (
           <Row>
             {[...Array(9)].map((_, index) => (
@@ -499,7 +562,32 @@ const fetchBlogs = async () => {
           <p>{error}</p>
         ) : (
           <Row>
-            {blogs.slice(0, visibleCards).map((card, index) => (
+           {blogs
+  .filter((card) => {
+    if (activeCategory === "All") return true;
+
+    // normalize all categories/services to lowercase array
+    const blogCategories = Array.isArray(card.services)
+      ? card.services.map((s) => s.toLowerCase())
+      : (card.category ? [card.category.toLowerCase()] : []);
+
+    // handle multiple selected filters
+    if (Array.isArray(activeCategory)) {
+      return activeCategory.some((cat) =>
+        blogCategories.some((bcat) => bcat.includes(cat.toLowerCase()))
+      );
+    }
+
+    // fallback if only one string is selected
+    return blogCategories.some((bcat) =>
+      bcat.includes(activeCategory.toLowerCase())
+    );
+  })
+  .slice(0, visibleCards)
+  .map((card, index) => (
+
+
+
               <Col sm={4} key={`${card.id}-${index}`} className="mb-4">
                 <div onClick={() => handleBlogCardClick(card.link)} style={{ cursor: "pointer" }}>
                   <BlogCard card={card} />

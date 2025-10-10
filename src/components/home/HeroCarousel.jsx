@@ -17,7 +17,7 @@ export default function HeroCarousel() {
   const slides = [
     {
       image: "/media/websiteBengaluru/slide.avif",
-      alt:"Best Website Development Company in Bangalore",
+      alt:"Website Development Company in Bangalore",
       title: "Best Website Development Company in Bangalore",
       desc: "Creating modern, responsive, and high-performing websites that are tailored to your goals. Our in-house team of experts and highly skilled developers bring your vision to life through well-designed sites that are easily navigable and optimized for all devices. We are proud to be trusted by startups to enterprises across industries.",
     },

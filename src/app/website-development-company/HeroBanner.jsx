@@ -54,7 +54,7 @@ export default function HeroBanner() {
                   { n: "500+", l: "Projects Delivered" },
                   { n: "8+", l: "Years Experience" },
                   { n: "98%", l: "Client Retention" },
-                  { n: "500+", l: "Public Reviews" },
+                  { n: "500+", l: "Happy Clinets" },
                 ].map((s, i) => (
                   <div className="col-6" key={i}>
                     <div className={`${styles.statCard} text-center p-3 rounded-4`}>

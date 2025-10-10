@@ -59,7 +59,7 @@ export default function MobileAppDevelopmentCompany() {
           Our Portfolio
         </h2>
         <p className="text-center mb-5" style={{width:"70%", margin:"0 auto"}}>
-From startups to enterprises, our website development company has delivered successful projects across industries. Each portfolio project reflects our creativity, technical expertise, and focus on client results.
+From startups to enterprises, our mobile app development company has delivered successful projects across industries. Each portfolio project reflects our creativity, technical expertise, and focus on client results.
         </p>
            </div>
     <Our_Service cardData={ourworkData} />
@@ -70,6 +70,9 @@ From startups to enterprises, our website development company has delivered succ
       {/* <ClientSegments/> */}
       <ServeClients/>
       {/* <WhyChooseUs/> */}
+       <h2 className="text-center fw-bold mb-2">
+          What Our Clients Say
+        </h2>
       <TestimonialsCarousel/>
       <FaqSection/>
  

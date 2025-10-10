@@ -37,6 +37,28 @@
  
 }
 
+/* Remove scrollbar while keeping scrolling enabled */
+.category-menu {
+  padding: 8px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  min-width: 230px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.category-menu::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+
+/* Hide scrollbar for Firefox */
+.category-menu {
+  scrollbar-width: none !important;
+}
+
+
 
 /* styles/globals.css or a module */
 .custom-modal {

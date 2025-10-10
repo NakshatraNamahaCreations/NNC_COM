@@ -211,77 +211,79 @@ export default function GraphicDesigning() {
    const schemaMarkup = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.instagram.com/nnc.digitalbengaluru/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-      },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/media/Group117.png",
-        url: "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
-      },
+     {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nakshatra Namaha Creations",
+  "url": "https://www.nakshatranamahacreations.com/",
+  "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+  "sameAs": [
+    "https://www.facebook.com/Nakshatranamahacreations/",
+    "https://www.instagram.com/nnc.digitalbengaluru/",
+    "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+    "https://x.com/nncbengaluru"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9900566466",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi", "Kannada"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560061",
+    "addressCountry": "IN"
+  }
+},
+
+   
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nakshatra Namaha Creations",
+  "image": "https://www.nakshatranamahacreations.com/media/Group117.png",
+  "url": "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
+  "telephone": "+91-9900566466",
+  "email": "info@nakshatranamahacreations.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560061",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.264056680993265,
+    "longitude": 76.6444222231926
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "19:00"
+    }
+  ],
+  "priceRange": "₹₹",
+  "paymentAccepted": "Cash, Credit Card, Online Payment",
+  "sameAs": [
+    "https://www.facebook.com/nakshatranamahacreations",
+    "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+  ]
+},
       {
         "@type": "Review",
         itemReviewed: {
@@ -361,58 +363,59 @@ export default function GraphicDesigning() {
         datePublished: "2025-05-10",
       },
       {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Why does my business need a mobile app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A mobile app increases customer engagement, improves sales and makes your services accessible anytime. It also helps build brand loyalty and gives you an edge over competitors.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Will my app work on both Android and iOS?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we develop native apps for Android and iOS, as well as cross-platform apps using Flutter and React Native to ensure smooth performance on both platforms.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do you ensure the security of my mobile app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We implement strong security protocols like encryption, authentication and secure APIs to protect user data and prevent unauthorized access.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Will you help with app store submission?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we assist in launching your app on Google Play Store and Apple App Store, ensuring it meets all guidelines for approval.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How can I track the performance of my app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We integrate analytics tools that help monitor user engagement, downloads, and other key metrics for business insights.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can my app integrate with third-party services like payment gateways and CRM systems?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we integrate payment gateways, CRM tools, social media platforms and other APIs for seamless functionality.",
-            },
-          },
-        ],
-      },
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I request revisions after the design is completed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer revisions based on client feedback to ensure the final design meets your expectations. The number of revisions depends on the project scope."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer UI/UX design services for websites and mobile apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in designing user-friendly interfaces for websites and mobile applications, ensuring a smooth and engaging user experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you handle bulk design projects for marketing campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide design services for bulk marketing materials, including brochures, posters, flyers and digital campaigns for businesses of all sizes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer custom designs based on specific requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every design we create is unique and based on the specific needs of the client, ensuring that it aligns with your brand identity and objectives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I get full ownership of the designs once they are completed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the project is completed and payment is made, you will have full rights to use the designs as per your business needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need urgent design work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer express design services for urgent projects, ensuring high-quality work delivered within tight deadlines."
+      }
+    }
+  ]
+},
       {
         "@type": "BreadcrumbList",
         itemListElement: [

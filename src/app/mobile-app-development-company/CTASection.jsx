@@ -9,16 +9,18 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-      <video
+     <video
         className={styles.bgVideo}
-        src="/BananerVideo.mp4" // ⬅️ replace with your path
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="none" // prevents preloading until visible
         aria-hidden="true"
-      />
+      >
+        <source src="./BananerVideo.webm" type="video/webm" />
+        {/* <source src="/videos/BannerVideo.mp4" type="video/mp4" /> */}
+      </video>
 
       {/* Dark overlay */}
       <div className={styles.overlay} aria-hidden="true" />

@@ -131,9 +131,9 @@ export default function BlogSearch() {
 
         <Row className="justify-content-center">
           <Col xs={12} >
-            <FloatingLabel controlId="floatingSearch" className="mb-3">
+            <FloatingLabel controlId="floatingSearch" className="">
               <animated.div ref={refInput} style={inputSpring}>
-                <InputGroup className="position-relative">
+                {/* <InputGroup className="position-relative">
                   <Form.Control
                     type="text"
                     placeholder="Come and explore our jobs"
@@ -160,7 +160,7 @@ export default function BlogSearch() {
                       style={{ color: "#000000", width: "24px", height: "24px" }}
                     />
                   </InputGroup.Text>
-                </InputGroup>
+                </InputGroup> */}
               </animated.div>
             </FloatingLabel>
           </Col>
