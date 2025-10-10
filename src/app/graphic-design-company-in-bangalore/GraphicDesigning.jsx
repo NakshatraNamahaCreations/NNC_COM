@@ -208,233 +208,151 @@ export default function GraphicDesigning() {
   const [showPopup, setShowPopup] = useState(false);
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-     {
+const schemaMarkup = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Nakshatra Namaha Creations",
-  "url": "https://www.nakshatranamahacreations.com/",
-  "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-  "sameAs": [
-    "https://www.facebook.com/Nakshatranamahacreations/",
-    "https://www.instagram.com/nnc.digitalbengaluru/",
-    "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-    "https://x.com/nncbengaluru"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-9900566466",
-    "contactType": "customer service",
-    "areaServed": "IN",
-    "availableLanguage": ["English", "Hindi", "Kannada"]
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-    "addressLocality": "Bengaluru",
-    "addressRegion": "Karnataka",
-    "postalCode": "560061",
-    "addressCountry": "IN"
-  }
-},
-
-   
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Nakshatra Namaha Creations",
-  "image": "https://www.nakshatranamahacreations.com/media/Group117.png",
-  "url": "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
-  "telephone": "+91-9900566466",
-  "email": "info@nakshatranamahacreations.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-    "addressLocality": "Bengaluru",
-    "addressRegion": "Karnataka",
-    "postalCode": "560061",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 12.264056680993265,
-    "longitude": 76.6444222231926
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+      "@type": "Organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
       ],
-      "opens": "09:30",
-      "closes": "19:00"
-    }
-  ],
-  "priceRange": "₹₹",
-  "paymentAccepted": "Cash, Credit Card, Online Payment",
-  "sameAs": [
-    "https://www.facebook.com/nakshatranamahacreations",
-    "https://www.linkedin.com/company/nakshatra-namaha-creation/"
-  ]
-},
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Graphic Design Service",
-        },
-        author: {
-          "@type": "Person",
-          name: "Sanjeev K",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "We needed a fresh and modern logo and the team exceeded our expectations. Their approach was structured and they ensured every element aligned with our brand identity. The final design was impressive and highly effective for our business.",
-        datePublished: "2025-05-01",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Graphic Design Service",
-        },
-        author: {
-          "@type": "Person",
-          name: "Anlit C",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.8",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody: `"We approached them for UI/UX design and they created an intuitive, user-friendly interface. Their creative approach and industry knowledge helped us achieve a professional and modern look. The designs were well-optimized for digital platforms.": "2025-04-20"`,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image": "https://www.nakshatranamahacreations.com/media/Group117.png",
+      "url": "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Graphic Design Service",
-        },
-        author: {
-          "@type": "Person",
-          name: "Narayan Mehata",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Their designs are professional, unique, and highly effective for marketing. The team took the time to understand our business and delivered creative solutions that enhanced our branding. We highly recommend them for graphic design services.",
-        datePublished: "2025-03-15",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Graphic Design Service",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I request revisions after the design is completed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer revisions based on client feedback to ensure the final design meets your expectations. The number of revisions depends on the project scope."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Karthik C",
+        {
+          "@type": "Question",
+          "name": "Do you offer UI/UX design services for websites and mobile apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in designing user-friendly interfaces for websites and mobile applications, ensuring a smooth and engaging user experience."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.9",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Can you handle bulk design projects for marketing campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide design services for bulk marketing materials, including brochures, posters, flyers and digital campaigns for businesses of all sizes."
+          }
         },
-        reviewBody:
-          "Working with Nakshatra Namaha Creations was a seamless experience. They understood our requirements and created designs that were both professional and engaging. Their expertise in branding and marketing materials added great value to our business.",
-        datePublished: "2025-05-10",
-      },
-      {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can I request revisions after the design is completed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we offer revisions based on client feedback to ensure the final design meets your expectations. The number of revisions depends on the project scope."
-      }
+        {
+          "@type": "Question",
+          "name": "Do you offer custom designs based on specific requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every design we create is unique and based on the specific needs of the client, ensuring that it aligns with your brand identity and objectives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I get full ownership of the designs once they are completed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once the project is completed and payment is made, you will have full rights to use the designs as per your business needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I need urgent design work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer express design services for urgent projects, ensuring high-quality work delivered within tight deadlines."
+          }
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Do you offer UI/UX design services for websites and mobile apps?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we specialize in designing user-friendly interfaces for websites and mobile applications, ensuring a smooth and engaging user experience."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you handle bulk design projects for marketing campaigns?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide design services for bulk marketing materials, including brochures, posters, flyers and digital campaigns for businesses of all sizes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer custom designs based on specific requirements?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, every design we create is unique and based on the specific needs of the client, ensuring that it aligns with your brand identity and objectives."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will I get full ownership of the designs once they are completed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, once the project is completed and payment is made, you will have full rights to use the designs as per your business needs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I need urgent design work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We offer express design services for urgent projects, ensuring high-quality work delivered within tight deadlines."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Graphic Design Company in Bangalore",
+          "item": "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore"
+        }
+      ]
     }
   ]
-},
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Website Development Service",
-            item: "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+};
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
