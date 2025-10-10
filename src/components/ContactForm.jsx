@@ -94,7 +94,12 @@ else if (
 ) {
   service = "Corporate Film Makers";
 }
-
+else if (
+  currentPath === "/website-designing-company" ||
+  currentPath === "/website-designing-company"
+) {
+  service = "Website Designing ";
+}
 
     setFormData((prev) => ({
       ...prev,

@@ -830,7 +830,7 @@ const ServicesDropdown = ({ textColor }) => {
                 </ul>
               </div>
 
-              {/* Column 2: Web Development */}
+              {/* Column 2: Web Development website-development-company */}
               <div style={{ flex: "1 1 20%", marginBottom: "20px" }}>
                 <Link
                   href="/website-development-company"
@@ -849,6 +849,13 @@ const ServicesDropdown = ({ textColor }) => {
                     cursor: "pointer",
                   }}
                 >
+                  <Link
+                     href="/website-designing-company"
+                  className="removelinkStyle"
+                  onClick={handleItemClick}
+                  >
+                   <li onClick={handleItemClick}>Website Designing Company</li>
+                  </Link>
                   <li onClick={handleItemClick}>Frontend Development</li>
                   <li onClick={handleItemClick}>Full Stack Development</li>
                   <li onClick={handleItemClick}>Static Website Development</li>
@@ -980,6 +987,10 @@ const ServicesDropdown = ({ textColor }) => {
                     Corporate Video Production
                   </h6>
                 </Link>
+                    <Link   href="/corporate-film-makers"
+                  className="removelinkStyle"
+                  onClick={handleItemClick}><li onClick={handleItemClick} style={{fontSize:"14px"}}>Corporate Film Makers</li></Link>
+                 
               </div>
 
               {/* Column 5: Solutions & B2B Marketing */}
