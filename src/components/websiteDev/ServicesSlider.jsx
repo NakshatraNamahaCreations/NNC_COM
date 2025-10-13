@@ -8,57 +8,50 @@ const services = [
     title: "Kick-Off Meeting",
     desc: "Nakshatra Namaha Creations’s Web Development Services in Bangalore begin with a detailed Kick-Off Meeting to align goals and vision. Choose the Best Web Development Company in Bangalore for top results.",
     img: "/media/gif/webdevelop1.jpg",
-    link: "/media/gif/kick-off-meeting",
   },
   {
     title: "Structure Planning (UX)",
     desc: "Nakshatra Namaha Creations offers Web Development Services in Bangalore, focusing on Structure Planning (UX). As a top Web Designing Company and Website Development Agency in Bangalore, we ensure seamless user experiences.",
     img: "/media/gif/uiuxdesign.jpg",
-    link: "/website-development/structure-planning",
   },
   {
     title: "Design (UI)",
     desc: "Nakshatra Namaha Creations offers expert Web Development Services in Bangalore with UI Design, making us the Best Web Development Company and top Web Designing Company in Bangalore for custom websites.",
-   img: "/media/gif/ui1.jpg",
-    link: "/website-development/ui-design",
+    img: "/media/gif/ui1.jpg",
   },
   {
     title: "Development",
     desc: "Nakshatra Namaha Creations offers top-notch Web Development Services in Bangalore. As a leading Website Development Agency in Bangalore, we deliver responsive designs backed by the Best Web Development Company in Bangalore.",
     img: "/media/gif/nncbanner1.jpg",
-    link: "/website-development/development",
   },
   {
     title: "Content Creation",
     desc: "Nakshatra Namaha Creations offers Web Development Services in Bangalore with engaging content and design, making us the Best Web Development Company and a trusted Website Development Agency in Bangalore.",
     img: "/media/gif/content.jpg",
-    link: "/website-development/content-creation",
   },
   {
     title: "SEO Implementations",
     desc: "As a top Web Designing Company in Bangalore and a leading Website Development Agency in Bangalore, we implement SEO strategies to boost your site’s visibility, making us the Best Web Development Company in Bangalore.",
     img: "/media/gif/seo.jpg",
-    link: "/website-development/seo-implementation",
   },
   {
     title: "Launch & Deployment",
     desc: "Nakshatra Namaha Creations offers expert web development services in Bangalore, ensuring smooth website launch and deployment. As a leading web designing and best web development company, we provide end-to-end solutions for a successful launch.",
-     img: "/media/gif/hosting1.jpg",
-    link: "/website-development/launch-deployment",
+    img: "/media/gif/hosting1.jpg",
   },
   {
     title: "Performance Monitoring & Maintenance",
     desc: "Nakshatra Namaha Creations offers Web Development Services in Bangalore, including performance monitoring and maintenance, ensuring smooth, secure, and top-performing websites.",
-      img: "/media/gif/monitor1.jpg",
-    link: "/website-development/performance-maintenance",
+    img: "/media/gif/monitor1.jpg",
   },
 ];
 
 export default function WebDevProcessSlider() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
+    arrows: false, 
     autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 4,
@@ -82,11 +75,6 @@ export default function WebDevProcessSlider() {
               <img src={item.img} alt={item.title} className={styles.img} />
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.desc}>{item.desc}</p>
-              <a href={item.link} className={styles.readMore}>
-                Read More 
-
-                
-              </a>
             </div>
           </div>
         ))}

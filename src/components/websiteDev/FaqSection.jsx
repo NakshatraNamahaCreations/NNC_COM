@@ -6,33 +6,66 @@ import Link from "next/link";
 const faqs = [
   {
     question:
-      "What are the benefits of hiring a mobile app development company in Bangalore?",
+      "Why should I hire a website development company in HSR Layout?",
     answer:
-      "Bangalore offers skilled developers, advanced infrastructure, and innovative solutions for businesses of all sizes.",
+      "HSR Layout is a growing tech hub in Bangalore, home to skilled web developers who deliver professional, responsive, and SEO-friendly websites tailored to your business goals.",
   },
   {
     question:
-      "What industries do mobile app development companies in Bangalore cater to?",
+      "What services do website development companies in HSR Layout provide?",
     answer:
-      "They serve industries like healthcare, e-commerce, education, logistics, real estate, fintech, and more.",
+      "Most companies offer complete web solutions including website design, development, e-commerce sites, SEO optimization, hosting, and regular maintenance.",
   },
   {
     question:
-      "Do mobile app development companies in Bangalore offer post-launch support?",
+      "How long does it take to build a website in HSR Layout?",
     answer:
-      "Yes, most companies provide regular updates, bug fixes, maintenance, and performance monitoring.",
-  },
-  {
-    question: "How can I ensure my app idea remains confidential?",
-    answer:
-      "Sign an NDA (Non-Disclosure Agreement) with the company before sharing your project details.",
+      "The timeline depends on the project’s size and complexity. A basic business website may take 2–3 weeks, while a custom or e-commerce site can take 4–8 weeks or more.",
   },
   {
     question:
-      "Can app development companies in Bangalore integrate advanced features like AI and IoT?",
+      "Can I get an SEO-friendly website developed in HSR Layout?",
     answer:
-      "Yes, leading companies specialize in implementing AI, IoT, AR/VR, and other emerging technologies.",
+      "Yes, top website development companies in HSR Layout integrate SEO best practices like fast loading speed, mobile responsiveness, and keyword optimization into every project.",
   },
+  {
+    question:
+      "Do website developers in HSR Layout provide website redesign services?",
+    answer:
+      "Yes, many companies specialize in redesigning outdated websites with modern layouts, better UI/UX, and improved performance for better conversions.",
+  },
+  {
+    question:
+      "What industries do web development companies in HSR Layout serve?",
+    answer:
+      "They cater to various sectors including healthcare, education, real estate, IT, retail, hospitality, startups, and manufacturing businesses.",
+  },
+  {
+    question:
+      "Will my website be mobile-friendly if developed in HSR Layout?",
+    answer:
+      "Yes, developers in HSR Layout focus on responsive design, ensuring your website looks and functions perfectly on all devices including mobiles and tablets.",
+  },
+  {
+    question:
+      "Do website developers in HSR Layout offer ongoing maintenance?",
+    answer:
+      "Yes, most companies offer post-launch support, including website updates, security monitoring, content changes, and performance optimization.",
+  },
+  {
+    question:
+      "Can developers in HSR Layout integrate e-commerce features on my site?",
+    answer:
+      "Absolutely. Web development firms in HSR Layout can integrate secure payment gateways, shopping carts, inventory management, and order tracking systems.",
+  },
+  {
+    question:
+      "How much does website development cost in HSR Layout?",
+    answer:
+      "Website development costs vary based on design, features, and size. On average, a small business site may cost ₹20,000–₹50,000, while advanced websites or e-commerce portals can range higher.",
+  },
+
+
 ];
 
 const terms = [

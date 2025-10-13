@@ -100,6 +100,38 @@ else if (
 ) {
   service = "Website Designing ";
 }
+else if (
+  currentPath === "/mobile-app-developers" ||
+  currentPath === "/mobile-app-developers"
+) {
+  service = "Mobile App Development";
+}
+else if (
+  currentPath === "/website-developers-near-me" ||
+  currentPath === "/website-developers-near-me"
+) {
+  service = "Website Development";
+}
+else if (
+  currentPath === "/website-development-company-in-mumbai" ||
+  currentPath === "/website-development-company-in-mumbai"
+) {
+  service = "Website Development";
+}
+else if (
+  currentPath === "/mobile-app-development-company-in-mumbai" ||
+  currentPath === "/mobile-app-development-company-in-mumbai"
+) {
+  service = "Website Development";
+}
+else if (
+  currentPath === "/2d-animation-studio-in-mumbai" ||
+  currentPath === "/2d-animation-studio-in-mumbai"
+) {
+  service = "2D Animations";
+}
+
+
 
     setFormData((prev) => ({
       ...prev,

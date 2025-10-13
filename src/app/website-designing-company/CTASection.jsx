@@ -43,7 +43,7 @@ export default function CTASection() {
               className={styles.ghostBtn}
               aria-label="Call now 9900566466"
             >
-              Call Now 9900566466
+              Call Now 
             </a>
           <button
             className={styles.primaryBtn}

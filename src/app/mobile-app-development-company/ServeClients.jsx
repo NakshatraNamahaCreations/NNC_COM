@@ -46,7 +46,7 @@ export default function ServeClients() {
   return (
     <section className={s.section} aria-labelledby="serve-title">
       <div className={s.container}>
-        <h2 id="serve-title" className={s.heading}>We Serve Clients Across</h2>
+        <h2 id="serve-title" className={s.heading}>Services Offered by Our Mobile App Developers</h2>
 
         <div className={s.grid}>
           {segments.map((seg) => (

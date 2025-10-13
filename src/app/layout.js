@@ -157,48 +157,43 @@ export default function RootLayout({ children }) {
         />
 
         {/* LocalBusiness */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "@id":
-                "https://www.nakshatranamahacreations.com/#localbusiness",
-              name: "Nakshatra Namaha Creations",
-              // image:
-              //   "https://www.nakshatranamahacreations.com/media/og/og-1200x630.jpg",
-              url: "https://www.nakshatranamahacreations.com",
-              telephone: "+91-9900566466",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                  "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
-                addressLocality: "Bengaluru",
-                addressRegion: "Karnataka",
-                postalCode: "560061",
-                addressCountry: "IN",
-              },
-              openingHours: ["Mo-Sa 09:30-18:30"],
-              priceRange: "₹₹",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: 120,
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "12.9716",
-                longitude: "77.5946",
-              },
-              sameAs: [
-                "https://www.facebook.com/nncdigital",
-                "https://www.instagram.com/nnc.digitalbengaluru",
-                "https://www.linkedin.com/company/nakshatra-namaha-creations",
-              ],
-            }),
-          }}
-        />
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      name: "Nakshatra Namaha Creations",
+      // image:
+      //   "https://www.nakshatranamahacreations.com/media/og/og-1200x630.jpg",
+      url: "https://www.nakshatranamahacreations.com",
+      telephone: "+91-9900566466",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560061",
+        addressCountry: "IN",
+      },
+      openingHours: ["Mo-Sa 09:30-18:30"],
+      priceRange: "₹₹",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "12.9716",
+        longitude: "77.5946",
+      },
+      sameAs: [
+        "https://www.facebook.com/nncdigital",
+        "https://www.instagram.com/nnc.digitalbengaluru",
+        "https://www.linkedin.com/company/nakshatra-namaha-creations",
+      ],
+    }),
+  }}
+/>
+
 
         {/* ====== TAGS / SCRIPTS ====== */}
 

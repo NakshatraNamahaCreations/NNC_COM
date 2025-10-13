@@ -42,11 +42,11 @@ export default function HeroBanner() {
             {/* LEFT */}
             <div className="col-lg-6">
               {/* Heading */}
-              <h1 className={`display-5 fw-bold lh-sm mb-3 ${styles.heroTitle}`}>
+              <h2 className={`display-5 fw-bold lh-sm mb-3 ${styles.heroTitle}`}>
                 Website Development Company
                 <br />
                 <span className={styles.heroSubtitle}>Build a Strong Digital Identity</span>
-              </h1>
+              </h2>
 
               {/* Stats */}
               <div className="row g-3">

@@ -433,7 +433,7 @@ export default function MobileNavbar() {
     },
     {
       name: "Web Development",
-      link: "/website-development-company-in-bangalore",
+      link: "/website-development-company",
       items: [
         { name: "Frontend Development", link: "/website-development-company-in-bangalore"},
         { name: "Full Stack Development", link: "/website-development-company-in-bangalore" },
@@ -449,7 +449,7 @@ export default function MobileNavbar() {
     },
     {
       name: "Software Development",
-      link: "/",
+      link: "/software-development-company-in-bangalore",
       items: [
         { name: "CRM Software Development", link: "/" },
         { name: "Enterprise Software Development", link: "/" },
@@ -462,7 +462,7 @@ export default function MobileNavbar() {
     },
     {
       name: "2D Animations",
-      link: "/2d-animation-studio-in-bangalore",
+      link: "/2d-animation-studio",
       items: [
         { name: "Explainer Videos", link: "/2d-animation-studio-in-bangalore" },
         { name: "Character Animation", link:"/2d-animation-studio-in-bangalore" },
@@ -472,7 +472,7 @@ export default function MobileNavbar() {
     },
     {
       name: "Mobile App Development",
-      link: "/mobile-app-development-company-in-bangalore",
+      link: "/mobile-app-development-company",
       items: [
         { name: "iOS Mobile App Development", link: "/mobile-app-development-company-in-bangalore" },
         { name: "Android Mobile App Development", link: "/mobile-app-development-company-in-bangalore" },
@@ -483,7 +483,10 @@ export default function MobileNavbar() {
     {
       name: "Corporate Video Production",
       link: "/corporate-video-production-company-in-bangalore",
-      items: [], // no sub-items
+      items: [
+        { name: "Corporate Film Makers", link: "/corporate-film-makers" },
+
+      ],  
     },
     {
       name: "Solutions",

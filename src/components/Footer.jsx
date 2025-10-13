@@ -4,10 +4,34 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Container, Row, Col } from "react-bootstrap";
 import QuickLinks from "@/components/QuickLinks";
 import Link from "next/link";
+import styles from "@/styles/PopularSearches.module.css";
+
+const data = [
+  {
+    label: "In India",
+    links: [
+   
+      { text: "Mumbai", href: "/website-development-company-in-mumbai" },
+      { text: "Hyderabad", href: "/website-development-company-in-hyderabad" },
+      { text: "Bangalore", href: "/website-development-company-in-bangalore" },
+      { text: "Mysore", href: "#" },
+    ],
+  },
+    {
+    label: "In Banglore",
+    links: [
+   
+      { text: "Hsr Layout", href: "/website-development-company-in-hsr-layout" },
+   
+    ],
+  }
+]
 
 export default function Footer() {
   return (
-    <Container style={{ color: "white" , paddingBottom:"100px"}}>
+
+    <>
+    <Container style={{ color: "white" }}>
       <Container
         style={{ padding: "50px 0", fontWeight: "600", letterSpacing: "1px" }}
         className="container-footer"
@@ -274,6 +298,33 @@ export default function Footer() {
           </Col>
         </Row>
       </Container>
+
     </Container>
+
+ <section className={`${styles.bar} ${styles.themeTeal}`} aria-labelledby="popular-title">
+      <div className={styles.inner}>
+         <h2 id="popular-title" className={styles.title}>
+          General Website Services
+        </h2>
+    <br />
+ 
+        <ul className={styles.list}>
+          {data.map((row, i) => (
+            <li className={styles.row} key={i}>
+              {/* Removed the label span */}
+              <span className={styles.label}>{row.label}:</span>
+              <nav className={styles.links} aria-label={row.label}>
+                {row.links.map((link, j) => (
+                  <a className={styles.link} href={link.href} key={j}>
+                    {link.text}
+                  </a>
+                ))}
+              </nav>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+    </>
   );
 }

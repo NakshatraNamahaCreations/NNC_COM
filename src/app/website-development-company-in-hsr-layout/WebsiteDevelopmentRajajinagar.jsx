@@ -50,7 +50,7 @@ export default function WebsiteDevelopmentRajajinagar() {
               {/* <Perfection/>
               <ContactUs1/> */}
               <ServicesSlider/>
-              <ContactSection/>
+              {/* <ContactSection/> */}
               <BlogTeasers/>
               <FaqSection/>
     </>

@@ -27,7 +27,7 @@ const features = [
   {
     title: "Quality Assurance",
     desc: "A mobile app development company ensures thorough QA and testing to deliver bug-free, secure, and high-performing apps—reducing downtime and post-launch issues.",
-    img: "/media/icons/shopping.png",
+    img: "/media/icons/high-quality.png",
   },
   {
     title: "Ongoing Support & Maintenance",

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-const websitedevBannerImg1 = "/media/webdev/webdevhyder.jpg";
+const websitedevBannerImg1 = "/media/webdev/bannerImg.png";
 const websitedevBannerImg2 = "/media/webdev/bannerImg2.png";
 
 const UnderstandingBusinessGoals =

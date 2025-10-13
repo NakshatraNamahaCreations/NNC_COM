@@ -1,3 +1,6 @@
+/* =========================
+   Section and Card Styles
+   ========================= */
 .servicesSection {
   padding: 60px 0;
   background: #e7f1f8;
@@ -21,6 +24,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   padding: 20px;
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .cardInner:hover {
@@ -34,6 +38,7 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .title {
@@ -46,16 +51,135 @@
 .desc {
   font-size: 18px;
   color: #333;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
-.readMore {
-  font-size: 18px;
-  color: #222;
-  font-weight: 600;
-  text-decoration: none;
+/* =========================
+   Slick Slider Overrides
+   ========================= */
+.slick-list {
+  overflow: visible;
 }
 
-.readMore:hover {
-  text-decoration: underline;
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  font-size: 0; /* hides "Previous"/"Next" text */
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -12px;
+}
+
+.slick-next {
+  right: -12px;
+}
+
+/* Remove default arrow icons */
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+/* Custom arrows */
+.slick-prev::after,
+.slick-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.slick-prev::after {
+  border-right: 8px solid #002a3a;
+  left: 14px;
+}
+
+.slick-next::after {
+  border-left: 8px solid #002a3a;
+  right: 14px;
+}
+
+/* Dots */
+.slick-dots {
+  position: static;
+  margin-top: 20px;
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slick-dots li {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  list-style: none;
+}
+
+/* Hide Slick's default nav UI completely */
+.slick-prev,
+.slick-next,
+.slick-dots {
+  display: none !important;
+}
+
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b9c7d3;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background: #002a3a;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .slick-prev {
+    left: 4px;
+  }
+  .slick-next {
+    right: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+  .img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    height: 150px;
+  }
+  .slick-prev,
+  .slick-next {
+    width: 36px;
+    height: 36px;
+  }
 }
