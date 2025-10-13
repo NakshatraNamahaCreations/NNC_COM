@@ -6,13 +6,13 @@ export const metadata = {
     "Start your digital journey with our Web Designing Company in Mumbai crafting unique websites. Book your free consultation with Nakshatra Namaha Creations.",
   alternates: {
     canonical:
-      "https://www.nakshatranamahacreations.com/web-development-company",
+      "https://www.nakshatranamahacreations.com/website-development-company-in-mumbai",
   },
   openGraph: {
     title: "Web Development Company | Free Consultation",
     description:
       "Start your digital journey with our Web Designing Company in Mumbai crafting unique websites. Book your free consultation with Nakshatra Namaha Creations.",
-    url: "https://www.nakshatranamahacreations.com/web-development-company",
+    url: "https://www.nakshatranamahacreations.com/website-development-company-in-mumbai",
     type: "website",
     siteName: "Nakshatra Namaha Creations",
   },

@@ -8,7 +8,7 @@ const websitedevBannerImg2 = "/media/webdev/bannerImg2.png";
 const UnderstandingBusinessGoals =
   "/media/webdev/Understanding Business Needs.png";
 const MarketResearchStrategyDevelopment =
-  "/media/webdev/Research & Strategy.png";
+  "/media/webdev/Research&Strategy.png";
 const Wireframe = "/media/webdev/Wireframing & Prototyping.png";
 const UXUI = "/media/webdev/UI_UX Design.png";
 const Websitedevelopment = "/media/webdev/Website Development.png";
