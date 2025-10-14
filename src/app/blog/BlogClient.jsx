@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col } from "react-bootstrap";
@@ -16,14 +16,16 @@ import Breadcrumbs from "@/components/BreadCrumbs";
 import ShimmerCard from "@/components/ShimmerCard";
 import BlogCategoryFilter from "./BlogCategoryFilter.jsx";
 
-// ✅ call your Next proxy route (no CORS/CSP headaches)
+// ===== API & ASSETS =====
 const API_URL = "https://api.nakshatranamahacreations.in/api/blogs";
-
-// used only for building image URLs
 const ASSET_BASE = "https://api.nakshatranamahacreations.in";
-// Static blog data
+
+// ===== PAGE SIZE (server-side) =====
+const PAGE_SIZE = 10;
+
+// ===== Static blogs (only show at the very end) =====
 const blogData = [
-    {
+ {
         id: 1,
         title: "Difference Between React And Nextjs in 2025",
         description:
@@ -255,8 +257,7 @@ const blogData = [
     },
 ];
 
-
-// ---------- helpers ----------
+// ===== helpers =====
 const slugify = (s = "") =>
   s.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
 
@@ -264,6 +265,7 @@ const parseDate = (d) => {
   const dt = new Date(d);
   return isNaN(dt.getTime()) ? null : dt;
 };
+
 const pickBestDate = (blog) => {
   const candidates = [blog?.publishedAt, blog?.createdAt, blog?.updatedAt, blog?.date];
   for (const c of candidates) {
@@ -273,20 +275,10 @@ const pickBestDate = (blog) => {
   return null;
 };
 
-
-
-const pick = (incoming, existing) => {
-  const v = typeof incoming === "string" ? incoming.trim() : incoming;
-  return (v === undefined || v === null || v === "") ? existing : v;
-};
-
-
-
-// Convert API item -> UI card
+// API item -> UI card
 const normalizeApi = (blog) => {
   const title = blog?.title ?? "Untitled";
   const slug = slugify(title);
-
   const rawBanner = blog?.bannerImage;
   const banner =
     typeof rawBanner === "string" && rawBanner.startsWith("http")
@@ -299,19 +291,17 @@ const normalizeApi = (blog) => {
     id: blog?._id ?? slug,
     title,
     description: (blog?.description || "").replace(/<[^>]+>/g, "").slice(0, 150),
-    date: pickBestDate(blog),        // <— important: no Date.now() fallback
+    date: pickBestDate(blog),
     category:
-  blog?.services?.length > 0
-    ? blog.services.join(", ") // combine multiple services as readable string
-    : blog?.category || "General",
-
+      blog?.services?.length > 0 ? blog.services.join(", ") : blog?.category || "General",
     link: `/blog/${slug}`,
     banner,
     _slug: slug,
+    _source: "api",
   };
 };
 
-// Convert static item -> UI card
+// Static item -> UI card (for end-of-list only)
 const normalizeStatic = (blog) => {
   const title = blog?.title ?? "Untitled";
   const slug = slugify(title);
@@ -319,179 +309,84 @@ const normalizeStatic = (blog) => {
     id: blog?.id ?? slug,
     title,
     description: blog?.description || "",
-    date: parseDate(blog?.date),     // static date string → Date or null
+    date: parseDate(blog?.date),
     category: blog?.category || "General",
     link: blog?.link || `/blog/${slug}`,
     banner: blog?.banner || "/media/blogs/placeholder.png",
     _slug: slug,
+    _source: "static",
   };
 };
 
-
-const BlogClient = () => {
-  const [allBlogs, setAllBlogs] = useState([]);
-  const [blogs, setBlogs] = useState([]);
-  const [visibleCards, setVisibleCards] = useState(9);
-  const [totalPages, setTotalPages] = useState(1); // if backend paginates
-  const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-const [activeCategory, setActiveCategory] = useState("All");
-const [categories, setCategories] = useState([]);
-
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
-  const router = useRouter();
-
-  const mergeBySlug = (apiCards, staticCards) => {
-  const map = new Map();
-
-  // seed with static (so every static blog is included)
-  for (const s of staticCards) map.set(s._slug, s);
-
-  // merge API into static, only overwriting when API actually has a value
-  for (const a of apiCards) {
-    const prev = map.get(a._slug);
-    if (!prev) {
-      map.set(a._slug, a);
-      continue;
-    }
-    const merged = {
-      ...prev,
-      id: pick(a.id, prev.id),
-      title: pick(a.title, prev.title),
-      description: pick(a.description, prev.description),
-      date: a.date instanceof Date ? a.date : prev.date, // keep static date if API has none
-      category: pick(a.category, prev.category),
-      link: pick(a.link, prev.link),
-      banner:
-        a.banner && !a.banner.includes("placeholder.png") ? a.banner : prev.banner,
-      _slug: prev._slug,
-    };
-    map.set(a._slug, merged);
-  }
-
-  return Array.from(map.values());
+// Sort by date desc (with safe parse)
+const toMs = (d) => {
+  const t = typeof d === "string" ? Date.parse(d) : d instanceof Date ? d.getTime() : NaN;
+  return Number.isNaN(t) ? -Infinity : t;
 };
 
-const fetchBlogs = async (service = "All") => {
-  setLoading(true);
-  try {
-    // build URL based on selected service
-    const url =
-      service === "All"
-        ? API_URL
-        : `${API_URL}?service=${encodeURIComponent(service)}`;
+const sortDescByDate = (arr = []) =>
+  [...arr].sort((a, b) => toMs(b.date) - toMs(a.date));
 
-    const res = await axios.get(url);
+// Build API URL for a page
+const buildUrl = ({ service = "All", page = 1, limit = PAGE_SIZE } = {}) => {
+  const u = new URL(API_URL);
+  if (service && service !== "All") u.searchParams.set("service", service);
+  u.searchParams.set("page", String(page));
+  u.searchParams.set("limit", String(limit));
+  return u.toString();
+};
 
-    const apiListRaw = Array.isArray(res?.data?.data)
-      ? res.data.data
-      : Array.isArray(res?.data)
-      ? res.data
-      : [];
+// Fetch a single server page
+const fetchBlogsPage = async (service = "All", page = 1) => {
+  const url = buildUrl({ service, page, limit: PAGE_SIZE });
+  const res = await axios.get(url);
 
-    const apiCards = apiListRaw.map(normalizeApi);
-    const staticCards = blogData.map(normalizeStatic);
-    const merged = mergeBySlug(apiCards, staticCards);
+  const payload = res?.data ?? {};
+  const list = Array.isArray(payload?.data) ? payload.data : [];
 
-    merged.sort((a, b) => {
-      const ad = a.date instanceof Date ? a.date.getTime() : -Infinity;
-      const bd = b.date instanceof Date ? b.date.getTime() : -Infinity;
-      return bd - ad;
-    });
-
-    const finalCards = merged.map((b) => ({
+  const apiCards = list.map(normalizeApi);
+  const pageCards = sortDescByDate(
+    apiCards.map((b) => ({
       ...b,
       date:
         b.date instanceof Date
-          ? b.date.toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })
-          : "",
-    }));
+          ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
+          : b.date, // keep string if already formatted
+    }))
+  );
 
-    // ✅ build category list from API services
-    const allServices = Array.from(
-      new Set(
-        apiListRaw.flatMap((b) => b.services || []).filter(Boolean)
-      )
-    );
+  const allServices = Array.from(new Set(list.flatMap((b) => b.services || []).filter(Boolean)));
 
-    setCategories(
-      allServices.length
-        ? allServices
-        : [
-            "Web Development",
-            "App Development",
-            "Corporate Video Production",
-            "Digital Marketing",
-            "Graphic Designing",
-            "3D Animations",
-            "B2B Marketing Service",
-            "Others",
-          ]
-    );
-
-    setBlogs(finalCards);
-    if (service === "All") setAllBlogs(finalCards);
-
-    setError(null);
-  } catch (err) {
-    console.error("Failed to fetch blogs:", err);
-    setError("Failed to load API blogs. Showing static data instead.");
-
-    const staticOnly = blogData
-      .map(normalizeStatic)
-      .sort((a, b) => {
-        const ad = a.date instanceof Date ? a.date.getTime() : -Infinity;
-        const bd = b.date instanceof Date ? b.date.getTime() : -Infinity;
-        return bd - ad;
-      })
-      .map((b) => ({
-        ...b,
-        date:
-          b.date instanceof Date
-            ? b.date.toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })
-            : "",
-      }));
-
-    setCategories([]);
-    setAllBlogs(staticOnly);
-    setBlogs(staticOnly);
-  } finally {
-    setLoading(false);
-  }
-};
-
-
-
-
-  useEffect(() => {
-    fetchBlogs();
-    // if you truly paginate server-side, include currentPage in the dependency
-    // and pass it as axios params above.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [/* currentPage */]);
-
-const handleFilterChange = (cat) => {
-  setActiveCategory(cat);
-  setVisibleCards(9);
-  fetchBlogs(cat); // ✅ now fetches directly from backend
-};
-
-
-
-  const handleViewMore = () => {
-    // client-side "load more" from the merged list
-    // If your backend paginates, you can switch to setCurrentPage(prev => prev + 1)
-    setVisibleCards((prev) => Math.min(prev + 9, blogs.length));
+  return {
+    pageCards,
+    meta: {
+      totalPages: payload.totalPages ?? 1,
+      currentPage: payload.currentPage ?? page,
+      totalDocuments: payload.totalDocuments ?? pageCards.length,
+      categories: allServices,
+    },
   };
+};
+
+const BlogClient = () => {
+  // API pagination state
+  const [apiBlogs, setApiBlogs] = useState([]);     // ONLY API items live here
+  const [totalPages, setTotalPages] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // static-at-end state
+  const [staticBlogs, setStaticBlogs] = useState([]); // precomputed, sorted
+  const [showStatic, setShowStatic] = useState(false); // flip to true when last API page is loaded
+
+  // misc state
+  const [loading, setLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [categories, setCategories] = useState([]);
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
+  const router = useRouter();
 
   const headingSpring = useSpring({
     opacity: inView ? 1 : 0,
@@ -501,28 +396,154 @@ const handleFilterChange = (cat) => {
 
   const handleBlogCardClick = (link) => router.push(link);
 
+  // Precompute + sort static once (date desc)
+  useEffect(() => {
+    const statics = sortDescByDate(
+      blogData.map(normalizeStatic).map((b) => ({
+        ...b,
+        date:
+          b.date instanceof Date
+            ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
+            : b.date,
+      }))
+    );
+    setStaticBlogs(statics);
+  }, []);
+
+  // Initial load for "All", page 1 (API only)
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      try {
+        const { pageCards, meta } = await fetchBlogsPage("All", 1);
+        setApiBlogs(pageCards);
+        setTotalPages(meta.totalPages);
+        setCurrentPage(meta.currentPage);
+        setCategories(
+          meta.categories?.length
+            ? meta.categories
+            : [
+                "Web Development",
+                "App Development",
+                "Corporate Video Production",
+                "Digital Marketing",
+                "Graphic Designing",
+                "3D Animations",
+                "B2B Marketing Service",
+                "Others",
+              ]
+        );
+        setShowStatic(meta.currentPage >= meta.totalPages); // if only 1 page, show static immediately
+        setError(null);
+      } catch (e) {
+        console.error("Failed to fetch blogs:", e);
+        setError("Failed to load API blogs.");
+        setApiBlogs([]);
+        setTotalPages(1);
+        setCurrentPage(1);
+        setShowStatic(true); // still show static so page isn't empty
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  // Category change: reset pagination and API list, hide static until last page reached
+  const handleFilterChange = async (cat) => {
+    setActiveCategory(cat);
+    setCurrentPage(1);
+    setTotalPages(1);
+    setApiBlogs([]);
+    setShowStatic(false);
+
+    setLoading(true);
+    try {
+      const { pageCards, meta } = await fetchBlogsPage(cat, 1);
+      setApiBlogs(pageCards);
+      setTotalPages(meta.totalPages);
+      setCurrentPage(meta.currentPage);
+      if (meta.categories?.length) setCategories(meta.categories);
+      // only show static when we've fully exhausted API pages for this service
+      setShowStatic(meta.currentPage >= meta.totalPages);
+      setError(null);
+    } catch (e) {
+      console.error("Failed to fetch blogs for category:", e);
+      setError("Failed to load API blogs for this category.");
+      setApiBlogs([]);
+      setTotalPages(1);
+      setCurrentPage(1);
+      setShowStatic(true); // allow static so page has content
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // View more: fetch next API page and append; if it was the last page, flip showStatic=true
+  const handleViewMore = async () => {
+    if (currentPage >= totalPages) return;
+    setLoadingMore(true);
+    try {
+      const nextPage = currentPage + 1;
+      const { pageCards } = await fetchBlogsPage(activeCategory, nextPage);
+      setApiBlogs((prev) => [...prev, ...pageCards]);
+      setCurrentPage(nextPage);
+      if (nextPage >= totalPages) setShowStatic(true); // now we can append static at the end
+    } catch (e) {
+      console.error("Failed to load more blogs:", e);
+    } finally {
+      setLoadingMore(false);
+    }
+  };
+
+  // Final list to render: API first; add static only when showStatic=true
+  const listToRender = useMemo(
+    () => (showStatic ? [...apiBlogs, ...staticBlogs] : apiBlogs),
+    [apiBlogs, staticBlogs, showStatic]
+  );
+
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
     { name: "Blog", link: "/blog" },
   ];
 
+  // Optional client-side category filter on the final list.
+  // (Server already filters API by service. Static is appended only at the end.)
+  const filtered = listToRender.filter((card) => {
+    if (activeCategory === "All") return true;
+    const cats = card.category ? [String(card.category).toLowerCase()] : [];
+    return cats.some((c) => c.includes(String(activeCategory).toLowerCase()));
+  });
+
   return (
     <div>
       <Breadcrumbs paths={breadcrumbPaths} />
 
-      <div style={{ height: "90vh" }} className="blogBanner d-flex align-items-center justify-content-center px-4">
+      <div
+        style={{ height: "90vh" }}
+        className="blogBanner d-flex align-items-center justify-content-center px-4"
+      >
         <div style={{ marginTop: "15%", marginBottom: "4%", textAlign: "center" }}>
           <h1
-            style={{ fontWeight: "900", fontSize: "65px",  marginBottom: "1%" }}
+            style={{ fontWeight: "900", fontSize: "65px", marginBottom: "1%" }}
             className="h1-careers"
           >
             Learn{" "}
             <span>
-              <FontAwesomeIcon icon={faCircle} size="xs" style={{ color: "#000000", width: 20, height: 20 }} className="h1-about-banner-icon" />
+              <FontAwesomeIcon
+                icon={faCircle}
+                size="xs"
+                style={{ color: "#000000", width: 20, height: 20 }}
+                className="h1-about-banner-icon"
+              />
             </span>{" "}
             Write{" "}
             <span>
-              <FontAwesomeIcon icon={faCircle} size="xs" style={{ color: "#000000", width: 20, height: 20 }} className="h1-about-banner-icon" />
+              <FontAwesomeIcon
+                icon={faCircle}
+                size="xs"
+                style={{ color: "#000000", width: 20, height: 20 }}
+                className="h1-about-banner-icon"
+              />
             </span>{" "}
             Share
           </h1>
@@ -534,23 +555,25 @@ const handleFilterChange = (cat) => {
       <Container style={{ textAlign: "center" }}>
         <animated.h2
           ref={ref}
-          style={{ fontWeight: "900", fontSize: "28px", letterSpacing: "3px", marginBlock: "6%", ...headingSpring }}
+          style={{
+            fontWeight: "900",
+            fontSize: "28px",
+            letterSpacing: "3px",
+            marginBlock: "6%",
+            ...headingSpring,
+          }}
           className="blogtext"
         >
           Discover the latest news, trends and innovative cultural trends brought to you by Nakshatra Namaha Creations.
         </animated.h2>
       </Container>
-<Container style={{ marginTop: "20px", marginBottom: "30px" }}>
-   <BlogCategoryFilter
-  // items={["All", ...categories]}   
-  onChange={handleFilterChange}
-/>
 
-</Container>
+      <Container style={{ marginTop: "20px", marginBottom: "30px" }}>
+        <BlogCategoryFilter onChange={handleFilterChange} />
+      </Container>
+
       <Container>
-
-  {/* Blog Listing Section */}
-           {loading ? (
+        {loading ? (
           <Row>
             {[...Array(9)].map((_, index) => (
               <Col sm={4} key={index} className="mb-4">
@@ -562,32 +585,7 @@ const handleFilterChange = (cat) => {
           <p>{error}</p>
         ) : (
           <Row>
-           {blogs
-  .filter((card) => {
-    if (activeCategory === "All") return true;
-
-    // normalize all categories/services to lowercase array
-    const blogCategories = Array.isArray(card.services)
-      ? card.services.map((s) => s.toLowerCase())
-      : (card.category ? [card.category.toLowerCase()] : []);
-
-    // handle multiple selected filters
-    if (Array.isArray(activeCategory)) {
-      return activeCategory.some((cat) =>
-        blogCategories.some((bcat) => bcat.includes(cat.toLowerCase()))
-      );
-    }
-
-    // fallback if only one string is selected
-    return blogCategories.some((bcat) =>
-      bcat.includes(activeCategory.toLowerCase())
-    );
-  })
-  .slice(0, visibleCards)
-  .map((card, index) => (
-
-
-
+            {filtered.map((card, index) => (
               <Col sm={4} key={`${card.id}-${index}`} className="mb-4">
                 <div onClick={() => handleBlogCardClick(card.link)} style={{ cursor: "pointer" }}>
                   <BlogCard card={card} />
@@ -597,9 +595,15 @@ const handleFilterChange = (cat) => {
           </Row>
         )}
 
-        {visibleCards < blogs.length && (
+        {/* Show "View more" only while there are more API pages */}
+        {!loading && !error && currentPage < totalPages && (
           <div style={{ marginTop: "2%" }}>
-            <ViewAllBtn onClick={handleViewMore} />
+            <ViewAllBtn onClick={handleViewMore} disabled={loadingMore} />
+            {loadingMore && (
+              <div style={{ marginTop: 12, fontSize: 13, opacity: 0.7 }}>
+                Loading more…
+              </div>
+            )}
           </div>
         )}
       </Container>
