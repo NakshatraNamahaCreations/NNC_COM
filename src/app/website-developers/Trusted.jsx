@@ -44,13 +44,13 @@ export default function Trusted() {
         
           {/* Right image */}
                <div className="col-lg-7">
-            <h2 className={styles.title}>Trying to Find the Website Development Company?</h2>
+            <h2 className={styles.title}>Why Partner with Our Website Developers</h2>
             <p className={styles.lead}>
-              Finding a credible Website Development Company is what separates an average online presence from a highly interactive digital platform that can ensure the increase of your business. The technical side of things, paired with the artistic side of things, is what sets us apart. It results in websites that are visually stunning, tightly secured, and perform well. The team here is able to adapt the style of every project to your goals whether first website of the startup or complete brand revamp.
-              </p>
+             By hiring us, you gain access to a team of certified website developers that are committed to your success. We use the knowledge of technology with a clear understanding of the client’s needs to produce websites which not just aesthetically pleasing but also give value to your business. Our method revolves around the establishment of mutual trust relations with clients, open communication, and provision of solutions that can propel your business to web-based growth.
+             </p>
           <p className={styles.lead}>
-             The Creative Website Development Company is the answer to all of your worries as they offer solutions covering the whole gamut starting from domain and hosting to mobile-friendly design and advanced CMS integration. The firm also provides you with services like E-commerce, website maintenance, and professional redesigns, thus making it easier for you to access all your digital needs in one place. We don’t want to limit the scope of what you get to just a website. We want to be partners in your long-term strategy for online success.
-                </p>
+            By partnering with our experienced website developers, you gain access to innovative ideas, reliable project execution, and a results-driven mindset. We ensure every project meets high standards of performance, scalability, and security—helping you achieve a stronger digital presence and long-term growth.
+              </p>
          
           </div>
         </div>

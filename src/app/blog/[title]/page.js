@@ -1,16 +1,43 @@
 // app/blog/[title]/page.js
 import BlogDetailsClient from "./BlogDetailsClient.jsx";
 
-const API = "https://api.nakshatranamahacreations.in";
+const API_BASE = "https://api.nakshatranamahacreations.in";
 
+// utils
 const stripHtml = (html = "") => html.replace(/<[^>]*>/g, "");
 const slugify = (s = "") =>
   s.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
 
-export async function generateMetadata({ params }) {
-  // In your project, params.title actually contains the SLUG
-  const routeSlug = params?.title ?? "";
+// paginate the real API until we find the blog (or exhaust pages)
+async function findBlogBySlug(routeSlug) {
+  let page = 1;
+  let totalPages = 1;
 
+  while (page <= totalPages) {
+    const res = await fetch(
+      `${API_BASE}/api/blogs?page=${page}&limit=50`,
+      { cache: "no-store" }
+    );
+
+    if (!res.ok) break;
+
+    const json = await res.json();
+    const list = Array.isArray(json?.data) ? json.data : [];
+    totalPages = Number(json?.totalPages) || 1;
+
+    const found =
+      list.find((b) => b?.slug === routeSlug) ||
+      list.find((b) => slugify(b?.title || "") === routeSlug);
+
+    if (found) return found;
+    page += 1;
+  }
+
+  return null;
+}
+
+export async function generateMetadata({ params }) {
+  const routeSlug = params?.title || "";
   const canonical = `https://www.nakshatranamahacreations.com/blog/${routeSlug}`;
 
   if (!routeSlug) {
@@ -21,23 +48,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  // Hit the working endpoint you verified in Postman
-  const res = await fetch(`${API}/api/blogs`, { cache: "no-store" });
-  if (!res.ok) {
-    return {
-      title: "Blog not found | Nakshatra Namaha Creations",
-      description: "Could not fetch blog data.",
-      alternates: { canonical },
-    };
-  }
-
-  const json = await res.json();
-  const blogs = Array.isArray(json?.data) ? json.data : [];
-
-  // Match by stored slug first, then by slugified title as a safety net
-  const blog =
-    blogs.find((b) => b?.slug === routeSlug) ||
-    blogs.find((b) => slugify(b?.title || "") === routeSlug);
+  // fetch across pages so meta works for any post
+  const blog = await findBlogBySlug(routeSlug);
 
   if (!blog) {
     return {
@@ -52,10 +64,10 @@ export async function generateMetadata({ params }) {
     blog.metaDescription || stripHtml(blog.description || "").slice(0, 160);
 
   const bannerImage =
-    blog.bannerImage?.startsWith?.("http")
+    typeof blog?.bannerImage === "string" && blog.bannerImage.startsWith("http")
       ? blog.bannerImage
-      : blog.bannerImage
-      ? `${API}/uploads/${blog.bannerImage}`
+      : blog?.bannerImage
+      ? `${API_BASE}/uploads/${blog.bannerImage}`
       : "https://www.nakshatranamahacreations.com/media/blogs/placeholder.png";
 
   return {
@@ -69,7 +81,7 @@ export async function generateMetadata({ params }) {
       type: "article",
       images: bannerImage ? [{ url: bannerImage, width: 1200, height: 630, alt: title }] : [],
     },
-    twitter: {
+  twitter: {
       card: "summary_large_image",
       title,
       description,
@@ -78,10 +90,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
+// ensure this route is always dynamic so we don’t cache a wrong page
 export const dynamic = "force-dynamic";
 
 export default function Page({ params }) {
-  // Pass the route slug down so the client renders the same blog
   return <BlogDetailsClient slug={params.title} />;
 }

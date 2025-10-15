@@ -31,7 +31,7 @@ export default function HeroBanner() {
                 <a href="/services" className={styles.crumbLink}>Services</a>
               </li>
               <li className={`breadcrumb-item active ${styles.crumbActive}`} aria-current="page">
-                Website Developers Near Me
+                Website Developers 
               </li>
             </ol>
           </nav>
@@ -43,7 +43,7 @@ export default function HeroBanner() {
             <div className="col-lg-6">
               {/* Heading */}
               <h2 className={`display-5 fw-bold lh-sm mb-3 ${styles.heroTitle}`} >
-                Website Developers Near Me
+                Website Developers 
                 <br />
                 <span className={styles.heroSubtitle}>Shape a Modern Virtual Branding</span>
               </h2>

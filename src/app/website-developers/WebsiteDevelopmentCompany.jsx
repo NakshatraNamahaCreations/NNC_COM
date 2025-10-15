@@ -13,6 +13,7 @@ import ServeClients from "./ServeClients";
 
 import WhyChooseUs from "./WhyChooseUs";
 import FaqSection from './FaqSection';
+import TestimonialsCarousel from './TestimonialsCarousel';
 
 const ourworkData = [
  {
@@ -94,13 +95,14 @@ export default function WebsiteDevelopmentCompany() {
         </p>
            </div>
     <Our_Service cardData={ourworkData} />
- {/* <Trusted /> */}
+ <Trusted />
       <FeaturesGrid2 />
       {/* <ServeClients/> */}
       {/* <ServiceExcellence/> */}
       {/* <ClientSegments/> */}
       <ServeClients/>
       <WhyChooseUs/>
+      <TestimonialsCarousel/>
       <FaqSection/>
  
     </>

@@ -32,7 +32,7 @@ export default function CTASection() {
   Connect with Expert Website Developers Near You
 </h2>
 <p className={styles.sub}>
-  Ready to launch your next website? Our local web developers bring ideas to life with responsive design, modern tech, and SEO-ready performance. Let’s build something great together.
+ Our website developers work closely with clients, ensuring regular communication and timely project delivery.  We provide clear milestones, reports, and ongoing consultation throughout the development journey.
 </p>
 
 

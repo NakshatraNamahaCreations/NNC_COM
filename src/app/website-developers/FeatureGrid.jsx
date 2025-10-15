@@ -5,29 +5,29 @@ import styles from "../../styles/FeatureGrid.module.css";
 
 const features = [
   {
-    title: "Business Website Development",
-    desc: "Our experienced website developers near me create responsive, user-friendly business websites designed to highlight your brand and generate leads.",
+    title: "Discovery & Strategy",
+    desc: "We start by understanding your business objectives, target audience, and project scope to build a clear roadmap for success.",
     img: "/media/icons/mobile.png",
   },
   {
-    title: "E-Commerce Website Development",
-    desc: "Work with website developers near me to build secure online stores with smooth checkout experiences, product catalogs, and fast-loading product pages.",
-      img: "/media/icons/shopping.png",
+    title: "Design & Wireframing",
+    desc: "Our creative team collaborates closely to create user-focused designs and detailed wireframes, ensuring a seamless transition from concept to development.",
+      img: "/media/icons/growth-chart.png",
   },
   {
-    title: "CMS Website Solutions",
-    desc: "We offer flexible CMS-based websites through website developers near me, allowing you to manage and update your content without technical challenges.",
-   img: "/media/icons/cms.png",
+    title: "Development & Integration",
+    desc: "The technical team brings the designs to life by writing clean, efficient code and integrating the necessary tools, features, and APIs.",
+   img: "/media/icons/web.png",
   },
   {
-    title: "Custom Web Applications",
-    desc: "Get powerful and scalable custom solutions with the help of website developers near me who understand your unique business requirements.",
-    img: "/media/icons//online-analysis.png",
+    title: "Testing & Quality Checks",
+    desc: "Rigorous testing is carried out to identify and resolve any issues, guaranteeing optimal performance, responsiveness, and security before launch.",
+    img: "/media/icons/online-analysis.png",
   },
   {
-    title: "Website Redesign & Upgrades",
-    desc: "Our professional website developers near me revamp outdated websites with modern designs, improved navigation, and better performance.",
-    img: "/media/icons/responsive-design.png",
+    title: "Launch & Post-Launch Support",
+    desc: "Once the site is live, we provide ongoing support, updates, and performance monitoring to ensure it continues to deliver a reliable user experience.",
+    img: "/media/icons/technical-support.png",
   },
 //   {
 //     title: "Performance, SEO & CWV",
@@ -41,7 +41,7 @@ export default function FeatureGrid() {
     <section className={styles.section}>
       <div className="container">
         <h2 className="text-center fw-bold mb-5">
-         Services We Provide
+         Our Proven Development Process
         </h2>
 
         <div className={styles.grid}>
