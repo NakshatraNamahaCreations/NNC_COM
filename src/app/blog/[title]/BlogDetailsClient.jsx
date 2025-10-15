@@ -9,47 +9,55 @@ import BlogContactForm from "@/components/blogs/BlogContactForm";
 import Icons from "@/components/Icons";
 import Script from "next/script";
 import "@/styles/BlogsFaqStyle.css";
-import BlogsGridByService from "../BlogsGridByService";
 
-// Your Next.js API proxy that returns paginated list from the backend
-const API_PROXY = "/api/blogs";
+// SAME API as grid
+const API_URL = "https://api.nakshatranamahacreations.in/api/blogs";
 const ASSET_BASE = "https://api.nakshatranamahacreations.in";
 
-// (optional) local static fallback list
+// If you append static blogs in the grid, copy that same array here too.
+// If not using static posts, leave as [].
 const blogData = [];
 
 const slugify = (s = "") =>
   s.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
 
-// ✅ Normalize ALL fields you need
-const normalizeApi = (item) => ({
-  id: item?._id,
-  slug: item?.slug || slugify(item?.title || ""),
-  title: item?.title ?? "Untitled",
-  description: item?.description ?? "",
-  metaTitle: item?.metaTitle || item?.title || "Untitled",
-  metaDescription: item?.metaDescription || "",
-  services: Array.isArray(item?.services) ? item.services : [],
-  faqs: Array.isArray(item?.faqs) ? item.faqs : [],
-  bannerImage: item?.bannerImage?.startsWith?.("http")
-    ? item.bannerImage
-    : item?.bannerImage
-    ? `${ASSET_BASE}/uploads/${item.bannerImage}`
-    : "/media/blogs/placeholder.png",
-  createdAt: item?.createdAt || new Date().toISOString(),
-  updatedAt: item?.updatedAt || item?.createdAt || new Date().toISOString(),
-});
+const normalizeApi = (item) => {
+  const title = item?.title ?? "Untitled";
+  const computedSlug = item?.slug || slugify(title);
+  const rawBanner = item?.bannerImage;
+
+  return {
+    id: item?._id ?? computedSlug,
+    slug: computedSlug,
+    title,
+    description: item?.description ?? "",
+    metaTitle: item?.metaTitle || title,
+    metaDescription: item?.metaDescription || "",
+    services: Array.isArray(item?.services) ? item.services : [],
+    faqs: Array.isArray(item?.faqs) ? item.faqs : [],
+    bannerImage:
+      typeof rawBanner === "string" && rawBanner.startsWith("http")
+        ? rawBanner
+        : rawBanner
+        ? `${ASSET_BASE}/uploads/${rawBanner}`
+        : "/media/blogs/placeholder.png",
+    createdAt: item?.createdAt || new Date().toISOString(),
+    updatedAt: item?.updatedAt || item?.createdAt || new Date().toISOString(),
+  };
+};
 
 export default function BlogDetailsPage() {
-  const { title: routeSlug } = useParams();
+  const params = useParams();
+  const routeSlugRaw = params?.title;
+  const routeSlug = Array.isArray(routeSlugRaw)
+    ? routeSlugRaw[0]
+    : String(routeSlugRaw || "").toLowerCase();
 
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
-
-  // FAQ accordion state
   const [openIndex, setOpenIndex] = useState(null);
-  const toggleFAQ = (idx) => setOpenIndex((prev) => (prev === idx ? null : idx));
+  const toggleFAQ = (idx) => setOpenIndex((p) => (p === idx ? null : idx));
 
   const staticCards = useMemo(
     () =>
@@ -69,85 +77,63 @@ export default function BlogDetailsPage() {
     let cancelled = false;
 
     const run = async () => {
+      if (!routeSlug) return;
+
       setLoading(true);
       setErr(null);
 
       try {
-        // find by slug from paginated list
-        let found = null;
-        let page = 1;
-        let totalPages = 1;
+        // 🔑 Fetch a BIG page once so any clicked post is available
+        const res = await axios.get(API_URL, {
+          params: { page: 1, limit: 500 }, // increase if you have more than 500
+        });
 
-        while (!found && page <= totalPages) {
-          const res = await axios.get(API_PROXY, { params: { page } });
-          const data = Array.isArray(res?.data?.data) ? res.data.data : [];
-          totalPages = Number(res?.data?.totalPages) || 1;
+        const payload = res?.data ?? {};
+        const list = Array.isArray(payload?.data) ? payload.data : [];
+        const items = list.map(normalizeApi);
 
-          for (const raw of data) {
-            const n = normalizeApi(raw);
-            if (n.slug === routeSlug || slugify(n.title) === routeSlug) {
-              found = n;
-              break;
-            }
-          }
-          page += 1;
-        }
+        let found =
+          items.find(
+            (n) => n.slug === routeSlug || slugify(n.title) === routeSlug
+          ) || null;
 
-        // static fallback
-        if (!found) {
+        // Fallback to static if you use static cards in the grid
+        if (!found && staticCards.length) {
           found = staticCards.find((b) => b._slug === routeSlug) || null;
         }
 
-        if (!cancelled) {
-          if (found) {
-            const dateObj = new Date(found.createdAt);
-            setBlog({
-              ...found,
-              date: isNaN(dateObj)
-                ? ""
-                : dateObj.toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }),
-            });
-          } else {
-            setErr("Blog not found.");
-          }
-          setLoading(false);
+        if (cancelled) return;
+
+        if (found) {
+          const dateObj = new Date(found.createdAt);
+          setBlog({
+            ...found,
+            date: isNaN(dateObj.getTime())
+              ? ""
+              : dateObj.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }),
+          });
+          setErr(null);
+        } else {
+          setErr("Blog not found.");
         }
       } catch (e) {
-        if (!cancelled) {
-          console.error("Fetch blog failed:", e);
-          const fallback = staticCards.find((b) => b._slug === routeSlug);
-          if (fallback) {
-            const dateObj = new Date(fallback.createdAt);
-            setBlog({
-              ...fallback,
-              date: isNaN(dateObj)
-                ? ""
-                : dateObj.toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }),
-            });
-            setErr(null);
-          } else {
-            setErr("Blog not found.");
-          }
-          setLoading(false);
-        }
+        console.error("Fetch blog failed:", e);
+        if (!cancelled) setErr("Blog not found.");
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     };
 
-    if (routeSlug) run();
+    run();
     return () => {
       cancelled = true;
     };
   }, [routeSlug, staticCards]);
 
-  // --- JSON-LD ---
   const articleSchema =
     blog && {
       "@context": "https://schema.org",
@@ -177,7 +163,7 @@ export default function BlogDetailsPage() {
     };
 
   const faqSchema =
-    blog && blog.faqs?.length
+    blog && Array.isArray(blog.faqs) && blog.faqs.length
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -195,7 +181,10 @@ export default function BlogDetailsPage() {
         { name: "Blog", link: "/blog" },
         { name: blog.title, link: `/blog/${routeSlug}` },
       ]
-    : [];
+    : [
+        { name: "Home", link: "/" },
+        { name: "Blog", link: "/blog" },
+      ];
 
   if (loading) return <p>Loading...</p>;
   if (err || !blog) return <p>{err || "Blog not found."}</p>;
@@ -230,10 +219,8 @@ export default function BlogDetailsPage() {
             </div>
 
             <div className="mt-5 ms-lg-4 mx-3" id="content" style={{ textAlign: "justify" }}>
-              {/* Body */}
               <div dangerouslySetInnerHTML={{ __html: blog.description }} />
 
-              {/* ✅ FAQs only (styled like your screenshot) */}
               {Array.isArray(blog.faqs) && blog.faqs.length > 0 && (
                 <section className="faq-container mt-5">
                   <div className="service-mainhead">
@@ -261,8 +248,6 @@ export default function BlogDetailsPage() {
                 </section>
               )}
             </div>
-            <br />
-            {/* <BlogsGridByService/> */}
           </Col>
 
           <Col sm={3} className="p-lg-0 p-4">
