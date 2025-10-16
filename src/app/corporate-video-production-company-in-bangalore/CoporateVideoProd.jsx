@@ -312,230 +312,163 @@ export default function CoporateVideoProd() {
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ---------- Organization ---------- */
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/office-photo.jpg",
-        url: "https://www.nakshatranamahacreations.com/",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          Longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+
+    /* ---------- LocalBusiness ---------- */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image":
+        "https://www.nakshatranamahacreations.com/media/BannerImage.png",
+      "url":
+        "https://www.nakshatranamahacreations.com/corporate-video-production-company-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Corporate Video Production",
-        },
-        author: {
-          "@type": "Person",
-          name: "Sanjeev K",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "We needed a fresh and modern logo and the team exceeded our expectations. Their approach was structured and they ensured every element aligned with our brand identity. The final design was impressive and highly effective for our business.",
-        datePublished: "2025-05-01",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Corporate Video Production",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    /* ---------- FAQPage ---------- */
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes your video production services different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We focus on creating visually engaging content that effectively communicates your message. Every video is crafted with a strategic approach to enhance brand impact."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Anlit C",
+        {
+          "@type": "Question",
+          "name": "How does a Corporate Video Production Company in Bangalore help businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professional video production company enhances brand visibility, simplifies complex ideas, and creates engaging content for marketing, training, and promotions."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.8",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Do you handle live streaming for corporate events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide high-quality live streaming services for conferences, product launches, and webinars."
+          }
         },
-        reviewBody:
-          "We approached them for UI/UX design and they created an intuitive, user-friendly interface. Their creative approach and industry knowledge helped us achieve a professional and modern look. The designs were well-optimized for digital platforms.",
-        datePublished: "2025-04-20",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Corporate Video Production",
+        {
+          "@type": "Question",
+          "name": "Do you offer voiceovers and subtitles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide professional voiceovers and multilingual subtitles to make videos more accessible and engaging for a global audience."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Narayan Mehata",
+        {
+          "@type": "Question",
+          "name": "Do you provide animation or motion graphics services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer animations, motion graphics, and visual effects to enhance video storytelling and overall visual appeal."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "How do we get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reach out to us with your project details, and our team will schedule a discussion to understand your vision and guide you through the next steps."
+          }
+        }
+      ]
+    },
+
+    /* ---------- BreadcrumbList ---------- */
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody:
-          "Their designs are professional, unique, and highly effective for marketing. The team took the time to understand our business and delivered creative solutions that enhanced our branding. We highly recommend them for graphic design services.",
-        datePublished: "2025-03-15",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Corporate Video Production",
-        },
-        author: {
-          "@type": "Person",
-          name: "Karthik C",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.9",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Working with Nakshatra Namaha Creations was a seamless experience. They understood our requirements and created designs that were both professional and engaging. Their expertise in branding and marketing materials added great value to our business.",
-        datePublished: "2025-05-10",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What makes your video production services different?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We focus on creating visually engaging content that effectively communicates your message. Every video is crafted with a strategic approach to enhance brand impact.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How does a Corporate Video Production Company in Bangalore help businesses?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A professional video production company enhances brand visibility, simplifies complex ideas and creates engaging content for marketing, training and promotions.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you handle live streaming for corporate events?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we provide high-quality live streaming services for conferences, product launches and webinars.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you offer voiceovers and subtitles?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we provide professional voiceovers and multilingual subtitles to make videos more accessible.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you provide animation or motion graphics services?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we offer animations, motion graphics and visual effects to enhance video storytelling and appeal.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do we get started?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Reach out to us with your project details and we will guide you through the next steps.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Corporate Video Production Company in Bangalore | Corporate Videos",
-            item: "https://www.nakshatranamahacreations.com/corporate-video-production-company-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Corporate Video Production Company in Bangalore",
+          "item":
+            "https://www.nakshatranamahacreations.com/corporate-video-production-company-in-bangalore"
+        }
+      ]
+    }
+  ]
+};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -612,9 +545,15 @@ fbq('track', 'PageView');`}
         </noscript>
         {/* <!-- End Meta Pixel Code --> */}
 
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+       <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
         <Breadcrumbs paths={breadcrumbPaths} />
         <Container style={{ marginBottom: "5%" }}>
           <Row className="d-flex justify-content-between align-items-center gap-5">

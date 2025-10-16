@@ -4,58 +4,41 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/styles/Testimonials.module.css";
 import styles1 from "@/styles/WhyAnuvic.module.css";
-/* Put these files in: /public/testimonials/
-   - arjun.png
-   - dr-manoj.png
-   - ramasubramaniam.png
-   - senthil-nathan.png
-   - ram-gopalan.png
-   - mansimar-aneja.png
-   - m-subramanian.png
-   - mezjan-dallas.png
-   - placeholder.png  (fallback)
-*/
+
 const clientReviews = [
   {
-    name: "Ranjani Sivaraj",
+    name: "Ananya R",
     role: "Co-Founder",
     company: "RaAnAr Agro Foods",
-    text:"I had a great experience working with Nakshatra Namaha Creations on developing my website. They were professional, responsive and ensured the website was designed exactly as I envisioned. The final result looks clean, functional and user-friendly. Looking forward to continuing with their digital marketing services next!",
+    text:"Working with Nakshatra Namaha Creations was a great experience. As a small business owner, I needed a professional, easy-to-manage site. They delivered. If you need a reliable Web Design Company in HSR Layout, choose them",
       img: "/media/gif/man (1).png",
   },
   {
-    name: "Sudhakar S",
+    name: "Rahul Mehta",
     role: "Doctor",
     company: "Dr Smilez",
     text:
-       "We are absolutely thrilled with our new website developed by Nakshtra Namaha! Their design perfectly captured our brand aesthetic while creating a user-friendly experience that seamlessly navigates visitors through our key information. The team was incredibly responsive to our feedback, exceeding expectations with their professionalism and attention to detail throughout the entire process. We highly recommend them to anyone looking for a top-notch website development solution.",
+       "Nakshatra Namaha Creations is the most dependable Website Development Company in HSR Layout. Our logistics website is smooth, user-friendly, and brings more inquiries.",
      img: "/media/gif/man (1).png",
   },
     {
-    name: "Chaandini Srinivas",
+    name: "Reema D",
     role: "CEO",
     company: "Early Hearing Experts",
     text:
-      "Mr. HARISH is excellent in understanding client requirement and quick response... Highly appreciated.. A place where,we can fulfill all your requirements & they give a right base for our Ideas. The best support team, they guide to improve our ideas too and they give chance to prove their talents.",
+      "Our pharma site needed responsive UX and technical documentation. This Website Development Company in HSR Layout handled compliance and content with care",
    img: "/media/gif/woman (1).png",
   },
   {
-    name: "Make My documents",
+    name: "Karthik Reddy",
     role: "Executive Vice President",
     company: "TVS Sundaram Motors",
     text:
-     "My experience with NNC was fantastic! The team was professional, patient, and attentive to our needs from start to finish. They delivered a website that exceeded our expectations, perfectly capturing our vision, A special thanks to Dhanlakshmi, Harish, Anjana, and the entire team for their dedication and attention to detail. Their seamless approach made the entire process smooth and hassle-free. Highly recommended!!!",
+     "We needed booking and enquiry forms for our packers and movers site. This Web Design Company in HSR Layout built exactly what we wanted, on time and with clear communication.",
      img: "/media/gif/man (1).png",
   },
 
-  {
-    name: "Patil sandeep",
-    role: "Founder",
-    company: "Simply.Coach",
-    text:
-       "Good service we got from the Nakshatra website creations ,it was great moment's we had with Mr,Harish ... We had started the new business at JP nagar,,,,,, To improve the business and marketing activities we got best support from Nakshatra website creations team.... I really suggest and recomend others to connect with Nakshatra website creations team to develop the website creation and Google adds or other online activities...... Staff and Owner is very helpful and kind people.",
-    img: "/media/gif/man (1).png",
-  },
+
 
  
 ];
@@ -184,8 +167,7 @@ export default function Testimonials() {
       </div>
     </section>
 
-       <section className={styles1.hero} >
-      {/* Original image, tinted to blue via CSS filter + overlay */}
+       {/* <section className={styles1.hero} >
       <img
         className={styles1.bg}
         src="/media/webdev/webdev45.jpg"
@@ -202,7 +184,7 @@ export default function Testimonials() {
           GET A PROPOSAL
         </a>
       </div>
-    </section>
+    </section> */}
     
     </>
   );

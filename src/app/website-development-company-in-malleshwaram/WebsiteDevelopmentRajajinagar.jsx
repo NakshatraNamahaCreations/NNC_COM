@@ -1,20 +1,20 @@
 "use client";
 
 import TechSection from "@/components/home/TechSection";
-import BannerRajajinagar from "@/components/websiteDev/BannerRajajinagar";
+import BannerRajajinagar from "./BannerRajajinagar";
 import BlogTeasers from "@/components/websiteDev/BlogTeasers";
 import ContactCard from "@/components/websiteDev/ContactCard";
 import ContactSection from "@/components/websiteDev/ContactSection";
 import ContactUs1 from "@/components/websiteDev/ContactUs1";
-import FaqSection from "@/app/website-development-company-in-hsr-layout/FaqSection";
+import FaqSection from "@/app/website-development-company-in-malleshwaram/FaqSection";
 import HeroAnuvic from "@/components/websiteDev/HeroAnuvic";
-import ServicesSlider from "@/components/websiteDev/ServicesSlider";
-import SuccessStats from "@/app/website-development-company-in-hsr-layout/SuccessStats";
-import Testimonials from "@/app/website-development-company-in-hsr-layout/Testimonials";
-import VerticalTabs from "@/app/website-development-company-in-hsr-layout/VerticalTabs";
-import WhyAnuvic from "@/components/websiteDev/WhyAnuvic";
-import Script from "next/script";
+import WebDevProcessSlider from "@/app/website-development-company-in-malleshwaram/WebDevProcessSlider";
+import SuccessStats from "@/app/website-development-company-in-malleshwaram/SuccessStats";
+import Testimonials from "@/app/website-development-company-in-malleshwaram/Testimonials";
+import VerticalTabs from "@/app/website-development-company-in-malleshwaram/VerticalTabs";
+import WhyAnuvic from "@/app/website-development-company-in-malleshwaram/WhyAnuvic";
 
+import Script from "next/script";
 import { useState } from "react";
 import CoveredSection from "./CoveredSection";
 import Trusted from "./Trusted";
@@ -40,7 +40,7 @@ export default function WebsiteDevelopmentRajajinagar() {
     alert("Thanks! We’ll contact you shortly.");
   };
 
-  const schemaMarkup = {
+const schemaMarkup = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -76,8 +76,8 @@ export default function WebsiteDevelopmentRajajinagar() {
       "@type": "LocalBusiness",
       "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
       "name": "Nakshatra Namaha Creations",
-      "image": "https://www.nakshatranamahacreations.com/media/webdev/bannerImg.png",
-      "url": "https://www.nakshatranamahacreations.com/website-development-company-in-hsr-layout",
+      "image": "https://nakshatranamahacreations.com/media/nnclogo.png",
+      "url": "https://www.nakshatranamahacreations.com/website-development-company-in-malleshwaram",
       "telephone": "+91-9900566466",
       "email": "info@nakshatranamahacreations.com",
       "address": {
@@ -96,7 +96,14 @@ export default function WebsiteDevelopmentRajajinagar() {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
           "opens": "09:30",
           "closes": "19:00"
         }
@@ -115,59 +122,33 @@ export default function WebsiteDevelopmentRajajinagar() {
       "@type": "Service",
       "@id": "https://www.nakshatranamahacreations.com/#service-wordpress",
       "serviceType": "WordPress Website Development",
-      "provider": { "@id": "https://www.nakshatranamahacreations.com/#localbusiness" }
+      "provider": {
+        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+      }
     },
     {
       "@type": "Service",
       "@id": "https://www.nakshatranamahacreations.com/#service-react",
       "serviceType": "React JS Website Development",
-      "provider": { "@id": "https://www.nakshatranamahacreations.com/#localbusiness" }
+      "provider": {
+        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+      }
     },
     {
       "@type": "Service",
       "@id": "https://www.nakshatranamahacreations.com/#service-node",
       "serviceType": "Node JS Website Development",
-      "provider": { "@id": "https://www.nakshatranamahacreations.com/#localbusiness" }
+      "provider": {
+        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+      }
     },
     {
       "@type": "Service",
       "@id": "https://www.nakshatranamahacreations.com/#service-cms",
       "serviceType": "CMS Website Development",
-      "provider": { "@id": "https://www.nakshatranamahacreations.com/#localbusiness" }
-    },
-
-    /* Reviews (optional but helpful) */
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "E-Commerce Website" },
-      "author": { "@type": "Person", "name": "Rajesh Kumar" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "Nakshatra Namaha Creations transformed my business with a professional and user-friendly e-commerce website. The team ensured smooth functionality, secure payment integration and mobile responsiveness. Their support and timely updates helped me scale my online store effortlessly.",
-      "datePublished": "2025-05-01"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Website Development" },
-      "author": { "@type": "Person", "name": "Priya Sharma" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.8", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "I needed a website for my healthcare practice and they delivered exactly what I wanted. The design is clean, easy to navigate and optimized for patient inquiries. Their expertise as a Website Development Company in Bangalore truly stands out.",
-      "datePublished": "2025-04-20"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Website Development Company HSR Layout Bangalore" },
-      "author": { "@type": "Person", "name": "Vikram Shetty" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "As an IT business, I needed a website that showcased my services effectively. They developed a sleek, fast and highly functional website that exceeded my expectations. Their post-launch support has been excellent.",
-      "datePublished": "2025-03-15"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Real Estate Website Services" },
-      "author": { "@type": "Person", "name": "Ankit Verma" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "My real estate website was outdated and they revamped it with a modern, engaging design. Now, my property listings are well-organized and customers can easily search and filter properties. I highly recommend their services.",
-      "datePublished": "2025-05-10"
+      "provider": {
+        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+      }
     },
 
     /* FAQ */
@@ -176,50 +157,42 @@ export default function WebsiteDevelopmentRajajinagar() {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do you provide website maintenance after development?",
+          "name": "What is the typical timeline for building a website with Nakshatra Namaha Creations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we offer post-launch maintenance and support to ensure your website stays updated and secure."
+            "text": "Our project duration varies by complexity but generally falls between 3 and 8 weeks to deliver a complete website."
           }
         },
         {
           "@type": "Question",
-          "name": "Will my website be mobile-friendly?",
+          "name": "Do you offer post-launch website support and updates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all our websites are fully responsive and work well across desktops, tablets, and mobile phones."
+            "text": "Yes, we provide continuous maintenance plans to keep your website secure and up to date."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you help with domain and hosting?",
+          "name": "Can Nakshatra Namaha Creations assist in improving my site’s search engine rankings?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we assist with domain registration, hosting setup, and recommend the best providers based on your needs."
+            "text": "Definitely! We offer SEO services designed to boost your website’s visibility and search performance."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you integrate payment gateways on my website?",
+          "name": "Are your websites optimized for mobile devices?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we integrate payment gateways like Razorpay, PayU, Stripe, and others for e-commerce and service-based websites."
+            "text": "Absolutely, every site we build is fully responsive to provide a seamless experience across all screen sizes."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you develop multi-language websites?",
+          "name": "Is it possible to develop an online store with Nakshatra Namaha Creations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we support multi-language websites that help you connect with a diverse audience."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work with startups and small businesses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we work with startups, local businesses, and enterprises. Our packages are flexible to suit all business types."
+            "text": "Yes, we specialize in creating secure, scalable e-commerce websites tailored to your business requirements."
           }
         }
       ]
@@ -238,13 +211,14 @@ export default function WebsiteDevelopmentRajajinagar() {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Website Development Company HSR Layout Bangalore",
-          "item": "https://www.nakshatranamahacreations.com/website-development-company-in-hsr-layout"
+          "name": "Website Development Company in Malleshwaram Bangalore",
+          "item": "https://www.nakshatranamahacreations.com/website-development-company-in-malleshwaram"
         }
       ]
     }
   ]
 };
+
 
   return (
     <>
@@ -263,7 +237,7 @@ export default function WebsiteDevelopmentRajajinagar() {
               <Testimonials/> 
               <Trusted/>
               <ServeClients/>
-              <ServicesSlider/>
+              <WebDevProcessSlider/>
              
               <BlogTeasers/>
               <FaqSection/>

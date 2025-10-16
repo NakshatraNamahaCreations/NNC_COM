@@ -261,231 +261,168 @@ export default function WebsiteDevelopmentPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.instagram.com/nnc.digitalbengaluru/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image:
-          "https://www.nakshatranamahacreations.com/media/webdev/bannerImg.png",
-        url: "https://www.nakshatranamahacreations.com/website-development-company-in-bangalore",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image":
+        "https://www.nakshatranamahacreations.com/media/webdev/bannerImg.png",
+      "url":
+        "https://www.nakshatranamahacreations.com/website-development-company-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "E-Commerce Website",
-        },
-        author: {
-          "@type": "Person",
-          name: "Rajesh Kumar",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Nakshatra Namaha Creations transformed my business with a professional and user-friendly e-commerce website. The team ensured smooth functionality, secure payment integration and mobile responsiveness. Their support and timely updates helped me scale my online store effortlessly.",
-        datePublished: "2025-05-01",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Website Development",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name":
+            "What services do you offer as a Website Development Company in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "We offer custom website development, eCommerce solutions, WordPress development, Shopify development, static and dynamic websites, landing page design, and website re-design."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Priya Sharma",
+        {
+          "@type": "Question",
+          "name": "Do you offer SEO-friendly website development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, we design SEO-friendly websites with a structured layout, optimized loading speed, and mobile responsiveness to improve your ranking with search engines."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.8",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Can you redesign my existing website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, we can make your website re-design with improvements to design, speed, functionality, and experience, while keeping your brand identity."
+          }
         },
-        reviewBody: `"I needed a website for my healthcare practice and they delivered exactly what I wanted. The design is clean, easy to navigate and optimized for patient inquiries. Their expertise as a Website Development Company in Bangalore truly stands out." : "2025-04-20"`,
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Website Development Service",
+        {
+          "@type": "Question",
+          "name": "What platform do you use for website development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "We work with WordPress, Shopify, React, Next.js, and can use custom development with Node.js, Express, and MongoDB."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Vikram Shetty",
+        {
+          "@type": "Question",
+          "name":
+            "Can you integrate a payment gateway into my e-commerce website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, we can integrate secure payment gateways such as Razorpay, PayU, Stripe, and Paypal to ensure a secure transaction experience."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "How do I get started with my website development project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You can contact us by phone, email, or on our website, and our team will guide you through the process."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody:
-          "As an IT business, I needed a website that showcased my services effectively. They developed a sleek, fast and highly functional website that exceeded my expectations. Their post-launch support has been excellent.",
-        datePublished: "2025-03-15",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Real Estate Website Services",
-        },
-        author: {
-          "@type": "Person",
-          name: "Ankit Verma",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.9",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "My real estate website was outdated and they revamped it with a modern, engaging design. Now, my property listings are well-organized and customers can easily search and filter properties. I highly recommend their services.",
-        datePublished: "2025-05-10",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What services do you offer as a Website Development Company in Bangalore?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We provide custom website development, e-commerce solutions, WordPress development, Shopify development, static and dynamic websites, landing page design and website re-designing.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you offer SEO-friendly website development?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we develop SEO-friendly websites with optimized structure, fast loading speed and mobile responsiveness for better search engine rankings.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can you redesign my existing website?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we specialize in website re-designing to improve design, speed, functionality and user experience while keeping your brand identity intact.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What platform do you use for website development?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We work with multiple platforms, including WordPress, Shopify, React, Next.js and custom development using Node.js, Express and MongoDB.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can you integrate a payment gateway into my e-commerce website?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we integrate secure payment gateways like Razorpay, PayU, Stripe and PayPal for seamless transactions.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do I get started with my website development project?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Simply reach out to us via call, email, or our website and our team will guide you through the process.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Website Development Service",
-            item: "https://www.nakshatranamahacreations.com/website-development-company-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Website Development Company in Bangalore",
+          "item":
+            "https://www.nakshatranamahacreations.com/website-development-company-in-bangalore"
+        }
+      ]
+    }
+  ]
+};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -540,9 +477,15 @@ export default function WebsiteDevelopmentPage() {
     <>
 
         {/* Schema Markup */}
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+        <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
      
 
       <div>

@@ -174,230 +174,164 @@ export default function DigitalMarketingPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ---------- Organization ---------- */
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/office-photo.jpg",
-        url: "https://www.nakshatranamahacreations.com/",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatranamahacreations",
-        ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+
+    /* ---------- LocalBusiness ---------- */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image": "https://www.nakshatranamahacreations.com/media/Group118.png",
+      "url":
+        "https://www.nakshatranamahacreations.com/digital-marketing-agency-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "digital marketing Service",
-        },
-        author: {
-          "@type": "Person",
-          name: "Rajesh Kumar",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Working with Nakshatra Namaha Creations has been a great experience. Their SEO and marketing strategies have helped increase our website traffic and improve sales. The team is professional, responsive and delivers results as promised.",
-        datePublished: "2025-05-01",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "digital marketing Service",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    /* ---------- FAQPage ---------- */
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will I get regular updates on my marketing campaign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide detailed performance reports and insights. Our team keeps you updated on progress and suggests improvements to enhance results."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Vikram Singh",
+        {
+          "@type": "Question",
+          "name": "What types of paid advertising do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer Google Ads, Facebook Ads, Instagram promotions, LinkedIn Ads, and YouTube advertising. Our team ensures your ads reach the right audience and generate high-quality leads."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Can digital marketing help local businesses grow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, local businesses can benefit from SEO, Google My Business optimization, social media marketing, and local ads. Our strategies help businesses attract nearby customers and improve their online presence."
+          }
         },
-        reviewBody:
-          "Lead generation has always been a challenge for us, but their digital marketing strategies made a huge difference. We are now getting more quality inquiries through paid ads and organic search. The team understands our business goals and delivers great support.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "digital marketing Service",
+        {
+          "@type": "Question",
+          "name": "How do you measure the success of digital marketing campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We track key performance indicators (KPIs) such as website traffic, search rankings, lead generation, engagement rates, and conversion rates."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Divya Rao",
+        {
+          "@type": "Question",
+          "name": "What services do you provide as a Digital Marketing Agency in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer SEO, social media marketing, PPC advertising, content marketing, website optimization, and branding solutions to help businesses grow online."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "How do I get started with your digital marketing services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us for a free consultation. Our team will understand your business goals, discuss suitable strategies, and create a customized plan to grow your online presence."
+          }
+        }
+      ]
+    },
+
+    /* ---------- BreadcrumbList ---------- */
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody:
-          "Our restaurant’s online presence has improved with their social media management and advertising. More customers are engaging with our posts and reservations have increased. The team is supportive and understands how to attract the right audience.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "digital marketing Service",
-        },
-        author: {
-          "@type": "Person",
-          name: "Akash C",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Our online presence has significantly improved after partnering with Nakshatra Namaha Creations. Their social media campaigns and content marketing have helped us connect with more clients. Highly recommended for digital marketing services.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Will I get regular updates on my marketing campaign?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we provide detailed performance reports and insights. Our team keeps you updated on progress and suggests improvements to enhance results.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What types of paid advertising do you offer?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We offer Google Ads, Facebook Ads, Instagram promotions, LinkedIn Ads, and YouTube advertising. Our team ensures your ads reach the right audience and generate high-quality leads.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can digital marketing help local businesses grow?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, local businesses can benefit from SEO, Google My Business optimization, social media marketing, and local ads. Our strategies help businesses attract nearby customers and improve their online presence.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do you measure the success of digital marketing campaigns?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We track key performance indicators (KPIs) such as website traffic, search rankings, lead generation, engagement rates, and conversion rates.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What services do you provide as a Digital Marketing Agency in Bangalore?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We offer SEO, social media marketing, PPC advertising, content marketing, website optimization, and branding solutions to help businesses grow online.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do I get started with your digital marketing services?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "You can contact us for a free consultation. Our team will understand your business goals, discuss suitable strategies, and create a customized plan to grow your online presence.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Digital Marketing Agency in Bangalore",
-            item: "https://www.nakshatranamahacreations.com/digital-marketing-agency-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Digital Marketing Agency in Bangalore",
+          "item":
+            "https://www.nakshatranamahacreations.com/digital-marketing-agency-in-bangalore"
+        }
+      ]
+    }
+  ]
+};
+
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -473,9 +407,15 @@ fbq('track', 'PageView');`}
         </noscript>
         {/* <!-- End Meta Pixel Code --> */}
 
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+       <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
         <Breadcrumbs paths={breadcrumbPaths} />
 
         <Container style={{ marginBlock: "4%" }}>

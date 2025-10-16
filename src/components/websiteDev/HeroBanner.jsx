@@ -9,7 +9,7 @@ import "@/styles/HeroCarousel.css";
 
 export default function HeroBanner() {
   const banner = {
-    image: "/media/websiteBengaluru/slide5.jpeg",
+    image: "/media/websiteBengaluru/slide.avif",
     title: "BEST WEB DEVELOPMENT COMPANY IN BANGALORE",
     desc: "We develop high-functioning, easy to use websites designed to fit various business cases. We make sure not only the design is visually creative, but also the coding is powerful and purposeful, resulting in digital experiences that have an impact. We are focused on scaling and performance because we want the brands that we work with to grow in the digital space.",
     showForm: true,

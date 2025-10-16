@@ -110,231 +110,160 @@ const testimonials = [
 export default function MobileAppPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ---------- Organization ---------- */
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.instagram.com/nnc.digitalbengaluru/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+    /* ---------- LocalBusiness ---------- */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image": "https://www.nakshatranamahacreations.com/media/OBJECTS.png",
+      "url": "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/media/OBJECTS.png",
-        url: "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Mobile App Development",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    /* ---------- FAQPage ---------- */
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my business need a mobile app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mobile app increases customer engagement, improves sales, and makes your services accessible anytime. It also helps build brand loyalty and gives you an edge over competitors."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Rahul Mehta",
+        {
+          "@type": "Question",
+          "name": "Will my app work on both Android and iOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we develop native apps for Android and iOS, as well as cross-platform apps using Flutter and React Native to ensure smooth performance on both platforms."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "How do you ensure the security of my mobile app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We implement strong security protocols like encryption, authentication, and secure APIs to protect user data and prevent unauthorized access."
+          }
         },
-        reviewBody:
-          "Working with Nakshatra Namaha Creations was a great decision for our business. The mobile app they developed has made order management and customer interactions much easier. Our sales have increased significantly and customers love the smooth shopping experience. Their team was always responsive, ensuring timely updates and improvements. I highly recommend them to anyone looking for a reliable mobile app development company.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Mobile App Development",
+        {
+          "@type": "Question",
+          "name": "How can I track the performance of my app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We integrate analytics tools that help monitor user engagement, downloads, and other key metrics to help you make data-driven decisions."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Vivek Sinha",
+        {
+          "@type": "Question",
+          "name": "Can my app integrate with third-party services like payment gateways and CRM systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can integrate third-party services such as payment gateways, CRM tools, and APIs to enhance your app's functionality and streamline your operations."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.8",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Will you help with app store submission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we assist in launching your app on Google Play Store and Apple App Store, ensuring it meets all guidelines for approval."
+          }
+        }
+      ]
+    },
+
+    /* ---------- BreadcrumbList ---------- */
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody: `"We needed an Android and iOS app for our logistics startup and Nakshatra Namaha Creations exceeded our expectations. The app provides real-time tracking, automated dispatching and seamless payments, making our operations much more efficient. Their development process was smooth and they delivered the project on time. Highly recommended for businesses looking for mobile app development services in Bangalore": "2025-04-20"`,
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Mobile App Development",
-        },
-        author: {
-          "@type": "Person",
-          name: "Neha Verma",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Our hotel booking app was developed by Nakshatra Namaha Creations and we are extremely happy with the results. The app provides real-time availability, instant bookings and smooth payment options, making it very convenient for our customers. Their team was professional, supportive and delivered the project as per our expectations.",
-        datePublished: "2025-03-15",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Mobile App Development",
-        },
-        author: {
-          "@type": "Person",
-          name: "Karthik Reddy",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.9",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Nakshatra Namaha Creations developed a feature-rich mobile app for our retail business, making online ordering and customer management effortless. The app is smooth, fast, and perfectly aligned with our business needs. Their team ensured timely updates and seamless integration with our inventory system.",
-        datePublished: "2025-05-10",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Why does my business need a mobile app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A mobile app increases customer engagement, improves sales and makes your services accessible anytime. It also helps build brand loyalty and gives you an edge over competitors.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Will my app work on both Android and iOS?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we develop native apps for Android and iOS, as well as cross-platform apps using Flutter and React Native to ensure smooth performance on both platforms.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do you ensure the security of my mobile app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We implement strong security protocols like encryption, authentication and secure APIs to protect user data and prevent unauthorized access.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Will you help with app store submission?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we assist in launching your app on Google Play Store and Apple App Store, ensuring it meets all guidelines for approval.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How can I track the performance of my app?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We integrate analytics tools that help monitor user engagement, downloads, and other key metrics for business insights.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can my app integrate with third-party services like payment gateways and CRM systems?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we integrate payment gateways, CRM tools, social media platforms and other APIs for seamless functionality.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Mobile App Development Service",
-            item: "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mobile App Development Service",
+          "item": "https://www.nakshatranamahacreations.com/mobile-app-development-company-in-bangalore",
+        }
+      ]
+    }
+  ]
+};
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -411,9 +340,15 @@ fbq('track', 'PageView');`}
         </noscript>
         {/* <!-- End Meta Pixel Code --> */}
 
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+       <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
 
         <Breadcrumbs paths={breadcrumbPaths} />
 

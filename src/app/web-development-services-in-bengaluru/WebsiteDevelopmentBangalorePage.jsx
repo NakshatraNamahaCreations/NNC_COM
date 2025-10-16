@@ -30,6 +30,7 @@ import Link from "next/link";
 import HeroBanner from "@/components/websiteDev/HeroBanner";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
+import HeroAnuvic from "@/components/websiteDev/HeroAnuvic";
 
 const industries = [
   ["Service", "Education"],
@@ -215,11 +216,11 @@ const keywords = [
   "WEB DEVELOPMENT AGENCY IN BANGALORE",
 ];
 
-const videoSlides = [
-  "/media/gaminzo.mp4",
-  "/media/Nithyaevent.mp4",
-  "/media/vjhomeservice.mp4",
-];
+// const videoSlides = [
+//   "/media/gaminzo.mp4",
+//   "/media/Nithyaevent.mp4",
+//   "/media/vjhomeservice.mp4",
+// ];
 export default function WebsiteDevelopmentBangalorePage() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -332,7 +333,7 @@ export default function WebsiteDevelopmentBangalorePage() {
           "@type": "Organization",
           "@id": "https://www.nakshatranamahacreations.com/#organization",
           name: "Nakshatra Namaha Creations",
-          url: "https://www.nakshatranamahacreations.com/web-design-company-in-jayanagar",
+          url: "https://www.nakshatranamahacreations.com/website-development-company-in-bangalore",
           logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
         })}
       </Script>
@@ -380,7 +381,7 @@ export default function WebsiteDevelopmentBangalorePage() {
         </h1>
       </div> */}
 
-      <div
+      {/* <div
         className="w-full mt-4 carousel-container"
         style={{ height: "100vh", overflow: "hidden", marginBottom: "20px" }}
       >
@@ -399,8 +400,8 @@ export default function WebsiteDevelopmentBangalorePage() {
             </Carousel.Item>
           ))}
         </Carousel>
-      </div>
-
+      </div> */}
+      <HeroAnuvic/>
       <div className="">
         <div
           style={{ backgroundColor: "#fff6f6", padding: "3rem 4rem" }}

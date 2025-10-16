@@ -207,12 +207,13 @@ const faqs = [
 export default function GraphicDesigning() {
   const [showPopup, setShowPopup] = useState(false);
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@graph": [
+    /* ---------- Organization ---------- */
     {
       "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
       "url": "https://www.nakshatranamahacreations.com/",
       "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
@@ -231,23 +232,30 @@ const schemaMarkup = {
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560061",
         "addressCountry": "IN"
       }
     },
+
+    /* ---------- LocalBusiness ---------- */
     {
       "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
       "name": "Nakshatra Namaha Creations",
-      "image": "https://www.nakshatranamahacreations.com/media/Group117.png",
-      "url": "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
+      "image":
+        "https://www.nakshatranamahacreations.com/media/Group117.png",
+      "url":
+        "https://www.nakshatranamahacreations.com/graphic-design-company-in-bangalore",
       "telephone": "+91-9900566466",
       "email": "info@nakshatranamahacreations.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560061",
@@ -280,6 +288,8 @@ const schemaMarkup = {
         "https://www.linkedin.com/company/nakshatra-namaha-creation/"
       ]
     },
+
+    /* ---------- FAQPage ---------- */
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -304,7 +314,7 @@ const schemaMarkup = {
           "name": "Can you handle bulk design projects for marketing campaigns?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we provide design services for bulk marketing materials, including brochures, posters, flyers and digital campaigns for businesses of all sizes."
+            "text": "Yes, we provide design services for bulk marketing materials, including brochures, posters, flyers, and digital campaigns for businesses of all sizes."
           }
         },
         {
@@ -333,6 +343,8 @@ const schemaMarkup = {
         }
       ]
     },
+
+    /* ---------- BreadcrumbList ---------- */
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -428,9 +440,15 @@ fbq('track', 'PageView');`}
           </noscript>
           {/* <!-- End Meta Pixel Code --> */}
 
-          <Script type="application/ld+json">
-            {JSON.stringify(schemaMarkup)}
-          </Script>
+      <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
 
         <Breadcrumbs paths={breadcrumbPaths} />
 

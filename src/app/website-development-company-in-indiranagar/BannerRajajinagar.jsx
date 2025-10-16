@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import styles from "@/styles/BannerRajajinagar.module.css";
-import BannerForm2 from "./BannerForm2";
+import BannerForm2 from "@/components/websiteDev/BannerForm2";
 
 export default function BannerRajajinagar() {
   const banner = {
     image: "/media/gif/nncbanner3.jpg",
     title:
-      "WEBSITE DEVELOPMENT COMPANY IN HSR LAYOUT, BANGALORE",
+      "WEBSITE DEVELOPMENT COMPANY IN RAJAJINAGAR",
     desc:
       "We build fast, secure, SEO-ready websites that turn visitors into customers and scale as your business grows.",
     showForm: true,
@@ -44,7 +44,7 @@ export default function BannerRajajinagar() {
               </li>
               <li aria-current="page">
                 <span className={styles.breadcrumbsCurrent}>
-                  Website Development (HSR)
+                  Website Development (Rajajinagar)
                 </span>
               </li>
             </ol>

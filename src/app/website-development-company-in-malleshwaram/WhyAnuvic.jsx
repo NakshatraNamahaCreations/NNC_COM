@@ -105,7 +105,7 @@ export default function WhyAnuvic() {
 
       <div className={styles.inner}>
         <h1 className={styles.title1}>
-          Custom Websites That Grow Your Business in HSR Layout, Bangalore
+          Custom Websites That Grow Your Business in Malleshwaram, Bangalore
         </h1>
 
         <a href="#contact" className={styles.cta}>

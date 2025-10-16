@@ -182,230 +182,163 @@ export default function TwoDAnimationPage() {
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ---------- Organization ---------- */
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/office-photo.jpg",
-        url: "https://www.nakshatranamahacreations.com/",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra, Bengaluru, Karnataka",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+
+    /* ---------- LocalBusiness ---------- */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image":
+        "https://www.nakshatranamahacreations.com/media/2DAnimation/2D%20Animation%20image.png",
+      "url":
+        "https://www.nakshatranamahacreations.com/2d-animation-studio-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":
+          "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "2D Animation",
-        },
-        author: {
-          "@type": "Person",
-          name: "Arjun Mehta",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "The animation quality and storytelling exceeded our expectations. The team understood our requirements and delivered exactly what we needed. Their work added great value to our brand communication.",
-        datePublished: "2025-05-01",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "2D Animation",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    /* ---------- FAQPage ---------- */
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can 2D animation help my business grow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2D animation makes complex ideas easy to understand, grabs audience attention, and improves brand recall. It can be used for marketing, product demos, and customer engagement."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Vikram Rao",
+        {
+          "@type": "Question",
+          "name": "Can you create animations that match my brand style?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we design characters, backgrounds, and visuals that align with your brand’s identity, colors, and messaging for a consistent look."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Do you provide voiceovers and background music?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer professional voice overs, background music, and sound effects to enhance the animation and create an immersive experience."
+          }
         },
-        reviewBody:
-          "The motion graphics and character animations helped us connect better with our audience. The team delivered high-quality work on time, making the process smooth and efficient.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "2D Animation",
+        {
+          "@type": "Question",
+          "name": "How long does it take to complete an animation project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The timeline depends on the complexity, duration, and revisions required. Most projects take a few weeks to complete."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Sneha Reddy",
+        {
+          "@type": "Question",
+          "name": "Do you create animations for social media marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we design short animations and motion graphics for social media platforms to boost engagement and brand visibility."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Do you provide storyboard previews before final animation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we share a storyboard preview so you can review the animation flow and suggest changes before production begins."
+          }
+        }
+      ]
+    },
+
+    /* ---------- BreadcrumbList ---------- */
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody:
-          "We wanted engaging explainer videos for our business, and the team delivered excellent results. The animations were smooth, visually appealing, and perfect for our marketing campaigns.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "2D Animation",
-        },
-        author: {
-          "@type": "Person",
-          name: "Divya Nair",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "The 2D animations created for our educational platform were highly engaging and informative. The attention to detail and creativity made learning more interactive for our students.",
-        datePublished: "2025-05-01",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "How can 2D animation help my business grow?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "2D animation makes complex ideas easy to understand, grabs audience attention, and improves brand recall. It can be used for marketing, product demos, and customer engagement.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can you create animations that match my brand style?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we design characters, backgrounds, and visuals that align with your brand’s identity, colors, and messaging for a consistent look.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you provide voiceovers and background music?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we offer professional voice overs, background music, and sound effects to enhance the animation and create an immersive experience.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How long does it take to complete an animation project?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "The timeline depends on the complexity, duration, and revisions required. Most projects take a few weeks to complete.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you create animations for social media marketing?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we design short animations and motion graphics for social media platforms to boost engagement and brand visibility.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you provide storyboard previews before final animation?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we share a storyboard preview so you can review the animation flow and suggest changes before production begins.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "2D Animation Studio in Bangalore | Motion Graphics & Animations",
-            item: "https://www.nakshatranamahacreations.com/2d-animation-studio-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "2D Animation Studio in Bangalore | Motion Graphics & Animations",
+          "item":
+            "https://www.nakshatranamahacreations.com/2d-animation-studio-in-bangalore",
+        }
+      ]
+    }
+  ]
+};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -481,9 +414,15 @@ fbq('track', 'PageView');`}
         </noscript>
         {/* <!-- End Meta Pixel Code --> */}
 
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+       <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
+
 
         <Breadcrumbs paths={breadcrumbPaths} />
 

@@ -176,231 +176,169 @@ export default function B2BMarketing() {
   const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "Nakshatra Namaha Creations",
-        url: "https://www.nakshatranamahacreations.com/",
-        logo: "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-        sameAs: [
-          "https://www.facebook.com/Nakshatranamahacreations/",
-          "https://www.instagram.com/nnc.digitalbengaluru/",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-          "https://x.com/nncbengaluru",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-9900566466",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi", "Kannada"],
-        },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ===========================
+       ORGANIZATION SCHEMA
+    ============================ */
+    {
+      "@type": "Organization",
+      "@id": "https://www.nakshatranamahacreations.com/#organization",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com/",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+      "sameAs": [
+        "https://www.facebook.com/Nakshatranamahacreations/",
+        "https://www.instagram.com/nnc.digitalbengaluru/",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/",
+        "https://x.com/nncbengaluru"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9900566466",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
       },
-      {
-        "@type": "LocalBusiness",
-        name: "Nakshatra Namaha Creations",
-        image: "https://www.nakshatranamahacreations.com/media/OBJECTS.png",
-        url: "https://www.nakshatranamahacreations.com/b2b-marketing-agency-in-bangalore",
-        telephone: "+91-9900566466",
-        email: "info@nakshatranamahacreations.com",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560061",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 12.264056680993265,
-          longitude: 76.6444222231926,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "09:30",
-            closes: "19:00",
-          },
-        ],
-        priceRange: "₹₹",
-        paymentAccepted: "Cash, Credit Card, Online Payment",
-        sameAs: [
-          "https://www.facebook.com/nakshatranamahacreations",
-          "https://www.linkedin.com/company/nakshatra-namaha-creation/",
-        ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
+      }
+    },
+
+    /* ===========================
+       LOCAL BUSINESS SCHEMA
+    ============================ */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+      "name": "Nakshatra Namaha Creations",
+      "image": "https://www.nakshatranamahacreations.com/media/b2bmarketing/B2B%20Marketing%20image.png",
+      "url": "https://www.nakshatranamahacreations.com/b2b-marketing-agency-in-bangalore",
+      "telephone": "+91-9900566466",
+      "email": "info@nakshatranamahacreations.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st floor, Darshan Plazza, Dwaraka Nagar, Banashankari, 6th Stage 1st Block, Channasandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560061",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "B2B Marketing",
-        },
-        author: {
-          "@type": "Person",
-          name: "Anand M",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "Working with Nakshatra Namaha Creations has transformed our B2B outreach. Their expertise in lead generation and brand positioning helped us connect with the right clients. We saw a significant increase in inbound leads and engagement. Their data-driven approach made a huge difference in our marketing strategy.",
-        datePublished: "2025-05-01",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.264056680993265,
+        "longitude": 76.6444222231926
       },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "B2B Services",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "paymentAccepted": "Cash, Credit Card, Online Payment",
+      "sameAs": [
+        "https://www.facebook.com/nakshatranamahacreations",
+        "https://www.linkedin.com/company/nakshatra-namaha-creation/"
+      ]
+    },
+
+    /* ===========================
+       FAQ PAGE SCHEMA
+    ============================ */
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.nakshatranamahacreations.com/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does B2B marketing differ from B2C marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "B2B marketing focuses on building relationships with businesses and decision-makers, whereas B2C targets individual consumers. The sales cycle in B2B is longer, requires strategic planning, and involves multiple stakeholders."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Srivatsa P",
+        {
+          "@type": "Question",
+          "name": "Can you handle B2B marketing for both startups and large enterprises?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we create scalable marketing strategies that cater to businesses of all sizes. Whether you're a startup looking for brand recognition or an enterprise aiming for market expansion, we deliver results."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.8",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "How do you measure the success of a B2B marketing campaign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We track key performance indicators (KPIs) such as lead conversion rates, website traffic, engagement levels, and return on investment (ROI) to ensure campaign effectiveness."
+          }
         },
-        reviewBody:
-          "Their marketing solutions helped us boost our brand awareness and attract more B2B clients. With effective content marketing and social media strategies, our engagement levels improved significantly. Their data-driven approach helped us optimize campaigns for better ROI. We highly recommend their services.",
-        datePublished: "2025-04-20",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Brand Marketing",
+        {
+          "@type": "Question",
+          "name": "What if I already have an in-house marketing team? Can you still help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we collaborate with in-house teams to enhance their efforts. We provide expert insights, advanced strategies, and execution support to ensure maximum effectiveness."
+          }
         },
-        author: {
-          "@type": "Person",
-          name: "Madura N C",
+        {
+          "@type": "Question",
+          "name": "Do you provide customized marketing strategies or use a fixed approach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every business is unique, so we create marketing strategies based on your goals, audience, and industry needs. We adapt our approach to ensure the best possible outcomes."
+          }
         },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
+        {
+          "@type": "Question",
+          "name": "Will B2B marketing work for my niche industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every industry has potential business clients. Our team customizes marketing strategies to match your niche, ensuring you connect with the right audience and generate quality leads."
+          }
+        }
+      ]
+    },
+
+    /* ===========================
+       BREADCRUMB SCHEMA
+    ============================ */
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.nakshatranamahacreations.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nakshatranamahacreations.com/"
         },
-        reviewBody:
-          "Nakshatra Namaha Creations helped us build a strong digital presence in the education sector. Their content marketing and lead generation strategies brought in more student enrollments and institutional partnerships. Their well-structured campaigns ensured better engagement and higher conversions. A great team to work with.",
-        datePublished: "2025-03-15",
-      },
-      {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "Service",
-          name: "Brand Marketing",
-        },
-        author: {
-          "@type": "Person",
-          name: "Namratha V",
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.9",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        reviewBody:
-          "We needed a focused marketing strategy to reach businesses in the finance sector. Nakshatra Namaha Creations provided a structured approach that increased our credibility and lead conversion. Their expertise in digital marketing and brand positioning made a noticeable impact.",
-        datePublished: "2025-05-10",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "How does B2B marketing differ from B2C marketing?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "B2B marketing focuses on building relationships with businesses and decision-makers, whereas B2C targets individual consumers. The sales cycle in B2B is longer, requires strategic planning, and involves multiple stakeholders.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can you handle B2B marketing for both startups and large enterprises?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we create scalable marketing strategies that cater to businesses of all sizes. Whether you're a startup looking for brand recognition or an enterprise aiming for market expansion, we deliver results.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do you measure the success of a B2B marketing campaign?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We track key performance indicators (KPIs) such as lead conversion rates, website traffic, engagement levels, and return on investment (ROI) to ensure campaign effectiveness.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What if I already have an in-house marketing team? Can you still help?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, we collaborate with in-house teams to enhance their efforts. We provide expert insights, advanced strategies, and execution support to ensure maximum effectiveness.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you provide customized marketing strategies or use a fixed approach?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Every business is unique, so we create marketing strategies based on your goals, audience, and industry needs. We adapt our approach to ensure the best possible outcomes.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Will B2B marketing work for my niche industry?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes, every industry has potential business clients. Our team customizes marketing strategies to match your niche, ensuring you connect with the right audience and generate quality leads.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.nakshatranamahacreations.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "B2B Marketing Agency in Bangalore",
-            item: "https://www.nakshatranamahacreations.com/b2b-marketing-agency-in-bangalore",
-          },
-        ],
-      },
-    ],
-  };
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "B2B Marketing Agency in Bangalore",
+          "item": "https://www.nakshatranamahacreations.com/b2b-marketing-agency-in-bangalore"
+        }
+      ]
+    }
+  ]
+};
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -454,7 +392,7 @@ export default function B2BMarketing() {
     <>
       <div>
         {/* <!-- Meta Pixel Code --> */}
-        <Script>
+                <Script>
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -476,9 +414,14 @@ fbq('track', 'PageView');`}
         </noscript>
         {/* <!-- End Meta Pixel Code --> */}
 
-        <Script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </Script>
+       <Script
+  id="schema-markup"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemaMarkup),
+  }}
+/>
         <Breadcrumbs paths={breadcrumbPaths} />
 
         <Container style={{ marginBottom: "5%", marginTop: "3%" }}>
