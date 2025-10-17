@@ -23,6 +23,10 @@ const data = [
    
       { text: "Hsr Layout", href: "/website-development-company-in-hsr-layout" },
       { text: "Malleshwaram", href: "/website-development-company-in-malleshwaram" },
+       { text: "Jayanagar", href: "/website-designing-company-in-jayanagar" },
+        { text: "Indiranagar", href: "/website-development-company-in-indiranagar" },
+         { text: "Rajajinagar", href: "/website-development-company-in-rajajinagar" },
+          { text: "JP Nagar", href: "/website-development-company-in-jpnagar" },
     ],
   },
     {
@@ -111,7 +115,7 @@ const data = [
     label: "Digital Marketing",
     links: [
         { text: "Digital Marketing Agency In Bangalore",   href: "/digital-marketing-agency-in-bangalore" },
-          { text: "Digital Marketing Agency In Hyderabad",   href: "/digital-marketing-agency-in-bangalore" },
+          { text: "Digital Marketing Agency In Hyderabad",   href: "/digital-marketing-agency-hyderabad" },
       { text: "Digital Marketing Agency",   href: "/" },
       { text: "SEO Services",   href: "/" },
       { text: "Social Media Marketing",   href: "/" },
@@ -411,30 +415,27 @@ export default function Footer() {
 
     </Container>
 
- <section className={`${styles.bar} ${styles.themeTeal}`} aria-labelledby="popular-title">
-      <div className={styles.inner}>
-         <h2 id="popular-title" className={styles.title}>
-          General Website Services
-        </h2>
-    <br />
- 
-        <ul className={styles.list}>
-          {data.map((row, i) => (
-            <li className={styles.row} key={i}>
-              {/* Removed the label span */}
-              <span className={styles.label}>{row.label}:</span>
-              <nav className={styles.links} aria-label={row.label}>
-                {row.links.map((link, j) => (
-                  <a className={styles.link} href={link.href} key={j}>
-                    {link.text}
-                  </a>
-                ))}
-              </nav>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+<section className={`${styles.bar} ${styles.themeTeal}`} aria-labelledby="popular-title">
+  <div className={styles.inner}>
+    <h2 id="popular-title" className={styles.title}>General Website Services</h2>
+
+    <ul className={styles.list}>
+      {data.map((row, i) => (
+        <li className={styles.row} key={i}>
+          <span className={styles.label}>{row.label}:</span>
+          <div className={styles.links} aria-label={row.label}>
+            {row.links.map((link, j) => (
+              <a className={styles.link} href={link.href} key={j}>
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
     </>
   );
 }

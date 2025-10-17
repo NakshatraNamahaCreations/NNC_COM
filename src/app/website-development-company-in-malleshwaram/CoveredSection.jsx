@@ -16,7 +16,7 @@ export default function CoveredSection() {
             <p className={styles.lead} style={{fontSize:"18px"}}>
            Are you searching for a Website Development Company in Malleshwaram that really gets your business goals? Nakshatra Namaha Creations is the perfect local partner for you when it comes to the creation of custom, responsive, and SEO-friendly websites. We don't just bring the beauty of art, but also the latest technology, to produce internet platforms that are a true reflection of your brand's personality. 
            </p>
-  <p className={styles.lead}>
+  <p className={styles.lead}  style={{fontSize:"18px"}}>
            You can count on the skilled team at Nakshatra Namaha Creations to provide you with portfolio sites, which are straightforward, or e-commerce solutions that are extensively professional. We, as a Website Development Company in Malleshwaram, are committed to on-time delivery, support for the future, and tangible digital growth to let your brand make the mark online.
              </p>
          

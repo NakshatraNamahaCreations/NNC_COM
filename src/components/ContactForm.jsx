@@ -122,7 +122,7 @@ else if (
   currentPath === "/mobile-app-development-company-in-mumbai" ||
   currentPath === "/mobile-app-development-company-in-mumbai"
 ) {
-  service = "Website Development";
+  service = "Mobile App Development";
 }
 else if (
   currentPath === "/2d-animation-studio-in-mumbai" ||

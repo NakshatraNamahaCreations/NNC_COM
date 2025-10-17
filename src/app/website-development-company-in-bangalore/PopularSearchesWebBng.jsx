@@ -33,7 +33,7 @@ const data = [
     ],
   },
 {
-  label: "HYDERABAD WEBSITE SERVICES",
+  label: "BANGALORE WEBSITE SERVICES",
 links: [
   { text: "Website Design Bangalore", href: "#" },
   { text: "Web Development Bangalore", href: "#" },
@@ -70,20 +70,20 @@ export default function PopularSearchesWebBng() {
     <section className={`${styles.bar} ${styles.themeTeal}`} aria-labelledby="popular-title">
       <div className={styles.inner}>
        
-        <ul className={styles.list}>
-          {data.map((row, i) => (
-            <li className={styles.row} key={i}>
-              {/* Removed the label span */}
-              <nav className={styles.links} aria-label={row.label}>
-                {row.links.map((link, j) => (
-                  <a className={styles.link} href={link.href} key={j}>
-                    {link.text}
-                  </a>
-                ))}
-              </nav>
-            </li>
-          ))}
-        </ul>
+          <ul className={styles.list}>
+              {data.map((row, i) => (
+                <li className={styles.row} key={i}>
+                  <span className={styles.label}>{row.label}:</span>
+                  <div className={styles.links} aria-label={row.label}>
+                    {row.links.map((link, j) => (
+                      <a className={styles.link} href={link.href} key={j}>
+                        {link.text}
+                      </a>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
       </div>
     </section>
   );

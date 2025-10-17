@@ -6,39 +6,39 @@ import Link from "next/link";
 const faqs = [
   {
     question:
-      "How long does it take Nakshatra Namaha Creations to develop a website?",
+      "Do you provide mobile-friendly website designs?",
     answer:
-      "Our Website Development Company in Indiranagar typically completes projects within 3 to 8 weeks, depending on scope and complexity",
+      "Yes—every build is responsive and optimized for mobile, tablet, and desktop.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations provide website maintenance?",
+      "Can I update the website content myself after it’s built?",
     answer:
-      "Yes, our Website Development Company in Indiranagar offers reliable post-launch maintenance and technical support packages.",
+      "Absolutely. We deliver CMS-powered sites (e.g., WordPress) so you can manage content easily.",
   },
   {
     question:
-      "Can Nakshatra Namaha Creations help with SEO after website launch?",
+      "Do you offer SEO services along with website design?",
     answer:
-      "Absolutely! As a full-service Website Development Company in Indiranagar, we provide complete SEO optimization to boost your rankings.",
+      "Yes—on-page SEO is standard, and we offer full SEO programs for ranking and visibility.",
   },
   {
     question:
-      "Will my website be mobile-friendly?",
+      "Can you redesign my existing website?",
     answer:
-      "Yes, every project by our Website Development Company in Indiranagar is designed to be fully responsive and mobile-optimized.",
+      "Yes—we modernize UX, improve speed, and add features while retaining brand essence.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations develop e-commerce websites?",
+      "Can you integrate third-party tools like WhatsApp, Google Maps, or payment gateways?",
     answer:
-      "Yes, our Website Development Company in Indiranagar builds secure, scalable e-commerce solutions customized to your business needs.",
+      "Yes—integrations include WhatsApp, Maps, Razorpay/Paytm/Stripe, CRMs, analytics, and more.",
   },
   {
     question:
-      "What industries does Nakshatra Namaha Creations serve?",
+      "Can I see some of your past work before getting started?",
     answer:
-      "Our Website Development Company in Indiranagar works with a wide range of industries including healthcare, education, real estate, e-commerce, and corporate businesses. We tailor every project to suit the client’s niche and audience.",
+      "Of course—share your industry and goals; we’ll provide relevant portfolio examples.",
   },
   // {
   //   question:
@@ -69,14 +69,13 @@ const faqs = [
 ];
 
 const searchLinks = [
-
-      {
+  {
     term: "JP Nagar",
     href: "/website-development-company-in-jpnagar",
   },
   {
-    term: "Malleshwaram",
-    href: "/website-development-company-in-malleshwaram",
+    term: "Indiranagar",
+    href: "/website-development-company-in-indiranagar",
   },
   {
     term: "Jayanagar",
@@ -86,14 +85,7 @@ const searchLinks = [
     term: "HSR Layout",
     href: "/website-development-company-in-hsr-layout",
   },
-//     {
-//     term: "Electronic City",
-//     href: "/",
-//   },
-//     {
-//     term: "Whitefield",
-//     href: "/",
-//   },
+
       {
     term: "Rajajinagar",
     href: "/website-development-company-in-rajajinagar",

@@ -1,28 +1,28 @@
 import WebsiteDevelopmentRajajinagar from "./WebsiteDevelopmentRajajinagar";
 
 export const metadata = {
-  title: "Website Development Company Rajajinagar Bangalore",
+  title: "Website Development Company in Malleshwaram Bangalore",
   description:
-    "Website Development Company in Rajajinagar Bangalore creating custom, responsive, and SEO-friendly websites to help business grow online with expert support.",
+    "Looking for a Website Development Company in Malleshwaram, Nakshatra Namaha Creations builds responsive, SEO-friendly websites that help business grow online.",
   keywords:
-    "website development company Rajajinagar Bangalore, website developers Rajajinagar, web design Rajajinagar Bangalore, custom website development Rajajinagar, professional website services Rajajinagar, best web development company Rajajinagar, business website development Rajajinagar",
+    "Website Development Company in Malleshwaram Bangalore, website developers Rajajinagar, web design Rajajinagar Bangalore, custom website development Rajajinagar, professional website services Rajajinagar, best web development company Rajajinagar, business website development Rajajinagar",
   alternates: {
     canonical:
-      "https://www.nakshatranamahacreations.com/website-development-company-rajajinagar",
+      "https://www.nakshatranamahacreations.com/website-development-company-in-malleshwaram",
   },
   openGraph: {
-    title: "Website Development Company Rajajinagar Bangalore",
+    title: "Website Development Company in Malleshwaram Bangalore",
     description:
-      "Website Development Company in Rajajinagar Bangalore creating custom, responsive, and SEO-friendly websites to help business grow online with expert support.",
+      "Looking for a Website Development Company in Malleshwaram, Nakshatra Namaha Creations builds responsive, SEO-friendly websites that help business grow online.",
     type: "website",
-    url: "https://www.nakshatranamahacreations.com/website-development-company-rajajinagar",
+    url: "https://www.nakshatranamahacreations.com/website-development-company-in-malleshwaram",
     siteName: "Nakshatra Namaha Creations",
   },
   twitter: {
     card: "summary",
-    title: "Website Development Company Rajajinagar Bangalore",
+    title: "Website Development Company in Malleshwaram Bangalore",
     description:
-      "Website Development Company in Rajajinagar Bangalore creating custom, responsive, and SEO-friendly websites to help business grow online with expert support.",
+      "Looking for a Website Development Company in Malleshwaram, Nakshatra Namaha Creations builds responsive, SEO-friendly websites that help business grow online.",
     site: "@nncbengaluru",
   },
 };

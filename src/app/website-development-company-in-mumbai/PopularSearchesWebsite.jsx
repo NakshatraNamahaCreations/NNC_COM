@@ -72,14 +72,14 @@ export default function PopularSearchesWebsite() {
         <ul className={styles.list}>
           {data.map((row, i) => (
             <li className={styles.row} key={i}>
-              {/* Removed the label span */}
-              <nav className={styles.links} aria-label={row.label}>
+              <span className={styles.label}>{row.label}:</span>
+              <div className={styles.links} aria-label={row.label}>
                 {row.links.map((link, j) => (
                   <a className={styles.link} href={link.href} key={j}>
                     {link.text}
                   </a>
                 ))}
-              </nav>
+              </div>
             </li>
           ))}
         </ul>

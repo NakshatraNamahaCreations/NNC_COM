@@ -12,12 +12,11 @@ export default function CoveredSection() {
         <div className="row align-items-center g-5">
           {/* Left copy */}
           <div className="col-lg-7">
-            <h2 className={styles.title}> Reliable Website Development Company in Indiranagar</h2>
+            <h2 className={styles.title}> Reliable Website Development Company in Rajajinagar</h2>
             <p className={styles.lead} style={{fontSize:"18px"}}>
-          Are you in need of a proficient Website Development Company in Indiranagar. Nakshatra Namaha Creations is the perfect partner for you in constructing responsive, custom, SEO-friendly websites. We know that your site is the root of your online identity, hence our crew architects every work to mirror your brand and captivate your target market. 
-           </p>
-  <p className={styles.lead}>
-         Being a top Website Development Company in Indiranagar, we offer websites that are not only scalable and secure but also aesthetically appealing and compatible with all devices. In short, we change the face of your company on the web if you are a startup or a mature business with our creative, technological, and accurate approach.
+         Are you in need of a reliable Website Development Company in Rajajinagar? Nakshatra Namaha Creations is your local partner for professional, responsive, and SEO-friendly websites. We emphasize the creation of new layouts that not only fit well with your brand but also help you achieve your marketing goals. Just give us a brief whether it is a mere business website or a feature-packed e-commerce platform and our skilled developers will provide vividness at every stage.
+   
+         Being the top Website Development Company in Rajajinagar, we make sure that your site is easy to use, loads quickly, and is totally mobile-friendly. Collaborate with us to materialize your digital dream and expand your online presence efficiently in Rajajinagar, Bangalore.
            </p>
          
           </div>

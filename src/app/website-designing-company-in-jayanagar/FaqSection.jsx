@@ -6,39 +6,39 @@ import Link from "next/link";
 const faqs = [
   {
     question:
-      "How long does it take Nakshatra Namaha Creations to develop a website?",
+      "Do you offer custom website design for local businesses in Jayanagar?",
     answer:
-      "Our Website Development Company in Indiranagar typically completes projects within 3 to 8 weeks, depending on scope and complexity",
+      "Yes—our Website Designing Company in Jayanagar tailors designs for startups, clinics, stores, and service providers.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations provide website maintenance?",
+      "How long does it take to complete a website?",
     answer:
-      "Yes, our Website Development Company in Indiranagar offers reliable post-launch maintenance and technical support packages.",
+      "Typical timelines are 7–15 working days. As a Website Designing Company in Jayanagar, we commit to clear milestones.",
   },
   {
     question:
-      "Can Nakshatra Namaha Creations help with SEO after website launch?",
+      "Will my website be mobile-friendly and SEO optimized?",
     answer:
-      "Absolutely! As a full-service Website Development Company in Indiranagar, we provide complete SEO optimization to boost your rankings.",
+      "Absolutely. Our Website Designing Company in Jayanagar ships responsive layouts and on-page SEO from day one.",
   },
   {
     question:
-      "Will my website be mobile-friendly?",
+      "Can you help with domain registration and hosting?",
     answer:
-      "Yes, every project by our Website Development Company in Indiranagar is designed to be fully responsive and mobile-optimized.",
+      "Yes full setup and guidance from a Website Designing Company in Jayanagar that handles end-to-end launch.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations develop e-commerce websites?",
+      "Do you provide website maintenance after delivery?",
     answer:
-      "Yes, our Website Development Company in Indiranagar builds secure, scalable e-commerce solutions customized to your business needs.",
+      "Yes monthly and annual plans from a Website Designing Company in Jayanagar that keeps sites secure and fast.",
   },
   {
     question:
-      "What industries does Nakshatra Namaha Creations serve?",
+      "What is the cost of building a website in Jayanagar?",
     answer:
-      "Our Website Development Company in Indiranagar works with a wide range of industries including healthcare, education, real estate, e-commerce, and corporate businesses. We tailor every project to suit the client’s niche and audience.",
+      "Packages start at ₹14,499; final pricing depends on pages, features, and tech—quoted by our Website Designing Company in Jayanagar after a quick scoping call.",
   },
   // {
   //   question:
@@ -69,18 +69,17 @@ const faqs = [
 ];
 
 const searchLinks = [
-
-      {
+  {
     term: "JP Nagar",
     href: "/website-development-company-in-jpnagar",
   },
   {
-    term: "Malleshwaram",
-    href: "/website-development-company-in-malleshwaram",
+    term: "Indiranagar",
+    href: "/website-development-company-in-indiranagar",
   },
   {
-    term: "Jayanagar",
-    href: "/website-designing-company-in-jayanagar",
+    term: "Rajajinagar",
+    href: "/website-development-company-in-rajajinagar",
   },
     {
     term: "HSR Layout",
@@ -94,11 +93,10 @@ const searchLinks = [
 //     term: "Whitefield",
 //     href: "/",
 //   },
-      {
-    term: "Rajajinagar",
-    href: "/website-development-company-in-rajajinagar",
+    {
+    term: "Malleshwaram",
+    href: "/website-development-company-in-malleshwaram",
   },
-
 ];
 
 export default function FaqSection() {

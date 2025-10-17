@@ -10,7 +10,7 @@ export default function BannerRajajinagar() {
   const banner = {
     image: "/media/gif/nncbanner3.jpg",
     title:
-      "WEBSITE DEVELOPMENT COMPANY IN INDIRANAGAR",
+      "WEBSITE DEVELOPMENT COMPANY IN JP NAGAR",
     desc:
       "We build fast, secure, SEO-ready websites that turn visitors into customers and scale as your business grows.",
     showForm: true,
@@ -44,7 +44,7 @@ export default function BannerRajajinagar() {
               </li>
               <li aria-current="page">
                 <span className={styles.breadcrumbsCurrent}>
-                  Website Development (Indiranagar)
+                  Website Development (JP Nagar)
                 </span>
               </li>
             </ol>

@@ -1,164 +1,120 @@
 /* =========================
-   Brand palettes (themes)
+   Brand palettes
    ========================= */
-
-/* TEAL BAND (default) — bg:#002a3a, accent:white */
 .themeTeal {
   --bg-deep: #002a3a;
   --ink: #fff;
   --ink-soft: rgba(255, 255, 255, 0.85);
-  --accent: rgba(255, 255, 255, 0.85);
+  --accent: #ffffff;
   --divider: rgba(255, 255, 255, 0.18);
-  --chip-bg: rgba(255, 255, 255, 0.06);
-  --chip-shadow: rgba(0, 0, 0, 0.12);
-}
-
-/* YELLOW BAND (optional inverse) — bg:#ffeb85, accent:#144f50 */
-.themeSun {
-  --bg-deep: #ffe07a;
-  --ink: #144f50;
-  --ink-soft: #1f6263;
-  --accent: #144f50;
-  --divider: rgba(20, 79, 80, 0.22);
-  --chip-bg: rgba(20, 79, 80, 0.08);
-  --chip-shadow: rgba(20, 79, 80, 0.15);
 }
 
 /* =========================
-   Component styles
+   General band layout
    ========================= */
-
 .bar {
   background: var(--bg-deep);
-  padding: clamp(20px, 4vw, 36px) 0;
   color: var(--ink);
   font-family: "Be Vietnam Pro", sans-serif;
+  padding: 10px 0;
 }
 
 .inner {
-  max-width: 85%;
+  max-width: 75%;
   margin: 0 auto;
-  padding: 0 16px;
+  /* padding: 0 16px; */
 }
 
 .title {
-  margin: 0 0 12px;
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(18px, 2vw, 26px);
   font-weight: 700;
   color: var(--ink);
-  letter-spacing: 0.01em;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
 }
 
+/* =========================
+   Row Structure
+   ========================= */
 .list {
   display: grid;
-  gap: 12px;
+  gap: 14px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .row {
-  display: flex;
-  justify-content: flex-start; /* ← aligns items to the left */
-  align-items: flex-start; /* aligns top edges cleanly */
-  padding: 10px 0;
   border-top: 1px solid var(--divider);
-    gap: 50px;
-
+  padding-top: 10px;
+  padding-bottom: 4px;
 }
+
 .row:first-child {
-  border-top: 0;
+  border-top: none;
 }
 
+/* Label above links */
 .label {
-  color: var(--ink);
+  display: block;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  white-space: nowrap;
-  text-align: left;
+  margin-bottom: 8px;
+  color: var(--ink);
 }
 
+/* =========================
+   Links Styling
+   ========================= */
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 18px;
-  justify-content: flex-start; /* ← aligns all chips to the left */
-  align-items: center;
-  text-align: left; /* ← ensures text starts from left edge */
+  gap: 6px 14px;
+  line-height: 1.8;
 }
 
-/* --- Link chips with vertical side bars --- */
+/* Inline link style — continues below label */
 .link {
   position: relative;
   color: var(--ink-soft);
   text-decoration: none;
-  font-size: 15px;
-  padding: 6px 16px;
-  border-radius: 999px;
-  transition:
-    color 0.18s ease,
-    background-color 0.18s ease,
-    transform 0.18s ease;
-  background-image: linear-gradient(var(--accent), var(--accent));
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 0% 2px;
+  font-size: 14px;
+  transition: color 0.2s ease;
 }
 
-.link::before,
-.link::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2px;
-  height: 62%;
-  background: var(--divider);
-  transition: background-color 0.18s ease, height 0.18s ease;
-}
-.link::before {
-  left: 6px;
-}
-.link::after {
-  right: 6px;
+/* Separator like Flipkart */
+.link:not(:last-child)::after {
+  content: "|";
+  color: var(--divider);
+  margin-left: 12px;
 }
 
+/* Hover and focus */
 .link:hover,
 .link:focus {
-  color: var(--ink);
-  background-color: var(--chip-bg);
-  background-size: 100% 2px;
-  transform: translateY(-1px);
-}
-.link:hover::before,
-.link:hover::after,
-.link:focus::before,
-.link:focus::after {
-  background: var(--accent);
-  height: 70%;
+  color: var(--accent);
+  text-decoration: underline;
 }
 
-.link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--accent), 0 6px 18px var(--chip-shadow);
-}
-
-.link:active {
-  transform: translateY(0);
-  background-size: 100% 0;
-}
-
-/* Responsive layout */
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-    align-items: flex-start; /* keep items left-aligned on mobile */
-    gap: 6px;
+/* =========================
+   Mobile
+   ========================= */
+@media (max-width: 768px) {
+  .bar {
+    padding: 20px 0;
   }
+
   .label {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+
+  .links {
+    gap: 4px 10px;
   }
 }

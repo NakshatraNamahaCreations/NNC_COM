@@ -71,27 +71,31 @@ const faqs = [
 const searchLinks = [
   {
     term: "JP Nagar",
-    href: "/",
+    href: "/website-development-company-in-jpnagar",
   },
   {
     term: "Indiranagar",
-    href: "/",
+    href: "/website-development-company-in-indiranagar",
   },
   {
     term: "Jayanagar",
-    href: "/",
+    href: "/website-designing-company-in-jayanagar",
   },
     {
     term: "HSR Layout",
     href: "/website-development-company-in-hsr-layout",
   },
-    {
-    term: "Electronic City",
-    href: "/",
-  },
-    {
-    term: "Whitefield",
-    href: "/",
+  //   {
+  //   term: "Electronic City",
+  //   href: "/",
+  // },
+  //   {
+  //   term: "Whitefield",
+  //   href: "/",
+  // },
+      {
+    term: "Rajajinagar",
+    href: "/website-development-company-in-rajajinagar",
   },
 
 ];

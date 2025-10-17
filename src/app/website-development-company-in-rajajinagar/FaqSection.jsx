@@ -6,39 +6,39 @@ import Link from "next/link";
 const faqs = [
   {
     question:
-      "How long does it take Nakshatra Namaha Creations to develop a website?",
+      "What makes Nakshatra Namaha Creations different from other website developers in Rajajinagar?",
     answer:
-      "Our Website Development Company in Indiranagar typically completes projects within 3 to 8 weeks, depending on scope and complexity",
+      "We are a results-focused Website Development Company in Rajajinagar offering creative, high-performing websites and dedicated post-launch support.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations provide website maintenance?",
+      "Can I update my website content myself after it’s built?",
     answer:
-      "Yes, our Website Development Company in Indiranagar offers reliable post-launch maintenance and technical support packages.",
+      "Yes! Our Website Development Company in Rajajinagar provides CMS solutions like WordPress that let you edit your website content easily.",
   },
   {
     question:
-      "Can Nakshatra Namaha Creations help with SEO after website launch?",
+      "How do you ensure my website loads quickly?",
     answer:
-      "Absolutely! As a full-service Website Development Company in Indiranagar, we provide complete SEO optimization to boost your rankings.",
+      "As an experienced Website Development Company in Rajajinagar, we optimize code, compress images, and use caching for lightning-fast load speeds.",
   },
   {
     question:
-      "Will my website be mobile-friendly?",
+      "Will my website be secure from hackers?",
     answer:
-      "Yes, every project by our Website Development Company in Indiranagar is designed to be fully responsive and mobile-optimized.",
+      "Absolutely. Our Website Development Company in Rajajinagar implements SSL, firewalls, and regular updates to keep your website protected.",
   },
   {
     question:
-      "Does Nakshatra Namaha Creations develop e-commerce websites?",
+      "What if I’m not sure what kind of website I need?",
     answer:
-      "Yes, our Website Development Company in Indiranagar builds secure, scalable e-commerce solutions customized to your business needs.",
+      "No worries — our Website Development Company in Rajajinagar offers free consultations to recommend the best web solution for your business goals.",
   },
   {
     question:
       "What industries does Nakshatra Namaha Creations serve?",
     answer:
-      "Our Website Development Company in Indiranagar works with a wide range of industries including healthcare, education, real estate, e-commerce, and corporate businesses. We tailor every project to suit the client’s niche and audience.",
+      "Our Website Development Company in Rajajinagar works with a wide range of industries including healthcare, education, real estate, e-commerce, and corporate businesses. We tailor every project to suit the client’s niche and audience.",
   },
   // {
   //   question:
@@ -69,14 +69,13 @@ const faqs = [
 ];
 
 const searchLinks = [
-
-      {
+  {
     term: "JP Nagar",
     href: "/website-development-company-in-jpnagar",
   },
   {
-    term: "Malleshwaram",
-    href: "/website-development-company-in-malleshwaram",
+    term: "Indiranagar",
+    href: "/website-development-company-in-indiranagar",
   },
   {
     term: "Jayanagar",
@@ -86,19 +85,18 @@ const searchLinks = [
     term: "HSR Layout",
     href: "/website-development-company-in-hsr-layout",
   },
-//     {
-//     term: "Electronic City",
-//     href: "/",
-//   },
-//     {
-//     term: "Whitefield",
-//     href: "/",
-//   },
-      {
-    term: "Rajajinagar",
-    href: "/website-development-company-in-rajajinagar",
+  //   {
+  //   term: "Electronic City",
+  //   href: "/",
+  // },
+  //   {
+  //   term: "Whitefield",
+  //   href: "/",
+  // },
+    {
+    term: "Malleshwaram",
+    href: "/website-development-company-in-malleshwaram",
   },
-
 ];
 
 export default function FaqSection() {
