@@ -232,7 +232,7 @@ const blogData = [
             "Explore how AI is transforming digital marketing in 2025—improving personalization, automating content, and making data-driven strategies a reality.",
         date: "July 10, 2025",
         category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/how-ai-is-transforming-digital-marketin-in-2025",
+        link: "/blog/how-ai-is-transforming-digital-marketing-in-2025", //how-ai-is-transforming-digital-marketing-in-2025
         banner: "/media/blogs/19.png",
     },
     {

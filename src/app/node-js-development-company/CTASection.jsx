@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-   <video
+     <video
         className={styles.bgVideo}
         autoPlay
         muted
@@ -27,13 +27,14 @@ export default function CTASection() {
 
       <div className={styles.inner}>
         <span className={styles.pill}>Talk to our Experts</span>
-
-      <h2 className={styles.title}>
-Connect with Expert Website Developers Today
+<h2 className={styles.title}>
+Partner with Expert Node.js Developers
 </h2>
+
 <p className={styles.sub}>
- Our website developers work closely with clients, ensuring regular communication and timely project delivery.  We provide clear milestones, reports, and ongoing consultation throughout the development journey.
-</p>
+Looking for a reliable Node.js development company to build fast, scalable, and high-performance web applications? Our team of experienced Node.js developers specializes in creating dynamic backend systems, real-time applications, and API-driven platforms that help businesses grow efficiently.  
+        From concept and architecture design to deployment and post-launch support, we ensure every Node.js solution is optimized for speed, scalability, and seamless integration with your existing technology stack.
+      </p>
 
 
         <div className={styles.actions}>

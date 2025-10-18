@@ -63,7 +63,7 @@
 /* Sub copy */
 .sub {
   margin: 0 auto;
-  max-width: 58ch;
+  max-width: 70%;
   font-size: clamp(14px, 1.6vw, 16px);
   line-height: 1.7;
   color: #e8eeff;

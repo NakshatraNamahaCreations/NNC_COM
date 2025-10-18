@@ -11,7 +11,7 @@ const rowA = [
   { title: "Top-Notch Security", icon: "/media/icons/online-analysis.png", desc: "Security is at the core of our work. Our mobile app developers follow strict coding standards, implement encryption, and comply with global regulations to safeguard your application and protect sensitive user data.", color:"ind--mint"},
   { title: "Cross-Platform Expertise", icon: "/media/icons/technical-support.png", desc: "To help businesses reach wider audiences, our mobile app developers specialize in cross-platform frameworks like Flutter and React Native. This ensures consistent performance and seamless user experiences across iOS and Android.", color:"ind--cyan"},
     { title: "User-Centric Design", icon: "/media/icons/app-settings.png", desc: "Great apps balance functionality with usability. Our mobile app developers focus on design-first principles, creating intuitive, engaging, and visually appealing interfaces that keep users coming back.", color:"ind--orange"},
-  { title: "Ongoing Support", icon: "/media/icons/backend.png", desc: "The job doesn’t end at launch. Our mobile app developers provide continuous maintenance, updates, and feature enhancements to keep your application optimized, future-ready, and aligned with your business growth.", color:"ind--teal"},
+  { title: "Ongoing Support", icon: "/media/icons/customer-service (1).png", desc: "The job doesn’t end at launch. Our mobile app developers provide continuous maintenance, updates, and feature enhancements to keep your application optimized, future-ready, and aligned with your business growth.", color:"ind--teal"},
  
 ];
 

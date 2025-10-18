@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-   <video
+     <video
         className={styles.bgVideo}
         autoPlay
         muted
@@ -27,13 +27,13 @@ export default function CTASection() {
 
       <div className={styles.inner}>
         <span className={styles.pill}>Talk to our Experts</span>
-
-      <h2 className={styles.title}>
-Connect with Expert Website Developers Today
+<h2 className={styles.title}>
+Partner with Expert React.js Developers
 </h2>
+
 <p className={styles.sub}>
- Our website developers work closely with clients, ensuring regular communication and timely project delivery.  We provide clear milestones, reports, and ongoing consultation throughout the development journey.
-</p>
+Looking for a trusted React.js development company to create fast, interactive, and user-friendly web applications? Our team of skilled React.js developers specializes in building dynamic front-end interfaces, scalable web apps, and high-performing SPAs (Single Page Applications) that deliver exceptional user experiences.
+  </p>
 
 
         <div className={styles.actions}>

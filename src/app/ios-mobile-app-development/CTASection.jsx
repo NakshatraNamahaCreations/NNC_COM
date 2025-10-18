@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-   <video
+     <video
         className={styles.bgVideo}
         autoPlay
         muted
@@ -29,10 +29,11 @@ export default function CTASection() {
         <span className={styles.pill}>Talk to our Experts</span>
 
       <h2 className={styles.title}>
-Connect with Expert Website Developers Today
+Partner with Expert iOS App Developers
 </h2>
+
 <p className={styles.sub}>
- Our website developers work closely with clients, ensuring regular communication and timely project delivery.  We provide clear milestones, reports, and ongoing consultation throughout the development journey.
+Looking for a trusted iOS app development company to turn your idea into a powerful mobile experience? Our team of skilled iOS developers builds high-performance, secure, and visually engaging applications for iPhone and iPad users. From concept and design to App Store deployment, we ensure your app meets Apple’s quality standards and delivers seamless user experiences.
 </p>
 
 

@@ -91,7 +91,7 @@ export default function WebsiteDevelopmentCompany() {
           Our Portfolio
         </h2>
         <p className="text-center mb-5" style={{width:"70%", margin:"0 auto"}}>
-        Looking for reliable website developers near you? Our experienced web development team has helped businesses of all sizes build high-performing websites that drive traffic and conversions. From startups to local enterprises, we combine design expertise, modern technologies, and industry-specific strategies to create websites that truly work for your business.
+        Looking for reliable website developers ? Our experienced web development team has helped businesses of all sizes build high-performing websites that drive traffic and conversions. From startups to local enterprises, we combine design expertise, modern technologies, and industry-specific strategies to create websites that truly work for your business.
         </p>
            </div>
     <Our_Service cardData={ourworkData} />

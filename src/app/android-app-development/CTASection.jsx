@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-   <video
+     <video
         className={styles.bgVideo}
         autoPlay
         muted
@@ -29,11 +29,13 @@ export default function CTASection() {
         <span className={styles.pill}>Talk to our Experts</span>
 
       <h2 className={styles.title}>
-Connect with Expert Website Developers Today
+Partner with Expert Android app Developers
 </h2>
+
 <p className={styles.sub}>
- Our website developers work closely with clients, ensuring regular communication and timely project delivery.  We provide clear milestones, reports, and ongoing consultation throughout the development journey.
+Looking for a trusted Android app development company to bring your ideas to life? Our team of expert Android developers creates fast, secure, and feature-rich mobile applications that run flawlessly across smartphones, tablets, and wearable devices. From planning and design to Play Store deployment, we ensure your app aligns with Google’s standards and delivers a smooth, engaging experience for users worldwide.
 </p>
+
 
 
         <div className={styles.actions}>

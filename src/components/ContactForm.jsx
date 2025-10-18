@@ -130,8 +130,31 @@ else if (
 ) {
   service = "2D Animations";
 }
+else if (
+  currentPath === "/ios-mobile-app-development" ||
+  currentPath === "/ios-mobile-app-development"
+) {
+  service = "Ios App Development";
+}
 
-
+else if (
+  currentPath === "/android-app-development" ||
+  currentPath === "/android-app-development"
+) {
+  service = "Android App Development";
+}
+else if (
+  currentPath === "/node-js-development-company" ||
+  currentPath === "/node-js-development-company"
+) {
+  service = "Node Js Development";
+}
+else if (
+  currentPath === "/react-js-development-company" ||
+  currentPath === "/react-js-development-company"
+) {
+  service = "React Js Development";
+}
 
     setFormData((prev) => ({
       ...prev,
