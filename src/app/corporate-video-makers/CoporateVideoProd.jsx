@@ -1,52 +1,28 @@
+
 "use client";
 import Script from "next/script";
 
 import { useEffect } from 'react';
-import Our_Service from "@/components/home/Our_Service";
+
 import CoveredSection from "./CoveredSection";
 import CTASection from "./CTASection";
 import FeatureGrid from "./FeatureGrid";
 import FeaturesGrid2 from "./FeaturesGrid2";
-import HeroBanner from "./HeroBanner";
+import HeroBanner1 from "./HeroBanner1";
 import IndustriesSlider from "./IndustriesSlider";
 import Trusted from "./Trusted";
 import styles from "../../styles/covered-section.module.css";
 import ServeClients from "./ServeClients";
 
-import WhyChooseUs from "./WhyChooseUs.jsx";
+import WhyChooseUs from "./WhyChooseUs";
 import FaqSection from './FaqSection';
 import TestimonialsCarousel from './TestimonialsCarousel';
-import Trusted2 from './Trusted2';
 
-const ourworkData = [
-{
-    ui_uxdesign: "/media/ourwork/vijayhome.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG_VijayHomeLogo.png",
-    title: "Vijaya Home Services",
-    description:
-      "This was created specifically keeping the client’s requirements. We stood up to their expectations.",
-    link: "https://play.google.com/store/apps/details?id=com.vhs1&pcampaignid=web_share",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/cdn.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG-06.png",
-    title: "CND Play",
-    description:
-      "CND PLAY is an emerging streaming platform dedicated to providing a vast library of movies to audiences worldwide.",
-    link: "https://play.google.com/store/apps/details?id=com.clockndail.clockndail&hl=en_IN",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/proleverage.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
-    title: "Pro Leverage",
-    description:
-      "This was created specifically keeping the client’s requirements. We stood up to their expectations.",
-    link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
-  },
-];
 
-export default function MobileAppDevelopmentCompany() {
-const schema = {
+
+export default function CoporateVideoProd() {
+
+    const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -81,33 +57,33 @@ const schema = {
       "@type": "Organization",
       "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
-      "url": "https://www.nakshatranamahacreations.com/react-js-development-company",
+      "url": "https://www.nakshatranamahacreations.com/corporate-video-makers",
       "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
     },
     {
       "@type": "Service",
-      "serviceType": "WordPress Website Development",
+      "serviceType": "Corporate Video Production",
       "provider": {
         "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
       }
     },
     {
       "@type": "Service",
-      "serviceType": "E-Commerce Website Development",
+      "serviceType": "Ad Film Studio",
       "provider": {
         "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
       }
     },
     {
       "@type": "Service",
-      "serviceType": "Static Website Development",
+      "serviceType": "Product Video Shoots",
       "provider": {
         "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
       }
     },
     {
       "@type": "Service",
-      "serviceType": "Dynamic Website Development",
+      "serviceType": "Corporate Testimonial Videos",
       "provider": {
         "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
       }
@@ -124,8 +100,8 @@ const schema = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "React JS Development Company",
-          "item": "https://www.nakshatranamahacreations.com/react-js-development-company"
+          "name": "Corporate Video Makers in – Ad Film Studio",
+          "item": "https://www.nakshatranamahacreations.com/corporate-video-makers"
         }
       ]
     },
@@ -134,50 +110,50 @@ const schema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What types of websites do you build using React JS?",
+          "name": "How long does a typical corporate video project take to complete?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We build everything from landing pages and corporate websites to complex web applications, dashboards, and portals—all using React JS."
+            "text": "It depends on the complexity, but most projects take 2–4 weeks including pre- and post-production."
           }
         },
         {
           "@type": "Question",
-          "name": "How is React JS different from other front-end technologies?",
+          "name": "Can we be involved during the scripting or review stages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "React JS uses a component-based architecture, which makes development faster, more scalable, and easier to maintain. It also ensures better performance and user experience."
+            "text": "Yes, our process is collaborative. Your input is key during concept, scripting, and editing."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you also offer backend development?",
+          "name": "Do you provide voiceovers or subtitles in other languages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we provide full-stack support and can integrate your React front-end with backend technologies like Node.js, Firebase, or REST/GraphQL APIs."
+            "text": "Absolutely. We offer multilingual voiceovers, subtitles, and localization support."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you redesign my existing website using React?",
+          "name": "What format will the final videos be delivered in?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely! We specialize in migrating or redesigning existing websites to React for better speed, flexibility, and user experience."
+            "text": "We provide HD or 4K files in your preferred format, optimized for web, social, or television."
           }
         },
         {
           "@type": "Question",
-          "name": "Is React JS SEO-friendly?",
+          "name": "Do you handle shoots outside of Bangalore as well?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "With the right setup—especially using frameworks like Next.js—React websites can be made SEO-friendly through server-side rendering and optimized routing."
+            "text": "Yes, we’ve covered shoots across India depending on the project scope."
           }
         },
         {
           "@type": "Question",
-          "name": "What’s your typical project timeline?",
+          "name": "Is drone or aerial footage included in your packages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Timelines vary depending on the project’s size and complexity. A basic website might take 2–3 weeks, while larger web apps can take a few months. We’ll always provide a clear estimate up front."
+            "text": "Aerial shots can be included as an add-on, subject to location permissions."
           }
         }
       ]
@@ -188,30 +164,30 @@ const schema = {
 
   return (
     <>
-          <Script
+         
+      <Script
         id="nnc-react-jsonld"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <HeroBanner />
+      <HeroBanner1 />
       <CoveredSection />
       <FeatureGrid />
       <IndustriesSlider />
       <CTASection />
 
+  
 
-    {/* <FeaturesGrid2/> */}
-      {/* <Trusted /> */}
-      {/* <FeaturesGrid2 /> */}
-
-      <ServeClients/>
-      <WhyChooseUs/>
-       <h2 className="text-center fw-bold mb-2">
+ <Trusted />
+  
+      {/* <WhyChooseUs/> */}
+      <br />    <br />
+         <h2 className="text-center fw-bold mb-2">
           What Our Clients Say
         </h2>
-      <TestimonialsCarousel/>
+       <TestimonialsCarousel/>  
       <FaqSection/>
  
     </>

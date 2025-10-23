@@ -47,7 +47,7 @@ export default function WebsiteDevelopmentRajajinagar() {
       "@type": "LocalBusiness",
       "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
       "name": "Nakshatra Namaha Creations",
-      "image": "https://nakshatranamahacreations.com/media/nnclogo.png",
+      "image": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
@@ -76,8 +76,8 @@ export default function WebsiteDevelopmentRajajinagar() {
       "@type": "Organization",
       "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
-      "url": "https://nakshatranamahacreations.com/web-design-company-in-jayanagar",
-      "logo": "https://nakshatranamahacreations.com/media/nnclogo.png"
+      "url": "https://www.nakshatranamahacreations.com/web-design-company-in-jayanagar",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
     },
 
     {

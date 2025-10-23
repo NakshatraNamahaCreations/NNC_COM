@@ -9,14 +9,14 @@ export const metadata = {
     "React JS development , React website development, React development company, React developers, Frontend development services ",
   alternates: {
     canonical:
-      "https://nakshatranamahacreations.com/react-js-development-company",
+      "https://www.nakshatranamahacreations.com/react-js-development-company",
   },
   openGraph: {
     title: "React JS Development Company | NNC",
     description:
       "Hire expert mobile app developers near you for Android and iOS platforms. Nakshatra Namaha Creations delivers secure, scalable, and high-performance mobile applications tailored to your business.",
     type: "website",
-    url: "https://nakshatranamahacreations.com/react-js-development-company",
+    url: "https://www.nakshatranamahacreations.com/react-js-development-company",
     images: [
       {
         url: "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",

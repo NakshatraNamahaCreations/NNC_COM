@@ -9,14 +9,14 @@ export const metadata = {
     "iOS app development , iPhone app developers, iOS mobile app company, iOS developers, iPad app development services, iOS application development , Apple app development  ",
   alternates: {
     canonical:
-      "https://nakshatranamahacreations.com/ios-app-development",
+      "https://www.nakshatranamahacreations.com/ios-app-development",
   },
   openGraph: {
     title: "IOS Mobile App Development Company",
     description:
       "Hire expert mobile app developers near you for Android and iOS platforms. Nakshatra Namaha Creations delivers secure, scalable, and high-performance mobile applications tailored to your business.",
     type: "website",
-    url: "https://nakshatranamahacreations.com/ios-app-development",
+    url: "https://www.nakshatranamahacreations.com/ios-app-development",
     images: [
       {
         url: "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",

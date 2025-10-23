@@ -155,7 +155,12 @@ else if (
 ) {
   service = "React Js Development";
 }
-
+else if (
+  currentPath === "/corporate-video-makers" ||
+  currentPath === "/corporate-video-makers"
+) {
+  service = "Corporate Video Makers";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,

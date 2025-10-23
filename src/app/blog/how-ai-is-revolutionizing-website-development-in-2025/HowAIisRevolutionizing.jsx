@@ -68,8 +68,8 @@ const HowAIisRevolutionizing = () => {
             "@type": "Article",
             "headline": "How AI is Revolutionizing Website Development in 2025",
             "description": "Discover how AI is revolutionizing website development in 2025—from design and coding to content and SEO. Build smarter, faster, and more dynamic websites.",
-            "url": "https://nakshatranamahacreations.com/blog/how-ai-is-revolutionizing-website-development-in-2025",
-            "image": "https://nakshatranamahacreations.com/media/blogs/20.jpeg",
+            "url": "https://www.nakshatranamahacreations.com/blog/how-ai-is-revolutionizing-website-development-in-2025",
+            "image": "https://www.nakshatranamahacreations.com/media/blogs/20.jpeg",
             "author": {
               "@type": "Organization",
               "name": "Nakshatra Namaha Creations"
@@ -79,7 +79,7 @@ const HowAIisRevolutionizing = () => {
               "name": "Nakshatra Namaha Creations",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://nakshatranamahacreations.com/media/nakshatralogo.jpg"
+                "url": "https://www.nakshatranamahacreations.com/media/nakshatralogo.jpg"
               }
             },
             "datePublished": "2025-07-14T00:00:00Z",
@@ -165,7 +165,7 @@ const HowAIisRevolutionizing = () => {
                         </div>
                         <div className="mt-5 ms-lg-4 mx-3">
                             <p style={{ textAlign: "justify" }}>
-                                AI is Revolutionizing <a href="https://nakshatranamahacreations.com/website-development-company-in-bangalore">Website Development</a> in 2025 by transforming the way websites are planned, built, and optimized. By 2025, making web sites is changing a lot. It's not just about new code or systems, but how big of a part AI is now playing. AI tools have grown past just being nice extras; they are now key parts of what web creators, artists, and online firms use every day. AI helps do the same work over and over, and helps in making smart design picks. It is making work flows quick and pushing the limits of what we can do on the web. The aim is not to cut out the web makers, but to help them and speed up their work—making everything quicker, working well, and full of new ideas.
+                                AI is Revolutionizing <a href="https://www.nakshatranamahacreations.com/website-development-company-in-bangalore">Website Development</a> in 2025 by transforming the way websites are planned, built, and optimized. By 2025, making web sites is changing a lot. It's not just about new code or systems, but how big of a part AI is now playing. AI tools have grown past just being nice extras; they are now key parts of what web creators, artists, and online firms use every day. AI helps do the same work over and over, and helps in making smart design picks. It is making work flows quick and pushing the limits of what we can do on the web. The aim is not to cut out the web makers, but to help them and speed up their work—making everything quicker, working well, and full of new ideas.
                             </p>
 
                             <h4> Table of Contents:</h4>
@@ -351,7 +351,7 @@ const HowAIisRevolutionizing = () => {
                                     Ethical and Security Considerations
                                 </h2>
                                 <p style={{ textAlign: "justify" }}>
-                                    Big power means big duty. AI in <a href="https://nakshatranamahacreations.com/">making websites </a>brings up new worries:
+                                    Big power means big duty. AI in <a href="https://www.nakshatranamahacreations.com/">making websites </a>brings up new worries:
                                 </p>
 
                                 <p style={{ textAlign: "justify" }}>
@@ -401,7 +401,7 @@ const HowAIisRevolutionizing = () => {
                                 </h2>
 
                                 <p style={{ textAlign: "justify" }}>
-                                    AI is Revolutionizing <a href="https://nakshatranamahacreations.com/website-development-company-in-bangalore">Website Development</a> in 2025, shifting the focus from manual effort to smart collaboration. By 2025, making sites is not just about typing. AI has become a silent aid—it helps, makes, looks over, and learns. It's changing how we create and run sites and opens up quick, new ways to work. If you own a business, write code, or make plans for content, using AI doesn't mean you lose control. Rather, it gives you a clever, better way to build and try new things on the web.
+                                    AI is Revolutionizing <a href="https://www.nakshatranamahacreations.com/website-development-company-in-bangalore">Website Development</a> in 2025, shifting the focus from manual effort to smart collaboration. By 2025, making sites is not just about typing. AI has become a silent aid—it helps, makes, looks over, and learns. It's changing how we create and run sites and opens up quick, new ways to work. If you own a business, write code, or make plans for content, using AI doesn't mean you lose control. Rather, it gives you a clever, better way to build and try new things on the web.
                                 </p>
                             </div>
                         </div>

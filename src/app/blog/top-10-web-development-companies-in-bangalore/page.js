@@ -14,13 +14,13 @@ export const metadata = {
   ],
   alternates: {
     canonical:
-      "https://nakshatranamahacreations.com/blog/top-10-web-development-companies-in-bangalore",
+      "https://www.nakshatranamahacreations.com/blog/top-10-web-development-companies-in-bangalore",
   },
   openGraph: {
     title: "Top 10 Web Development Companies in Bangalore",
     description:
       "Discover the top 10 web development companies in Bangalore. Learn about their services, expertise, and how they can help grow your business online.",
-    url: "https://nakshatranamahacreations.com/blog/top-10-web-development-companies-in-bangalore",
+    url: "https://www.nakshatranamahacreations.com/blog/top-10-web-development-companies-in-bangalore",
     type: "website",
     siteName: "Nakshatra Namaha Creations",
   },
@@ -30,7 +30,7 @@ export const metadata = {
     description:
       "Discover the top 10 web development companies in Bangalore. Learn about their services, expertise, and how they can help grow your business online.",
     images: [
-      "https://nakshatranamahacreations.com/media/logo.png",
+      "https://www.nakshatranamahacreations.com/media/logo.png",
     ],
     site: "@nncbengaluru",
   },

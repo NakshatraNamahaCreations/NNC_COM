@@ -76,7 +76,7 @@ const schemaMarkup = {
       "@type": "LocalBusiness",
       "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
       "name": "Nakshatra Namaha Creations",
-      "image": "https://nakshatranamahacreations.com/media/nnclogo.png",
+      "image": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
       "url": "https://www.nakshatranamahacreations.com/website-development-company-in-malleshwaram",
       "telephone": "+91-9900566466",
       "email": "info@nakshatranamahacreations.com",

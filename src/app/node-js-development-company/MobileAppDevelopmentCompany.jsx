@@ -54,7 +54,7 @@ const schema = {
       "@type": "LocalBusiness",
       "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
       "name": "Nakshatra Namaha Creations",
-      "image": "https://nakshatranamahacreations.com/media/nnclogo.png",
+      "image": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
@@ -82,8 +82,8 @@ const schema = {
       "@type": "Organization",
       "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
-      "url": "https://nakshatranamahacreations.com/nodejs-development-company",
-      "logo": "https://nakshatranamahacreations.com/media/nnclogo.png"
+      "url": "https://www.nakshatranamahacreations.com/nodejs-development-company",
+      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
     },
     {
       "@type": "Service",
@@ -126,7 +126,7 @@ const schema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Top Node JS Development Company",
-          "item": "https://nakshatranamahacreations.com/nodejs-development-company"
+          "item": "https://www.nakshatranamahacreations.com/nodejs-development-company"
         }
       ]
     },
