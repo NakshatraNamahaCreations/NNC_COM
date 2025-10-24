@@ -161,6 +161,19 @@ else if (
 ) {
   service = "Corporate Video Makers";
 }
+else if (
+  currentPath === "/animated-video-creators" ||
+  currentPath === "/animated-video-creators"
+) {
+  service = "Animated Video Creators";
+}
+else if (
+  currentPath === "/graphic-designing-company" ||
+  currentPath === "/graphic-designing-company"
+) {
+  service = "Graphic Designing Company";
+}
+
     setFormData((prev) => ({
       ...prev,
       user_service: service,

@@ -87,7 +87,7 @@ const data = [
        { text: "Graphic Design Services In Hyderabad",  href: "/graphic-design-services-hyderabad" },
        { text: "Graphic Design Company In Bangalore",  href: "/graphic-design-company-in-bangalore" },
        
-      { text: "Graphic Design Company",  href: "/" },
+      { text: "Graphic Design Company",  href: "/graphic-designing-company" },
       { text: "Logo Design Company", href: "/" },
       { text: "UI UX Design Company",  href: "/"},
       { text: "UI Design Company",  href: "/"},
@@ -101,6 +101,7 @@ const data = [
       { text: "2D Animation Services",   href: "/" },
       { text: "2D Animation Studio", href: "/2d-animation-studio" },
       { text: "2D Motion Graphics",  href: "/" },
+       { text: "Animated Video Creators",   href: "/animated-video-creators" },
       { text: "2D Cartoon Animation",   href: "/" },
       { text: "2D Explainer Video",   href: "/" },
       { text: "2D Character Animation",   href: "/" },
@@ -131,11 +132,12 @@ const data = [
     label: "Corporate Video Production",
     links: [
         { text: "Corporate Video Production In Bangalore",   href: "/corporate-video-production-company-in-bangalore"},
-      { text: "Corporate Video Production In Hyderabad",   href: "/corporate-video-production-company-hyderabad"},
+      { text: "Corporate Video Production In Hyderabad",   href: "/corporate-video-production-company-hyderabad"},  
        { text: "Corporate Film Makers",   href: "/corporate-film-makers"},
+          { text: "Corporate Video Makers", href: "/corporate-video-makers" },  
       { text: "Corporate Video Production",   href: "/"},
       { text: "Corporate Ad Shoot",   href: "/" },
-      { text: "Corporate Film Makers", href: "/corporate-film-makers" },
+    
       { text: "Business Promotional Video",   href: "/"},
       { text: "Product Video Shoot",   href: "/"},
       { text: "Drone Shoot for Corporate Film",   href: "/" },
