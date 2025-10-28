@@ -19,10 +19,10 @@ export const metadata = {
     url: "https://www.nakshatranamahacreations.com/react-js-development-company",
     images: [
       {
-        url: "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",
+        url: "https://www.nakshatranamahacreations.com/media/react-js-development-company.png",
         width: 1200,
         height: 630,
-        alt: "Mobile App Developers Near Me",
+        alt: "react-js-development-company",
       },
     ],
     siteName: "Nakshatra Namaha Creations",
@@ -31,9 +31,9 @@ export const metadata = {
     card: "summary_large_image",
     title: "React JS Development Company | NNC",
     description:
-      "Find reliable mobile app developers near you. Nakshatra Namaha Creations builds scalable Android and iOS apps with stunning design and robust performance.",
+      "Looking for a React JS development company? We build fast, scalable, and modern websites tailored to your business with the latest web technologies.",
     images: [
-      "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",
+      "https://www.nakshatranamahacreations.com/media/react-js-development-company.png",
     ],
     site: "@nncbengaluru",
     creator: "@nncbengaluru",

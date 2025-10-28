@@ -173,6 +173,18 @@ else if (
 ) {
   service = "Graphic Designing Company";
 }
+else if (
+  currentPath === "/paid-marketing-services" ||
+  currentPath === "/paid-marketing-services"
+) {
+  service = "Paid Marketing Services";
+}
+else if (
+  currentPath === "/social-media-marketing" ||
+  currentPath === "/social-media-marketing"
+) {
+  service = "Social Media Marketing";
+}
 
     setFormData((prev) => ({
       ...prev,

@@ -119,9 +119,11 @@ const data = [
     links: [
         { text: "Digital Marketing Agency In Bangalore",   href: "/digital-marketing-agency-in-bangalore" },
           { text: "Digital Marketing Agency In Hyderabad",   href: "/digital-marketing-agency-hyderabad" },
+           { text: "Paid Marketing Services",   href: "/paid-marketing-services" },
       { text: "Digital Marketing Agency",   href: "/" },
+{ text: "Social Media Marketing",   href: "/social-media-marketing" },
       { text: "SEO Services",   href: "/" },
-      { text: "Social Media Marketing",   href: "/" },
+     
       { text: "Digital Marketing Services",   href: "/" },
       { text: "PPC Advertising",   href: "/" },
       { text: "Digital Marketing Company",   href: "/" },
