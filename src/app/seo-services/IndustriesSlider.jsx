@@ -6,20 +6,20 @@ import styles from "@/styles/industries.module.css";
 
 // Top row
 const rowA = [
-  { title: "Discovery & Strategy", icon: "/media/icons/idea (1).png", desc: "Establish the brand voice, objectives, and target market for efficient Social Media Marketing." , color:"ind--blue"},
-  { title: "Planning & Creation", icon: "/media/icons/app-development.png", desc: "Create visuals for the posts, compose engaging copy, and set up the content with clear goals.", color:"ind--purple"},
-  { title: "Execution & Engagement", icon: "/media/icons/ux.png", desc: "Social Media Marketing campaigns that are activated, and interactions that are managed in the real-time mode.", color:"ind--mint"},
-  { title: "Optimization & Reporting", icon: "/media/icons/onboarding.png", desc: "Identify the customer needs through the data and adjust the strategy to get more engagement and ​‍​‌‍​‍‌​‍​‌‍​‍‌conversions.", color:"ind--cyan"},
+  { title: "Discover & Audit", icon: "/media/icons/idea (1).png", desc: "Understanding and evaluating the existing SEO status and potential for growth." , color:"ind--blue"},
+  { title: "Strategy & Keyword Research", icon: "/media/icons/keyword.png", desc: "Creating a roadmap with the focus of Search Engine Optimisation targeting the right keywords.", color:"ind--purple"},
+  { title: "Implementation", icon: "/media/icons/ux.png", desc: "Use the on-page improvements, technical fixes, and content optimization to achieve the desired goals.", color:"ind--mint"},
+  { title: "Monitoring & Reporting", icon: "/media/icons/technical-support.png", desc: "Keep track of the ranking performance and offer practical monthly ​‍​‌‍​‍‌​‍​‌‍​‍‌insights.", color:"ind--cyan"},
  
  
 ];
 
 // Bottom row (scrolls opposite) img: "/media/icons/ui.png",
 const rowB = [
-  { title: "Discovery & Strategy", icon: "/media/icons/idea (1).png", desc: "Establish the brand voice, objectives, and target market for efficient Social Media Marketing." , color:"ind--blue"},
-  { title: "Planning & Creation", icon: "/media/icons/app-development.png", desc: "Create visuals for the posts, compose engaging copy, and set up the content with clear goals.", color:"ind--purple"},
-  { title: "Execution & Engagement", icon: "/media/icons/ux.png", desc: "Social Media Marketing campaigns that are activated, and interactions that are managed in the real-time mode.", color:"ind--mint"},
-  { title: "Optimization & Reporting", icon: "/media/icons/onboarding.png", desc: "Identify the customer needs through the data and adjust the strategy to get more engagement and ​‍​‌‍​‍‌​‍​‌‍​‍‌conversions.", color:"ind--cyan"},
+  { title: "Discover & Audit", icon: "/media/icons/idea (1).png", desc: "Understanding and evaluating the existing SEO status and potential for growth." , color:"ind--blue"},
+  { title: "Strategy & Keyword Research", icon: "/media/icons/keyword.png", desc: "Creating a roadmap with the focus of Search Engine Optimisation targeting the right keywords.", color:"ind--purple"},
+  { title: "Implementation", icon: "/media/icons/ux.png", desc: "Use the on-page improvements, technical fixes, and content optimization to achieve the desired goals.", color:"ind--mint"},
+  { title: "Monitoring & Reporting", icon: "/media/icons/technical-support.png", desc: "Keep track of the ranking performance and offer practical monthly ​‍​‌‍​‍‌​‍​‌‍​‍‌insights.", color:"ind--cyan"},
  
 ];
 
@@ -61,10 +61,10 @@ export default function IndustriesSlider() {
   return (
     <section className={styles.industries}>
       <div className="container">
-      <h2 className={styles.sec3Heading}>Our Social Media Marketing Process – Data Meets Creativity</h2>
+      <h2 className={styles.sec3Heading}>Our Search Engine Optimisation Process – Step-by-Step Growth</h2>
         <p className={styles.sec3Text}>
-        We​‍​‌‍​‍‌​‍​‌‍​‍‌ operate in a method that is well-organized, clear to the client, and geared towards achieving results. Nakshatra Namaha Creations as a reliable Social Media Marketing company, effectively combines the strategy with the creative aspects to ensure that the brand grows in a way that can be quantified.
-        </p>
+        Nakshatra Namaha Creations is a company that provides SEO services and focuses on the strategy and measurable progress.
+         </p>
     <br /> 
       </div>
 

@@ -18,35 +18,12 @@ import FaqSection from './FaqSection';
 import TestimonialsCarousel from './TestimonialsCarousel';
 import Trusted2 from './Trusted2';
 
-const ourworkData = [
-{
-    ui_uxdesign: "/media/ourwork/vijayhome.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG_VijayHomeLogo.png",
-    title: "Vijaya Home Services",
-    description:
-      "This was created specifically keeping the client’s requirements. We stood up to their expectations.",
-    link: "https://play.google.com/store/apps/details?id=com.vhs1&pcampaignid=web_share",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/cdn.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG-06.png",
-    title: "CND Play",
-    description:
-      "CND PLAY is an emerging streaming platform dedicated to providing a vast library of movies to audiences worldwide.",
-    link: "https://play.google.com/store/apps/details?id=com.clockndail.clockndail&hl=en_IN",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/proleverage.webp",
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
-    title: "Pro Leverage",
-    description:
-      "This was created specifically keeping the client’s requirements. We stood up to their expectations.",
-    link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
-  },
-];
+
 
 export default function MobileAppDevelopmentCompany() {
-  const schema = {
+
+
+const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -81,7 +58,7 @@ export default function MobileAppDevelopmentCompany() {
       "@type": "Organization",
       "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
-      "url": "https://www.nakshatranamahacreations.com/social-media-marketing",
+      "url": "https://www.nakshatranamahacreations.com/seo-services",
       "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
     },
     {
@@ -117,8 +94,8 @@ export default function MobileAppDevelopmentCompany() {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Social Media Marketing Services | NNC",
-          "item": "https://www.nakshatranamahacreations.com/social-media-marketing"
+          "name": "SEO Services Company",
+          "item": "https://www.nakshatranamahacreations.com/seo-services"
         }
       ]
     },
@@ -127,56 +104,57 @@ export default function MobileAppDevelopmentCompany() {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do you provide content for all social media platforms?",
+          "name": "How long does SEO take to show results?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we create and manage content for Instagram, Facebook, LinkedIn, Twitter (X), and YouTube."
+            "text": "Typically, visible improvements start within 3–6 months, but it depends on your domain history, competition, and existing setup."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you run ad campaigns along with organic content?",
+          "name": "Do you guarantee #1 rankings on Google?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. We manage both organic strategies and paid ads under one integrated plan."
+            "text": "No ethical SEO agency can guarantee that. We focus on sustainable strategies that bring consistent growth."
           }
         },
         {
           "@type": "Question",
-          "name": "How often will you post for us?",
+          "name": "What tools do you use for SEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer packages that include 12, 20, or more posts per month, based on your goals."
+            "text": "We use tools like Google Search Console, SEMrush, Ahrefs, and Screaming Frog—but more importantly, we use our expertise."
           }
         },
         {
           "@type": "Question",
-          "name": "Will you respond to comments and DMs on our behalf?",
+          "name": "Will SEO help my local business?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, community management is included in our Growth and Pro plans."
+            "text": "Yes. With Local SEO, we help you appear on maps, local listings, and nearby searches to drive real foot traffic."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you create reels and short videos?",
+          "name": "Can you optimize an existing website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we design and edit engaging video content tailored to each platform’s format."
+            "text": "Absolutely. We audit your current setup and enhance it with our on-page, technical, and content-focused optimizations."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I change my plan later?",
+          "name": "What’s the difference between SEO and paid ads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Of course. Plans are flexible and can be upgraded or downgraded monthly based on your needs."
+            "text": "SEO earns you long-term organic visibility, while ads offer instant traffic at a cost. We can help with both if needed."
           }
         }
       ]
     }
   ]
 };
+
 
 
 

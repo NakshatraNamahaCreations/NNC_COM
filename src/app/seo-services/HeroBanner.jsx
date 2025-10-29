@@ -31,7 +31,7 @@ export default function HeroBanner() {
                 <a href="/services" className={styles.crumbLink}>Services</a>
               </li>
               <li className={`breadcrumb-item active ${styles.crumbActive}`} aria-current="page">
-                Social Media Marketing Services 
+                Search Engine Optimisation Services 
 
               </li>
             </ol>
@@ -44,7 +44,7 @@ export default function HeroBanner() {
             <div className="col-lg-6">
               {/* Heading */}
               <h1 className={`display-5 fw-bold lh-sm  ${styles.heroTitle}`} style={{marginBottom:"2px"}}>
-              Social Media Marketing Services </h1>
+              Search Engine Optimisation Services </h1>
                
                 <h2>
                 <span className={`display-5 fw-bold mb-3 ${styles.heroSubtitle}`}>Design. Develop. Deliver Excellence.</span>

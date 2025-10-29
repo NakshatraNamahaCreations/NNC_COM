@@ -4,44 +4,44 @@ import styles from "../../styles/covered-section.module.css";
 
 const faqs = [
    {
-    q: 'Why​‍​‌‍​‍‌​‍​‌‍​‍‌ choose Nakshatra Namaha Creations for Social Media Marketing?',
-    a: 'It is because of the blend of creativity, analytics, and strategy that we do to give you the desired results through our Social Media Marketing services.',
+    q: 'Why choose Nakshatra Namaha Creations for Search Engine Optimisation?',
+    a: 'We combine expertise, transparency, and measurable results to deliver top-performing Search Engine Optimisation for all industries.',
   },
    {
-    q: 'Is Nakshatra Namaha Creations a full-service Social Media Marketing company?',
-    a: 'Indeed, we are. We take up the entire management from strategy, content, paid campaigns, and reporting.',
+    q: 'Is Nakshatra Namaha Creations an ethical SEO agency?',
+    a: 'Yes. Our Search Engine Optimisation strictly follows Google guidelines — no black-hat or spammy tactics.',
   },
    {
-    q: 'By what means do you judge the effectiveness of Social Media Marketing?',
-    a: 'By means of the engagement metrics, conversions, and ROI tracking dashboards.',
+    q: 'Do you offer SEO audits before starting?',
+    a: 'Absolutely. We begin every Search Engine Optimisation campaign with a detailed audit to identify technical and content gaps.',
   },
    {
-    q: 'Can Nakshatra Namaha Creations handle both local and international campaigns?',
-    a: 'Definitely. Our Social Media Marketing is open to different languages and international audiences.',
-  },
-  {
-    q: 'Before promoting Social Media Marketing, do you supply brand audits?',
-    a: 'Yes. We do an in-depth analysis of your profiles, competitors, and audience before preparing a strategy.',
+    q: 'Can you manage both local and global SEO projects?',
+    a: 'Yes, our Search Engine Optimisation strategies adapt to local markets and international audiences.',
   },
    {
-    q: 'Do you provide content to all social media platforms?',
-    a: 'Yes, through our Social Media Marketing, one can access services from Instagram, Facebook, LinkedIn, Twitter (X), and YouTube.',
-  },
-  {
-    q: 'Is it possible for you to manage ads alongside organic posts?',
-    a: 'Indeed, we are to integrate both organic and paid strategies within our Social Media Marketing plans.',
+    q: 'What industries do you specialize in for SEO?',
+    a: 'We provide Search Engine Optimisation for e-commerce, healthcare, real estate, education, and tech sectors.',
   },
    {
-    q: 'How often do you post for clients?',
-    a: 'Our Social Media Marketing is at your disposal to offer 12, 20, or 30+ posts monthly based on your plan.',
+    q: 'What makes a successful Search Engine Optimisation strategy?',
+    a: 'A combination of content quality, keyword intent, backlinks, and technical optimization ensures long-term visibility.',
   },
    {
-    q: 'Are you in charge of community management and DMs?',
-    a: 'Yes, engagement and customer response are parts of our Social Media Marketing services.',
+    q: 'Do you guarantee #1 rankings?',
+    a: 'No ethical Search Engine Optimisation company can guarantee rankings, but we guarantee consistent growth.',
   },
    {
-    q: 'Do you make reels and video content?',
-    a: 'Indeed. Under the Social Media Marketing plan, we provide high-quality video content that is ​‍​‌‍​‍‌​‍​‌‍​‍‌platform-friendly.',
+    q: 'Which SEO tools do you use?',
+    a: 'Our Search Engine Optimisation team uses Google Search Console, Ahrefs, SEMrush, and Screaming Frog for accurate insights.',
+  },
+   {
+    q: 'Will SEO help my local business?',
+    a: 'Definitely. Local Search Engine Optimisation helps your business appear on Google Maps, directories, and “near me” searches.',
+  },
+   {
+    q: 'Can you optimize my existing website?',
+    a: 'Yes, we can enhance your current site’s performance through thorough Search Engine Optimisation audits and fixes.',
   },
 
 ];

@@ -28,11 +28,11 @@ export default function CTASection() {
       <div className={styles.inner}>
         <span className={styles.pill}>Talk to our Experts</span>
 <h2 className={styles.title}>
-Grow Your Brand with Expert Social Media Marketing Services
+Boost Your Business with Powerful Search Engine Optimisation
 </h2>
 
 <p className={styles.sub}>
-Want to build a strong online presence and connect with the right audience? Our social media marketing team helps brands grow through creative content, targeted campaigns, and consistent engagement across platforms like Instagram, Facebook, LinkedIn, and YouTube. From strategy to execution, we craft social media experiences that drive awareness, leads, and measurable business growth.
+Ready to take your website to the top of Google search results? Our SEO experts help your brand attract the right audience through keyword research, on-page optimization, and high-quality backlinks. We focus on improving visibility, increasing traffic, and driving real business growth — not just rankings.
 </p>
 
 

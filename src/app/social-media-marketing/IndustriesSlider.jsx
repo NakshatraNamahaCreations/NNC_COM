@@ -60,17 +60,8 @@ export default function IndustriesSlider() {
 
   return (
     <>
-     <section className={styles.spotlightSection}>
-  <div className={styles.spotlightFull}>
-    <Image
-      src="/media/spotlight1.webp"
-      alt="Social Media Marketing spotlight"
-      fill
-      className={styles.spotlightImg}
-      priority
-    />
-  </div>
-</section>
+
+
     <section className={styles.industries}>
       <div className="container">
       <h2 className={styles.sec3Heading}>Our Social Media Marketing Process – Data Meets Creativity</h2>

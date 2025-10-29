@@ -7,6 +7,7 @@ export default function CoveredSection() {
 
 
   return (
+    <>
     <section className={styles.wrap}>
       <div className="container">
         <div className="row align-items-center g-5">
@@ -22,7 +23,7 @@ export default function CoveredSection() {
                  </p>
           </div>
 
-          {/* Right image */}
+          {/* Right image  */}
           <div className="col-lg-5">
             <div className={styles.imageCard}>
               <Image
@@ -38,5 +39,21 @@ export default function CoveredSection() {
         </div>
       </div>
     </section>
+    
+            <section className={styles.spotlightSection}>
+  <div className={`${styles.spotlightFull} ${styles.edgeToEdge}`}>
+    <Image
+      src="/media/spotlight4.png"
+      alt="Social Media Marketing spotlight"
+      fill
+      className={styles.spotlightImg}
+      /* Serve smaller images on small screens to improve LCP */
+     
+      priority
+     
+    />
+  </div>
+</section>
+    </>
   );
 }

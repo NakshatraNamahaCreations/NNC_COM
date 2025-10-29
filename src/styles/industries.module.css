@@ -138,25 +138,3 @@
   }
   .indIcon { width: 60px; height: 60px; }
 }
-
-.spotlightSection {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  
-}
-
-/* Full-width container without padding */
-.spotlightFull {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 300px; 
-  margin: "0 auto";
-}
-
-/* Next.js Image with fill will make it cover entire width */
-.spotlightImg {
-  object-fit: cover;
-  object-position: center;
-}

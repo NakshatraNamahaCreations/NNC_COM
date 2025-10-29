@@ -335,3 +335,31 @@
   .aligned { transition: none; }
   .answer { animation: none; }
 }
+
+
+
+.spotlightSection { width: 100%; margin: 0; padding: 0; }
+
+.spotlightFull {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3.75 / 1;        /* match your image ratio */
+  height: auto;                   /* no tall clamps */
+  min-height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.spotlightImg {
+  object-fit: contain;
+  object-position: center;
+  background: transparent;        /* or set a brand gradient if you want no white bars on odd screens */
+}
+
+/* modest bump on larger screens if you want */
+@media (min-width: 1044px) {
+  .spotlightFull { aspect-ratio: 10 / 1; }
+}
+
+/* remove gap before next block */
+.spotlightSection + * { margin-top: 0; }

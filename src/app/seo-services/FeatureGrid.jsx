@@ -5,41 +5,32 @@ import styles from "../../styles/FeatureGrid.module.css";
 
 const features = [
   {
-    title: "The collaboration and transparency in the process",
-    desc: "Strategy calls, reviews, and updates for every stage of Social Media Marketing. ",
+    title: "Collaborative Approach",
+    desc: "Transparent communication throughout every stage of Search Engine Optimisation.",
     img: "/media/icons/report.png",
   },
 
   {
-    title: "Fully Custom Designs",
-    desc: "No templates every post and reel is uniquely designed.",
+    title: "Custom Strategies",
+    desc: " Each SEO plan is crafted for your unique goals never generic.",
     img: "/media/icons/ux.png",
   },
   {
-    title: "Timely Delivery",
-    desc: "Clear schedules ensure seamless Social Media Marketing execution.",
+    title: "Transparent Metrics",
+    desc: "Monthly reports and dashboards for easy tracking.",
     img: "/media/icons/growth-chart.png",
   },
   {
-    title: "Multilingual & Global Ready",
-    desc: "Content crafted in regional and international formats.",
+    title: "Global and Multilingual SEO:",
+    desc: "Our Search Engine Optimisation extends to both local and international markets.",
     img: "/media/icons/languages.png",
   },
     {
-    title: "Post-Delivery Support",
-    desc: "Continuous optimization and monthly performance tracking.",
+    title: "Continuous Optimization",
+    desc: "We adapt your Search Engine Optimisation plan based on algorithm changes and trends",
     img: "/media/icons/online-analysis.png",
   },
-  //    {
-  //   title: "Deployment & Optimization",
-  //   desc: "We deploy your applications on AWS, Azure, or your preferred platform. As a Node Js Development Company, we monitor and optimize performance continuously.",
-  //   img: "/media/icons/agile.png",
-  // },
-  //    {
-  //   title: "Ongoing Maintenance & Support",
-  //   desc: "Our support team ensures your Node.js website stays secure and updated as your business grows — a commitment our Node Js Development Company stands by.",
-  //   img: "/media/icons/technical-support.png",
-  // },
+
 ];
 
 export default function FeatureGrid() {
@@ -50,7 +41,7 @@ export default function FeatureGrid() {
 What Can You Expect from Nakshatra Namaha Creations?
 </h2>
 <p className={styles.sec3Text}style={{width:"70%", margin:"0 auto"}}>
-  Our​‍​‌‍​‍‌​‍​‌‍​‍‌ growth is largely determined by the innovative, synergistic, and consistent manner of our Social Media Marketing. 
+We deliver more than rankings — we deliver consistent progress through quality Search Engine Optimisation practices.
 </p>
 
 <br />

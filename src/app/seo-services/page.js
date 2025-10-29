@@ -4,7 +4,7 @@ import MobileAppDevelopmentCompany from "./MobileAppDevelopmentCompany"
 export const metadata = {
   title: "Search Engine Optimisation Company – SEO Services for Growth",
   description:
-    "Social Media Marketing that drives engagement, followers, and sales. From content creation to ad campaigns, grow your brand on Instagram, Facebook and more.",
+    "Boost visibility, traffic with Search Engine Optimisation services. We deliver on-page, off-page, and local SEO strategies for long-term ranking success.",
   keywords:
     "SEO services, SEO company, Search engine optimisation. Local SEO services, SEO experts ",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Search Engine Optimisation Company – SEO Services for Growth",
     description:
-      "Social Media Marketing that drives engagement, followers, and sales. From content creation to ad campaigns, grow your brand on Instagram, Facebook and more.",
+      "Boost visibility, traffic with Search Engine Optimisation services. We deliver on-page, off-page, and local SEO strategies for long-term ranking success.",
     type: "website",
     url: "https://www.nakshatranamahacreations.com/seo-services",
     images: [
@@ -31,7 +31,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Search Engine Optimisation Company – SEO Services for Growth",
     description:
-      "Social Media Marketing that drives engagement, followers, and sales. From content creation to ad campaigns, grow your brand on Instagram, Facebook and more.",
+      "Boost visibility, traffic with Search Engine Optimisation services. We deliver on-page, off-page, and local SEO strategies for long-term ranking success.",
     images: [
       "https://www.nakshatranamahacreations.com/media/seo-services.png",
     ],

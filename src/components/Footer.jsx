@@ -122,7 +122,7 @@ const data = [
            { text: "Paid Marketing Services",   href: "/paid-marketing-services" },
       { text: "Digital Marketing Agency",   href: "/" },
 { text: "Social Media Marketing",   href: "/social-media-marketing" },
-      { text: "SEO Services",   href: "/" },
+      { text: "SEO Services",   href: "/seo-services" },
      
       { text: "Digital Marketing Services",   href: "/" },
       { text: "PPC Advertising",   href: "/" },

@@ -6,31 +6,31 @@ import s from "../../styles/TestimonialsCarousel.module.css";
 const ITEMS = [
   {
     quote:
-      "We saw a 300% engagement boost after partnering with Nakshatra Namaha Creations for Social Media Marketing.",
-    name: "Sneha R",
+      "Our website traffic doubled in four months — their Search Engine Optimisation strategy worked perfectly.",
+    name: "Vikram K.",
     role: "Chief Technology Officer at UGRO Capital Ltd",
-   avatar: "/media/icons/woman (5).png",
+   avatar: "/media/icons/man (6).png",
   },
   {
     quote:
-      "Their influencer strategy expanded our reach dramatically.",
-    name: "Ajay M",
+      "We ranked #1 locally after their Search Engine Optimisation efforts",
+    name: "Deepa M.",
     role: "Chief Accounts & Finance Officer at Astute Group",
-    avatar: "/media/icons/man (6).png",
+    avatar: "/media/icons/woman (5).png",
   },
     {
     quote:
-      "Professional and creative — their Social Media Marketing made our café brand memorable.",
-    name: "Praveen S.",
+      "Their SEO revamp transformed our old website into a top performer.",
+    name: " Ravi S.",
     role: "Head of Operations",
     avatar: "/media/icons/man (6).png",
   },
   {
     quote:
-      "Custom creatives and consistency were unmatched",
-    name: "Manisha D",
+      "Clear reports, honest communication their Search Engine Optimisation is reliable and effective",
+    name: "Ananya D.",
     role: "VP — Information Technologies & Infrastructure, Rebel Foods",
-    avatar: "/media/icons/man (6).png",
+    avatar: "/media/icons/woman (5).png",
   },
 
   

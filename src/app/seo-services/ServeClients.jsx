@@ -19,8 +19,9 @@ export default function ServeClients() {
   return (
     <section className={s.section} aria-labelledby="serve-title">
       <div className={s.container}>
-        <h2 id="serve-title" className={s.heading}>Industries Our Social Media Marketing Serve</h2>
-<br />
+        <h2 id="serve-title" className={s.heading}>Industries We Serve as Search Engine Optimisation Experts</h2>
+
+      <br />
         <div className={s.grid}>
           {segments.map((seg) => (
             <article key={seg.title} className={s.item}>

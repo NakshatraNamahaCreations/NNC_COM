@@ -7,18 +7,19 @@ export default function CoveredSection() {
 
 
   return (
+    <>
     <section className={styles.wrap}>
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Left copy */}
           <div className="col-lg-7">
-            <h2 className={styles.title}> Social Media Marketing Studio</h2>
+            <h2 className={styles.title}> Search Engine Optimisation Studio</h2>
             <p className={styles.lead}>
-         Nakshatra​‍​‌‍​‍‌​‍​‌‍​‍‌ Namaha Creations is a creative-first social media marketing studio that is committed to building meaningful digital connections. We develop platform-specific strategies that are in line with your brand voice and business objectives, thus enabling you to be visible in the crowded feeds. By means of curated content calendars and optimized posts, our social media marketing strategy is the way your brand will be able to remain consistent and engaging on Instagram, Facebook, LinkedIn, YouTube, and the like.
-           </p>
+         Nakshatra​‍​‌‍​‍‌​‍​‌‍​‍‌ Namaha Creations is a Search Engine Optimisation studio that focuses on results and drives them by the means of SEO in a way that is completely organic. Our skilled team uses a blend of technical SEO, on-page strategies, and content alignment to make sure that your website is ranking well on all search engines. Every search engine optimisation plan is based on solid facts, understanding the audience and business goals for gaining success that can be measured.
+          </p>
             <p className={styles.lead}>
-         Our crew does not concentrate on only likes and shares — the chief aim is to make business through social media marketing. Creative storytelling and insights are some of the things we use to accomplish measurable growth whenever you decide to launch a product, nurture a community or run ad campaigns for lead ​‍​‌‍​‍‌​‍​‌‍​‍‌generation.
-           </p>
+        We employ Search Engine Optimisation techniques to achieve growth that is sustainable for startups and local businesses as well as for large enterprises looking for national domination. To begin with, our SEO strategy allows you to rise in keyword rankings, increase traffic through organic visitors, and gain more authority for your site which, in the end, will lead to lasting ​‍​‌‍​‍‌​‍​‌‍​‍‌results.
+          </p>
           </div>
 
           {/* Right image */}
@@ -37,5 +38,20 @@ export default function CoveredSection() {
         </div>
       </div>
     </section>
+        <section className={styles.spotlightSection}>
+  <div className={`${styles.spotlightFull} ${styles.edgeToEdge}`}>
+    <Image
+      src="/media/spotlight3.png"
+      alt="Social Media Marketing spotlight"
+      fill
+      className={styles.spotlightImg}
+      /* Serve smaller images on small screens to improve LCP */
+     
+      priority
+     
+    />
+  </div>
+</section>
+    </>
   );
 }

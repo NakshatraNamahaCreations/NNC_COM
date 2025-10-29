@@ -185,7 +185,12 @@ else if (
 ) {
   service = "Social Media Marketing";
 }
-
+else if (
+  currentPath === "/seo-services" ||
+  currentPath === "/seo-services"
+) {
+  service = "Search Engine Optimisation";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,
