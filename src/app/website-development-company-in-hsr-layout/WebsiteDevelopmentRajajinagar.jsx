@@ -137,38 +137,7 @@ export default function WebsiteDevelopmentRajajinagar() {
     },
 
     /* Reviews (optional but helpful) */
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "E-Commerce Website" },
-      "author": { "@type": "Person", "name": "Rajesh Kumar" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "Nakshatra Namaha Creations transformed my business with a professional and user-friendly e-commerce website. The team ensured smooth functionality, secure payment integration and mobile responsiveness. Their support and timely updates helped me scale my online store effortlessly.",
-      "datePublished": "2025-05-01"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Website Development" },
-      "author": { "@type": "Person", "name": "Priya Sharma" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.8", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "I needed a website for my healthcare practice and they delivered exactly what I wanted. The design is clean, easy to navigate and optimized for patient inquiries. Their expertise as a Website Development Company in Bangalore truly stands out.",
-      "datePublished": "2025-04-20"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Website Development Company HSR Layout Bangalore" },
-      "author": { "@type": "Person", "name": "Vikram Shetty" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "As an IT business, I needed a website that showcased my services effectively. They developed a sleek, fast and highly functional website that exceeded my expectations. Their post-launch support has been excellent.",
-      "datePublished": "2025-03-15"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@type": "Service", "name": "Real Estate Website Services" },
-      "author": { "@type": "Person", "name": "Ankit Verma" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "My real estate website was outdated and they revamped it with a modern, engaging design. Now, my property listings are well-organized and customers can easily search and filter properties. I highly recommend their services.",
-      "datePublished": "2025-05-10"
-    },
+
 
     /* FAQ */
     {

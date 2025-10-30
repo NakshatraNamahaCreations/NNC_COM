@@ -1,528 +1,1226 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "@react-spring/web";
-import axios from "axios";
-import BlogSearch from "@/components/blogs/BlogSearch";
-import BlogCard from "@/components/blogs/BlogCard";
-import Icons from "@/components/Icons";
-import ViewAllBtn from "@/components/ourworks/ViewAllBtn";
-import { useRouter } from "next/navigation";
-import Breadcrumbs from "@/components/BreadCrumbs";
-import ShimmerCard from "@/components/ShimmerCard";
+import { useEffect, useState } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+const websitedevBannerImg1 = "/media/webdev/webdevhyder.jpg";
+const websitedevBannerImg2 = "/media/webdev/bannerImg2.png";
 
-// ✅ call your Next proxy route (no CORS/CSP headaches)
-const API_URL = "/api/blogs";
-// used only for building image URLs
-const ASSET_BASE = "https://api.nakshatranamahacreations.in";
-// Static blog data
-const blogData = [
-    {
-        id: 1,
-        title: "Difference between React and Next.js in 2025",
-        description:
-            "Learn how investing in mobile app development can help businesses stay competitive in the market and connect with their audience better.",
-        date: "March 25, 2025",
-        category: "Web App Development",
-        link: "/blog/difference-between-react-and-next-js",
-        banner: "/media/blogs/react&Nextjs.webp",
-    },
-    {
-        id: 2,
-        title: "Top 10 Mobile App Development Companies in Bangalore",
-        description:
-            "Learn how investing in mobile app development can help businesses stay competitive in the market and connect with their audience better.",
-        date: "April 30, 2025",
-        category: "Mobile App Development",
-        link: "/blog/top10-mobile-app-dev-companies-in-bangalore",
-        banner: "/media/blogs/Top10MobileappCompanies.png",
-    },
-    {
-        id: 3,
-        title: "Top 5 2D Animation Companies in Bangalore",
-        description:
-            "Explore the Top 2D animation companies in Bangalore offering creative animation services for various industries. Find the perfect studio for your project needs.",
-        date: "April 30, 2025",
-        category: "Top 5 2D Animation Companies in Bangalore",
-        link: "/blog/top-5-2d-animation-companies-in-bangalore",
-        banner: "/media/blogs/1.png",
-    },
-    {
-        id: 4,
-        title: "Why Businesses Are Choosing 2D Animation for Marketing",
-        description:
-            "Discover why businesses are opting for 2D animation in marketing. Learn how it enhances brand identity, engages customers, and simplifies complex messages.",
-        date: "April 30, 2025",
-        category: "Why Businesses Are Choosing 2D Animation for Marketing",
-        link: "/blog/why-businesses-are-choosing-2d-animation-for-marketing",
-        banner: "/media/blogs/2.png",
-    },
-    {
-        id: 5,
-        title: "Top 5 Benefits of 2D Animation for Businesses",
-        description:
-            "Discover the top benefits of 2D animation for businesses. Learn how it enhances brand identity, simplifies ideas, and boosts engagement for marketing success.",
-        date: "April 30, 2025",
-        category: "Top 5 Benefits of 2D Animation for Businesses",
-        link: "/blog/top-5-benefits-of-2d-animation-for-businesses",
-        banner: "/media/blogs/3.png",
-    },
-    {
-        id: 6,
-        title: "Web Development Company vs Web Development Agency",
-        description:
-            "Learn the difference between a web development company and agency. Find out which one suits your business needs based on focus, services, and scalability.",
-        date: "April 30, 2025",
-        category: "Web Development Company vs Web Development Agency",
-        link: "/blog/web-development-company-vs-web-development-agency",
-        banner: "/media/blogs/4.png",
-    },
-    {
-        id: 7,
-        title: "Top 10 Web Development Companies in Bangalore",
-        description:
-            "Discover the top 10 web development companies in Bangalore. Learn about their services, expertise, and how they can help grow your business online.",
-        date: "April 30, 2025",
-        category: "Top 10 Web Development Companies in Bangalore",
-        link: "/blog/top-10-web-development-companies-in-bangalore",
-        banner: "/media/blogs/5.png",
-    },
-    {
-        id: 8,
-        title: "Website Speed Optimization: Tips to Improve your Website Speed",
-        description:
-            "Learn effective tips to improve your website speed and enhance performance for a better user experience and improved SEO rankings. Boost your site's speed today!",
-        date: "April 30, 2025",
-        category: "Tips to Improve your Website Speed",
-        link: "/blog/tips-to-improve-your-website-speed",
-        banner: "/media/blogs/6.png",
-    },
-    {
-        id: 9,
-        title: "Bing Places vs Google Business Profile: Key Differences",
-        description:
-            "Explore the key differences between Bing Places and Google Business Profile to boost your local SEO and manage your business visibility more effectively.",
-        date: "April 30, 2025",
-        category: "Bing Places vs. Google Business Profile: Key",
-        link: "/blog/bing-places-vs-google-business-profile",
-        banner: "/media/blogs/8.png",
-    },
-    {
-        id: 10,
-        title: "Local SEO Guide: Boost Your Business Visibility Locally",
-        description:
-            "Professional website development company in HSR Layout, Bangalore. We build mobile friendly, secure, SEO-friendly websites for all types of businesses.",
-        date: "April 30, 2025",
-        category: "Local SEO Guide: Boost Your Business Visibility Locally",
-        link: "/blog/local-seo-complete-guide/",
-        banner: "/media/blogs/7.png",
-    },
-    {
-        id: 11,
-        title: "Custom Website vs. Template: Which Is Right for Your Business?",
-        description:
-            "Discover the key differences between custom and template websites to choose the right option that fits your business needs, budget, and long-term growth.",
-        date: "April 30, 2025",
-        category: "Custom Website vs Template: What’s Best for Your Business?",
-        link: "/blog/custom-website-vs-template-which-is-right-for-your-business",
-        banner: "/media/blogs/9.png",
-    },
-    {
-        id: 12,
-        title: "Why Your Website Needs Schema Markup for SEO",
-        description:
-            "Discover why adding schema markup to your website improves search visibility, boosts click-through rates, and helps search engines understand your content better.",
-        date: "April 30, 2025",
-        category: "Why Your Website Needs Schema Markup for SEO",
-        link: "/blog/why-your-website-needs-schema-markup",
-        banner: "/media/blogs/10.png",
-    },
-    {
-        id: 13,
-        title: "Landing Page vs. Homepage: Key Differences Explained",
-        description:
-            "Understand the real difference between a landing page and a homepage, when to use each, and how to boost conversions by guiding visitors the right way.",
-        date: "April 30, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/landing-page-vs-homepage/",
-        banner: "/media/blogs/11.png",
-    },
-    {
-        id: 14,
-        title: "Top 10 AWS Services for Mobile App Development 2025",
-        description:
-            "Explore the top 10 AWS services used in mobile app development. Learn how Amplify, Cognito, Lambda, and more power secure, scalable apps in 2025 and beyond.",
-        date: "April 30, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/aws-services-for-mobile-app-development",
-        banner: "/media/blogs/12.png",
-    },
-    {
-        id: 15,
-        title: "Top Mobile App Ideas for Restaurant and Food Businesses",
-        description:
-            "Explore best mobile app ideas for restaurants and food businesses, from online ordering to loyalty programs. Boost efficiency and engage more customers today.",
-        date: "April 30, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/top-mobile-app-ideas-for-restaurant-food-businesses",
-        banner: "/media/blogs/13.png",
-    },
-    {
-        id: 16,
-        title: "2D vs. 3D Animation: Which Is Better for Your Business Goals",
-        description:
-            "2D vs. 3D animation—learn which style works best for your business goals. Compare costs, use cases, visual impact, and marketing benefits.",
-        date: "April 30, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/2d-vs-3d-animation-which-is-better-for-your-business-goals",
-        banner: "/media/blogs/14.png",
-    },
-    {
-        id: 17,
-        title: "5 Ways Animation Can Revamp Your Brand Identity",
-        description:
-            "Discover how animation boosts brand recall, simplifies messaging, and differentiates your business. See 5 ways it can elevate your brand identity today.",
-        date: "July 7, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/animation-for-brand-identity",
-        banner: "/media/blogs/15.png",
-    },
-    {
-        id: 18,
-        title: "Do I Need a Website or a Web App? Here's How to Decide",
-        description:
-            "Not sure if you need a website or web app, Learn the differences, real-world use cases, and how to make the right choice for your business or project.",
-        date: "July 3, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/do-i-need-a-website-or-web-app",
-        banner: "/media/blogs/16.png",
-    },
-    {
-        id: 19,
-        title: "10 Ways to Use 2D Animation for Websites to Boost Conversions",
-        description:
-            "Discover how 2D animation for websites can boost user engagement, explain products better, and drive higher conversions with visual storytelling.",
-        date: "July 4, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/2d-animation-for-websites",
-        banner: "/media/blogs/17.png",
-    },
-    {
-        id: 20,
-        title: "Importance of Responsive Design in Modern Web Development",
-        description:
-            "Discover how 2D animation for websites can boost user engagement, explain products better, and drive higher conversions with visual storytelling.",
-        date: "July 5, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/importance-of-responsive-design-in-modern-web-development",
-        banner: "/media/blogs/18.png",
-    },
-    {
-        id: 21,
-        title: "How AI is Transforming Digital Marketing in 2025",
-        description:
-            "Explore how AI is transforming digital marketing in 2025—improving personalization, automating content, and making data-driven strategies a reality.",
-        date: "July 10, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/how-ai-is-transforming-digital-marketin-in-2025",
-        banner: "/media/blogs/19.png",
-    },
-    {
-        id: 22,
-        title: "How AI is Revolutionizing Website Development in 2025",
-        description:
-            "Discover how AI is revolutionizing website development in 2025—from design and coding to content and SEO. Build smarter, faster, and more dynamic websites.",
-        date: "July 15, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/how-ai-is-revolutionizing-website-development-in-2025",
-        banner: "/media/blogs/20.jpeg",
-    },
-    {
-        id: 23,
-        title: "Graphic Design Trends Every Brand Should Embrace in 2025",
-        description:
-            "Discover the top graphic design trends in 2025 that are transforming brand visuals. From bold typography to AI-powered design, stay ahead in your industry.",
-        date: "July 16, 2025",
-        category: "Landing Page vs. Homepage: Key Differences Explained",
-        link: "/blog/graphic-design-trends-in-2025",
-        banner: "/media/blogs/21.jpeg",
-    },
+const UnderstandingBusinessGoals =
+  "/media/webdev/Understanding Business Needs.png";
+const MarketResearchStrategyDevelopment =
+  "/media/webdev/Research & Strategy.png";
+const Wireframe = "/media/webdev/Wireframing & Prototyping.png";
+const UXUI = "/media/webdev/UI_UX Design.png";
+const Websitedevelopment = "/media/webdev/Website Development.png";
+const contentIntegration = "/media/webdev/Content Integration.png";
+const TestingQualityCheck = "/media/webdev/Testing & Quality Check.png";
+const DeploymentLaunch = "/media/webdev/Deployment & Launch.png";
+const PostLaunchSupport = "/media/webdev/Post-Launch Support.png";
+const StaticOnePageWebsiteIcon =
+  "/media/webdev/Static One Page Website_Icon.png";
+const MultipageWordPressWebsite =
+  "/media/webdev/Multipage WordPress Website.png";
+const ECommerceWebsite = "/media/webdev/E - Commerce Website.png";
+
+// import bgservicesyellow from "/media/YellowPriceCard_DigitalMarketing.png";
+const bgpink = "/media/webdev/group2.png";
+const bgYellow = "/media/webdev/group1.png";
+const bgblue = "/media/webdev/group3.png";
+import IndustriesServedMobileApp from "@/components/IndustriesServedMobileApp";
+import ClientImagesMobileApp from "@/components/websiteDev/ClientImagesMobileApp";
+
+import { useTrail } from "@react-spring/web";
+import { useInView } from "react-intersection-observer";
+// import PopupBtn from "../PopupBtn";
+
+import PlanBtn from "@/components/websiteDev/PlanBtn";
+import ContactFrom from "@/components/ContactForm";
+const testimonalImages = "/media/NNCWebsite_V3_Testimonials.png";
+const testimonalImages1 = "/media/NNCWebsite_V3_Testimonials1.png";
+
+import Breadcrumbs from "@/components/BreadCrumbs";
+import InternalContactModal from "@/components/websiteDev/InternalContactModal";
+import IconsModal from "@/components/IconsModal";
+import WebsiteDevCards from "@/components/websiteDev/WebsiteDevCards";
+const mostPoptag = "/media/webdev/mostPoptag.png";
+import TestimonialsSlick from "@/components/websiteDev/TestimonialsSlick";
+
+const service1 = "/media/webdev/E-Commerce Website Development.png";
+const service2 = "/media/webdev/Custom Web Development.png";
+const service3 = "/media/webdev/Landing Page Design.png";
+const service4 = "/media/webdev/WordPress Development.png";
+const service5 = "/media/webdev/Dynamic Website Development.png";
+const service6 = "/media/webdev/CMS Website Development.png";
+const service7 = "/media/webdev/Static One Page Website_Icon.png";
+const service8 = "/media/webdev/Website Re-Designing.png";
+import Link from "next/link";
+import Head from "next/head";
+import Script from "next/script";
+import FAQs from "@/components/home/FAQs";
+import KeywordsSection from "@/components/KeywordsSection";
+
+// Testimonial Data
+const testimonials = [
+  {
+    image: testimonalImages,
+    name: "– Ravi Teja",
+    text: "I launched my real estate site with them and saw a 40% increase in inquiries within the first month. Highly recommend",
+  },
+  {
+    image: testimonalImages1,
+    name: "– Sangeetha",
+    text: "Great team to work with. They made our Shopify store look clean, fast, and responsive.",
+  },
+  {
+    image: testimonalImages,
+    name: "– Anil Kumar",
+    text: "They delivered our WordPress site on time with all SEO basics in place. We ranked in Google within 2 weeks!",
+  },
+  {
+    image: testimonalImages1,
+    name: "– Deepa Raj",
+    text: "The support post-launch was amazing. Even after going live, they helped us with updates and fixes",
+  },
 ];
 
+const services = [
+  {
+    img: service2,
+    title: "Custom Web Development",
+    points: [
+      "Tailored website solutions built from scratch to match your unique business requirements.",
+      "Clean, scalable code architecture using the latest technologies (HTML5, CSS3, JS, React, Node).",
+      "Performance-optimized, SEO-ready, and responsive across all devices.",
+    ],
+  },
+  {
+    img: service4,
+    title: "WordPress Development",
+    points: [
+      "Custom themes and plugins for a fully branded and functional WordPress experience.",
+      "Easy-to-manage backend with complete control over content, blogs, and media.",
+      "SEO-optimized, fast-loading, and secured WordPress websites.",
+    ],
+  },
+  {
+    img: service1,
+    title: "E-Commerce Website Development",
+    points: [
+      "User-friendly storefronts with cart, payment gateway, inventory, and shipping integrations.",
+      "Built using platforms like WooCommerce, Shopify, or custom frameworks.",
+      "Mobile-optimized designs to improve sales and reduce cart abandonment.",
+    ],
+  },
 
-// ---------- helpers ----------
-const slugify = (s = "") =>
-  s.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+  {
+    img: service3,
+    title: "Landing Page Design",
+    points: [
+      "High-converting landing pages focused on lead generation or product campaigns.",
+      "Optimized for Google Ads, Facebook Ads, and other digital marketing funnels.",
+      "Clear CTAs, fast loading, and responsive design for maximum ROI.",
+    ],
+  },
+  {
+    img: service7,
+    title: "Static Website Development",
+    points: [
+      "Lightweight, fast, and budget-friendly websites for quick online presence.",
+      "Ideal for portfolios, brochures, personal branding, or basic business info.",
+      "Minimal maintenance with clean and responsive design layout.",
+    ],
+  },
+  {
+    img: service5,
+    title: "Dynamic Website Development",
+    points: [
+      "Interactive websites with database connectivity and real-time content management.",
+      "Suitable for businesses that need frequent updates, blog integration, or user portals.",
+      "Built using robust technologies like PHP, React, Node.js, or CMS platforms.",
+    ],
+  },
+  {
+    img: service8,
+    title: "Website Re-Designing",
+    points: [
+      "Refresh outdated designs with a modern, mobile-friendly and SEO-compliant look.",
+      "Improve UI/UX, load speed, and conversion rate through structured redesign.",
+      "Migrate smoothly from old platforms while retaining essential data and content.",
+    ],
+  },
+  {
+    img: service6,
+    title: "CMS Website Development",
+    points: [
+      "Build sites with CMS platforms like WordPress, Joomla, or custom admin panels.",
+      "Easily update content, blogs, and media without coding knowledge.",
+      "Flexible, secure, and ideal for content-heavy or frequently updated websites.",
+    ],
+  },
+];
 
-const parseDate = (d) => {
-  const dt = new Date(d);
-  return isNaN(dt.getTime()) ? null : dt;
-};
-const pickBestDate = (blog) => {
-  const candidates = [blog?.publishedAt, blog?.createdAt, blog?.updatedAt, blog?.date];
-  for (const c of candidates) {
-    const dt = parseDate(c);
-    if (dt) return dt;
-  }
-  return null;
-};
+const processvideo = [
+  {
+    img: UnderstandingBusinessGoals,
+    title: "Understanding Business Needs",
+    points: [
+      "We begin by identifying your brand goals, target audience, and business objectives. This sets the foundation for a website that aligns with your vision.",
+    ],
+  },
+  {
+    img: MarketResearchStrategyDevelopment,
+    title: "Research & Strategy",
+    points: [
+      "Competitor analysis, market trends, and technical planning help us craft a solid strategy. This ensures your website stands out and performs effectively.",
+    ],
+  },
+  {
+    img: Wireframe,
+    title: "Wireframing & Prototyping",
+    points: [
+      "We design a structural layout of the website to visualize user flow and functionality. Prototypes give a clear idea of how the final site will work.",
+    ],
+  },
+  {
+    img: UXUI,
+    title: "UI/UX Design",
+    points: [
+      "Our designers create a clean, intuitive interface focused on user engagement. The result is a visually appealing and mobile-friendly experience.",
+    ],
+  },
+  {
+    img: Websitedevelopment,
+    title: "Website Development",
+    points: [
+      "Our developers bring the design to life using modern technologies like React, Node, and WordPress. The build is optimized for speed, security, and scalability.",
+    ],
+  },
+  {
+    img: contentIntegration,
+    title: "Content Integration",
+    points: [
+      "We add and format your website content—text, images, videos, and graphics. Every section is placed to enhance readability and SEO.",
+    ],
+  },
+  {
+    img: TestingQualityCheck,
+    title: "Testing & Quality Check",
+    points: [
+      "Comprehensive testing is done across devices, browsers, and screen sizes. We fix bugs, optimize speed, and ensure every feature works flawlessly.",
+    ],
+  },
+  {
+    img: DeploymentLaunch,
+    title: "Deployment & Launch",
+    points: [
+      "After approval, we deploy your website on a live server with full setup. DNS, SSL, and hosting are configured for a smooth launch.",
+    ],
+  },
+  {
+    img: PostLaunchSupport,
+    title: "Post-Launch Support",
+    points: [
+      "We provide continuous support for updates, backups, and performance monitoring. Our team is available for any changes or enhancements post-launch.",
+    ],
+  },
+];
 
+const faqs = [
+  // FAQ List
+  {
+    question:
+      "What services do you offer as a Website Development Company in Bangalore?",
+    answer:
+      "We offer custom website development, eCommerce solutions, WordPress development, Shopify development, static and dynamic websites, landing page design, and website re-design.",
+  },
+  {
+    question: "Do you offer SEO-friendly website development?",
+    answer:
+      "Yes, we design SEO-friendly websites with a structured layout, optimized loading speed, and mobile responsiveness to improve your ranking with search engines.",
+  },
+  {
+    question: "Can you redesign my existing website?",
+    answer:
+      "Yes, we can make your website re-design with improvements to design, speed, functionality, and experience, while keeping your brand identity.",
+  },
+  {
+    question: "What platform do you use for website development?",
+    answer:
+      "We work with Wordpress, Shopify, React, Next.js and can use custom development with Node.js, Express and MongoDB.",
+  },
+  {
+    question: "Can you integrate a payment gateway into my e-commerce website?",
+    answer:
+      "Yes, we can integrate secure payment gateways such as Razorpay, PayU, Stripe, and Paypal to ensure a secure transaction experience.",
+  },
+  {
+    question: "How do I get started with my website development project?",
+    answer:
+      "You can contact us by phone, email or on our website, and our team can guide you through the process.",
+  },
+];
 
-
-const pick = (incoming, existing) => {
-  const v = typeof incoming === "string" ? incoming.trim() : incoming;
-  return (v === undefined || v === null || v === "") ? existing : v;
-};
-
-
-
-// Convert API item -> UI card
-const normalizeApi = (blog) => {
-  const title = blog?.title ?? "Untitled";
-  const slug = slugify(title);
-
-  const rawBanner = blog?.bannerImage;
-  const banner =
-    typeof rawBanner === "string" && rawBanner.startsWith("http")
-      ? rawBanner
-      : rawBanner
-      ? `${ASSET_BASE}/uploads/${rawBanner}`
-      : "/media/blogs/placeholder.png";
-
-  return {
-    id: blog?._id ?? slug,
-    title,
-    description: (blog?.description || "").replace(/<[^>]+>/g, "").slice(0, 150),
-    date: pickBestDate(blog),        // <— important: no Date.now() fallback
-    category: blog?.metaTitle || blog?.category || "General",
-    link: `/blog/${slug}`,
-    banner,
-    _slug: slug,
-  };
-};
-
-// Convert static item -> UI card
-const normalizeStatic = (blog) => {
-  const title = blog?.title ?? "Untitled";
-  const slug = slugify(title);
-  return {
-    id: blog?.id ?? slug,
-    title,
-    description: blog?.description || "",
-    date: parseDate(blog?.date),     // static date string → Date or null
-    category: blog?.category || "General",
-    link: blog?.link || `/blog/${slug}`,
-    banner: blog?.banner || "/media/blogs/placeholder.png",
-    _slug: slug,
-  };
-};
-
-
-const BlogClient = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [visibleCards, setVisibleCards] = useState(9);
-  const [totalPages, setTotalPages] = useState(1); // if backend paginates
-  const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
-  const router = useRouter();
-
-  const mergeBySlug = (apiCards, staticCards) => {
-  const map = new Map();
-
-  // seed with static (so every static blog is included)
-  for (const s of staticCards) map.set(s._slug, s);
-
-  // merge API into static, only overwriting when API actually has a value
-  for (const a of apiCards) {
-    const prev = map.get(a._slug);
-    if (!prev) {
-      map.set(a._slug, a);
-      continue;
-    }
-    const merged = {
-      ...prev,
-      id: pick(a.id, prev.id),
-      title: pick(a.title, prev.title),
-      description: pick(a.description, prev.description),
-      date: a.date instanceof Date ? a.date : prev.date, // keep static date if API has none
-      category: pick(a.category, prev.category),
-      link: pick(a.link, prev.link),
-      banner:
-        a.banner && !a.banner.includes("placeholder.png") ? a.banner : prev.banner,
-      _slug: prev._slug,
-    };
-    map.set(a._slug, merged);
-  }
-
-  return Array.from(map.values());
-};
-
-const fetchBlogs = async () => {
-  setLoading(true);
-  try {
-    const res = await axios.get(API_URL);
-
-    const apiListRaw = Array.isArray(res?.data?.data)
-      ? res.data.data
-      : Array.isArray(res?.data)
-      ? res.data
-      : [];
-
-    const apiCards = apiListRaw.map(normalizeApi);
-    const staticCards = blogData.map(normalizeStatic);
-
-    const merged = mergeBySlug(apiCards, staticCards);
-
-    merged.sort((a, b) => {
-      const ad = a.date instanceof Date ? a.date.getTime() : -Infinity;
-      const bd = b.date instanceof Date ? b.date.getTime() : -Infinity;
-      return bd - ad;
-    });
-
-    const finalCards = merged.map((b) => ({
-      ...b,
-      date:
-        b.date instanceof Date
-          ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
-          : "",
-    }));
-
-    setBlogs(finalCards);
-    setTotalPages(1);
-    setError(null);
-  } catch (err) {
-    console.error("Failed to fetch blogs:", err);
-    setError("Failed to load API blogs. Showing static data instead.");
-
-    const staticOnly = blogData
-      .map(normalizeStatic)
-      .sort((a, b) => {
-        const ad = a.date instanceof Date ? a.date.getTime() : -Infinity;
-        const bd = b.date instanceof Date ? b.date.getTime() : -Infinity;
-        return bd - ad;
-      })
-      .map((b) => ({
-        ...b,
-        date:
-          b.date instanceof Date
-            ? b.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
-            : "",
-      }));
-
-    setBlogs(staticOnly);
-  } finally {
-    setLoading(false);
-  }
-};
-
-
-
+export default function WebsiteDevelopmentCompany() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   useEffect(() => {
-    fetchBlogs();
-    // if you truly paginate server-side, include currentPage in the dependency
-    // and pass it as axios params above.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [/* currentPage */]);
-
-  const handleViewMore = () => {
-    // client-side "load more" from the merged list
-    // If your backend paginates, you can switch to setCurrentPage(prev => prev + 1)
-    setVisibleCards((prev) => Math.min(prev + 9, blogs.length));
-  };
-
-  const headingSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateX(0)" : "translateX(-30px)",
-    config: { tension: 200, friction: 20 },
-  });
-
-  const handleBlogCardClick = (link) => router.push(link);
-
+    window.scrollTo(0, 0);
+  }, []);
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
-    { name: "Blog", link: "/blog" },
+    {
+      name: "Website Development Company in Hyderabad",
+      link: "/website-development-company-in-hyderabad",
+    },
   ];
 
+  // Buttons list
+  const buttons = [
+    {
+      title: "Mobile App Development Company in Hyderabad",
+      link: "/mobile-app-development-company-hyderabad",
+    },
+    {
+      title: "Graphic Design Services in Hyderabad",
+      link: "/graphic-design-services-hyderabad",
+    },
+    {
+      title: "2D Animation Studio in Hyderabad",
+      link: "/2d-animation-studio-hyderabad",
+    },
+    {
+      title: "Digital Marketing Agency in Hyderabad",
+      link: "/digital-marketing-agency-hyderabad",
+    },
+    {
+      title: "Corporate Video Production in Hyderabad",
+      link: "/corporate-video-production-company-hyderabad",
+    },
+    {
+      title: "B2B Marketing Company in Hyderabad",
+      link: "/b2b-marketing-company-hyderabad",
+    },
+  ];
+
+  // Sequential animation for buttons using useTrail
+  const buttonTrail = useTrail(buttons.length, {
+    opacity: inView ? 1 : 0,
+    transform: inView ? "scale(1)" : "scale(0.8)",
+    from: { opacity: 0, transform: "scale(0.8)" },
+    config: { tension: 200, friction: 12 },
+    delay: 200,
+  });
+
   return (
-    <div>
-      <Breadcrumbs paths={breadcrumbPaths} />
+    <>
 
-      <div style={{ height: "90vh" }} className="blogBanner d-flex align-items-center justify-content-center px-4">
-        <div style={{ marginTop: "15%", marginBottom: "12%", textAlign: "center" }}>
-          <h1
-            style={{ fontWeight: "900", fontSize: "65px", letterSpacing: "3px", marginBottom: "1%" }}
-            className="h1-careers"
-          >
-            Learn{" "}
-            <span>
-              <FontAwesomeIcon icon={faCircle} size="xs" style={{ color: "#000000", width: 20, height: 20 }} className="h1-about-banner-icon" />
-            </span>{" "}
-            Write{" "}
-            <span>
-              <FontAwesomeIcon icon={faCircle} size="xs" style={{ color: "#000000", width: 20, height: 20 }} className="h1-about-banner-icon" />
-            </span>{" "}
-            Share
-          </h1>
+                {/* Schema Markup */}
+                <Script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "LocalBusiness",
+                                "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
+                                "name": "Nakshatra Namaha Creations",
+                                "image": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
+                                    "addressLocality": "Bengaluru",
+                                    "addressRegion": "Karnataka",
+                                    "postalCode": "560061",
+                                    "addressCountry": "IN"
+                                },
+                                "geo": {
+                                    "@type": "GeoCoordinates",
+                                    "latitude": 12.900525119796741,
+                                    "longitude": 77.52318771928213
+                                },
+                                "url": "https://www.nakshatranamahacreations.com",
+                                "telephone": "+91-9900566466",
+                                "email": "info@nakshatranamahacreations.com",
+                                "areaServed": "Bangalore",
+                                "priceRange": "₹₹",
+                                "sameAs": [
+                                    "https://www.facebook.com/Nakshatranamahacreations/",
+                                    "https://www.instagram.com/nnc.digitalbengaluru/"
+                                ]
+                            },
+                            {
+                                "@type": "Organization",
+                                "@id": "https://www.nakshatranamahacreations.com/#organization",
+                                "name": "Nakshatra Namaha Creations",
+                                "url": "https://www.nakshatranamahacreations.com/website-development-company-in-hyderabad",
+                                "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
+                            },
+                            {
+                                "@type": "Service",
+                                "serviceType": "WordPress Website Development",
+                                "provider": {
+                                    "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+                                }
+                            },
+                            {
+                                "@type": "Service",
+                                "serviceType": "E-Commerce Website Development",
+                                "provider": {
+                                    "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+                                }
+                            },
+                            {
+                                "@type": "Service",
+                                "serviceType": "Static Website Development",
+                                "provider": {
+                                    "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+                                }
+                            },
+                            {
+                                "@type": "Service",
+                                "serviceType": "Dynamic Website Development",
+                                "provider": {
+                                    "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
+                                }
+                            },
+                            {
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://www.nakshatranamahacreations.com"
+                                    },
+                                    {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Website Development Company in Hyderabad | NNC",
+                                        "item": "https://www.nakshatranamahacreations.com/website-development-company-in-hyderabad"
+                                    }
+                                ]
+                            },
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": "How long does it take to build a website?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "On average, basic sites take 7–10 days, while complex websites may take up to 4 weeks."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Will my website be mobile-friendly and responsive?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes, we ensure your website looks great and functions perfectly on all screen sizes."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Do you provide domain registration and hosting services?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Absolutely. We help you register your domain and host your site securely."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Can I make updates to my site after it’s launched?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Yes, you’ll be able to update text, images, and content via the CMS or admin panel."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Is SEO included in your website development service?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "We include basic on-page SEO like meta tags, page speed, and mobile optimization."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What if I need help after the website is live?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "We offer 30 days of free support and paid maintenance options for ongoing help."
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    })}
+                </Script>
 
-          <BlogSearch />
-        </div>
-      </div>
+      <div>
+        <Breadcrumbs paths={breadcrumbPaths} />
 
-      <Container style={{ textAlign: "center" }}>
-        <animated.h2
-          ref={ref}
-          style={{ fontWeight: "900", fontSize: "28px", letterSpacing: "3px", marginBlock: "6%", ...headingSpring }}
-          className="blogtext"
-        >
-          Discover the latest news, trends and innovative cultural trends brought to you by Nakshatra Namaha Creations.
-        </animated.h2>
-      </Container>
-
-      <Container>
-           {loading ? (
-          <Row>
-            {[...Array(9)].map((_, index) => (
-              <Col sm={4} key={index} className="mb-4">
-                <ShimmerCard />
-              </Col>
-            ))}
+        <Container style={{ marginBottom: "5%", marginTop: "3%" }}>
+          <Row className="d-flex justify-content-between align-items-center gap-5">
+            <Col sm={6}>
+              <div style={{ marginTop: "2%", marginBottom: "5%" }}>
+                <h2 style={{ fontWeight: "600" }}>
+                  WEBSITE DEVELOPMENT COMPANY{" "}
+                </h2>
+                <h6>
+                  Building a strong online presence starts with a well-designed
+                  and functional website.
+                </h6>
+              </div>
+              <img
+                src={websitedevBannerImg1}
+                alt="mobileapp-icon"
+                className="img-fluid"
+                style={{
+                  width: "80%",
+                  height: "auto",
+                  objectFit: "cover",
+                  borderRadius: "16px",
+                }}
+              />
+            </Col>
+            <Col sm={4}>
+              <ContactFrom />
+            </Col>
           </Row>
-        ) : error ? (
-          <p>{error}</p>
-        ) : (
+        </Container>
+
+        {/* COMPANY IN BANGALORE */}
+        <div style={{ paddingTop: "5%" }}>
+          <Container>
+            <h1
+              style={{
+                fontWeight: "600",
+                letterSpacing: "1px",
+                marginBottom: "5%",
+                textTransform: "uppercase",
+              }}
+            >
+              Best Website Development Company in Hyderabad
+            </h1>
+            <Row>
+              <Col sm={8}>
+                <p
+                  style={{
+                    lineHeight: "1.7",
+                    fontSize: "16px",
+                    letterSpacing: "1px",
+                    fontWeight: "400",
+                  }}
+                >
+                  A strong online presence starts with a well-built website. As
+                  a trusted website development company in Hyderabad, we design
+                  responsive, scalable websites that help businesses grow. From
+                  UI/UX to performance, our team delivers solutions that work
+                  seamlessly across all devices.
+                </p>
+                <p
+                  style={{
+                    lineHeight: "1.7",
+                    fontSize: "16px",
+                    letterSpacing: "1px",
+                    fontWeight: "400",
+                  }}
+                >
+                  Hyderabad's competitive market demands more than just an
+                  online presence. Our development approach focuses on building
+                  conversion-driven websites with fast load times, mobile
+                  responsiveness, and SEO readiness. Whether you need a
+                  one-pager or a complex e-commerce platform, we provide digital
+                  solutions that deliver real business impact.
+                </p>
+              </Col>
+              <Col sm={4}>
+                <img
+                  src={websitedevBannerImg2}
+                  alt="mobile-icon"
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                />
+              </Col>
+            </Row>
+            <h2
+              style={{
+                fontWeight: "600",
+                letterSpacing: "1px",
+                marginTop: "10%",
+                marginBottom: "3%",
+                textTransform: "uppercase",
+              }}
+            >
+              Our Service as a Website Development Company in Hyderabad
+            </h2>
+
+            {/*  Our Services on the Mobile App Development Company in Bangalore */}
+
+            <Container style={{ marginTop: "5%" }}>
+              <Row>
+                {services.map((service, index) => (
+                  <Col
+                    key={index}
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    className="d-flex justify-content-left"
+                  >
+                    <div
+                      style={{
+                        backgroundColor: "white",
+                        boxShadow: "1px 1px 5px lightgrey",
+                        padding: "20px",
+                        borderRadius: "10px",
+                        width: "100%",
+                        minHeight: "320px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        textAlign: "left",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        style={{
+                          width: "30%",
+                          height: "auto",
+                          objectFit: "cover",
+                        }}
+                      />
+                      <h6
+                        style={{
+                          fontSize: "16px",
+                          fontWeight: "bold",
+                          marginTop: "5%",
+                        }}
+                      >
+                        {service.title}
+                      </h6>
+                      <ul
+                        style={{
+                          fontSize: "12px",
+                          lineHeight: "1.7",
+                          textAlign: "left",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        {service.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </Container>
+        </div>
+
+        {/* Our Video Production Process: */}
+        <div style={{ margin: "5% 10% 0% 10%" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontWeight: "600",
+              marginBottom: "3%",
+              fontSize: "30px",
+              maxWidth: "700px",
+              marginInline: "auto",
+            }}
+          >
+            Our Website Development Process: Innovative Web Solutions
+          </h2>
+
           <Row>
-            {blogs.slice(0, visibleCards).map((card, index) => (
-              <Col sm={4} key={`${card.id}-${index}`} className="mb-4">
-                <div onClick={() => handleBlogCardClick(card.link)} style={{ cursor: "pointer" }}>
-                  <BlogCard card={card} />
+            {processvideo.map((processvideo, index) => (
+              <Col
+                key={index}
+                xs={12}
+                sm={6}
+                md={4}
+                className="d-flex justify-content-left"
+              >
+                <div
+                  style={{
+                    padding: "20px",
+                    width: "100%",
+                    minHeight: "320px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "left",
+                    // marginBottom: "20px",
+                  }}
+                >
+                  <img
+                    src={processvideo.img}
+                    alt={processvideo.title}
+                    style={{
+                      width: "30%",
+                      height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <h6
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: "bold",
+                      marginTop: "5%",
+                    }}
+                  >
+                    {processvideo.title}
+                  </h6>
+                  <div
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "1.7",
+                      textAlign: "left",
+                      paddingLeft: "15px",
+                    }}
+                  >
+                    {processvideo.points.map((point, i) => (
+                      <p key={i}>{point}</p>
+                    ))}
+                  </div>
                 </div>
               </Col>
             ))}
           </Row>
-        )}
+        </div>
+        <div style={{ marginBottom: "5%" }}>
+          <WebsiteDevCards />
+        </div>
 
-        {visibleCards < blogs.length && (
-          <div style={{ marginTop: "2%" }}>
-            <ViewAllBtn onClick={handleViewMore} />
+        <Container style={{ margin: "5% auto" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontWeight: "600",
+              marginBottom: "2%",
+            }}
+          >
+            What can you expect from Nakshatra Namaha Creations?
+          </h2>
+          <p
+            style={{
+              lineHeight: "1.7",
+              fontSize: "16px",
+              letterSpacing: "1px",
+              textAlign: "center",
+              fontWeight: "400",
+              marginBottom: "5%",
+            }}
+          >
+            At Nakshatra Namaha Creations, you can expect professional service,
+            dependable support, and clear communication at every stage of the
+            project. As a trusted Website Development Company in Hyderabad, our
+            team is committed to delivering responsive, secure, and
+            user-friendly websites that match your business goals and boost your
+            digital presence.
+          </p>
+          <div>
+            <Row>
+              <Col sm={4}>
+                <div style={{ display: "flex" }}>
+                  <h2
+                    style={{
+                      marginRight: "10px",
+                      fontWeight: "600",
+                      color: "#006EA6",
+                    }}
+                  >
+                    01
+                  </h2>
+
+                  <div style={{ fontSize: "14px", lineHeight: "1.7" }}>
+                    <p style={{ fontWeight: "bold", fontSize: "16px" }}>
+                      Professional and Modern Designs
+                    </p>
+                    <p>
+                      We build visually polished websites with structured
+                      layouts and a user-first approach tailored to Hyderabad’s
+                      growing business landscape.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col sm={4}>
+                <div style={{ display: "flex" }}>
+                  <h2
+                    style={{
+                      marginRight: "10px",
+                      fontWeight: "600",
+                      color: "#006EA6",
+                    }}
+                  >
+                    02
+                  </h2>
+                  <div style={{ fontSize: "14px", lineHeight: "1.7" }}>
+                    <p style={{ fontWeight: "bold", fontSize: "16px" }}>
+                      Mobile-Friendly and Responsive Websites
+                    </p>
+                    <p>
+                      Our websites adapt seamlessly to mobile, tablet, and
+                      desktop devices — offering an optimal experience for
+                      Hyderabad’s diverse digital audience.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col sm={4}>
+                <div style={{ display: "flex" }}>
+                  <h2
+                    style={{
+                      marginRight: "10px",
+                      fontWeight: "600",
+                      color: "#006EA6",
+                    }}
+                  >
+                    03
+                  </h2>
+                  <div style={{ fontSize: "14px", lineHeight: "1.7" }}>
+                    <p style={{ fontWeight: "bold", fontSize: "16px" }}>
+                      SEO-Optimized Development
+                    </p>
+                    <p>
+                      We follow local SEO strategies and coding standards to
+                      help Hyderabad-based businesses rank better on search
+                      engines and attract regional traffic.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+
+              <div className="d-lg-flex justify-content-center my-lg-5 gap-4">
+                <Col sm={4}>
+                  <div style={{ display: "flex" }}>
+                    <h2
+                      style={{
+                        marginRight: "10px",
+                        fontWeight: "600",
+                        color: "#006EA6",
+                      }}
+                    >
+                      04
+                    </h2>
+                    <div style={{ fontSize: "14px", lineHeight: "1.7" }}>
+                      <p style={{ fontWeight: "bold", fontSize: "16px" }}>
+                        {" "}
+                        Fast Loading Speed
+                      </p>
+                      <p>
+                        Performance is key — our websites are optimized for
+                        speed, helping reduce bounce rates and improve
+                        conversion across Hyderabad's competitive markets.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+                <Col sm={4}>
+                  <div style={{ display: "flex" }}>
+                    <h2
+                      style={{
+                        marginRight: "10px",
+                        fontWeight: "600",
+                        color: "#006EA6",
+                      }}
+                    >
+                      05
+                    </h2>
+                    <div style={{ fontSize: "14px", lineHeight: "1.7" }}>
+                      <p style={{ fontWeight: "bold", fontSize: "16px" }}>
+                        On-Time Project Delivery
+                      </p>
+                      <p>
+                        We maintain clear timelines and use an organized
+                        development workflow to ensure your Hyderabad business
+                        website launches right on schedule.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
           </div>
-        )}
-      </Container>
-
-      <div style={{ marginTop: "10%" }}>
-        <Container>
-          <Icons />
         </Container>
-      </div>
-    </div>
-  );
-};
 
-export default BlogClient;
+        {/* PICK YOUR PLAN */}
+
+        <div
+          style={{
+            backgroundColor: "#F6F6F6",
+            padding: "20px",
+            textAlign: "center",
+          }}
+        >
+          <Container>
+            <h2
+              style={{
+                fontWeight: "600",
+                // marginBottom: "1.5%",
+                fontSize: "26px",
+                margin: 0,
+              }}
+            >
+              PICK YOUR PLAN
+            </h2>
+
+            <div
+              className="d-flex justify-content-between align-items-center "
+              style={{ gap: "20px", flexDirection: "row", flexWrap: "wrap" }}
+            >
+              {/* First Plan Section */}
+              <div
+                style={{
+                  flex: "1",
+                  maxWidth: "400px",
+                  position: "relative",
+                  minWidth: "250px",
+                  marginBottom: "20px",
+                }}
+                className="plan1"
+              >
+                <img
+                  src={bgYellow}
+                  alt="bg-blue"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
+                />
+                <div style={{ position: "absolute", top: "15%", left: "5%" }}>
+                  <img
+                    src={StaticOnePageWebsiteIcon}
+                    alt="building-icon"
+                    style={{
+                      width: "35%",
+                      height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "52%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <h3 style={{ fontSize: "20px", color: "white", margin: 0 }}>
+                    Static One Page Website
+                  </h3>{" "}
+                  {/* Single line text */}
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "65%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                  }}
+                >
+                  <p style={{ fontSize: "16px" }}>Starting from</p>
+                  <h2 style={{ fontSize: "30px", fontWeight: "600" }}>
+                    ₹14,499
+                  </h2>{" "}
+                  {/* Reduced font size */}
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "5%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                >
+                  <PlanBtn setShowPopup={setShowPopup} />
+                  {showPopup && (
+                    <InternalContactModal
+                      showPopup={showPopup}
+                      setShowPopup={setShowPopup}
+                    />
+                  )}
+                </div>
+              </div>
+
+              {/* Second Plan Section */}
+              <div
+                style={{
+                  flex: "1",
+                  maxWidth: "400px",
+                  position: "relative",
+                  minWidth: "250px",
+                  marginBottom: "20px",
+                }}
+              >
+                <img
+                  src={bgblue}
+                  alt="bg-yellow"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
+                />
+                <img
+                  src={mostPoptag}
+                  style={{
+                    position: "absolute",
+                    top: "1%",
+                    right: "-6%",
+                    width: "36%",
+                  }}
+                />
+                <div style={{ position: "absolute", top: "16%", left: "5%" }}>
+                  <img
+                    src={MultipageWordPressWebsite}
+                    alt="building-icon"
+                    style={{
+                      width: "35%",
+                      height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "55%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <h3 style={{ fontSize: "20px", color: "white", margin: 0 }}>
+                    Multipage WordPress Website
+                  </h3>{" "}
+                  {/* Single line text */}
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "68%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                  }}
+                >
+                  <p style={{ fontSize: "16px" }}>Starting from</p>
+                  <h2 style={{ fontSize: "30px", fontWeight: "600" }}>
+                    ₹24,999
+                  </h2>{" "}
+                  {/* Reduced font size */}
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "5%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                >
+                  <PlanBtn setShowPopup={setShowPopup} />
+                  {showPopup && (
+                    <InternalContactModal
+                      showPopup={showPopup}
+                      setShowPopup={setShowPopup}
+                    />
+                  )}
+                </div>
+              </div>
+
+              {/* Third Plan Section */}
+              <div
+                style={{
+                  flex: "1",
+                  maxWidth: "400px",
+                  position: "relative",
+                  minWidth: "250px",
+                  marginBottom: "20px",
+                }}
+                className="plan3"
+              >
+                <img
+                  src={bgpink}
+                  alt="bg-yellow"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
+                />
+                <div style={{ position: "absolute", top: "15%", left: "5%" }}>
+                  <img
+                    src={ECommerceWebsite}
+                    alt="building-icon"
+                    style={{
+                      width: "35%",
+                      height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "52%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <h3 style={{ fontSize: "20px", color: "white", margin: 0 }}>
+                    E - Commerce Website
+                  </h3>{" "}
+                  {/* Single line text */}
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "65%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    textAlign: "center",
+                  }}
+                >
+                  <p style={{ fontSize: "16px" }}>Starting from</p>
+                  <h2 style={{ fontSize: "30px", fontWeight: "600" }}>
+                    ₹45,999
+                  </h2>
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "5%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                >
+                  <PlanBtn setShowPopup={setShowPopup} />
+                  {showPopup && (
+                    <InternalContactModal
+                      showPopup={showPopup}
+                      setShowPopup={setShowPopup}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </div>
+
+        {/* Industries Mobile App Development */}
+
+        <Container style={{ margin: "8% auto", height: "30vh" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontWeight: "600",
+              marginBottom: "2%",
+            }}
+          >
+            Industries We Serve as Website Development Company in Hyderabad
+          </h2>
+          <p
+            style={{
+              lineHeight: "1.7",
+              fontSize: "16px",
+              letterSpacing: "1px",
+              textAlign: "center",
+              fontWeight: "400",
+              marginBottom: "5%",
+            }}
+          >
+            We offer web development services tailored to diverse business
+            sectors. With experience spanning various domains, we create custom
+            websites that align with your specific goals and workflows. Whether
+            the focus is on generating leads, driving online sales, or enhancing
+            user engagement, we’ve built solutions that deliver measurable
+            impact.
+          </p>
+
+  
+          <IndustriesServedMobileApp />
+        </Container>
+
+        <div style={{ margin: "10% auto" }}>
+          <Container>
+            <h2
+              style={{
+                fontWeight: "600",
+                marginBottom: "2%",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              We work with remarkable brands
+            </h2>
+          </Container>
+
+          <ClientImagesMobileApp />
+        </div>
+
+        {/* TESTIMONIALS */}
+        <Container style={{ margin: "7% auto" }}>
+          <TestimonialsSlick testimonials={testimonials} />
+        </Container>
+
+        <div
+          style={{
+            backgroundColor: "#F6F6F6",
+            padding: "25px",
+            textAlign: "center",
+            margin: "5% 0%",
+            // height: "40vh"
+          }}
+        >
+          <h2
+            style={{
+              fontWeight: "600",
+              marginBottom: "2%",
+            }}
+          >
+            {" "}
+            Our Other Related Services
+          </h2>
+          <div className="d-flex flex-wrap justify-content-center gap-3 gap-space gapreduce">
+            {buttons.map((button, index) => (
+              <div key={index}>
+                <Button
+                  variant="outline-dark"
+                  className="rounded-pill px-3 py-2"
+                  style={{ fontSize: "14px" }}
+                >
+                  <Link href={button.link}>{button.title}</Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <FAQs faqs={faqs} />
+        <KeywordsSection />
+
+        <div style={{ marginTop: "10%" }}>
+          <Container>
+            <IconsModal />
+          </Container>
+        </div>
+      </div>
+    </>
+  );
+}
