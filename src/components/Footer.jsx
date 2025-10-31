@@ -71,7 +71,7 @@ const data = [
       { text: "Android App Development Company",  href: "/android-app-development" },
       { text: "iOS App Development Company",  href: "/ios-mobile-app-development" },
       { text: "Best App Development Agency",  href: "/" },
-      { text: "Flutter App Development Company",  href: "/" },
+      { text: "Flutter App Development Company",  href: "/flutter-app-development" },
       { text: "React Native App Development Company",  href: "/" },
       { text: "Cross-platform App Development Company",  href: "/" },
       { text: "Native Mobile App Developers",  href: "/" },

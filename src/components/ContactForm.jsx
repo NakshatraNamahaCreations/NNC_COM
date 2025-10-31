@@ -191,6 +191,12 @@ else if (
 ) {
   service = "Search Engine Optimisation";
 }
+else if (
+  currentPath === "/flutter-app-development" ||
+  currentPath === "/flutter-app-development"
+) {
+  service = "Flutter App Development";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,
