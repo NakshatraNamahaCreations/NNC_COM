@@ -197,6 +197,12 @@ else if (
 ) {
   service = "Flutter App Development";
 }
+else if (
+  currentPath === "/mobile-app-developers-in-hyderabad" ||
+  currentPath === "/mobile-app-developers-in-hyderabad"
+) {
+  service = "Mobile App Development";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,
