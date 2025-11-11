@@ -27,6 +27,7 @@ const data = [
         { text: "Indiranagar", href: "/website-development-company-in-indiranagar" },
          { text: "Rajajinagar", href: "/website-development-company-in-rajajinagar" },
           { text: "JP Nagar", href: "/website-development-company-in-jpnagar" },
+           { text: "RR Nagar", href: "/website-development-company-in-rr-nagar" },
     ],
   },
     {
