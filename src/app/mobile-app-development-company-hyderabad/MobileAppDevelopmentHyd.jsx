@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-const mobileapp = "/media/webdev/webdevhyder.jpg";
+const mobileapp = "/media/OBJECTS.png";
 import {
   Container,
   Row,
