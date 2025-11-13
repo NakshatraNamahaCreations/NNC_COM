@@ -18,6 +18,8 @@ const QuickLinks = () => {
     { path: "/services", label: "Services" },
     { path: "/careers", label: "Careers" },
     { path: "/contact-us", label: "Contact Us" },
+    { path: "/privacy-policy", label: "Privacy Policy" },
+    { path: "/terms-and-conditions", label: "Terms and Conditions" },
   ];
 
   return (
