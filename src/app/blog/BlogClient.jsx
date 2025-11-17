@@ -19,6 +19,8 @@ import BlogCategoryFilter from "./BlogCategoryFilter.jsx";
 // ===== API & ASSETS =====
 const API_URL = "https://api.nakshatranamahacreations.in/api/blogs";
 const ASSET_BASE = "https://api.nakshatranamahacreations.in";
+// change or add:
+const CITY = "Bangalore"; // <-- set desired city here
 
 // ===== PAGE SIZE (server-side) =====
 const PAGE_SIZE = 10;
@@ -328,17 +330,21 @@ const sortDescByDate = (arr = []) =>
   [...arr].sort((a, b) => toMs(b.date) - toMs(a.date));
 
 // Build API URL for a page
-const buildUrl = ({ service = "All", page = 1, limit = PAGE_SIZE } = {}) => {
+// Build API URL for a page (now supports city)
+const buildUrl = ({ service = "All", page = 1, limit = PAGE_SIZE, city = CITY } = {}) => {
   const u = new URL(API_URL);
   if (service && service !== "All") u.searchParams.set("service", service);
   u.searchParams.set("page", String(page));
   u.searchParams.set("limit", String(limit));
+  if (city) u.searchParams.set("city", String(city));
   return u.toString();
 };
 
+
 // Fetch a single server page
-const fetchBlogsPage = async (service = "All", page = 1) => {
-  const url = buildUrl({ service, page, limit: PAGE_SIZE });
+// Fetch a single server page (now takes city)
+const fetchBlogsPage = async (service = "All", page = 1, city = CITY) => {
+  const url = buildUrl({ service, page, limit: PAGE_SIZE, city });
   const res = await axios.get(url);
 
   const payload = res?.data ?? {};
@@ -367,6 +373,7 @@ const fetchBlogsPage = async (service = "All", page = 1) => {
     },
   };
 };
+
 
 const BlogClient = () => {
   // API pagination state
@@ -411,89 +418,94 @@ const BlogClient = () => {
   }, []);
 
   // Initial load for "All", page 1 (API only)
-  useEffect(() => {
-    (async () => {
-      setLoading(true);
-      try {
-        const { pageCards, meta } = await fetchBlogsPage("All", 1);
-        setApiBlogs(pageCards);
-        setTotalPages(meta.totalPages);
-        setCurrentPage(meta.currentPage);
-        setCategories(
-          meta.categories?.length
-            ? meta.categories
-            : [
-                "Web Development",
-                "App Development",
-                "Corporate Video Production",
-                "Digital Marketing",
-                "Graphic Designing",
-                "3D Animations",
-                "B2B Marketing Service",
-                "Others",
-              ]
-        );
-        setShowStatic(meta.currentPage >= meta.totalPages); // if only 1 page, show static immediately
-        setError(null);
-      } catch (e) {
-        console.error("Failed to fetch blogs:", e);
-        setError("Failed to load API blogs.");
-        setApiBlogs([]);
-        setTotalPages(1);
-        setCurrentPage(1);
-        setShowStatic(true); // still show static so page isn't empty
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
-
-  // Category change: reset pagination and API list, hide static until last page reached
-  const handleFilterChange = async (cat) => {
-    setActiveCategory(cat);
-    setCurrentPage(1);
-    setTotalPages(1);
-    setApiBlogs([]);
-    setShowStatic(false);
-
+ // Initial load for "All", page 1 (API only)
+useEffect(() => {
+  (async () => {
     setLoading(true);
     try {
-      const { pageCards, meta } = await fetchBlogsPage(cat, 1);
+      const { pageCards, meta } = await fetchBlogsPage("All", 1, CITY);
       setApiBlogs(pageCards);
       setTotalPages(meta.totalPages);
       setCurrentPage(meta.currentPage);
-      if (meta.categories?.length) setCategories(meta.categories);
-      // only show static when we've fully exhausted API pages for this service
+      setCategories(
+        meta.categories?.length
+          ? meta.categories
+          : [
+              "Web Development",
+              "App Development",
+              "Corporate Video Production",
+              "Digital Marketing",
+              "Graphic Designing",
+              "3D Animations",
+              "B2B Marketing Service",
+              "Others",
+            ]
+      );
       setShowStatic(meta.currentPage >= meta.totalPages);
       setError(null);
     } catch (e) {
-      console.error("Failed to fetch blogs for category:", e);
-      setError("Failed to load API blogs for this category.");
+      console.error("Failed to fetch blogs:", e);
+      setError("Failed to load API blogs.");
       setApiBlogs([]);
       setTotalPages(1);
       setCurrentPage(1);
-      setShowStatic(true); // allow static so page has content
+      setShowStatic(true); // still show static so page isn't empty
     } finally {
       setLoading(false);
     }
-  };
+  })();
+}, []);
+
+
+  // Category change: reset pagination and API list, hide static until last page reached
+  // Category change
+const handleFilterChange = async (cat) => {
+  setActiveCategory(cat);
+  setCurrentPage(1);
+  setTotalPages(1);
+  setApiBlogs([]);
+  setShowStatic(false);
+
+  setLoading(true);
+  try {
+    const { pageCards, meta } = await fetchBlogsPage(cat, 1, CITY); // pass CITY
+    setApiBlogs(pageCards);
+    setTotalPages(meta.totalPages);
+    setCurrentPage(meta.currentPage);
+    if (meta.categories?.length) setCategories(meta.categories);
+    setShowStatic(meta.currentPage >= meta.totalPages);
+    setError(null);
+  } catch (e) {
+    console.error("Failed to fetch blogs for category:", e);
+    setError("Failed to load API blogs for this category.");
+    setApiBlogs([]);
+    setTotalPages(1);
+    setCurrentPage(1);
+    setShowStatic(true);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   // View more: fetch next API page and append; if it was the last page, flip showStatic=true
-  const handleViewMore = async () => {
-    if (currentPage >= totalPages) return;
-    setLoadingMore(true);
-    try {
-      const nextPage = currentPage + 1;
-      const { pageCards } = await fetchBlogsPage(activeCategory, nextPage);
-      setApiBlogs((prev) => [...prev, ...pageCards]);
-      setCurrentPage(nextPage);
-      if (nextPage >= totalPages) setShowStatic(true); // now we can append static at the end
-    } catch (e) {
-      console.error("Failed to load more blogs:", e);
-    } finally {
-      setLoadingMore(false);
-    }
-  };
+  // View more (pagination)
+const handleViewMore = async () => {
+  if (currentPage >= totalPages) return;
+  setLoadingMore(true);
+  try {
+    const nextPage = currentPage + 1;
+    const { pageCards, meta } = await fetchBlogsPage(activeCategory, nextPage, CITY); // pass CITY
+    setApiBlogs((prev) => [...prev, ...pageCards]);
+    setCurrentPage(nextPage);
+    if (nextPage >= meta.totalPages) setShowStatic(true);
+  } catch (e) {
+    console.error("Failed to load more blogs:", e);
+  } finally {
+    setLoadingMore(false);
+  }
+};
+
 
   // Final list to render: API first; add static only when showStatic=true
   const listToRender = useMemo(
