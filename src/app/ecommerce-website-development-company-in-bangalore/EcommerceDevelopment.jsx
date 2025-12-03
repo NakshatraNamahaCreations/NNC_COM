@@ -534,10 +534,12 @@ const schemaMarkup = {
     <>
 
         {/* Schema Markup */}
-        <Script type="application/ld+json">
+        <Script type="application/ld+json"
+         id="nnc-ecommerce-schema">
           {JSON.stringify(schemaMarkup)}
         </Script>
-     
+
+
 
       <div>
         <Breadcrumbs paths={breadcrumbPaths} />

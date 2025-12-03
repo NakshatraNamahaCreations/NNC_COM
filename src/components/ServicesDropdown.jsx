@@ -767,7 +767,7 @@ const ServicesDropdown = ({ textColor }) => {
               {/* Column 1: UI/UX Design & Ecommerce Development */}
               <div style={{ flex: "1 1 15%", marginBottom: "20px" }}>
                 <Link
-                  href="/graphic-design-company-in-bangalore"
+                  href="/graphic-designing-company"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >

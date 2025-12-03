@@ -163,8 +163,8 @@ const schema = {
 
   return (
     <>
-      <Script
-  id="nnc-graphic-design-schema"
+    <Script
+  id="nnc-flutter-design-schema"
   type="application/ld+json"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
