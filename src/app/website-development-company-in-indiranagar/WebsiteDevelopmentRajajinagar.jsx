@@ -180,7 +180,7 @@ const schemaMarkup = {
 
   return (
     <>
-      <Script id="schema-markup" type="application/ld+json">
+      <Script id="schema-markup8" type="application/ld+json">
   {JSON.stringify(schemaMarkup)}
 </Script>
 

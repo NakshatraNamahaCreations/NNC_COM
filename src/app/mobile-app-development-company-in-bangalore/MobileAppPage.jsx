@@ -341,7 +341,7 @@ fbq('track', 'PageView');`}
         {/* <!-- End Meta Pixel Code --> */}
 
        <Script
-  id="schema-markup"
+  id="schema4"
   type="application/ld+json"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{

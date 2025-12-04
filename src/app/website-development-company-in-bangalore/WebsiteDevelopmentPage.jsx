@@ -478,7 +478,7 @@ const schemaMarkup = {
 
         {/* Schema Markup */}
         <Script
-  id="schema-markup"
+  id="schema-markup7"
   type="application/ld+json"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{
