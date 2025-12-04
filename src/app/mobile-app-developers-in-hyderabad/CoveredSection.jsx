@@ -27,7 +27,7 @@ Businesses all over Hyderabad and the neighboring areas are going mobile with ap
           <div className="col-lg-5">
             <div className={styles.imageCard}>
               <Image
-                src="/media/tech28.jpg"
+                src="/media/tech28.avif"
                 alt="Ionic app development — UI graph and neural network illustration"
                 fill
                 sizes="(max-width: 992px) 100vw, 520px"

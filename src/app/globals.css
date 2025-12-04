@@ -3852,3 +3852,15 @@ width: 60% !important;
     margin: 0 !important;
   }
 }
+
+/* spacing between cards */
+.ourwork-slider .slick-slide > div {
+  padding: 0 10px;
+}
+
+/* mobile: make each slide full width and centered */
+  /* @media (max-width: 768px) {
+    .ourwork-slider .slick-list {
+      padding:  16px !important; 
+    }
+  } */

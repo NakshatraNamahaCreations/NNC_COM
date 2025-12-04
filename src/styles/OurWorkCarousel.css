@@ -1,0 +1,146 @@
+/* Slider spacing */
+.ourwork-slider .ourwork-slide {
+  padding: 0 0.75rem;
+}
+
+/* Card layout */
+.ourwork-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image wrapper keeps consistent ratio */
+.ourwork-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;  /* adjust if you like */
+  overflow: hidden;
+}
+
+.ourwork-img {
+  object-fit: cover;
+}
+
+/* Card body */
+.ourwork-card-body {
+  padding: 1rem 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ourwork-desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Live button */
+.ourwork-live-btn {
+  padding: 0.25rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background-color: #d4f5d9;
+  color: #007500;
+}
+
+.ourwork-live-btn:hover {
+  background-color: #a0dca4;
+  color: #004500;
+}
+
+/* Heart icon */
+.ourwork-heart {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* Custom arrows */
+.ourwork-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.ourwork-arrow-prev {
+  left: -10px;
+}
+
+.ourwork-arrow-next {
+  right: -10px;
+}
+
+/* Make default slick arrows invisible if they appear */
+.ourwork-slider .slick-prev,
+.ourwork-slider .slick-next {
+  display: none !important;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .ourwork-slider .ourwork-slide {
+    padding: 0 0.5rem;
+  }
+
+  .ourwork-card-body {
+    padding: 0.8rem 1rem 1.2rem;
+  }
+
+  .ourwork-arrow-prev {
+    left: 4px;
+  }
+
+  .ourwork-arrow-next {
+    right: 4px;
+  }
+}
+/* desktop/tablet – keep some side padding */
+.ourwork-slider .ourwork-slide {
+  padding: 0 16px;
+}
+
+/* 👇 Mobile fixes */
+@media (max-width: 768px) {
+  /* remove left/right padding that comes from centerPadding */
+  .ourwork-slider .slick-list {
+    padding: 0 !important;
+  }
+
+  /* each slide should be full width */
+  .ourwork-slider .slick-slide {
+    width: 100% !important;
+  }
+
+  /* inner div should also stretch */
+  .ourwork-slider .ourwork-slide {
+    padding: 0 8px;
+  }
+}
+@media (max-width: 768px) {
+  .ourwork-slider .slick-slide {
+    width: 100% !important;
+  }
+
+  /* remove extra side padding on mobile so the card is truly full width */
+  .ourwork-slider .px-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

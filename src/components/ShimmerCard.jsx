@@ -1,4 +1,5 @@
-import React from 'react';
+
+
 import { Card } from 'react-bootstrap';
 import "@/styles/ShimmerCard.css"// We'll create this CSS file
 

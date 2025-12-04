@@ -9,18 +9,14 @@ export default function CTASection() {
   return (
     <section className={styles.cta} aria-label="Call to action">
       {/* Background video */}
-     <video
-        className={styles.bgVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none" // prevents preloading until visible
-        aria-hidden="true"
-      >
-        <source src="./BananerVideo.webm" type="video/webm" />
-        {/* <source src="/videos/BannerVideo.mp4" type="video/mp4" /> */}
-      </video>
+    
+<img
+  src="/media/background2.avif"
+  alt="Nakshatra Namaha Creations Banner"
+  className={styles.bgVideo}
+  loading="lazy"
+  decoding="async"
+/>
 
       {/* Dark overlay */}
       <div className={styles.overlay} aria-hidden="true" />

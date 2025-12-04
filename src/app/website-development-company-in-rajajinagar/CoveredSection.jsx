@@ -25,7 +25,7 @@ export default function CoveredSection() {
           <div className="col-lg-5">
             <div className={styles.imageCard}>
               <Image
-                src="/tech23.jpg"
+                src="/tech23(1).avif"
                 alt="Ionic app development — UI graph and neural network illustration"
                 fill
                 sizes="(max-width: 992px) 100vw, 520px"

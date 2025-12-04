@@ -4,8 +4,8 @@ import { useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "@/styles/HeroCarousel.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });

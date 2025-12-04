@@ -12,7 +12,7 @@
       rgba(0, 0, 0, 0.55),      /* dark overlay – adjust opacity to taste */
       rgba(0, 0, 0, 0.55)
     ),
-    url("/techbackground16.jpg") center/cover no-repeat,
+    url("/techbackground16.avif") center/cover no-repeat,
     radial-gradient(
       1200px 600px at 10% -10%,
       rgba(255,255,255,0.04) 0%,

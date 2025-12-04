@@ -61,7 +61,7 @@ export default function Trusted() {
           <div className="col-lg-5">
             <div className={styles.imageCard}>
   <Image
-    src="/tech12banner.jpg"
+    src="/tech12banner.avif"
     alt="Ionic app development — UI graph and neural network illustration"
     fill
     sizes="(max-width: 992px) 100vw, 520px"

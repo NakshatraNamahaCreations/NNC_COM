@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Button, Card } from "react-bootstrap";
+
 import Link from "next/link";
 import Image from "next/image";
 import { IoIosHeartEmpty } from "react-icons/io";
@@ -63,37 +64,44 @@ const PrevArrow = ({ onClick }) => (
 const Our_Service = ({ cardData }) => {
   const router = useRouter();
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "70px",
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "10px",
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "0px",
-          dots: false,
-        },
-      },
-    ],
-  };
+  // ---- control slidesToShow with JS (instead of slick "responsive") ----
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const updateSlides = () => {
+      const w = window.innerWidth;
+
+      if (w <= 480) {
+        setSlidesToShow(1);
+      } else if (w <= 720) {
+        setSlidesToShow(1);
+      } else if (w <= 992) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    updateSlides(); // run once on mount
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
+  }, []);
+
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow,
+  slidesToScroll: 1,
+  centerMode: slidesToShow > 1,
+  centerPadding: slidesToShow === 3 ? "70px" : "10px",
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+};
+
 
   return (
     <div className="my-5 px-3 mx-2">
-      <Slider {...settings}>
+      <Slider {...settings} className="ourwork-slider">
         {cardData.map((card, index) => (
           <div key={index} className="px-4">
             <Link
@@ -119,9 +127,9 @@ const Our_Service = ({ cardData }) => {
                 />
                 <Card.Body
                   className="d-flex flex-column mt-3"
-                  style={{ position: "absolute", bottom: "0", left: "0"}}
+                  style={{ position: "absolute", bottom: "0", left: "0" }}
                 >
-                  <Card.Title className="fw-bold fs-6 mb-2 text-dark mt-2" >
+                  <Card.Title className="fw-bold fs-6 mb-2 text-dark mt-2">
                     {card.title}
                   </Card.Title>
                   <Card.Text
@@ -148,7 +156,6 @@ const Our_Service = ({ cardData }) => {
                         e.currentTarget.style.backgroundColor = "#d4f5d9";
                         e.currentTarget.style.color = "#007500";
                       }}
-                    
                     >
                       Live
                     </Button>
