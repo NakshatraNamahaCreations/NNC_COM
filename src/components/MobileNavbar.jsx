@@ -515,7 +515,7 @@ export default function MobileNavbar() {
           style={{ cursor: "pointer" }}
         >
           <img
-            src="/media/nnclogo.png"
+            src="/media/nnclog1.avif"
             style={{ width: "60px", height: "auto" }}
             className="d-inline-block align-top navbar-logo"
             alt="Logo"

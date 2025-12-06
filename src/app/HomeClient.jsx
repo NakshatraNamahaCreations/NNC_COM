@@ -60,7 +60,7 @@ const faqs = [
 
 const ourworkData = [
   {
-    ui_uxdesign: "/media/ourwork/vijayhome.webp",
+    ui_uxdesign: "/media/tech/vijayhom.avif",
     logo: "/media/NNCWebsite_Works_MobileApp_PNG_VijayHomeLogo.png",
     title: "Vijaya Home Services",
     description:
@@ -68,7 +68,7 @@ const ourworkData = [
     link: "https://play.google.com/store/apps/details?id=com.vhs1&pcampaignid=web_share",
   },
   {
-    ui_uxdesign: "/media/ourwork/puranInterior.webp",
+    ui_uxdesign: "/media/tech/puranInterio.avif",
     logo: "/media/NNCWebsite_Works_PNG_Puranlogo.png",
     title: "Puran Interiors",
     description:
@@ -76,7 +76,8 @@ const ourworkData = [
     link: "https://puraninteriors.com/",
   },
   {
-    ui_uxdesign: "/media/ourwork/cdn.webp",
+    ui_uxdesign: "/media/tech/cd.avif",
+
     logo: "/media/NNCWebsite_Works_MobileApp_PNG-06.png",
     title: "CND Play",
     description:
@@ -99,15 +100,15 @@ const ourworkData = [
   //     "We have implemented our full creativity for the website of this Interior design company.",
   //   link: "https://www.vijayhomeservices.com/",
   // },
-  // {
-  //   ui_uxdesign: "/media/ourwork/proleverage.webp",
+  {
+    ui_uxdesign: "/media/ourwork/proleverage.webp",
 
-  //   logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
-  //   title: "Pro Leverage",
-  //   description:
-  //     "This was created spcifically keeping the client’s requirments. We stood upto their expectations.",
-  //   link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
-  // },
+    logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
+    title: "Pro Leverage",
+    description:
+      "This was created spcifically keeping the client’s requirments. We stood upto their expectations.",
+    link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
+  },
   // {
   //   ui_uxdesign: "/media/ourwork/sarang.webp",
   //   logo: "/media/NNCSarangCreationsLogo.png",
