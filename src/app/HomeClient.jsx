@@ -91,56 +91,56 @@ const ourworkData = [
       "We have designed a simple and minimalist website for this project.",
     link: "https://aadhyainstruments.com/",
   },
-  {
-    ui_uxdesign: "/media/ourwork/vijayhomeweb.webp",
-    logo: "/media/NNCVijayHomeServicesLogo.png",
-    title: "Vijay Home Services",
-    description:
-      "We have implemented our full creativity for the website of this Interior design company.",
-    link: "https://www.vijayhomeservices.com/",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/proleverage.webp",
+  // {
+  //   ui_uxdesign: "/media/ourwork/vijayhomeweb.webp",
+  //   logo: "/media/NNCVijayHomeServicesLogo.png",
+  //   title: "Vijay Home Services",
+  //   description:
+  //     "We have implemented our full creativity for the website of this Interior design company.",
+  //   link: "https://www.vijayhomeservices.com/",
+  // },
+  // {
+  //   ui_uxdesign: "/media/ourwork/proleverage.webp",
 
-    logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
-    title: "Pro Leverage",
-    description:
-      "This was created spcifically keeping the client’s requirments. We stood upto their expectations.",
-    link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/sarang.webp",
-    logo: "/media/NNCSarangCreationsLogo.png",
-    title: "Sarang Creations",
-    description:
-      "We have implemented our full creativity for the website of this Interior design company.",
-    link: "https://sarangcreations.com/",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/rrPrecision.webp",
-    logo: "/media/NNCPrecisionLogo.png",
-    title: "RR Precision",
-    description:
-      "We have implemented our full creativity for the website of this Interior design company.",
-    link: "https://rr-precision.com/",
-  },
+  //   logo: "/media/NNCWebsite_Works_MobileApp_PNG_Proleveragelogo.png",
+  //   title: "Pro Leverage",
+  //   description:
+  //     "This was created spcifically keeping the client’s requirments. We stood upto their expectations.",
+  //   link: "https://play.google.com/store/apps/details?id=com.ecom_gyan.pro_leverage&pcampaignid=web_share",
+  // },
+  // {
+  //   ui_uxdesign: "/media/ourwork/sarang.webp",
+  //   logo: "/media/NNCSarangCreationsLogo.png",
+  //   title: "Sarang Creations",
+  //   description:
+  //     "We have implemented our full creativity for the website of this Interior design company.",
+  //   link: "https://sarangcreations.com/",
+  // },
+  // {
+  //   ui_uxdesign: "/media/ourwork/rrPrecision.webp",
+  //   logo: "/media/NNCPrecisionLogo.png",
+  //   title: "RR Precision",
+  //   description:
+  //     "We have implemented our full creativity for the website of this Interior design company.",
+  //   link: "https://rr-precision.com/",
+  // },
 
-  {
-    ui_uxdesign: "/media/ourwork/nesra.webp",
-    logo: "/media/NesaraAyurvedaLogo.png",
-    title: "Nesara Ayurveda",
-    description:
-      "We have implemented our full creativity for the website of this Interior design company.",
-    link: "https://nesaraayurveda.com/",
-  },
-  {
-    ui_uxdesign: "/media/ourwork/mmd.webp",
-    logo: "/media/Mydocumentslogo.png",
-    title: "Make my documents",
-    description:
-      "We have implemented our full creativity for the website of this Interior design company.",
-    link: "https://www.makemydocuments.com/",
-  },
+  // {
+  //   ui_uxdesign: "/media/ourwork/nesra.webp",
+  //   logo: "/media/NesaraAyurvedaLogo.png",
+  //   title: "Nesara Ayurveda",
+  //   description:
+  //     "We have implemented our full creativity for the website of this Interior design company.",
+  //   link: "https://nesaraayurveda.com/",
+  // },
+  // {
+  //   ui_uxdesign: "/media/ourwork/mmd.webp",
+  //   logo: "/media/Mydocumentslogo.png",
+  //   title: "Make my documents",
+  //   description:
+  //     "We have implemented our full creativity for the website of this Interior design company.",
+  //   link: "https://www.makemydocuments.com/",
+  // },
 ];
 
 const cardData = [
