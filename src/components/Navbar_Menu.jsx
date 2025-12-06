@@ -64,7 +64,7 @@ export default function Navbar_Menu({ isHomePage }) {
         <div className="navbar__logo">
           <Link href="/">
             <Image
-              src="/media/nnclog1.avif"
+              src="/media/nnclogo.avif"
               width={70}
               height={70}
               alt="NNC logo"

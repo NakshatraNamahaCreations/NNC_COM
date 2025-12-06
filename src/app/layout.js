@@ -39,8 +39,8 @@
     },
     icons: {
       icon: [
-        { url: "/media/nnclog1.avif", sizes: "32x32" },
-        { url: "/media/nnclog1.avif", sizes: "16x16" },
+        { url: "/media/nnclogo.avif", sizes: "32x32" },
+        { url: "/media/nnclogo.avif", sizes: "16x16" },
       ],
       apple: [{ url: "/apple-touch-icon.png" }],
       other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0d0d0d" }],

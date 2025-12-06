@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-const websitedevBannerImg1 = "/media/webdev/webdevhyder.jpg";
+const websitedevBannerImg1 = "/media/webdev/bannerImg.png";
 const websitedevBannerImg2 = "/media/webdev/bannerImg2.png";
 
 const UnderstandingBusinessGoals =
@@ -29,7 +29,7 @@ const bgblue = "/media/webdev/group3.png";
 import IndustriesServedMobileApp from "@/components/IndustriesServedMobileApp";
 import ClientImagesMobileApp from "@/components/websiteDev/ClientImagesMobileApp";
 
-import { useTrail } from "@react-spring/web";
+// import { useTrail } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 // import PopupBtn from "../PopupBtn";
 
@@ -304,13 +304,13 @@ export default function WebsiteDevelopmentCompany() {
   ];
 
   // Sequential animation for buttons using useTrail
-  const buttonTrail = useTrail(buttons.length, {
-    opacity: inView ? 1 : 0,
-    transform: inView ? "scale(1)" : "scale(0.8)",
-    from: { opacity: 0, transform: "scale(0.8)" },
-    config: { tension: 200, friction: 12 },
-    delay: 200,
-  });
+  // const buttonTrail = useTrail(buttons.length, {
+  //   opacity: inView ? 1 : 0,
+  //   transform: inView ? "scale(1)" : "scale(0.8)",
+  //   from: { opacity: 0, transform: "scale(0.8)" },
+  //   config: { tension: 200, friction: 12 },
+  //   delay: 200,
+  // });
 
   return (
     <>

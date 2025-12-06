@@ -84,7 +84,7 @@ const Preloader = ({ progress, onComplete }) => {
 
         {/* Center Logo */}
         <img
-          src="/media/nnclog1.avif"
+          src="/media/nnclogo.avif"
           alt="Logo"
           style={{
             width: 50,
