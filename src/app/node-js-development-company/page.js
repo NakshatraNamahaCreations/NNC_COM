@@ -14,15 +14,15 @@ export const metadata = {
   openGraph: {
     title: "Top Node JS Development Company",
     description:
-      "Hire expert mobile app developers near you for Android and iOS platforms. Nakshatra Namaha Creations delivers secure, scalable, and high-performance mobile applications tailored to your business.",
+     "Hire expert Node.js developers for scalable, high-performance backend solutions. Custom APIs, real-time apps, migration & support services.",
     type: "website",
     url: "https://www.nakshatranamahacreations.com/node-js-development-company",
     images: [
       {
-        url: "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",
+        url: "https://www.nakshatranamahacreations.com/media/node-js-development-company.png",
         width: 1200,
         height: 630,
-        alt: "Mobile App Developers Near Me",
+        alt: "Top Node JS Development Company",
       },
     ],
     siteName: "Nakshatra Namaha Creations",
@@ -31,9 +31,9 @@ export const metadata = {
     card: "summary_large_image",
     title: "Top Node JS Development Company",
     description:
-      "Find reliable mobile app developers near you. Nakshatra Namaha Creations builds scalable Android and iOS apps with stunning design and robust performance.",
+      "Hire expert Node.js developers for scalable, high-performance backend solutions. Custom APIs, real-time apps, migration & support services.",
     images: [
-      "https://www.nakshatranamahacreations.com/media/mobile-app-developers.png",
+      "https://www.nakshatranamahacreations.com/media/node-js-development-company.png",
     ],
     site: "@nncbengaluru",
     creator: "@nncbengaluru",

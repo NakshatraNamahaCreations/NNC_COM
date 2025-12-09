@@ -22,7 +22,7 @@ export const metadata = {
         url: "https://www.nakshatranamahacreations.com/media/react-js-development-company.png",
         width: 1200,
         height: 630,
-        alt: "react-js-development-company",
+        alt: "React JS Development Company",
       },
     ],
     siteName: "Nakshatra Namaha Creations",

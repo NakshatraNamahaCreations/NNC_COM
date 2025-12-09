@@ -1,0 +1,53 @@
+.tm-section {
+  background: #002a3a;
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+/* marquee wrapper */
+.tm-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* inner track that moves */
+.tm-marquee-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: tm-slide 30s linear infinite;
+}
+
+/* each item */
+.tm-item {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-right: 48px; /* spacing between items */
+  display: inline-flex;
+  align-items: center;
+}
+
+.tm-dot {
+  color: #2cc5b5;
+  margin-left: 18px;
+  font-size: 18px;
+}
+
+/* animation – adjust duration for speed */
+@keyframes tm-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* small tweaks for mobile */
+@media (max-width: 768px) {
+  .tm-item {
+    font-size: 14px;
+    margin-right: 32px;
+  }
+}

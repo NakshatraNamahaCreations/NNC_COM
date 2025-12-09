@@ -203,6 +203,12 @@ else if (
 ) {
   service = "Mobile App Development";
 }
+else if (
+  currentPath === "/motion-graphics-services" ||
+  currentPath === "/motion-graphics-services"
+) {
+  service = "Motion Graphic Services";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,

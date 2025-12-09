@@ -1,0 +1,159 @@
+/* SECTION */
+.tr-section {
+  background: #ffffff;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+/* HEADING */
+.tr-heading {
+  margin-bottom: 40px;
+}
+
+.tr-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+.tr-star {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+/* SLIDER WRAPPER */
+.tr-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* TRACK (each slide = 100%) */
+.tr-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.tr-slide {
+  min-width: 100%;
+}
+
+/* CARD */
+.tr-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px 22px 20px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tr-card:hover {
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.1);
+  transform: translateY(-3px);
+  transition: all 0.25s ease;
+}
+
+/* CARD HEADER */
+.tr-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.tr-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #111827;
+}
+
+.tr-company {
+  font-size: 13px;
+  color: #e11d48; /* pink like reference */
+  margin: 0 0 6px;
+}
+
+.tr-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.tr-rating .fa-star {
+  color: #fbbf24;
+  font-size: 12px;
+}
+
+/* GOOGLE LOGO */
+.tr-google-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.tr-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* CONTROLS */
+.tr-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.tr-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tr-arrow-btn:hover {
+  background: #111827;
+  border-color: #111827;
+}
+
+.tr-arrow-icon {
+  width: 18px;
+  height: 18px;
+  fill: #111827;
+}
+
+.tr-arrow-btn:hover .tr-arrow-icon {
+  fill: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .tr-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tr-section {
+    padding: 56px 0;
+  }
+
+  .tr-title {
+    font-size: 24px;
+  }
+
+  .tr-card {
+    border-radius: 18px;
+    padding: 18px 16px 16px;
+  }
+}

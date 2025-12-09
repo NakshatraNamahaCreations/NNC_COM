@@ -61,7 +61,7 @@ const logoArray3 = [
 
 const ClientImages = () => {
   return (
-    <div style={{ padding: "24px 0px", margin: "10% auto" }}>
+    <div style={{ padding: "24px 0px" }}>
       <h3
         style={{
           textAlign: "center",
