@@ -1,63 +1,91 @@
-/* Section Wrapper */
-.faq-section {
-  background: #fff;
-  padding: 80px 0;
+/* Main accordion container */
+.faq-accordion {
+  border: 0;
 }
 
-/* Heading */
-.faq-title {
-  text-align: center;
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-/* FAQ Container */
-.faq-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* FAQ Item */
+/* Each item wrapper – no radius here */
 .faq-item {
-  background: #dce9ff;
-  padding: 22px 25px;
-  border-radius: 40px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: 0.3s ease;
+  border: 0;
+  margin-bottom: 18px;
+  background: transparent;
+  border-radius: 0 !important;
+  overflow: visible;
 }
 
-.faq-item:hover {
-  background: #cfe0ff;
+/* Remove default bootstrap chevron */
+.faq-item .accordion-button::after {
+  display: none !important;
 }
 
-/* Question Row */
-.faq-question {
+/* Header pill (closed state) */
+.faq-item .accordion-button {
+  background: #ddeeff; /* light blue */
+  border-radius: 999px !important;
+  padding: 18px 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  color: #000;
+  font-weight: 500;
+  border: none;
+}
+
+/* Remove weird outline on focus */
+.faq-item .accordion-button:focus {
+  box-shadow: none;
+}
+
+/* When open: keep top rounded, but make bottom straight
+   so it can join with the body box */
+.faq-item .accordion-button:not(.collapsed) {
+  background: #ddeeff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Layout inside header: question left, icon right */
+.faq-header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Question text */
+.faq-question {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Right side + / - circle */
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
   font-size: 18px;
-  font-weight: 600;
 }
 
-/* Icons */
-.faq-icon svg {
-  font-size: 22px;
-  font-weight: bold;
+/* Body container shares same background */
+.faq-item .accordion-collapse {
+  background: #ddeeff;
+  border-radius: 0 0 999px 999px !important; /* bottom pill */
+  padding-top: 10px;
 }
 
-/* Answer */
+/* Body content */
+.faq-item .accordion-body {
+  padding: 0 32px 20px;
+  border-radius: 0 0 999px 999px;
+  margin-top: 0;
+}
+
+/* Answer text */
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  font-size: 16px;
-  color: #333;
- 
+  margin: 0;
+  font-size: 0.95rem;
   line-height: 1.6;
-  transition: max-height 0.4s ease;
-}
-
-.faq-answer.open {
-  max-height: 300px; /* Enough to show any answer */
 }

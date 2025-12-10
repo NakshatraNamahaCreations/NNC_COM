@@ -74,7 +74,7 @@ const data = [
       { text: "iOS App Development Company",  href: "/ios-mobile-app-development" },
       { text: "Best App Development Agency",  href: "/" },
       { text: "Flutter App Development Company",  href: "/flutter-app-development" },
-      { text: "React Native App Development Company",  href: "/" },
+      { text: "React Native App Development Company",  href: "/react-native-mobile-app-developers" },
       { text: "Cross-platform App Development Company",  href: "/" },
       { text: "Native Mobile App Developers",  href: "/" },
       { text: "E-commerce App Development Company",  href: "/" },
@@ -125,7 +125,7 @@ const data = [
       { text: "Digital Marketing Agency",   href: "/" },
 { text: "Social Media Marketing",   href: "/social-media-marketing" },
       { text: "SEO Services",   href: "/seo-services" },
-     
+     { text: "UI UX Design Agency",   href: "/ui-ux-design-agency" },
       { text: "Digital Marketing Services",   href: "/" },
       { text: "PPC Advertising",   href: "/" },
       { text: "Digital Marketing Company",   href: "/" },
@@ -142,7 +142,8 @@ const data = [
       { text: "Corporate Video Production",   href: "/"},
       { text: "Corporate Ad Shoot",   href: "/" },
     
-      { text: "Business Promotional Video",   href: "/"},
+      { text: "Business Promotional Video",   href: "/"},  
+        { text: "Motion Graphics Service",   href: "/motion-graphics-service"}, 
       { text: "Product Video Shoot",   href: "/"},
       { text: "Drone Shoot for Corporate Film",   href: "/" },
     ],

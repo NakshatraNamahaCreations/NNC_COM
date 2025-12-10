@@ -209,6 +209,12 @@ else if (
 ) {
   service = "Motion Graphic Services";
 }
+else if (
+  currentPath === "/react-native-mobile-app-developers" ||
+  currentPath === "/react-native-mobile-app-developers"
+) {
+  service = "React Native App Development";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,

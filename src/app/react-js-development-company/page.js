@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "React JS Development Company | NNC",
     description:
-      "Hire expert mobile app developers near you for Android and iOS platforms. Nakshatra Namaha Creations delivers secure, scalable, and high-performance mobile applications tailored to your business.",
+      "Looking for a React JS development company? We build fast, scalable, and modern websites tailored to your business with the latest web technologies.",
     type: "website",
     url: "https://www.nakshatranamahacreations.com/react-js-development-company",
     images: [

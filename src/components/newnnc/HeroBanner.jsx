@@ -29,7 +29,7 @@ const HeroBanner = () => {
                   <span className="hero-badge-dot" />
                 </span>
                 <span className="hero-badge-text">
-                  Top #1 in Bangalore 🇮🇳
+                  Leading Company in Bangalore
                 </span>
               </div>
 

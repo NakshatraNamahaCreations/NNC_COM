@@ -1,143 +1,132 @@
 "use client";
 
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import Slider from "react-slick";
+import Image from "next/image";
+import { Container } from "react-bootstrap";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 import "@/styles/PortfolioShowcase.css";
 
-const portfolioItems = [
+// Dummy data – replace with your own
+const projects = [
   {
-    id: "001",
-    tag: "Web Development",
-    title: "Fraud-Detection Tool",
-    text: "Clean and modern financial services website design for TVS Credit.",
+    id: 1,
+    title: "Indam Seeds – Hybrid Seeds & Inputs",
     image: "/media/ourwork/image1.png",
+    link: "https://example.com/indam",
+    tags: ["Website Design"],
   },
   {
-    id: "002",
-    tag: "UI/UX Design",
-    title: "AI Healthcare Assistant",
-    text: "Clean and modern financial services website design for TVS Credit.",
-    image: "/media/ourwork/image2.png",
+    id: 2,
+    title: "Narayan Bali Pooja in Srirangpatna",
+     image: "/media/ourwork/image2.png",
+    link: "https://example.com/narayan-bali",
+    tags: ["Website Design"],
   },
   {
-    id: "003",
-    tag: "Branding",
-    title: "Dryfruit Bharat",
-     text: "Clean and modern financial services website design for TVS Credit.",
+    id: 3,
+    title: "Sample Project 3 – City Name",
     image: "/media/ourwork/image3.png",
+    link: "https://example.com/sample-3",
+    tags: ["Website Design"],
   },
   {
-    id: "004",
-    tag: "Branding",
-    title: "TVS Credit",
-    text: "Clean and modern financial services website design for TVS Credit.",
-    image: "/media/ourwork/image4.png",
+    id: 4,
+    title: "Sample Project 4 – City Name",
+     image: "/media/ourwork/image4.png",
+    link: "https://example.com/sample-4",
+    tags: ["Business Blaze"],
   },
 ];
 
-const PortfolioShowcase = () => {
+// Custom arrows using React Icons
+function PrevArrow(props) {
+  const { className, onClick } = props;
   return (
-    <section className="portfolio-section">
-      <div className="container-fluid">
-        <div className="portfolio-showcase__inner">
-          {/* Heading */}
-          <div className="portfolio-showcase__title-box">
-            <p className="portfolio-showcase__badge">~ Selected work ~</p>
-            <h2 className="portfolio-showcase__title">Our Work</h2>
-            <p className="portfolio-showcase__subtitle">
-              Real outcomes through{" "}
-              <span className="portfolio-showcase__highlight">
-                mobile apps and websites
-              </span>
-            </p>
-          </div>
+    <button
+      type="button"
+      className={`ps-arrow ps-arrow-prev ${className}`}
+      onClick={onClick}
+    >
+      <FiArrowLeft className="ps-arrow-icon" />
+    </button>
+  );
+}
 
-          {/* Slider */}
-          <div className="portfolio-showcase__carousel">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              slidesPerView={3}
-              spaceBetween={30}
-              centeredSlides={false}
-              loop
-              speed={900}
-              autoplay={{
-                delay: 4500,
-                disableOnInteraction: false,
-              }}
-              navigation={{
-                nextEl: ".portfolio-showcase__arrow--next",
-                prevEl: ".portfolio-showcase__arrow--prev",
-              }}
-             pagination={{
-  el: ".portfolio-showcase__pagination",
-  clickable: true,
-  horizontalClass: "portfolio-showcase__pagination", 
-  bulletClass: "swiper-pagination-bullet",
-  bulletActiveClass: "swiper-pagination-bullet-active",
-}}
+function NextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <button
+      type="button"
+      className={`ps-arrow ps-arrow-next ${className}`}
+      onClick={onClick}
+    >
+      <FiArrowRight className="ps-arrow-icon" />
+    </button>
+  );
+}
 
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-              }}
-            >
-              {portfolioItems.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div className="portfolio-showcase__item">
-                    <div className="portfolio-showcase__image">
-                      <img src={item.image} alt={item.title} />
-                    </div>
+export default function PortfolioShowcase() {
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "ease-in-out",
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
-                    <div className="portfolio-showcase__content">
-                      <div className="portfolio-showcase__tags">
-                        <span className="portfolio-showcase__tag portfolio-showcase__tag--primary">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <div className="portfolio-showcase__number">
-                        {item.id}
-                      </div>
-                      <h3 className="portfolio-showcase__item-title">
-                        {item.title}
-                      </h3>
-                      <p className="portfolio-showcase__item-text">
-                        {item.text}
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+  return (
+    <section className="ps-section">
+      <Container>
+        {/* Heading */}
+        <div className="ps-heading">
+          {/* <h6 className="ps-sub">Projects</h6> */}
+          <h2 className="ps-title">Our Work</h2>
+        </div>
 
-            {/* arrows + dots */}
-            <div className="portfolio-showcase__navigation">
-              <div className="portfolio-showcase__arrows">
-               <button className="portfolio-showcase__arrow portfolio-showcase__arrow--prev">
-  <FaChevronLeft size={18} />
-</button>
+        {/* Slider */}
+        <Slider {...settings} className="ps-slider">
+          {projects.map((p) => (
+            <div key={p.id} className="ps-slide">
+              <div className="ps-card">
+                {/* IMAGE */}
+                <div className="ps-thumb">
+                  <a href={p.link} target="_blank" rel="noreferrer">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="ps-thumb-img"
+                    />
+                  </a>
+                </div>
 
-<div className="portfolio-showcase__pagination" />
-
-<button className="portfolio-showcase__arrow portfolio-showcase__arrow--next">
-  <FaChevronRight size={18} />
-</button>
-
+                {/* WHITE CARD OVER IMAGE */}
+                <div className="ps-info">
+                  <h5 className="ps-info-title">{p.title}</h5>
+                  <p className="ps-info-tags">{p.tags.join(" / ")}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          ))}
+        </Slider>
+      </Container>
     </section>
   );
-};
-
-export default PortfolioShowcase;
+}

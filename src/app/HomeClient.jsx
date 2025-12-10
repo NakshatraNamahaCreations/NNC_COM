@@ -26,17 +26,9 @@ import Icons from "@/components/Icons";
 import PopupForm from "@/components/home/PopupForm";
 import TechSection from "@/components/home/TechSection";
 import HeroCarousel from "@/components/home/HeroCarousel";
-import HeroBanner from "@/components/newnnc/HeroBanner";
 import KeywordsSection from "@/components/KeywordsSection";
 import Link from "next/link";
 import WhyChooseUsSection from "@/components/newnnc/WhyChooseUsSection";
-import GridOurProcess from "@/components/newnnc/GridOurProcess";
-import FaqSection from "@/components/newnnc/FaqSection";
-import TechStackGrid from "@/components/newnnc/TechStackGrid";
-import PremiumTestimonials from "@/components/newnnc/PremiumTestimonials";
-import TechnologyMarquee from "@/components/newnnc/TechnologyMarquee";
-import ProcessSection from "@/components/newnnc/ProcessSection";
-import PortfolioShowcase from "@/components/newnnc/PortfolioShowcase";
 
 const faqs = [
   // FAQ List
@@ -232,8 +224,7 @@ const Home = () => {
       {showPopup && <PopupForm />}
 
       <div>
-        {/* <HeroBanner /> */}
-        <HeroCarousel/>
+        <HeroCarousel />
 
         {/* ABOUT US */}
         <div id="about">
@@ -285,12 +276,11 @@ const Home = () => {
           </h2>
           <Our_Service cardData={ourworkData} />
         </div>
- {/* <PortfolioShowcase/> */}
+
         {/* TECH TOOLS & PROCESS */}
         <Container>
           <Technical_Tools />
-          <OurProcess /> 
-        
+          <OurProcess />
         </Container>
 
         {/* INDUSTRIES WE SERVE */}
@@ -305,23 +295,11 @@ const Home = () => {
           </Container>
         </div>
 
-        {/*
-        new
-        <ProcessSection/>
-        <TechStackGrid/>
-       <TechnologyMarquee/>
-         <br/>
-       */}
-     
         <TechSection />
         <ClientImages />
-         {/* <PremiumTestimonials/> */}
-      {/* <NewTestimonial />   */}
-        {/*
-        new
-        <FaqSection/> */}
+        <NewTestimonial />
         <Container>
-         
+          {/* <Our_Blog /> */}
           <div style={{ padding: "5% 0%" }} ref={blogRef}></div>
           <FAQs faqs={faqs} />
           <KeywordsSection />

@@ -1,0 +1,93 @@
+.industries-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.i-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.i-sub {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.industry-cell {
+  padding: 45px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- INTERNAL VERTICAL BORDERS (Between Columns Only) --- */
+.industry-cell:nth-child(1),
+.industry-cell:nth-child(2),
+.industry-cell:nth-child(3),
+.industry-cell:nth-child(5),
+.industry-cell:nth-child(6),
+.industry-cell:nth-child(7) {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* --- INTERNAL HORIZONTAL BORDER (Between rows only) --- */
+.industry-cell:nth-child(-n + 4) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Logo Styling */
+.industry-logo {
+  max-width: 180px;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-cell:nth-child(2),
+  .industry-cell:nth-child(6) {
+    border-right: none;
+  }
+
+  .industry-cell:nth-child(-n + 6) {
+    border-bottom: 1px solid #565757;
+  }
+}
+.industry-cell {
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon / Logo */
+.industry-logo {
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Name Below Icon */
+.industry-name {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #1f2937;
+}
