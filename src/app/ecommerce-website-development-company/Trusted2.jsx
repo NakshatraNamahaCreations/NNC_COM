@@ -26,10 +26,10 @@ export default function Trusted2() {
  const track = [...ITEMS, ...ITEMS];
   return (
     <>
-    <section className={styles.wrap}>
+    {/* <section className={styles.wrap}>
       <div className="container">
         <div className="row align-items-center g-5">
-          {/* Left copy */}
+        
      
           <div className="col-lg-5">
             <div className={styles.imageCard}>
@@ -47,7 +47,7 @@ export default function Trusted2() {
 
           </div>
         
-          {/* Right image */}
+          
                <div className="col-lg-7">
             <h2 className={styles.title}>Why Choose Nakshatra Namaha Creations?</h2>
             <p className={styles.lead}>
@@ -60,7 +60,7 @@ export default function Trusted2() {
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
      <section className={styles.wrap}>
       <div className="container">
         <div className="row align-items-center g-5">

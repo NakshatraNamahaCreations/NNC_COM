@@ -50,11 +50,11 @@ export default function Trusted() {
  
          <section className={styles1.featuresGrid_wrap} aria-label="Product features">
           <h2 className="text-center fw-bold mb-2" style={{width:"70%", margin:"0 auto"}}>
-         Why Choose Nakshatra Namaha Creations as Your Flutter App Development Company
+         Why Choose Nakshatra Namaha Creations as Your E-commerce Development Company
         </h2>
         <br />
          <p className={styles1.sec3Text}>
-    Trust,​‍​‌‍​‍‌​‍​‌‍​‍‌ innovation, and consistent delivery are the main factors that have helped us at Nakshatra Namaha Creations to build our reputation as a Flutter App Development Company.
+   Trust, innovation, and consistent delivery are the core values that define Nakshatra Namaha Creations as a reliable E-commerce Development Company. We focus on building online stores that are not only visually engaging but also optimized for performance, usability, and conversions.
        </p>
 
       <div className={styles1.featuresGrid_grid}>
@@ -65,7 +65,6 @@ export default function Trusted() {
             style={{ "--accent": f.accent }}
           >
             <div className={styles1.featuresGrid_iconWrap} aria-hidden="true">
-              {/* Replace with your exact sizes; keep 1:1 for best result */}
               <Image
                 src={f.icon}
                 alt=""
@@ -86,7 +85,6 @@ export default function Trusted() {
 
             <p className={styles1.featuresGrid_desc}>{f.desc}</p>
 
-            {/* bottom bar */}
             <span className={styles1.featuresGrid_bar} aria-hidden="true" />
           </article>
         ))}

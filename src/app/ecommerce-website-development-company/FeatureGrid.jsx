@@ -6,7 +6,7 @@ import styles from "../../styles/FeatureGrid.module.css";
 const features = [
   {
     title: "Custom E-commerce Website Development",
-    desc: "We design online stores that are not only visually appealing with your brand colors but also carry the essence of your brand and are aligned with how users move through your site. Every single thing from the layout to the product pages is perfected to increase conversion.",
+    desc: "We design online stores that are not only visually appealing with your brand colors but also carry the essence of your brand and are aligned with how users move through your site. ",
     img: "/media/icons/profit-growth.png",
   },
   {
@@ -21,7 +21,7 @@ const features = [
   },
   {
       title: "Multi-Vendor Marketplace Development",
-    desc: "You can create a totally functional marketplace platform with the features such as vendor dashboards, commissions, payout, and product management systems that are powered by a reputable E-commerce website development company, to mention just a ​‍​‌‍​‍‌​‍​‌‍​‍‌few.",
+    desc: "You can create a totally functional marketplace platform with the features such as vendor dashboards, commissions, payout, and product management systems ",
     img: "/media/icons/jigsaw.png",
   },
 
