@@ -64,7 +64,7 @@ export default function Teams() {
     // { image: Dhanalakshmi, alt: "Dhanalakshmi", name: "Dhanalakshmi S B", title: "Frontend Developer" },
      
     { image: Sathish, alt: "Sathish", name: "Sathish", title: "QA Analyst" },
-     { image: Bharath, alt: "Bharath Kumar K", name:  "Bharath Kumar K", title: "Backend Developer" },
+    //  { image: Bharath, alt: "Bharath Kumar K", name:  "Bharath Kumar K", title: "Backend Developer" },
   ];
 
   // Helper: break teamMembers into chunks of 3 for responsive rows
