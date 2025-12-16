@@ -215,6 +215,18 @@ else if (
 ) {
   service = "React Native App Development";
 }
+else if (
+  currentPath === "/ui-ux-design-agency" ||
+  currentPath === "/ui-ux-design-agency"
+) {
+  service = "UI/UX Design ";
+}
+else if (
+  currentPath === "/ecommerce-website-development-company" ||
+  currentPath === "/ecommerce-website-development-company"
+) {
+  service = "Ecommerce Website ";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,
