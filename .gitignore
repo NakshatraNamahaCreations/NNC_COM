@@ -7,3 +7,6 @@
 *.mp4
 *.pdf
 NNCNew-Clone/
+
+# Local Netlify folder
+.netlify

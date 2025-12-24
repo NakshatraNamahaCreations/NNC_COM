@@ -1,0 +1,115 @@
+/* ================= FORM ================= */
+
+.formBox {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.formTitle {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= INPUTS ================= */
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+  caret-color: #111111;
+}
+
+/* Chrome / Edge autofill FIX */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #111111 !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.textarea {
+  resize: none;
+}
+
+/* Placeholder */
+.input::placeholder,
+.textarea::placeholder {
+  color: #888;
+}
+
+/* Focus */
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #4fa3ff;
+  box-shadow: 0 0 0 3px rgba(79, 163, 255, 0.2);
+}
+
+/* ================= BUTTON ================= */
+
+.button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #1e3cff, #4fa3ff);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 163, 255, 0.35);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ================= FOOTER NOTE ================= */
+
+.note {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.lockIcon {
+  margin-right: 6px;
+  color: #4fa3ff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+}

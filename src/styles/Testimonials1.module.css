@@ -1,0 +1,107 @@
+.section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.slider {
+  padding-bottom: 40px;
+}
+
+/* CARD */
+.card {
+  padding: 40px 30px;
+  opacity: 0.3;
+  transition: all 0.4s ease;
+}
+
+.swiper-slide-active .card {
+  opacity: 1;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111;
+  margin: 30px 0;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.role {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
+
+/* IMAGE */
+.avatar {
+  margin-top: 15px;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  background: #ddd;
+}
+
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.prevBtn {
+  left: 0;
+}
+
+.nextBtn {
+  right: 0;
+}
+
+.arrow:hover {
+  background: #2563eb;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px;
+  }
+}

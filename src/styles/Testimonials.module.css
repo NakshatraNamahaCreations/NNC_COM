@@ -1,171 +1,109 @@
 .section {
+  padding: 100px 0;
+  background: transparent;
+  text-align: center;
   position: relative;
-  padding: 56px 0 72px;
-  /* Pink → purple gradient like the screenshot */
-background: #444;
-
-
-}
-
-.wrap {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .heading {
-  text-align: center;
-  color: #fff;
-  font-size: clamp(18px, 2.2vw, 24px);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  margin: 0 0 28px;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #000;
 }
 
-.sliderWrap {
-  position: relative;
-}
-
-.scroller {
-  overflow-x: auto;
-  overflow-y: visible;
-  display: flex;
-  gap: 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 6px 56px; /* space for arrows on sides */
-}
-
-.slide {
-  flex: 0 0 auto;
-  width: 328px; /* matches screenshot width */
-  scroll-snap-align: start;
+.slider {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .card {
-  position: relative;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(10, 10, 10, 0.08);
-  padding: 28px 22px;
-  min-height: 170px;
+  transition: all 0.4s ease;
+  padding: 20px;
 }
 
-/* speech-bubble tail */
-.card::after {
-  content: "";
-  position: absolute;
-  left: 84px;
-  bottom: -10px;
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
-  transform: rotate(45deg);
-  border-bottom-right-radius: 4px;
-  box-shadow: 2px 2px 10px rgba(10,10,10,.06);
+.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.inactive {
+  opacity: 0.35;
+  filter: blur(1px);
+  transform: scale(0.9);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.divider span {
+  width: 40px;
+  height: 1px;
+  background: #ddd;
 }
 
 .text {
-  color: #14151a;
-  line-height: 1.55;
-  font-size: 16px;
-  margin: 0;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 6px 0;
-  color: #fff; /* meta sits on gradient */
-}
-
-.avatarWrap {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.15);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.avatar {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-}
-
-.author {
-  display: grid;
-  gap: 4px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 30px;
 }
 
 .name {
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  color: #ffeefb; /* slightly warmer white */
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
 }
 
 .role {
-  margin: 0;
   font-size: 14px;
-  opacity: .9;
+  color: #888;
 }
 
-/* arrows */
+.avatar {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
+  background: #000;
+  color: #fff;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 0;
-  background: #ffffff;
-  color: #222;
-  display: grid;
-  place-items: center;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 8px 22px rgba(0,0,0,.15);
-  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
-  z-index: 2;
+  z-index: 10;
 }
 
-.arrowLeft { left: 8px; }
-.arrowRight { right: 8px; }
-
-.arrow:disabled {
-  opacity: .45;
-  cursor: default;
-  box-shadow: none;
+.arrow:hover {
+  background: #007bff;
 }
 
-.arrow:not(:disabled):active {
-  transform: translateY(-50%) scale(.96);
+.prev {
+  left: 60px;
 }
 
-/* Responsiveness */
+.next {
+  right: 60px;
+}
+
 @media (max-width: 768px) {
-  .scroller { padding: 6px 48px; }
-  .slide { width: 86vw; max-width: 420px; }
-  .card { min-height: 160px; }
+  .arrow {
+    display: none;
+  }
 }
-
-@media (min-width: 1280px) {
-  .wrap { padding: 0 28px; }
-}
-
-/* Hide scrollbar cross-browser, keep wheel/trackpad scroll */
-.scroller {
-  overflow-x: auto;
-  -ms-overflow-style: none;   /* IE/Edge legacy */
-  scrollbar-width: none;      /* Firefox */
-}
-
-.scroller::-webkit-scrollbar { /* Chrome/Safari/Edge */
-  width: 0;
-  height: 0;
-}
-

@@ -1,0 +1,90 @@
+.section {
+  padding: 90px 0;
+  background: linear-gradient(to bottom, #f8fbff, #ffffff);
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.heading span {
+  color: #2563eb;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.tabBtn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.active {
+  color: #fff;
+  border: none;
+}
+
+
+
+.tabBtn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 28px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.card p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+}

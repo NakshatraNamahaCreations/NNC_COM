@@ -227,6 +227,12 @@ else if (
 ) {
   service = "Ecommerce Website ";
 }
+else if (
+  currentPath === "/website-development-agency" ||
+  currentPath === "/website-development-agency"
+) {
+  service = "Website development agency";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,

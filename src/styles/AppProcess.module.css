@@ -1,0 +1,122 @@
+.processSection {
+  background: linear-gradient(135deg, #050b2e, #081857);
+  padding: 80px 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.header h2 {
+  font-size: 38px;
+  max-width: 520px;
+}
+
+.header p {
+  max-width: 420px;
+  color: #c7d2fe;
+  line-height: 1.7;
+}
+
+/* MAIN LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* LEFT */
+.left {
+  position: relative;
+}
+
+.stickyMedia {
+  position: sticky;
+  top: 190px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1a4f, #0d2a7a);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* IMAGE */
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* STEP CARD */
+.stepCard {
+  display: flex;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 26px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stepNumber {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4f8cff;
+  min-width: 48px;
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: #a5b4fc;
+  text-transform: uppercase;
+}
+
+.stepTitle {
+  margin: 4px 0 8px;
+  font-size: 20px;
+}
+
+.stepDesc {
+  color: #dbeafe;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stickyMedia {
+    position: relative;
+    top: 0;
+  }
+}

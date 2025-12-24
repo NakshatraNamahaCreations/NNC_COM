@@ -29,26 +29,22 @@ const techItems = [
 
   "Strapi",
 
-  // Mobile
   "Flutter",
   "Android",
   "iOS",
 
 
-  // Databases
   "MySQL",
   "MongoDB",
   "PostgreSQL",
 
-
-  // Cloud / DevOps
   "AWS",
-  "Docker",
+
   
   "Nginx",
   "Apache",
   "Git",
-  "CI/CD",
+ 
 
   // CMS & E-Commerce
   "WordPress",
