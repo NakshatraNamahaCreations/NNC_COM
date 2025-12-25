@@ -217,3 +217,104 @@
   display: flex;
   justify-content: center;
 }
+
+.contactSection {
+  background: linear-gradient(135deg, #fef8f8, #f4f7ff);
+  padding: 80px 0;
+}
+
+.contactCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.contactForm {
+  padding: 50px;
+}
+
+.formTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.formSub {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.input {
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.textarea {
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  background: #2563eb;
+}
+
+/* RIGHT PANEL */
+.contactInfo {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  padding: 50px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.trustList {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.trustList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contactImage {
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contactCard {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm,
+  .contactInfo {
+    padding: 30px;
+  }
+}

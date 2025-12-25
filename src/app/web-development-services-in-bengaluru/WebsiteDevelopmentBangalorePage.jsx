@@ -751,16 +751,17 @@ export default function WebsiteDevelopmentBangalorePage() {
               {/* Map */}
               <Col lg={6} md={12} sm={12} xs={12}>
                 <div className="rounded-3 overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18..."
-                    width="100%"
-                    height="300"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Company Location"
-                  ></iframe>
+          <iframe
+  src="https://www.google.com/maps?q=1st%20floor,%20Darshan%20Plaza,%20Dwaraka%20Nagar,%20Banashankari%206th%20Stage%201st%20Block,%20Channasandra,%20Bengaluru,%20Karnataka%20560061&output=embed"
+  width="100%"
+  height="300"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Nakshatra Namaha Creations Location"
+></iframe>
+
                 </div>
               </Col>
 

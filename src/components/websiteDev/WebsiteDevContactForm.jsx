@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import "@/styles/WebsiteDevContactForm.css";
 import axios from "axios";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
+import "@/styles/WebsiteDevelopmentBengaluru.css";
 const services = [
   "Web Development",
   "App Development",
@@ -123,116 +122,112 @@ export default function WebsiteDevContactForm() {
   };
 
   return (
+    <div className="py-5" style={{ backgroundColor: "#fef8f8" }}>
+      <div className="container">
+        <div className="row bg-white shadow rounded overflow-hidden">
+          {/* Left Form Section */}
+          <div className="col-lg-6 p-5 border-end">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  placeholder="Your Name*"
+                  name="name"
+                  className={`form-control ${formErrors.name ? "is-invalid" : ""}`}
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                {formErrors.name && <div className="invalid-feedback">{formErrors.name}</div>}
+              </div>
 
-  <section className="contactSection">
-    <div className="container">
-      <div className="contactCard">
-        
-        {/* LEFT – FORM */}
-        <div className="contactForm">
-          <h3 className="formTitle">Let’s Talk About Your Project</h3>
-          <p className="formSub">
-            Share your requirement and our experts will reach out.
-          </p>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  placeholder="Your Email*"
+                  name="email"
+                  className={`form-control ${formErrors.email ? "is-invalid" : ""}`}
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                {formErrors.email && <div className="invalid-feedback">{formErrors.email}</div>}
+              </div>
 
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Your Name *"
-              name="name"
-              className={`form-control ${formErrors.name ? "is-invalid" : ""}`}
-              value={formData.name}
-              onChange={handleChange}
-            />
+              <div className="mb-3">
+                <input
+                  type="text"
+                  placeholder="Your Contact Number*"
+                  name="phone"
+                  className={`form-control ${formErrors.phone ? "is-invalid" : ""}`}
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                {formErrors.phone && <div className="invalid-feedback">{formErrors.phone}</div>}
+              </div>
 
-            <input
-              type="email"
-              placeholder="Your Email *"
-              name="email"
-              className={`form-control ${formErrors.email ? "is-invalid" : ""}`}
-              value={formData.email}
-              onChange={handleChange}
-            />
+              <div className="mb-3">
+                <select
+                  name="service"
+                  className={`form-select ${formErrors.service ? "is-invalid" : ""}`}
+                  value={formData.service}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select a Service</option>
+                  {services.map((service, idx) => (
+                    <option key={idx} value={service}>
+                      {service}
+                    </option>
+                  ))}
+                </select>
+                {formErrors.service && <div className="invalid-feedback">{formErrors.service}</div>}
+              </div>
 
-            <input
-              type="text"
-              placeholder="Your Phone *"
-              name="phone"
-              className={`form-control ${formErrors.phone ? "is-invalid" : ""}`}
-              value={formData.phone}
-              onChange={handleChange}
-            />
+              <div className="mb-4">
+                <textarea
+                  placeholder="Your Message Here"
+                  rows="4"
+                  name="message"
+                  className={`form-control ${formErrors.message ? "is-invalid" : ""}`}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
+                {formErrors.message && <div className="invalid-feedback">{formErrors.message}</div>}
+              </div>
 
-            <select
-              name="service"
-              className={`form-select ${formErrors.service ? "is-invalid" : ""}`}
-              value={formData.service}
-              onChange={handleChange}
-            >
-              <option value="">Select a Service</option>
-              {services.map((s, i) => (
-                <option key={i}>{s}</option>
-              ))}
-            </select>
+              <div className="d-flex justify-content-center">
+                <button
+                  type="submit"
+                  className="btn btn-dark px-4 py-2 rounded-pill"
+                  style={{ minWidth: "180px" }}
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Message"}
+                </button>
+              </div>
 
-            <textarea
-              placeholder="Tell us about your project"
-              rows="4"
-              name="message"
-              className={`form-control ${formErrors.message ? "is-invalid" : ""}`}
-              value={formData.message}
-              onChange={handleChange}
-            />
+              {message && (
+                <p className="text-center mt-3 text-success fw-semibold">{message}</p>
+              )}
+            </form>
+          </div>
 
-            <button
-              type="submit"
-              className="submitBtn"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-
-            {message && <p className="successText">{message}</p>}
-          </form>
+          {/* Right Text Section */}
+          <div className="col-lg-6 p-5 d-flex flex-column justify-content-center align-items-start">
+            <h2 className="fw-bold mb-3">
+              Your Questions
+              <br />
+              Answered Quickly
+            </h2>
+            <p className="text-muted">
+              Get in touch with our team of experts to help you further.
+            </p>
+          </div>
         </div>
-
-        {/* RIGHT – INFO */}
-        <div className="contactInfo">
-          <h3>Get in Touch</h3>
-
-          <div className="infoItem">
-            <FaMapMarkerAlt />
-            <span>Mysore & Bangalore, India</span>
-          </div>
-
-          <div className="infoItem">
-            <FaPhoneAlt />
-            <span>+91 73488 88078</span>
-          </div>
-
-          <div className="infoItem">
-            <FaEnvelope />
-            <span>info@nakshatranamahacreations.com</span>
-          </div>
-
-          {/* <ul className="trustList">
-            <li><FaCheckCircle /> 100% Project Transparency</li>
-            <li><FaCheckCircle /> Dedicated Support</li>
-            <li><FaCheckCircle /> On-time Delivery</li>
-          </ul> */}
-
-          {/* Optional Image */}
-          <img
-            src="/mbbanner.png"
-            alt="Contact Illustration"
-            className="contactImage"
-          />
-        </div>
-
       </div>
     </div>
-  </section>
-
-
   );
 }
