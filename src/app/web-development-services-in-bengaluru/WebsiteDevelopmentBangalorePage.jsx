@@ -31,6 +31,17 @@ import HeroBanner from "@/components/websiteDev/HeroBanner";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
 import HeroAnuvic from "@/components/websiteDev/HeroAnuvic";
+const PostLaunchSupport = "/media/webdev/Post-Launch Support.png";
+const StaticOnePageWebsiteIcon =
+  "/media/icons/mobile.png";
+const MultipageWordPressWebsite =
+  "/media/icons/web.png";
+const ECommerceWebsite = "/media/icons/shopping.png";
+
+
+import PlanBtn from "@/components/websiteDev/PlanBtn";
+import InternalContactModal from "@/components/websiteDev/InternalContactModal";
+
 
 const industries = [
   ["Service", "Education"],
@@ -216,17 +227,14 @@ const keywords = [
   "WEB DEVELOPMENT AGENCY IN BANGALORE",
 ];
 
-// const videoSlides = [
-//   "/media/gaminzo.mp4",
-//   "/media/Nithyaevent.mp4",
-//   "/media/vjhomeservice.mp4",
-// ];
+
 export default function WebsiteDevelopmentBangalorePage() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
+  const [showPopup, setShowPopup] = useState(false);
   const sectionRefs = useRef({});
   const [activeKey, setActiveKey] = useState("0");
   const [ref, inView] = useInView({ threshold: 0.3 });
@@ -543,6 +551,89 @@ export default function WebsiteDevelopmentBangalorePage() {
           </Container>
         </div>
         <TechSection />
+        
+             {/* PICK YOUR PLAN */}
+    <div className="pricingSection">
+      <Container>
+        <h2 className="pricingTitle">PICK YOUR PLAN</h2>
+
+        <div className="pricingGrid">
+          {/* CARD 1 */}
+          <div className="pricingCard yellow">
+            <div className="iconWrap">
+              <img src={StaticOnePageWebsiteIcon} alt="" />
+            </div>
+
+            <h3>Static One Page Website</h3>
+            <p className="subText">
+              Perfect for small businesses & startups
+            </p>
+
+            <div className="price">
+              <span>Starting from</span>
+              <h2>₹14,499</h2>
+            </div>
+
+            <div className="btnWrap">
+              <PlanBtn setShowPopup={setShowPopup} />
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="pricingCard blue popular">
+            <span className="popularBadge">Most Popular</span>
+
+            <div className="iconWrap">
+              <img src={MultipageWordPressWebsite} alt="" />
+            </div>
+
+            <h3>Multipage WordPress Website</h3>
+            <p className="subText">
+              Best for growing brands & SEO
+            </p>
+
+            <div className="price">
+              <span>Starting from</span>
+              <h2>₹24,999</h2>
+            </div>
+
+            <div className="btnWrap">
+              <PlanBtn setShowPopup={setShowPopup} />
+            </div>
+          </div>
+
+          {/* CARD 3 */}
+          <div className="pricingCard pink">
+            <div className="iconWrap">
+              <img src={ECommerceWebsite} alt="" />
+            </div>
+
+            <h3>E-Commerce Website</h3>
+            <p className="subText">
+              Sell products & scale online
+            </p>
+
+            <div className="price">
+              <span>Starting from</span>
+              <h2>₹45,999</h2>
+            </div>
+
+            <div className="btnWrap">
+              <PlanBtn setShowPopup={setShowPopup} />
+            </div>
+          </div>
+        </div>
+      </Container>
+
+      {/* ✅ MODAL RENDERED ONCE */}
+      {showPopup && (
+        <InternalContactModal
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+      )}
+    </div>
+
         <StickyCarousal />
 
         {/* Consultation */}
@@ -726,7 +817,9 @@ export default function WebsiteDevelopmentBangalorePage() {
           </Container>
         </div>
 
-        <div style={{ backgroundColor: "#fff5f8", padding: "60px 0" }}>
+
+
+        {/* <div style={{ backgroundColor: "#fff5f8", padding: "60px 0" }}>
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h2 className="fw-bold" style={{ color: "#555" }}>
@@ -765,7 +858,7 @@ export default function WebsiteDevelopmentBangalorePage() {
               ))}
             </Row>
           </Container>
-        </div>
+        </div> */}
 
         <div style={{ background: "#fff5f8", padding: "60px 0" }}>
           <Container>

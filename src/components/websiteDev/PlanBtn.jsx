@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-export default function PlanBtn({ setShowPopup}) {
+export default function   PlanBtn({ setShowPopup}) {
   const [hovered, setHovered] = useState(false);
 
   // Spring animation for zoom-in effect

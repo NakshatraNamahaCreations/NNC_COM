@@ -396,3 +396,257 @@
     display: none;
   }
 }
+
+
+
+
+.pricingSection {
+  background: #f8fafc;
+  padding: 80px 20px;
+}
+
+.pricingTitle {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.pricingCard {
+  border-radius: 22px;
+  padding: 35px 25px;
+  color: white;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+
+.btnWrap {
+  margin-top: auto;   /* 👈 pushes button to bottom */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.pricingCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* Color themes */
+.pricingCard.yellow { background: linear-gradient(135deg,#F6B042,#FAD961); }
+.pricingCard.blue { background: linear-gradient(135deg,#2563EB,#38BDF8); }
+.pricingCard.pink { background: linear-gradient(135deg,#EC4899,#F472B6); }
+
+/* Icon */
+.iconWrap {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrap img {
+  width: 90px;
+}
+
+/* Text */
+.pricingCard h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subText {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.price span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.price h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0 25px;
+}
+
+/* Popular badge */
+.popularBadge {
+  position: absolute;
+  top: 25px;
+  right: -20px;
+  background: #22c55e;
+  color: white;
+  font-size: 12px;
+  padding: 8px 35px;
+  transform: rotate(45deg);
+  font-weight: 600;
+  border-radius: 10%;
+}
+
+/* ============================= */
+/* TABLET (≤ 1024px) */
+/* ============================= */
+@media (max-width: 1024px) {
+  .pricingSection {
+    padding: 60px 16px;
+  }
+
+  .pricingTitle {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .iconWrap {
+    width: 100px;
+    height: 100px;
+  }
+
+  .iconWrap img {
+    width: 70px;
+  }
+
+  .price h2 {
+    font-size: 28px;
+  }
+}
+
+/* ============================= */
+/* MOBILE (≤ 768px) */
+/* ============================= */
+@media (max-width: 768px) {
+  .pricingSection {
+    padding: 50px 14px;
+  }
+
+  .pricingTitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 24px;
+  }
+
+  .pricingCard {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .iconWrap {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 16px;
+  }
+
+  .iconWrap img {
+    width: 60px;
+  }
+
+  .pricingCard h3 {
+    font-size: 18px;
+  }
+
+  .subText {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .price span {
+    font-size: 13px;
+  }
+
+  .price h2 {
+    font-size: 26px;
+    margin-bottom: 22px;
+  }
+
+  .btnWrap button {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  /* Popular badge fix */
+  .popularBadge {
+    top: 18px;
+    right: -28px;
+    font-size: 11px;
+    padding: 6px 28px;
+  }
+}
+
+/* ============================= */
+/* SMALL MOBILE (≤ 480px) */
+/* ============================= */
+@media (max-width: 480px) {
+  .pricingSection {
+    padding: 40px 12px;
+  }
+
+  .pricingTitle {
+    font-size: 22px;
+  }
+
+  .pricingCard {
+    padding: 24px 16px;
+  }
+
+  .iconWrap {
+    width: 80px;
+    height: 80px;
+  }
+
+  .iconWrap img {
+    width: 50px;
+  }
+
+  .pricingCard h3 {
+    font-size: 17px;
+  }
+
+  .subText {
+    font-size: 12.5px;
+  }
+
+  .price h2 {
+    font-size: 24px;
+  }
+
+  .popularBadge {
+    top: 14px;
+    right: -32px;
+    padding: 5px 26px;
+  }
+}
