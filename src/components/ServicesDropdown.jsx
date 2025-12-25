@@ -796,7 +796,7 @@ const ServicesDropdown = ({ textColor }) => {
                 </ul>
 
                 <Link
-                  href="/"
+                  href="/ecommerce-website-development-company"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >
@@ -819,14 +819,14 @@ const ServicesDropdown = ({ textColor }) => {
                   }}
                 >
                   <Link
-                    href="/"
+                    href="/ecommerce-website-development-company"
                     className="removelinkStyle"
                     onClick={handleItemClick}
                   >
                     {" "}
-                    <li onClick={handleItemClick}>WooCommerce Development</li>
+                    <li onClick={handleItemClick}>Ecommerce Web Development</li>
                   </Link>
-                  <li onClick={handleItemClick}>Ecommerce Web Development</li>
+                  {/* <li onClick={handleItemClick}>Ecommerce Web Development</li> */}
                 </ul>
               </div>
 
@@ -856,6 +856,14 @@ const ServicesDropdown = ({ textColor }) => {
                   >
                    <li onClick={handleItemClick}>Website Designing Company</li>
                   </Link>
+                        <Link
+                    href="/ecommerce-website-development-company"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Frontend Development</li>
+                  </Link> 
                   <li onClick={handleItemClick}>Frontend Development</li>
                   <li onClick={handleItemClick}>Full Stack Development</li>
                   <li onClick={handleItemClick}>Static Website Development</li>

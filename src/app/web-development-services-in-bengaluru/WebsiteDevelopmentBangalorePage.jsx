@@ -470,8 +470,8 @@ export default function WebsiteDevelopmentBangalorePage() {
               to your business goals.
             </p>
             <a href="#hero-banner">
-              <Button className="cta-button">
-                <span style={{ color: "#000", textDecoration: "none" }}>
+              <Button className="cta-button" style={{backgroundColor:"#444"}}>
+                <span style={{ color: "#fff", textDecoration: "none" }}>
                   Book A Consultation
                 </span>
                 <span className="cta-icon">→</span>
@@ -550,8 +550,10 @@ export default function WebsiteDevelopmentBangalorePage() {
             </Row>
           </Container>
         </div>
-        <TechSection />
-        
+
+
+
+                
              {/* PICK YOUR PLAN */}
     <div className="pricingSection">
       <Container>
@@ -559,7 +561,7 @@ export default function WebsiteDevelopmentBangalorePage() {
 
         <div className="pricingGrid">
           {/* CARD 1 */}
-          <div className="pricingCard yellow">
+          <div className="pricingCard " style={{backgroundColor:"#1ba8d4"}}>
             <div className="iconWrap">
               <img src={StaticOnePageWebsiteIcon} alt="" />
             </div>
@@ -580,14 +582,14 @@ export default function WebsiteDevelopmentBangalorePage() {
           </div>
 
           {/* CARD 2 */}
-          <div className="pricingCard blue popular">
+          <div className="pricingCard popular" style={{backgroundColor:"#d84e50"}}>
             <span className="popularBadge">Most Popular</span>
 
             <div className="iconWrap">
               <img src={MultipageWordPressWebsite} alt="" />
             </div>
 
-            <h3>Multipage WordPress Website</h3>
+            <h3>Dynamic Upto 10 Page Website</h3>
             <p className="subText">
               Best for growing brands & SEO
             </p>
@@ -603,7 +605,7 @@ export default function WebsiteDevelopmentBangalorePage() {
           </div>
 
           {/* CARD 3 */}
-          <div className="pricingCard pink">
+          <div className="pricingCard " style={{backgroundColor:"#1ba8d4"}}>
             <div className="iconWrap">
               <img src={ECommerceWebsite} alt="" />
             </div>
@@ -634,10 +636,18 @@ export default function WebsiteDevelopmentBangalorePage() {
       )}
     </div>
 
+
+
+
+
+
+
+        <TechSection />
+
         <StickyCarousal />
 
         {/* Consultation */}
-        <Container className="my-5">
+        {/* <Container className="my-5">
           <div className="cta-section text-center px-3 py-5">
             <h2 className="fw-bold mb-3">Ready to Build Your Next App?</h2>
             <p className="fw-semibold mb-4">
@@ -645,13 +655,14 @@ export default function WebsiteDevelopmentBangalorePage() {
               to your business goals.
             </p>
             <a href="#hero-banner">
-              <Button className="cta-button">
-                <span>Book A Consultation</span>
+                <Button className="cta-button" style={{backgroundColor:"#0092ff"}}>
+                <span style={{ color: "#fff", textDecoration: "none" }}>
+                Book A Consultation</span>
                 <span className="cta-icon">→</span>
               </Button>
             </a>
           </div>
-        </Container>
+        </Container> */}
 
         {/* Card section */}
         <div className="core-pillar-wrapper">
@@ -820,69 +831,40 @@ export default function WebsiteDevelopmentBangalorePage() {
 
 
 
-        {/* <div style={{ backgroundColor: "#fff5f8", padding: "60px 0" }}>
-          <Container>
-            <div className="d-flex justify-content-between align-items-center mb-4">
-              <h2 className="fw-bold" style={{ color: "#555" }}>
-                OUR BLOGS
-              </h2>
-              <Button
-                variant="dark"
-                className="rounded-pill d-flex align-items-center gap-2 px-4 py-2"
-                onClick={() => router.push("/blog")}
-              >
-                View All Blogs <FaArrowUpRightFromSquare />
-              </Button>
-            </div>
 
-            <Row className="g-4">
-              {blogs.map((blog) => (
-                <Col lg={6} key={blog.id}>
-                  <div className="p-4 blog-card h-100 d-flex flex-column justify-content-between">
-                    <div>
-                      <div className="blog-category mb-3">{blog.category}</div>
-                      <h5 className="fw-bold">{blog.title}</h5>
-                    </div>
-                    <div className="d-lg-flex justify-content-between align-items-center mt-4">
-                      <span className="text-muted" style={{ fontSize: "14px" }}>
-                        Posted on: <span className="ms-1">{blog.date}</span>
-                      </span>
-                      <div
-                        className="blog-icon"
-                        onClick={() => router.push(blog.link)}
-                      >
-                        <FaArrowUpRightFromSquare size={16} />
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </div> */}
+      <div className="faqSection">
+  <Container>
+    <h3 className="faqTitle">Frequently Asked Questions</h3>
 
-        <div style={{ background: "#fff5f8", padding: "60px 0" }}>
-          <Container>
-            <h3 className="text-center mb-4" style={{ fontWeight: "bold" }}>
-              Frequently Asked Questions
-            </h3>
-            <Row className="justify-content-center">
-              <Col md={10}>
-                <Accordion
-                  activeKey={activeKey}
-                  onSelect={(key) => setActiveKey(key)}
-                >
-                  {faqList.map((faq, index) => (
-                    <Accordion.Item eventKey={index.toString()} key={index}>
-                      <Accordion.Header>{faq.question}</Accordion.Header>
-                      <Accordion.Body>{faq.answer}</Accordion.Body>
-                    </Accordion.Item>
-                  ))}
-                </Accordion>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+    <Row className="justify-content-center">
+      <Col md={10} lg={9}>
+        <Accordion
+          activeKey={activeKey}
+          onSelect={(key) => setActiveKey(key)}
+          className="faqAccordion"
+          alwaysOpen={false}
+        >
+          {faqList.map((faq, index) => (
+            <Accordion.Item
+              eventKey={index.toString()}
+              key={index}
+              className="faqItem"
+            >
+              <Accordion.Header className="faqHeader">
+                {faq.question}
+              </Accordion.Header>
+
+              <Accordion.Body className="faqBody">
+                {faq.answer}
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      </Col>
+    </Row>
+  </Container>
+</div>
+
 
         <div className="container-fluid px-0">
           {/* Red Section */}
@@ -937,7 +919,7 @@ export default function WebsiteDevelopmentBangalorePage() {
           <WebsiteDevContactForm />
         </div>
 
-        <div style={{ backgroundColor: "#fef6f6", padding: "40px 20px" }}>
+        {/* <div style={{ backgroundColor: "#fef6f6", padding: "40px 20px" }}>
           <Container className="text-center">
             <h4 className="fw-bold mb-4 text-uppercase">
               What People Are Searching For
@@ -963,7 +945,7 @@ export default function WebsiteDevelopmentBangalorePage() {
               ))}
             </div>
           </Container>
-        </div>
+        </div> */}
 
         <div className="container mx-auto my-5">
           <Accordion
@@ -984,7 +966,7 @@ export default function WebsiteDevelopmentBangalorePage() {
                   Read More
                 </span>
               </Accordion.Header>
-              <Accordion.Body style={{ backgroundColor: "#dbdbdbff" }}>
+              <Accordion.Body style={{ backgroundColor: "#cfe2ff" }}>
                 <div className="" style={{ color: "#000" }}>
                   <h5 style={{ fontWeight: "bold" }}>
                     Are You Looking For Top-Notch Web Development Agency in
