@@ -198,7 +198,7 @@ const faqList = [
   {
     question: "How much does it cost to make a website?",
     answer:
-      "YCosts change based on what features and design you want. Contact us for a free cost idea that fits what you need and your money plan",
+      "Costs change based on what features and design you want. Contact us for a free cost idea that fits what you need and your money plan",
   },
   {
     question: "How do I start with your website team?",
