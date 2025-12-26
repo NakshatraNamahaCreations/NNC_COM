@@ -111,7 +111,7 @@ const servicesList = [
 const standoutFeatures = [
   {
     title: "Custom-Built Websites",
-    icon: "/media/Custom-Built-Websites1.png",
+    icon: "/media/Custom-Built-Websites2.png",
     dots: [{ color: "#9370DB", bottom: "0%", left: "50%" }],
   },
   {
@@ -168,12 +168,12 @@ const faqList = [
   {
     question: "What does your website making process have?",
     answer:
-      "Our team primarily specializes in WordPress, known for its flexibility, scalability, and ease of use.",
+      "Our website development process covers requirement analysis, design, development, testing, and launch with ongoing support.",
   },
   {
     question: "How long does it take to make a website?",
     answer:
-      "How long it takes changes with how big and hard the job is. A simple site for work may take 2–4 weeks, but big sites or online shops can take 6–12 weeks.",
+      "The time to create a website depends on its design, features, and content requirements, with simpler sites taking less time than more complex ones.",
   },
   {
     question: "Is the SEO part of your website helping?",

@@ -54,6 +54,7 @@ import React from "react";
 import styles from "@/styles/thankyou.module.css";
 import Link from "next/link";
 
+
 const ThankyouPage = () => {
   return (
     <div className={styles.pageWrapper}>
@@ -148,3 +149,5 @@ const ThankyouPage = () => {
 };
 
 export default ThankyouPage;
+
+
