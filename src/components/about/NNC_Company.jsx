@@ -56,7 +56,7 @@ export default function NNC_Company() {
         style={{
           width: "85%",
           textAlign: "center",
-          margin: "5% auto",
+          margin: "2% auto",
         }}
         ref={headingRef}
       >
@@ -71,7 +71,8 @@ export default function NNC_Company() {
           }}
           className="h2-nnc"
         >
-          Nakshatra Namaha Creations is a Reliable Website Development Company: As an expert in the field
+          {/* Nakshatra Namaha Creations is a Reliable Website Development Company: As an expert in the field */}
+          Nakshatra Namaha Creations – A Reliable Website Development Company for Growing Businesses
         </animated.h2>
       </div>
 
@@ -102,35 +103,65 @@ export default function NNC_Company() {
               }}
               ref={paragraphRef}
             >
-              <animated.p
-                style={{
-                  lineHeight: "1.7",
-                  fontSize: "16px",
-                  letterSpacing: "1px",
-                  padding: "20px",
-                  fontWeight: "400",
-                  ...paragraphAnimation,
-                }}
-                className="para-about-content"
-              >
-                <b>Our team</b> has been shaping <b>digital experiences,</b> serving over <b>890+ clients</b> across <b>4 countries.</b> As the <b>best mobile app</b> and <b>website development company in Bangalore,</b> we offer a comprehensive range of services to help businesses grow in the online space.
-              </animated.p>
+        <animated.p
+  style={{
+    lineHeight: "1.7",
+    fontSize: "16px",
+    letterSpacing: "1px",
+    padding: "10px",
+    fontWeight: "400",
+    ...paragraphAnimation,
+  }}
+  className="para-about-content"
+>
+  <b>Our team</b> has been shaping <b>digital experiences</b> since <b>2015</b>, serving over
+  <b> 890+ clients</b> across <b>4 countries.</b> As a <b>trusted mobile app</b> and
+  <b> website development company in Bangalore,</b> we help businesses build
+  <b> strong online platforms</b> that support <b>growth</b> and
+  <b> visibility.</b>
+</animated.p>
+
             </div>
 
             <div style={{ backgroundColor: "#ECF2FB", padding: "10px" }}>
-              <animated.p
-                style={{
-                  lineHeight: "1.7",
-                  fontSize: "16px",
-                  letterSpacing: "1px",
-                  padding: "20px",
-                  fontWeight: "400",
-                  ...paragraphAnimation,
-                }}
-                className="para-about-content"
-              >
-                We specialize in everything from <b>website design</b> and <b>web applications to mobile app development, providing user-friendly, high-performing solutions</b> that meet your needs. Whether you’re looking to <b>improve your web presence</b> or enhance customer engagement, our expertise ensures that we deliver practical, effective results.
-              </animated.p>
+          <animated.p
+  style={{
+    lineHeight: "1.7",
+    fontSize: "16px",
+    letterSpacing: "1px",
+    padding: "10px",
+    fontWeight: "400",
+    ...paragraphAnimation,
+  }}
+  className="para-about-content"
+>
+  We specialize in <b>website design</b>, <b>web applications</b>, and
+  <b> mobile app development</b>, creating <b>user-friendly</b> and
+  <b> high-performing digital solutions.</b> Whether your goal is to
+  <b> strengthen your online presence</b> or
+  <b> improve customer engagement,</b> we focus on delivering
+  <b> practical, result-oriented solutions.</b>
+</animated.p>
+
+            </div>
+
+                   <div style={{ backgroundColor: "#ECF2FB", padding: "10px" }}>
+                              <animated.p
+  style={{
+    lineHeight: "1.7",
+    fontSize: "16px",
+    letterSpacing: "1px",
+    padding: "10px",
+    fontWeight: "400",
+    ...paragraphAnimation,
+  }}
+  className="para-about-content"
+>
+Our approach combines <b>clear planning</b>, <b>clean code</b>, and
+<b> performance-focused design</b> to build digital solutions that are
+reliable, scalable, and easy to maintain.
+</animated.p>
+
             </div>
           </Col>
         </Row>

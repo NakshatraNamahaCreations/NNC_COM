@@ -105,9 +105,12 @@ export default function Teams() {
         }}
         className="paragraph-teams"
       >
-        Our team is a passionate blend of creativity, expertise and dedication. We collaborate together,
-        applying innovative ideas with precision and care. Driven by a collective vision, we aspire to create
-        memorable experiences that engender lasting impressions.
+       Our team is a passionate blend of creativity, technical expertise, and
+dedication. We work collaboratively to turn ideas into well-crafted
+digital solutions, applying care and precision at every stage.
+Driven by a shared vision, we focus on creating meaningful digital
+experiences that leave a lasting impact for businesses and users alike Our strength lies in teamwork, clear communication, and a shared
+commitment to quality.
       </animated.p>
 
       <Container>

@@ -233,6 +233,12 @@ else if (
 ) {
   service = "Website development agency";
 }
+else if (
+  currentPath === "/best-website-development-company-in-bangalore" ||
+  currentPath === "/best-website-development-company-in-bangalore"
+) {
+  service = "Website development Company";
+}
     setFormData((prev) => ({
       ...prev,
       user_service: service,

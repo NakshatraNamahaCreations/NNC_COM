@@ -1,0 +1,127 @@
+/* =========================
+   SECTION
+========================= */
+.section {
+  padding: 60px 0 90px;
+  background: #ffffff;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.subText {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  position: relative;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+/* IMAGE EFFECT */
+.card:hover img {
+  transform: scale(1.08);
+  filter: blur(2px) brightness(0.75);
+}
+
+/* =========================
+   GLASS PANEL
+========================= */
+.glass {
+  position: absolute;
+  inset: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .glass {
+  opacity: 1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.glass h4 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.glass ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.glass li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.cta {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .card {
+    height: 360px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}

@@ -47,7 +47,7 @@ export default function Mission_Vision() {
                 marginBottom: "20px",
                 position: "relative",
                 width: "100%",
-                minHeight: "350px",
+                minHeight: "150px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -66,7 +66,14 @@ export default function Mission_Vision() {
                 }}
                 className="para-mission"
               >
-                Our mission is to help businesses grow with smart and practical digital services. Whether it’s website development, mobile apps, or digital marketing, we focus on creating simple and effective solutions that meet the business needs. As one of the best website development companies in Bangalore, we are committed to delivering value through honest work, consistent quality, and long-term support to all our clients.
+                Our mission is to help businesses grow with smart and practical digital
+services. Whether it’s website development, mobile apps, or digital
+marketing, we focus on creating simple and effective solutions that
+meet real  business needs.
+
+We are committed to delivering value through honest work, consistent
+quality, and long-term support to our clients 
+
               </p>
               <div style={{ position: "absolute", bottom: "13px", right: "20px" }}>
                 <Image
@@ -92,7 +99,7 @@ export default function Mission_Vision() {
                 marginBottom: "20px",
                 position: "relative",
                 width: "100%",
-                minHeight: "350px",
+                minHeight: "250px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
@@ -110,8 +117,14 @@ export default function Mission_Vision() {
                 }}
                 className="para-mission"
               >
-                To be recognised as the best website development company in Bangalore and a leading mobile app development company known for building meaningful digital experiences. We aim to grow as a trusted name for businesses looking to build their online presence and expand through reliable, creative, and result-oriented digital solutions.
-              </p>
+              To be recognised as a trusted website and mobile app development company
+known for building meaningful digital experiences.
+
+We aim to grow as a reliable partner for businesses looking to strengthen
+their online presence and expand through creative, practical, and
+result-oriented digital solutions
+              
+                      </p>
               <div style={{ position: "absolute", bottom: "13px", right: "20px" }}>
                 <Image
                   src={vision}

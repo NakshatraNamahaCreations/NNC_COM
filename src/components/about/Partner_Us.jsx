@@ -65,12 +65,12 @@ export default function Partner_Us() {
   });
 
   const listItems = [
-    "Innovative Designers",
-    "UI/UX Experts",
+    " UI/UX Experts ",
+    "Website Development Team",
+    "Mobile App Developers",
     "Development Specialists",
-    "Web Development Team",
-    "App Creators",
     "Animation Experts",
+    "Creative Designers",
   ];
 
   const listItemAnimation = (index) =>
@@ -116,20 +116,21 @@ export default function Partner_Us() {
             </animated.h2>
 
             <animated.p
-              ref={paragraphRef}
-              style={{
-                ...paragraphAnimation,
-                lineHeight: "1.7",
-                letterSpacing: "1.5px",
-                fontSize: "16px",
-                fontWeight: "400",
-              }}
-              className="para-partner-contents"
-            >
-              To explore <b>new possibilities for your business online.</b> Let
-              us help you <b>achieve your goals</b> with a strategy that focuses
-              on <b>growth and success in the digital world.</b>
-            </animated.p>
+  ref={paragraphRef}
+  style={{
+    ...paragraphAnimation,
+    lineHeight: "1.7",
+    letterSpacing: "1.5px",
+    fontSize: "16px",
+    fontWeight: "400",
+  }}
+  className="para-partner-contents"
+>
+  To explore <b>new possibilities for your business online,</b> we help you
+  build a <b>clear digital strategy</b> focused on
+  <b> growth, usability,</b> and <b>long-term success.</b>
+</animated.p>
+
 
             <animated.p
               style={{
@@ -142,8 +143,9 @@ export default function Partner_Us() {
               }}
               className="para-partner-contents"
             >
-              As a result, we are a <b>top choice</b> for entrepreneurs seeking
-              web design services for numerous reasons:
+              As a result, we are a <b>top choice</b> for entrepreneurs and businesses
+seeking website, app, and digital development services.
+
             </animated.p>
 
             <animated.ul
@@ -165,7 +167,21 @@ export default function Partner_Us() {
                   </animated.li>
                 );
               })}
+   <animated.p
+              style={{
+                ...paragraphAnimation,
+                lineHeight: "1.7",
+                letterSpacing: "1.5px",
+                fontSize: "16px",
+                marginTop: "18px",
+                fontWeight: "400",
+              }}
+              className="para-partner-contents"
+            >
+             We work closely with you to understand your goals and deliver solutions
+that align with your business needs.
 
+            </animated.p>
               <animated.div style={buttonAnimation}>
                 <Button
                   variant="outline-light"

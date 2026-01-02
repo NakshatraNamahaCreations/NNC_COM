@@ -48,70 +48,33 @@ const ourworkData = [
 export default function MobileAppDevelopmentCompany() {
 
 const schema = {
-  "@context": "https://schema.org",
+ "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.nakshatranamahacreations.com/#localbusiness",
-      "name": "Nakshatra Namaha Creations",
-      "image": "https://www.nakshatranamahacreations.com/media/nnclogo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1st floor, Darshan Plaza, Dwaraka Nagar, Banashankari 6th Stage 1st Block, Channasandra",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560061",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 12.900525119796741,
-        "longitude": 77.52318771928213
-      },
-      "url": "https://www.nakshatranamahacreations.com",
-      "telephone": "+91-9900566466",
-      "email": "info@nakshatranamahacreations.com",
-      "areaServed": "Bangalore",
-      "priceRange": "₹₹",
-      "sameAs": [
-        "https://www.facebook.com/Nakshatranamahacreations/",
-        "https://www.instagram.com/nnc.digitalbengaluru/"
-      ]
+      "@type": "WebPage",
+      "@id": "https://www.nakshatranamahacreations.com/best-website-development-company-in-bangalore",
+      "url": "https://www.nakshatranamahacreations.com/best-website-development-company-in-bangalore",
+      "name": "Best Website Development Company in Bangalore for Business",
+      "description": "Looking for the best website development company in Bangalore. We build professional, SEO-ready business websites and revamp solutions to drive leads."
     },
     {
       "@type": "Organization",
-      "@id": "https://www.nakshatranamahacreations.com/#organization",
       "name": "Nakshatra Namaha Creations",
-      "url": "https://www.nakshatranamahacreations.com/animated-video-creators",
-      "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
+      "url": "https://www.nakshatranamahacreations.com",
+      "logo": "https://www.nakshatranamahacreations.com/logo.png"
     },
     {
-      "@type": "Service",
-      "serviceType": "WordPress Website Development",
-      "provider": {
-        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "E-Commerce Website Development",
-      "provider": {
-        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Static Website Development",
-      "provider": {
-        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Dynamic Website Development",
-      "provider": {
-        "@id": "https://www.nakshatranamahacreations.com/#localbusiness"
-      }
+      "@type": "LocalBusiness",
+      "name": "Nakshatra Namaha Creations",
+      "url": "https://www.nakshatranamahacreations.com",
+      "image": "https://www.nakshatranamahacreations.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressRegion": "KA",
+        "addressCountry": "IN"
+      },
+      "areaServed": "Bangalore"
     },
     {
       "@type": "BreadcrumbList",
@@ -125,8 +88,8 @@ const schema = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Animated Video Creators in | Brand Storytelling",
-          "item": "https://www.nakshatranamahacreations.com/animated-video-creators"
+          "name": "Best Website Development Company in Bangalore",
+          "item": "https://www.nakshatranamahacreations.com/best-website-development-company-in-bangalore"
         }
       ]
     },
@@ -135,62 +98,48 @@ const schema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do you price animated video projects?",
+          "name": "Is this suitable for small and mid-sized businesses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We quote based on length, style, script complexity, and turnaround time."
+            "text": "Yes. The best website development company in Bangalore builds scalable websites suitable for businesses at every stage."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I provide my own script or voiceover?",
+          "name": "Can you redesign my existing website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we’re happy to work with your materials or offer professional scripting and voice talent."
+            "text": "Yes. Website revamp services focus on improving performance, usability, and enquiry generation."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you support revisions?",
+          "name": "Will the website help generate leads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we include a defined number of revision rounds in every package."
+            "text": "Websites are structured with conversion-focused layouts and clear calls-to-action."
           }
         },
         {
           "@type": "Question",
-          "name": "Will the animation be suitable for mobile and desktop use?",
+          "name": "Do you provide ongoing support?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. All files are optimized for cross-device compatibility and various aspect ratios."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can we track the progress during development?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We provide regular updates, previews, and feedback sessions throughout the project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there a minimum or maximum video length you work on?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We typically work on videos from 30 seconds up to 10 minutes, depending on the purpose and platform."
+            "text": "Yes. Continued support ensures long-term performance and security."
           }
         }
       ]
     }
   ]
+
+
 };
 
 
   return (
     <>
        <Script
-  id="nnc-animation-jsonld"
+  id="nnc-best-web-jsonld"
   type="application/ld+json"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

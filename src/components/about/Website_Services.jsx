@@ -89,8 +89,8 @@ export default function Website_Services() {
                 }}
                 className="h1-websiteservices"
               >
-                What makes US the Leading Mobile App and Website Development
-                Company?
+                What Makes Nakshatra Namaha Creations a Trusted Mobile App and Website Development Company?
+
               </animated.h2>
             </Col>
 
@@ -107,9 +107,9 @@ export default function Website_Services() {
                 }}
                 className="para-websiteservices"
               >
-                At Nakshatra Namaha Creations, we take pride in being the best
-                website development company, offering a wide range of web
-                services including.
+                At Nakshatra Namaha Creations, we focus on delivering reliable website
+and mobile app development services that help businesses build strong
+and scalable digital platforms.
               </animated.p>
 
               <animated.ul
@@ -124,13 +124,28 @@ export default function Website_Services() {
                 className="ul-li-websiteservices"
               >
                 <li>Website development</li>
-                <li>App development</li>
+                <li>Mobile App Development  </li>
                 <li>E-Commerce website development</li>
-                <li>WordPress website development</li>
+            
                 <li>Flutter App development</li>
-                <li>React Native Website Development</li>
+                <li> React Native App Development  </li>
                 <li>React JS Website Development</li>
               </animated.ul>
+
+                  <animated.p
+                ref={paragraphRef}
+                style={{
+                  ...paragraphAnimation,
+                  lineHeight: "1.7",
+                  fontSize: "16px",
+                  letterSpacing: "1px",
+                  fontWeight: "500",
+                }}
+                className="para-websiteservices"
+              >
+                Each solution is built with a focus on usability, performance,
+and long-term business growth.
+              </animated.p>
             </Col>
           </Row>
 

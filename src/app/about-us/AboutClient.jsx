@@ -18,6 +18,7 @@ import Choose_Us from "@/components/about/Choose_Us.jsx";
 import Business_Notice from "@/components/about/Business_Notice.jsx";
 import Teams from "@/components/about/Teams.jsx";
 import Script from "next/script";
+import ProcessSteps from '@/components/about/ProcessSteps';
 
 const schemaMarkup = {
   '@context': 'https://schema.org',
@@ -190,7 +191,7 @@ fbq('track', 'PageView');`}
             ))}
           </h1>
 
-          <animated.h4
+      <animated.h4
             style={{
               ...useSpring({
                 opacity: inView ? 1 : 0,
@@ -204,7 +205,24 @@ fbq('track', 'PageView');`}
             }}
             className="h4-about"
           >
-            Cutting-edge web solutions to tackle your
+            Website & App Development Company
+          </animated.h4>
+
+          <animated.h4
+            style={{
+              ...useSpring({
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0px)' : 'translateY(30px)',
+                delay: 600,
+              }),
+              letterSpacing: '2px',
+              fontSize: '20px',
+              fontWeight: '100',
+              lineHeight: '1.5',
+            }}
+            className="h4-about"
+          >
+            Web solutions designed to solve real business challenges <br /> and support long-term growth.
           </animated.h4>
           <div style={{ position: 'relative' }}>
             <animated.h4
@@ -216,17 +234,17 @@ fbq('track', 'PageView');`}
                 }),
                 padding: '0px 2px',
                 letterSpacing: '2px',
-                fontSize: '35px',
+                fontSize: '20px',
                 fontWeight: '100',
                 lineHeight: '1.5',
               }}
               className="h4-about"
             >
-              most <span className="text-decoration-line-through">complex</span>{' '}
-              business challenges!
+               {/* <span className="text-decoration-line-through">challenges</span>{' '} */}
+             
             </animated.h4>
 
-            <div className="difficlutText">
+            {/* <div className="difficlutText">
               <animated.h4
                 style={{
                   ...useSpring({
@@ -239,7 +257,7 @@ fbq('track', 'PageView');`}
               >
                 difficult
               </animated.h4>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -255,7 +273,8 @@ fbq('track', 'PageView');`}
       <Website_Services />
 
       {/* Why choose us? */}
-      <Choose_Us />
+      {/* <Choose_Us /> */}
+              <ProcessSteps/>
 
       {/* WE MAKE YOUR BUSINESS NOTICE */}
       <Business_Notice />

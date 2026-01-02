@@ -767,7 +767,7 @@ const ServicesDropdown = ({ textColor }) => {
               {/* Column 1: UI/UX Design & Ecommerce Development */}
               <div style={{ flex: "1 1 15%", marginBottom: "20px" }}>
                 <Link
-                  href="/graphic-designing-company"
+                  href="/ui-ux-design-agency"
                   className="removelinkStyle"
                   onClick={handleItemClick}
                 >
@@ -790,12 +790,22 @@ const ServicesDropdown = ({ textColor }) => {
                   >
                     {" "}
                     <li onClick={handleItemClick}>
-                      Wireframing and Prototyping
+                      Graphic Design Company
+                    </li>
+                  </Link>
+                  <Link
+                    href="/graphic-designing-company"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>
+                      Graphic Design Services
                     </li>
                   </Link>
                 </ul>
 
-                <Link
+                {/* <Link
                   href="/ecommerce-website-development-company"
                   className="removelinkStyle"
                   onClick={handleItemClick}
@@ -809,8 +819,8 @@ const ServicesDropdown = ({ textColor }) => {
                   >
                     Ecommerce Development
                   </h6>
-                </Link>
-                <ul
+                </Link> */}
+                {/* <ul
                   style={{
                     listStyle: "none",
                     padding: 0,
@@ -826,7 +836,60 @@ const ServicesDropdown = ({ textColor }) => {
                     {" "}
                     <li onClick={handleItemClick}>Ecommerce Web Development</li>
                   </Link>
-                  {/* <li onClick={handleItemClick}>Ecommerce Web Development</li> */}
+                  <li onClick={handleItemClick}>Ecommerce Web Development</li>
+                </ul> */}
+
+                   <Link
+                  href="/2d-animation-studio"
+                  className="removelinkStyle"
+                  onClick={handleItemClick}
+                >
+                  <h6
+                    style={{
+                      fontWeight: "bold",
+                      marginTop: "20px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    2D Animations
+                  </h6>
+                </Link>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    fontSize: "13px",
+                    cursor: "pointer",
+                  }}
+                >
+                                    <Link
+                    href="/animated-video-creators"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Animated Video Creator</li>
+                  </Link> 
+                               <Link
+                    href="/2d-animation-studio-in-bangalore"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>2D Animation Service</li>
+                  </Link> 
+                       
+                               <Link
+                    href="/motion-graphics-services"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Motion Graphic Service</li>
+                  </Link> 
+                  <li onClick={handleItemClick}>Character Animation</li>
+                  <li onClick={handleItemClick}>Puppet Animation</li>
+                  <li onClick={handleItemClick}>Motion Graphics</li>
                 </ul>
               </div>
 
@@ -857,32 +920,43 @@ const ServicesDropdown = ({ textColor }) => {
                    <li onClick={handleItemClick}>Website Designing Company</li>
                   </Link>
                         <Link
+                    href="/website-development-company-in-bangalore"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Website Development Company In Banglore</li>
+                  </Link> 
+                         <Link
                     href="/ecommerce-website-development-company"
                     className="removelinkStyle"
                     onClick={handleItemClick}
                   >
                     {" "}
-                    <li onClick={handleItemClick}>Frontend Development</li>
+                    <li onClick={handleItemClick}>Ecommerce Website Development Company  </li>
                   </Link> 
-                  <li onClick={handleItemClick}>Frontend Development</li>
-                  <li onClick={handleItemClick}>Full Stack Development</li>
-                  <li onClick={handleItemClick}>Static Website Development</li>
-                  <li onClick={handleItemClick}>Dynamic Website Development</li>
-                  <li onClick={handleItemClick}>PHP Web Development</li>
-                  <li onClick={handleItemClick}>Web Portal Development</li>
-                  <li onClick={handleItemClick}>
-                    WordPress Website Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    React JS Website Development
-                  </li>
-                  <li onClick={handleItemClick}>Node JS Website Development</li>
-                  <li onClick={handleItemClick}>CMS Website Development</li>
+                              <Link
+                    href="/node-js-development-company"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Node Js Development Company</li>
+                  </Link> 
+                                 <Link
+                    href="/react-js-development-company"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>React Js Development Company</li>
+                  </Link> 
+       
                 </ul>
               </div>
 
               {/* Column 3: Software Development & 2D Animations */}
-              <div style={{ flex: "1 1 25%", marginBottom: "20px" }}>
+              <div style={{ flex: "1 1 20%", marginBottom: "20px" }}>
                 <Link
                   href="/software-development-company-in-bangalore"
                   className="removelinkStyle"
@@ -900,53 +974,24 @@ const ServicesDropdown = ({ textColor }) => {
                     cursor: "pointer",
                   }}
                 >
-                  <li onClick={handleItemClick}>CRM Software Development</li>
-                  <li onClick={handleItemClick}>
-                    Enterprise Software Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    Software Product Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    Cloud Application Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    Software Support and Maintenance
-                  </li>
-                  <li onClick={handleItemClick}>
-                    Legacy Software Modernization
-                  </li>
-                  <li onClick={handleItemClick}>Software Consulting</li>
+
+                                 <Link
+                    href="/software-development-company-in-bangalore"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Software Development Company</li>
+                  </Link> 
+          <li onClick={handleItemClick}>CRM Software Development  </li>
+                  <li onClick={handleItemClick}>Enterprise Software Development</li>
+                  <li onClick={handleItemClick}>Software Product Development</li>
+                    <li onClick={handleItemClick}>Cloud Application Development</li>
+                    <li onClick={handleItemClick}>Software Support and Maintenance</li>
+                   
                 </ul>
 
-                <Link
-                  href="/2d-animation-studio"
-                  className="removelinkStyle"
-                  onClick={handleItemClick}
-                >
-                  <h6
-                    style={{
-                      fontWeight: "bold",
-                      marginTop: "20px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    2D Animations
-                  </h6>
-                </Link>
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: 0,
-                    fontSize: "13px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <li onClick={handleItemClick}>Explainer Videos</li>
-                  <li onClick={handleItemClick}>Character Animation</li>
-                  <li onClick={handleItemClick}>Puppet Animation</li>
-                  <li onClick={handleItemClick}>Motion Graphics</li>
-                </ul>
+             
               </div>
 
               {/* Column 4: Mobile App Development & Corporate Video Production */}
@@ -968,16 +1013,41 @@ const ServicesDropdown = ({ textColor }) => {
                     cursor: "pointer",
                   }}
                 >
-                  <li onClick={handleItemClick}>iOS Mobile App Development</li>
-                  <li onClick={handleItemClick}>
-                    Android Mobile App Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    Flutter Mobile App Development
-                  </li>
-                  <li onClick={handleItemClick}>
-                    React Native Mobile App Development
-                  </li>
+
+                   <Link
+                    href="/ios-mobile-app-development"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>iOS Mobile App Development</li>
+                  </Link> 
+                 <Link
+                    href="/android-app-development"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Android Mobile App Development</li>
+                  </Link> 
+                 <Link
+                    href="/flutter-app-development"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Flutter Mobile App Development</li>
+                  </Link> 
+                   <Link
+                    href="/react-native-mobile-app-developers"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>React Native Mobile App Development</li>
+                  </Link> 
+            
+        
                 </ul>
 
                 <Link
@@ -1020,14 +1090,34 @@ const ServicesDropdown = ({ textColor }) => {
                     cursor: "pointer",
                   }}
                 >
-                  <li onClick={handleItemClick}>
-                    Website Performance Optimization
-                  </li>
-                  <li onClick={handleItemClick}>Website Migration Service</li>
-                  <li onClick={handleItemClick}>Startup Solution</li>
+
+                         <Link
+                    href="/paid-marketing-services"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Paid Marketing Services</li>
+                  </Link> 
+                       <Link
+                    href="/social-media-marketing"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Social Media Marketing</li>
+                  </Link> 
+                         <Link
+                    href="/seo-services"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Seo Services</li>
+                  </Link> 
+          
                   <li onClick={handleItemClick}>Search Engine Optimisation</li>
-                  <li onClick={handleItemClick}>Social Media Marketing</li>
-                  <li onClick={handleItemClick}>Paid Marketing</li>
+                
                 </ul>
 
                 <Link
@@ -1045,6 +1135,24 @@ const ServicesDropdown = ({ textColor }) => {
                     B2B Marketing
                   </h6>
                 </Link>
+                    <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    fontSize: "13px",
+                    cursor: "pointer",
+                  }}
+                >
+
+                         <Link
+                    href="/digital-marketing-agency-in-bangalore"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Digital Marketing Services</li>
+                  </Link> 
+                  </ul>
               </div>
             </Row>
           </Container>

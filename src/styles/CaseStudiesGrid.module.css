@@ -1,0 +1,167 @@
+.section {
+  padding: 80px 6%;
+  background: #ffffff;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  height: 480px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.card:hover::after {
+  transform: scale(1.08);
+}
+
+.results {
+  position: absolute;
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* DARK GRADIENT */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+/* RESULTS PANEL */
+.results {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.35s ease;
+  z-index: 3;
+}
+
+.results h4 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.resultsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.resultItem {
+  text-align: center;
+}
+
+.resultItem span {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #29a9e1;
+}
+
+.resultItem p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* SHOW ON HOVER */
+.card:hover .results {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BOTTOM CONTENT */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+}
+
+.content h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.content p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 420px;
+  }
+}

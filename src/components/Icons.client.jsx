@@ -20,8 +20,8 @@ export default function Icons() {
   });
 
   const items = [
-    { image: briefcase, heading: "8+", text: "Years in Work" },
-    { image: folder, heading: "500+", text: "Project done" },
+    { image: briefcase, heading: "8+", text: "Years of Experience" },
+    { image: folder, heading: "500+", text: "Projects Completed" },
     { image: smile, heading: "500", text: "Happy Clients" },
   ];
 
