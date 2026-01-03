@@ -1,12 +1,13 @@
 "use client";
 import { useEffect } from "react";
 
-import Breadcrumbs from "@/components/BreadCrumbs.jsx";
-import CaseStudiesGrid from "./CaseStudiesGrid";
-import CaseStudiesGrid2 from "./CaseStudiesGrid2";
+
+import CaseStudyHeader from "./CaseStudyHeader";
+import CaseStudyLayout from "./CaseStudyLayout";
 
 
-export default function ContactClient() {
+
+export default function Novus() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -84,7 +85,7 @@ export default function ContactClient() {
           "https://www.linkedin.com/company/nakshatra-namaha-creation/",
         ],
       },
-      {
+     {
         "@type": "BreadcrumbList",
         itemListElement: [
           {
@@ -96,10 +97,15 @@ export default function ContactClient() {
           {
             "@type": "ListItem",
             position: 2,
-            name: "Contact Us",
-            item: "https://www.nakshatranamahacreations.com/contact-us",
+            name: "Case Studies",
+            item: "https://www.nakshatranamahacreations.com/case-studies",
           },
-          
+                {
+            "@type": "ListItem",
+            position: 3,
+            name: "Events Hospitality",
+            item: "https://www.nakshatranamahacreations.com/case-studies/events-hospitality",
+          },
         ],
       },
     ],
@@ -107,15 +113,15 @@ export default function ContactClient() {
 
 
 
-  const words = ["Contact", "Us"];
-
-
-
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
     {
-      name: "Contact Us",
-      link: "/contact-us",
+      name: "Case Studies",
+      link: "/case-studies",
+    },
+        {
+      name: "Events Hospitality",
+      link: "/case-studies/events-hospitality",
     },
   ];
 
@@ -123,11 +129,18 @@ export default function ContactClient() {
     <div>
 
 
-      <Breadcrumbs paths={breadcrumbPaths} />
+      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+<CaseStudyHeader
+  title="SEO-Driven Healthcare Website Development for Building Patient Trust & Enquiry Confidence"
+  date="October 2025"
+  industry="Healthcare"
+  platforms="SEO-Optimised Healthcare Business Website"
+  services="Healthcare website development, SEO strategy, performance optimisation, conversion-focused UI design"
+/>
 
-        <CaseStudiesGrid/>
-        <CaseStudiesGrid2/>
-    
+
+
+<CaseStudyLayout  />
     </div>
   );
 }

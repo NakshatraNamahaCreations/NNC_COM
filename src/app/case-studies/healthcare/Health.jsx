@@ -3,10 +3,10 @@ import { useEffect } from "react";
 
 import Breadcrumbs from "@/components/BreadCrumbs.jsx";
 import CaseStudiesGrid from "./CaseStudiesGrid";
-import CaseStudiesGrid2 from "./CaseStudiesGrid2";
 
 
-export default function ContactClient() {
+
+export default function Health() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -96,10 +96,15 @@ export default function ContactClient() {
           {
             "@type": "ListItem",
             position: 2,
-            name: "Contact Us",
-            item: "https://www.nakshatranamahacreations.com/contact-us",
+            name: "Case Studies",
+            item: "https://www.nakshatranamahacreations.com/case-studies",
           },
-          
+                {
+            "@type": "ListItem",
+            position: 3,
+            name: "Health Care",
+            item: "https://www.nakshatranamahacreations.com/case-studies/healthcare",
+          },
         ],
       },
     ],
@@ -107,15 +112,15 @@ export default function ContactClient() {
 
 
 
-  const words = ["Contact", "Us"];
-
-
-
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
     {
-      name: "Contact Us",
-      link: "/contact-us",
+      name: "Case Studies",
+      link: "/case-studies",
+    },
+        {
+      name: "Health Care ",
+      link: "/case-studies/healthcare",
     },
   ];
 
@@ -125,9 +130,8 @@ export default function ContactClient() {
 
       <Breadcrumbs paths={breadcrumbPaths} />
 
-        <CaseStudiesGrid/>
-        <CaseStudiesGrid2/>
-    
+    <CaseStudiesGrid/>
+   
     </div>
   );
 }

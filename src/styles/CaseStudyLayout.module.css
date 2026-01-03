@@ -1,0 +1,673 @@
+.page {
+  padding: 80px 6%;
+  background: #f9fafb;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+}
+
+/* LEFT */
+.left {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+/* Content blocks */
+.contentBlock {
+  margin-top: 40px;
+}
+
+.contentBlock h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contentBlock p,
+.contentBlock li {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.contentBlock ul {
+  padding-left: 18px;
+}
+
+/* Results highlight */
+.results li {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* RIGHT */
+.right {
+  position: sticky;
+  top: 130px;
+  height: fit-content;
+}
+
+/* FORM */
+.formCard {
+  background: linear-gradient(135deg, #29a9e1, #1e93c6);
+  padding: 28px;
+  border-radius: 22px;
+  color: #ffffff;
+}
+
+.formCard h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.formCard input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.formCard button {
+  width: 100%;
+  padding: 14px;
+  background: #ffffff;
+  color: #333;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    position: relative;
+    top: unset;
+  }
+}
+
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.resultsList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.resultIcon {
+  color: #29a9e1; /* premium purple */
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+/* ===============================
+   LAVISH SEO GROWTH – WHITE THEME
+================================ */
+
+.lavishSeoSection {
+  padding: 90px 0%;
+  background: #ffffff;
+  color: #111827;
+}
+
+.lavishSeoContainer {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* -------------------------------
+   HEADINGS
+-------------------------------- */
+.lavishSeoTitle {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.lavishSeoSubtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 50px;
+}
+
+/* -------------------------------
+   METRICS GRID
+-------------------------------- */
+.lavishMetricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 60px;
+}
+
+.lavishMetricCard {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lavishMetricCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.metricLabel {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.metricValue {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* UP / DOWN */
+.metricUp {
+  font-size: 14px;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metricDown {
+  font-size: 14px;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+
+/* -------------------------------
+   ANALYTICS IMAGE
+-------------------------------- */
+.lavishAnalyticsBox {
+  margin: 60px 0;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.lavishAnalyticsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* -------------------------------
+   CONTENT
+-------------------------------- */
+.lavishSeoContent {
+  max-width: 900px;
+}
+
+.lavishSeoContent p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 18px;
+}
+
+/* -------------------------------
+   RESPONSIVE
+-------------------------------- */
+@media (max-width: 1024px) {
+  .lavishMetricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lavishSeoTitle {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lavishSeoSection {
+    padding: 70px 5%;
+  }
+
+  .lavishMetricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .lavishSeoTitle {
+    font-size: 28px;
+  }
+
+  .metricValue {
+    font-size: 28px;
+  }
+
+  .lavishAnalyticsBox {
+    padding: 12px;
+  }
+}
+
+
+/* SECTION */
+.monthProgressSection {
+  padding: 20px 0%;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CONTAINER */
+.monthProgressContainer {
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+/* HEADER */
+.monthProgressHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.monthProgressMonth {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a8f55;
+  letter-spacing: 1px;
+}
+
+.monthProgressTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+  max-width: 900px;
+}
+
+.monthProgressDate {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+/* DIVIDER */
+.monthProgressDivider {
+  width: 100%;
+  height: 1px;
+  background: #e6e6e6;
+  margin: 30px 0 60px;
+}
+
+/* GRID */
+.monthProgressGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 50px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.monthProgressCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* ICON */
+.monthProgressIconBox {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  border: 2px solid #e6dcff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #29a9e1;
+  font-size: 22px;
+}
+
+/* TITLE */
+.monthProgressCardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+/* TEXT */
+.monthProgressCardText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555555;
+  max-width: 420px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .monthProgressGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .monthProgressTitle {
+    font-size: 28px;
+  }
+
+  .monthProgressCardText {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .monthProgressSection {
+    padding: 70px 0;
+  }
+
+  .monthProgressTitle {
+    font-size: 24px;
+  }
+}
+
+
+
+.kaSection {
+  padding: 30px 0%;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.kaContainer {
+  max-width: 1200px;
+  margin: auto;
+  /* display: grid; */
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+
+
+.kaContentArea {
+  background: #ffffff;
+  border-radius: 18px;
+  /* padding: 36px;
+  border: 1px solid #ececec; */
+}
+
+.kaHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.kaDivider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0 24px;
+}
+
+.kaIntro {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+
+.kaTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.kaTimelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+/* ICON COLUMN */
+
+.kaIconColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.kaIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #29a9e1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 2;
+}
+
+/* CONNECTOR LINE */
+
+.kaConnector {
+  width: 2px;
+  height: 100%;
+  background: #d6c8f3;
+  margin-top: 6px;
+}
+
+/* TEXT */
+
+.kaTextBlock {
+  max-width: 520px;
+}
+
+.kaItemTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.kaItemText {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===============================
+   RIGHT ENQUIRY PANEL
+================================ */
+
+.kaEnquiryPanel {
+  background: linear-gradient(180deg, #29a9e1, #177eab);
+  border-radius: 18px;
+  padding: 32px;
+  color: #ffffff;
+  position: sticky;
+  top: 120px;
+}
+
+.kaEnquiryTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* INPUTS */
+
+.kaInput {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.kaInput::placeholder {
+  color: #777;
+}
+
+/* BUTTON */
+
+.kaSubmitBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: #29a9e1;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.kaSubmitBtn:hover {
+  background: #29a9e1;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   CTA BANNER
+================================ */
+
+.kaCtaSection {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #29a9e1, #107aa8);
+  border-radius: 20px;
+  padding: 60px 6%;
+}
+
+.kaCtaInner {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.kaCtaTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.kaCtaText {
+  font-size: 16px;
+  color: #e9ddff;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.kaCtaButton {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #29a9e1;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kaCtaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .kaContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .kaEnquiryPanel {
+    position: relative;
+    top: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .kaHeading {
+    font-size: 26px;
+  }
+
+  .kaCtaTitle {
+    font-size: 24px;
+  }
+
+  .kaCtaSection {
+    padding: 50px 6%;
+  }
+}
+
+@media (max-width: 480px) {
+  .kaSection {
+    padding: 70px 5%;
+  }
+
+  .kaContentArea {
+    padding: 28px 22px;
+  }
+
+  .kaIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .kaItemTitle {
+    font-size: 16px;
+  }
+
+  .kaItemText {
+    font-size: 14px;
+  }
+}

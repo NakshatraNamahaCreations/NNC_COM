@@ -3,10 +3,10 @@ import { useEffect } from "react";
 
 import Breadcrumbs from "@/components/BreadCrumbs.jsx";
 import CaseStudiesGrid from "./CaseStudiesGrid";
-import CaseStudiesGrid2 from "./CaseStudiesGrid2";
 
 
-export default function ContactClient() {
+
+export default function Event() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -84,7 +84,7 @@ export default function ContactClient() {
           "https://www.linkedin.com/company/nakshatra-namaha-creation/",
         ],
       },
-      {
+     {
         "@type": "BreadcrumbList",
         itemListElement: [
           {
@@ -96,10 +96,15 @@ export default function ContactClient() {
           {
             "@type": "ListItem",
             position: 2,
-            name: "Contact Us",
-            item: "https://www.nakshatranamahacreations.com/contact-us",
+            name: "Case Studies",
+            item: "https://www.nakshatranamahacreations.com/case-studies",
           },
-          
+                {
+            "@type": "ListItem",
+            position: 3,
+            name: "Events Hospitality",
+            item: "https://www.nakshatranamahacreations.com/case-studies/events-hospitality",
+          },
         ],
       },
     ],
@@ -107,15 +112,15 @@ export default function ContactClient() {
 
 
 
-  const words = ["Contact", "Us"];
-
-
-
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
     {
-      name: "Contact Us",
-      link: "/contact-us",
+      name: "Case Studies",
+      link: "/case-studies",
+    },
+        {
+      name: "Events Hospitality",
+      link: "/case-studies/events-hospitality",
     },
   ];
 
@@ -125,9 +130,7 @@ export default function ContactClient() {
 
       <Breadcrumbs paths={breadcrumbPaths} />
 
-        <CaseStudiesGrid/>
-        <CaseStudiesGrid2/>
-    
+    <CaseStudiesGrid/>
     </div>
   );
 }

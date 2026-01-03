@@ -1,7 +1,7 @@
 
 
 // src/app/page.js
-import ContactClient from "./ContactClient.jsx";
+import Health from "./Health.jsx";
 
 export const metadata = {
     title: "Digital Marketing Company in Bangalore | Contact Us",
@@ -32,5 +32,5 @@ export const metadata = {
   };
   
 export default function ContactPage() {
-  return <ContactClient />;
+  return <Health />;
 }

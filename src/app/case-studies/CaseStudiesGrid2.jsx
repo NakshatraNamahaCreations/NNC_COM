@@ -6,6 +6,7 @@ const industries = [
   {
     title: "Home Services",
     image: "/media/casestudies/homeservices1.jpg",
+    link: "/case-studies/home-services",
     points: [
       "Improved service discovery and booking flow",
       "Mobile-first experience for faster conversions",
@@ -15,6 +16,7 @@ const industries = [
   {
     title: "Events & Hospitality",
     image: "/media/casestudies/events.jpg",
+    link: "/case-studies/events-hospitality",
     points: [
       "Streamlined event listings and registrations",
       "Better page speed and engagement metrics",
@@ -24,6 +26,7 @@ const industries = [
   {
     title: "IT Services & Technology",
     image: "/media/tech/47.jpg",
+    link: "/case-studies/it-services",
     points: [
       "Modernized brand presence and UI",
       "Clear service positioning for B2B leads",
@@ -33,6 +36,7 @@ const industries = [
   {
     title: "Healthcare",
     image: "/media/tech/44.jpg",
+    link: "/case-studies/healthcare",
     points: [
       "Simplified appointment booking journeys",
       "Accessibility-focused responsive design",
@@ -40,6 +44,7 @@ const industries = [
     ],
   },
 ];
+
 
 export default function CaseStudiesGrid2() {
   return (
@@ -53,29 +58,28 @@ export default function CaseStudiesGrid2() {
           and long-term growth.
         </p>
 
-        <div className={styles.grid}>
-          {industries.map((item, index) => (
-            <div className={styles.card} key={index}>
-              <img src={item.image} alt={item.title} />
+     <div className={styles.grid}>
+  {industries.map((item, index) => (
+    <Link href={item.link} key={index} className={styles.cardLink}>
+      <div className={styles.card}>
+        <img src={item.image} alt={item.title} />
 
-              <div className={styles.glass}>
-                <h4>{item.title}</h4>
-                <ul>
-                  {item.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              <Link
-  href="/contact-us"
-  className={styles.cta}
->
-  Explore Solutions
-</Link>
+        <div className={styles.glass}>
+          <h4>{item.title}</h4>
 
-              </div>
-            </div>
-          ))}
+          <ul>
+            {item.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+
+          <span className={styles.cta}>Explore Solutions </span>
         </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
       </div>
     </section>
   );

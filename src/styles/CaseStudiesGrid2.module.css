@@ -19,6 +19,12 @@
   margin-bottom: 12px;
 }
 
+.cardLink {
+  text-decoration: none;
+  display: block;
+}
+
+
 .subText {
   max-width: 760px;
   margin: 0 auto 60px;
@@ -76,8 +82,45 @@
   backdrop-filter: blur(10px);
   opacity: 0;
 
+  text-align: left; /* 🔥 IMPORTANT */
   transition: opacity 0.4s ease;
 }
+
+.glass ul {
+  padding-left: 18px;
+  margin: 0;
+  list-style-position: outside;
+}
+
+.glass li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.cta {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #93c5fd;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .cta {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.glass {
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.85),
+    rgba(15, 23, 42, 0.25)
+  );
+}
+
 
 .card:hover .glass {
   opacity: 1;
@@ -125,3 +168,87 @@
     font-size: 28px;
   }
 }
+
+
+
+.formCard {
+  background: linear-gradient(145deg, #29a9e1, #2495c6);
+  border-radius: 24px;
+  padding: 28px;
+  color: #ffffff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.subText {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 22px;
+   color: #fff; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+}
+
+.field {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input::placeholder {
+  color: #9ca3af;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+
+.note {
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+
