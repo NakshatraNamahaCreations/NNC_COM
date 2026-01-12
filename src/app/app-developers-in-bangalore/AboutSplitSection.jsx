@@ -24,7 +24,7 @@ export default function AboutSplitSection() {
           <p className={styles.description}>
             Regardless​‍​‌‍​‍‌​‍​‌‍​‍‌ of whether you are a startup preparing to launch your first version or a seasoned business that is updating its digital ecosystem, we will make your app idea a live product that influences the real world. Our offerings cover the entire wheel from strategy and design to development and deployment. We make the promise that your app will be able to operate, grow, and deliver tangible ​‍​‌‍​‍‌​‍​‌‍​‍‌results.
           </p>
-
+    <br />
           <a href="/contact-us" className={styles.cta} >
             Book Free Consultation <FaArrowRight color="#fff" size={16} />
           </a>
@@ -51,7 +51,7 @@ export default function AboutSplitSection() {
 
       <div className={styles.content}>
         <h2>
-       <span>Build What Matters</span> A Trusted Mobile App Development Partner in Bangalore
+       <span>Build What Matters</span> <br /> A Trusted Mobile App Development Partner in Bangalore
 
         </h2>
 

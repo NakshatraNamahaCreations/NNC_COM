@@ -56,6 +56,7 @@ const data = [
       { text: "PHP Web Development Company",  href: "/" },
       { text: "Full Stack Web Development Company",  href: "/" },
       { text: "MERN Stack Web Development Company",  href: "/" },
+        { text: "Website Developers In Mumbai",  href: "/website-developers-in-mumbai" },
     ],
   },
   {
@@ -67,7 +68,7 @@ const data = [
         { text: "Mobile App Development Company In Bangalore", href: "/mobile-app-development-company-in-bangalore" },
         { text: "Mobile App Development Company In Mumbai", href: "/mobile-app-development-company-in-mumbai" },
         { text: "Mobile App Development Company in RR Nagar", href: "/mobile-app-development-company-in-rr-nagar" },
-      { text: "App Development Services",  href: "/" },
+      { text: "App Developmers In Banglore",  href: "/app-developers-in-bangalore" },
       { text: "Mobile Application Developers",  href: "/"},
       { text: "Custom Mobile App Development",  href: "/" },
       { text: "Android App Development Company",  href: "/android-app-development" },

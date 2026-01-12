@@ -81,7 +81,7 @@
 
 /* Heading */
 .heading {
-  font-size: clamp(36px, 4vw, 54px);
+  font-size: clamp(36px, 3.7vw, 50px);
   font-weight: 700;
   line-height: 1.2;
 }
