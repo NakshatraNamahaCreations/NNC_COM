@@ -113,3 +113,86 @@
     display: none;
   }
 }
+
+/* ================= MOBILE OPTIMIZATION ================= */
+
+/* Tablets & below */
+@media (max-width: 900px) {
+  .wrapper {
+    margin-top: 0;
+    padding: 0 10px;
+  }
+
+  .inner {
+    padding: 26px 24px;
+  }
+
+  .logoSlider {
+    width: 100%;
+  }
+
+  .track img {
+    height: 60px;
+  }
+
+  .counter h3 {
+    font-size: 34px;
+  }
+
+  .counter p {
+    font-size: 13.5px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .inner {
+    padding: 22px 18px;
+    border-radius: 24px;
+    gap: 22px;
+  }
+
+  /* Logo slider tweaks */
+  .track {
+    gap: 16px;
+    animation-duration: 28s;
+  }
+
+  .track img {
+    height: 52px;
+  }
+
+  /* Stats layout */
+  .stats {
+    gap: 18px;
+  }
+
+  .counter h3 {
+    font-size: 30px;
+  }
+
+  .counter p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* Small phones (≤480px) */
+@media (max-width: 480px) {
+  .inner {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .track img {
+    height: 46px;
+  }
+
+  .counter h3 {
+    font-size: 26px;
+  }
+
+  .counter p {
+    font-size: 12.5px;
+  }
+}

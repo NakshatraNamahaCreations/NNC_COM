@@ -124,3 +124,128 @@
     margin-bottom: 30px;
   }
 }
+
+/* ================= INDIA SMART – MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    width: 94%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stickyImage {
+    position: relative;
+    top: 0;
+  }
+
+  .image {
+    height: auto;
+    max-height: 380px;
+    border-radius: 20px;
+  }
+
+  .header {
+    padding: 0;
+    min-height: auto;
+  }
+
+  .heading {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .subText {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 18px;
+    gap: 32px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .subText {
+    font-size: 14.5px;
+  }
+
+  .image {
+    max-height: 320px;
+  }
+
+  .list {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    gap: 16px;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 14px;
+  }
+
+  .item h4 {
+    font-size: 17px;
+  }
+
+  .item p {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  .subText {
+    font-size: 14px;
+  }
+
+  .image {
+    max-height: 280px;
+  }
+
+  .item {
+    padding: 16px;
+  }
+
+  .iconBox {
+    width: 44px;
+    height: 44px;
+    font-size: 17px;
+  }
+
+  .item h4 {
+    font-size: 16px;
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+}
+

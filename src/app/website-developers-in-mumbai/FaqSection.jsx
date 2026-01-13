@@ -11,7 +11,7 @@ const faqs = [
   },
    {
     q: "How long does it take to develop a website?",
-    a: "Most business websites are completed within 3–6 weeks, depending on scope.",
+    a: "Most business websites are completed within 3 – 10 Days, depending on scope.",
   },
    {
     q: "Do you provide website maintenance services?",

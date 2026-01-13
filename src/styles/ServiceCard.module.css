@@ -199,3 +199,86 @@
   color: #444;
 
 }
+
+
+
+/* ================= SERVICES SECTION – MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 900px) {
+  .servicesSection {
+    padding: 40px 30px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    grid-auto-columns: 92%;
+    gap: 20px;
+    padding-bottom: 30px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide {
+    scroll-snap-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .imageWrap {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .points li {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 35px 18px;
+  }
+
+  .slider {
+    grid-auto-columns: 95%;
+  }
+
+  .title {
+    font-size: 16.5px;
+  }
+
+  .desc {
+    font-size: 13.8px;
+  }
+
+  .points li::before {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+}

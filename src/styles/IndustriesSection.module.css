@@ -111,3 +111,83 @@
     font-size: 28px;
   }
 }
+
+/* ================= INDUSTRIES – MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .heading {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .subText {
+    font-size: 15px;
+    margin-bottom: 36px;
+  }
+
+  .grid {
+    gap: 22px;
+  }
+
+  .card {
+    height: 240px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 35px 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .subText {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    height: auto;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  .subText {
+    font-size: 14px;
+  }
+
+  .card {
+    min-height: 210px;
+    border-radius: 16px;
+  }
+}
+
+

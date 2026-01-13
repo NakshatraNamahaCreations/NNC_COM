@@ -120,3 +120,104 @@
     top: 0;
   }
 }
+
+
+/* ================= APP PROCESS – MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 900px) {
+  .processSection {
+    padding: 60px 0;
+  }
+
+  .header {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .header h2 {
+    font-size: 28px;
+    max-width: 100%;
+    line-height: 1.35;
+  }
+
+  .header p {
+    font-size: 15px;
+    max-width: 100%;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    gap: 40px;
+  }
+
+  .left {
+    order: -1; /* image first for visual context */
+  }
+
+  .stickyMedia {
+    position: relative;
+    top: 0;
+    border-radius: 18px;
+  }
+
+  .image {
+    border-radius: 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .stepCard {
+    gap: 18px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .stepNumber {
+    font-size: 28px;
+    min-width: 40px;
+  }
+
+  .stepTitle {
+    font-size: 17px;
+  }
+
+  .stepDesc {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .processSection {
+    padding: 50px 0;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .stepCard {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .stepNumber {
+    font-size: 24px;
+  }
+
+  .stepTitle {
+    font-size: 16px;
+  }
+
+  .stepDesc {
+    font-size: 14px;
+  }
+}
+
