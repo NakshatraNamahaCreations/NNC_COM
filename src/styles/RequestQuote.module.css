@@ -1,0 +1,71 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.popup {
+  width: 360px;
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🔥 Compact inputs */
+.input {
+  height: 42px;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.15rem rgba(37, 99, 235, 0.15);
+}
+
+.error {
+  font-size: 11px;
+  color: #dc2626;
+  margin-top: -6px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  height: 44px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.openBtn {
+  border-radius: 999px;
+  padding: 6px 14px;
+}

@@ -1,39 +1,60 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import Modal from "react-modal";
-import PopupBtn from "./PopupBtn";
 import { Button, Card, Row, Col } from "react-bootstrap";
 import { BsX } from "react-icons/bs";
 import { useRouter } from "next/navigation";
+import PopupBtn from "./PopupBtn";
 
 export default function PopupForm() {
   const router = useRouter();
 
   const [formData, setFormData] = useState({
     user_name: "",
+    companyName: "",
     user_email: "",
     user_phone: "",
     user_service: "",
+    city: "",
     referenceFrom: "website",
-    city: "Bangalore",
   });
 
   const [formErrors, setFormErrors] = useState({});
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
 
+  const inputStyle = {
+    height: "44px",
+    padding: "10px 14px",
+    fontSize: "14px",
+    borderRadius: "8px",
+  };
+
+  // ✅ REQUIRED for react-modal (App Router safe)
+  useEffect(() => {
+    Modal.setAppElement(document.body);
+  }, []);
+
+  // ✅ OPEN POPUP AFTER 2 SECONDS ON PAGE LOAD / REFRESH
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setModalIsOpen(true);
+      setFadeIn(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     if (name === "user_phone") {
-      const numericValue = value.replace(/\D/g, "");
-      if (numericValue.length <= 10) {
-        setFormData((prev) => ({ ...prev, [name]: numericValue }));
-        setFormErrors((prev) => ({ ...prev, [name]: "" }));
+      const numeric = value.replace(/\D/g, "");
+      if (numeric.length <= 10) {
+        setFormData((prev) => ({ ...prev, [name]: numeric }));
       }
       return;
     }
@@ -41,113 +62,60 @@ export default function PopupForm() {
     if (name === "user_name") {
       const lettersOnly = value.replace(/[^A-Za-z\s]/g, "");
       setFormData((prev) => ({ ...prev, [name]: lettersOnly }));
-      setFormErrors((prev) => ({ ...prev, [name]: "" }));
       return;
     }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
-    setFormErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const errors = {};
-    const { user_name, user_phone, user_service, user_email } = formData;
+    const { user_name, user_phone, user_service, user_email, companyName, city } = formData;
 
-    const nameRegex = /^[A-Za-z\s]{3,}$/;
-    if (!user_name || !nameRegex.test(user_name.trim())) {
-      errors.user_name = "Please enter a valid name (only letters, min 3 characters).";
+    if (!/^[A-Za-z\s]{3,}$/.test(user_name)) errors.user_name = "Enter a valid name";
+    if (!companyName.trim()) errors.companyName = "Company name is required";
+    if (!/^[6-9]\d{9}$/.test(user_phone)) errors.user_phone = "Invalid phone number";
+    if (!user_service) errors.user_service = "Select a service";
+    if (!city.trim()) errors.city = "City is required";
+
+    if (user_email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user_email)) {
+      errors.user_email = "Invalid email address";
     }
 
-    const phoneRegex = /^[6-9]\d{9}$/;
-    const repeatedDigitsRegex = /^(\d)\1{9}$/;
-    const invalidPhones = [
-      "0000000000",
-      "1234567890",
-      "0123456789",
-      "9999999999",
-      "8888888888",
-      "7777777777",
-      "6666666666",
-    ];
-
-    if (
-      !user_phone ||
-      !phoneRegex.test(user_phone) ||
-      repeatedDigitsRegex.test(user_phone) ||
-      invalidPhones.includes(user_phone)
-    ) {
-      errors.user_phone = "Please enter a valid 10-digit mobile number.";
-    }
-
-    if (!user_service) {
-      errors.user_service = "Please select a service.";
-    }
-
-    if (user_email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(user_email)) {
-        errors.user_email = "Please enter a valid email address.";
-      }
-    }
-
-    if (Object.keys(errors).length > 0) {
+    if (Object.keys(errors).length) {
       setFormErrors(errors);
       return;
     }
 
     try {
-      const response = await axios.post("https://api.nakshatranamahacreations.in/api/enquiries", {
-        name: user_name,
-        email: user_email,
-        phoneNo: user_phone,
-        service: user_service,
-        referenceFrom: "website",
-        city: "Bangalore",
-      });
-
-      if (response.status === 201 || response.status === 200) {
-        router.push("/thankyou");
-        setFormData({
-          user_name: "",
-          user_email: "",
-          user_phone: "",
-          user_service: "",
+      const response = await axios.post(
+        "https://api.nakshatranamahacreations.in/api/enquiries",
+        {
+          name: user_name,
+          companyName,
+          email: user_email,
+          phoneNo: user_phone,
+          service: user_service,
+          city,
           referenceFrom: "website",
-          city: "Bangalore",
-        });
-        setFormErrors({});
+          sourceDomain: "nakshatra.com",
+        }
+      );
+
+      if (response.status === 200 || response.status === 201) {
         setModalIsOpen(false);
-      } else {
-        alert("Failed to send enquiry. Please try again.");
+        router.push("/thankyou");
       }
     } catch (error) {
-      console.error("Error sending enquiry:", error);
-      alert("Failed to send enquiry. Please check the console for details.");
+      console.error(error);
+      alert("Failed to submit form");
     }
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setModalIsOpen(true);
-      setTimeout(() => setFadeIn(true), 100);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const closeModal = () => {
     setFadeIn(false);
-    setFormData({
-      user_name: "",
-      user_email: "",
-      user_phone: "",
-      user_service: "",
-      referenceFrom: "website",
-      city: "Bangalore",
-    });
-    setFormErrors({});
     setTimeout(() => setModalIsOpen(false), 300);
   };
 
@@ -155,99 +123,99 @@ export default function PopupForm() {
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      contentLabel="Popup Form"
       className={`modal-content ${fadeIn ? "fade-in" : "fade-out"}`}
       overlayClassName="modal-overlay"
     >
-      <Card className="popup-card shadow-lg p-4 position-relative">
+      <Card className="shadow-lg p-3 position-relative">
         <Button variant="light" className="close-btn" onClick={closeModal}>
           <BsX size={28} />
         </Button>
 
         <Card.Body>
-          <h3 className="text-center mb-3" style={{ fontWeight: "bold", fontSize: "26px" }}>
-            Contact Us
-          </h3>
+          <h3 className="text-center mb-4 fw-bold">Contact Us</h3>
 
           <Form onSubmit={handleSubmit}>
-            <Row>
+            <Row className="g-2">
               <Col xs={12}>
-                <FloatingLabel controlId="floatingName" label="Name *" className="mb-1">
-                  <Form.Control
-                    type="text"
-                    name="user_name"
-                    placeholder="Name"
-                    value={formData.user_name}
-                    onChange={handleChange}
-                    required
-                  />
-                </FloatingLabel>
+                <Form.Control
+                  style={inputStyle}
+                  name="user_name"
+                  placeholder="Name *"
+                  value={formData.user_name}
+                  onChange={handleChange}
+                />
                 {formErrors.user_name && (
-                  <div style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-                    {formErrors.user_name}
-                  </div>
+                  <small className="text-danger">{formErrors.user_name}</small>
                 )}
               </Col>
 
               <Col xs={12}>
-                <FloatingLabel controlId="floatingPhone" label="Phone Number *" className="mb-1 mt-3">
-                  <Form.Control
-                    type="text"
-                    name="user_phone"
-                    placeholder="Phone Number"
-                    value={formData.user_phone}
-                    onChange={handleChange}
-                    maxLength={10}
-                    required
-                  />
-                </FloatingLabel>
+                <Form.Control
+                  style={inputStyle}
+                  name="companyName"
+                  placeholder="Company Name *"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                />
+                {formErrors.companyName && (
+                  <small className="text-danger">{formErrors.companyName}</small>
+                )}
+              </Col>
+
+              <Col xs={12}>
+                <Form.Control
+                  style={inputStyle}
+                  name="user_phone"
+                  placeholder="Phone Number *"
+                  value={formData.user_phone}
+                  onChange={handleChange}
+                />
                 {formErrors.user_phone && (
-                  <div style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-                    {formErrors.user_phone}
-                  </div>
+                  <small className="text-danger">{formErrors.user_phone}</small>
                 )}
               </Col>
 
               <Col xs={12}>
-                <FloatingLabel controlId="floatingEmail" label="Email Address *" className="mb-1 mt-3">
-                  <Form.Control
-                    type="email"
-                    name="user_email"
-                    placeholder="Email Address"
-                    value={formData.user_email}
-                    onChange={handleChange}
-                    required
-                  />
-                </FloatingLabel>
-                {formErrors.user_email && (
-                  <div style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-                    {formErrors.user_email}
-                  </div>
-                )}
+                <Form.Control
+                  style={inputStyle}
+                  name="user_email"
+                  placeholder="Email Address"
+                  value={formData.user_email}
+                  onChange={handleChange}
+                />
               </Col>
 
               <Col xs={12}>
-                <FloatingLabel controlId="floatingSelect" label="" className="mb-1 mt-3">
-                  <Form.Select
-                    name="user_service"
-                    value={formData.user_service}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Select a Service</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="App Development">App Development</option>
-                    <option value="Corporate Video Production">Corporate Video Production</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Graphic Designing">Graphic Designing</option>
-                    <option value="2D Animations">2D Animations</option>
-                    <option value="B2B Marketing Service">B2B Marketing Service</option>
-                  </Form.Select>
-                </FloatingLabel>
+                <Form.Select
+                  style={inputStyle}
+                  name="user_service"
+                  value={formData.user_service}
+                  onChange={handleChange}
+                >
+                  <option value="">Select Service *</option>
+                  <option>Web Development</option>
+                  <option>App Development</option>
+                  <option>Corporate Video Production</option>
+                  <option>Digital Marketing</option>
+                  <option>Graphic Designing</option>
+                  <option>2D Animations</option>
+                  <option>B2B Marketing Service</option>
+                </Form.Select>
                 {formErrors.user_service && (
-                  <div style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-                    {formErrors.user_service}
-                  </div>
+                  <small className="text-danger">{formErrors.user_service}</small>
+                )}
+              </Col>
+
+              <Col xs={12}>
+                <Form.Control
+                  style={inputStyle}
+                  name="city"
+                  placeholder="City *"
+                  value={formData.city}
+                  onChange={handleChange}
+                />
+                {formErrors.city && (
+                  <small className="text-danger">{formErrors.city}</small>
                 )}
               </Col>
             </Row>

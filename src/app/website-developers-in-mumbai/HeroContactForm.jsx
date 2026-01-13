@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { FaLock } from "react-icons/fa";
 import styles from "../../styles/HeroContactForm.module.css";
 
 export default function HeroContactForm() {
@@ -11,18 +10,18 @@ export default function HeroContactForm() {
 
   const [formData, setFormData] = useState({
     user_name: "",
+    company_name: "",
     user_email: "",
     user_phone: "",
-    message: "",
     user_service: "",
+    city: "",
     referenceFrom: "website",
-    city: "Bangalore",
   });
 
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  /* 🔹 Auto detect service from URL */
+  /* 🔹 Auto detect service */
   useEffect(() => {
     const path = window.location.pathname;
 
@@ -30,7 +29,7 @@ export default function HeroContactForm() {
       "/app-developers-in-bangalore": "App Development",
       "/website-development-company-in-bangalore": "Website Development",
       "/mobile-app-development-company-in-bangalore": "Mobile App Development",
-         "/website-developers-in-mumbai": "Website Development",
+      "/website-developers-in-mumbai": "Website Development",
     };
 
     setFormData((prev) => ({
@@ -39,7 +38,7 @@ export default function HeroContactForm() {
     }));
   }, []);
 
-  /* 🔹 Input Handler */
+  /* 🔹 Input handler */
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -80,6 +79,12 @@ export default function HeroContactForm() {
     )
       validationErrors.user_email = true;
 
+    if (!formData.company_name.trim())
+      validationErrors.company_name = true;
+
+    if (!formData.city.trim())
+      validationErrors.city = true;
+
     if (Object.keys(validationErrors).length) {
       setErrors(validationErrors);
       return;
@@ -92,12 +97,13 @@ export default function HeroContactForm() {
         "https://api.nakshatranamahacreations.in/api/enquiries",
         {
           name: formData.user_name,
+          companyName: formData.company_name,
           email: formData.user_email,
           phoneNo: formData.user_phone,
           service: formData.user_service,
-          message: formData.message,
+          city: formData.city,
           referenceFrom: "website",
-          city: "Bangalore",
+          sourceDomain: "nakshatra.com",
         }
       );
 
@@ -111,46 +117,64 @@ export default function HeroContactForm() {
 
   return (
     <div className={styles.formBox}>
-      <h3 className={styles.formTitle}>Let’s Discuss Your Project</h3>
+      <h3 className={styles.formTitle}>Contact Us</h3>
 
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.row}>
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Full Name"
-            className={styles.input}
-            value={formData.user_name}
-            onChange={handleChange}
-            required
-          />
+        {/* Name */}
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Name *"
+          className={styles.input}
+          value={formData.user_name}
+          onChange={handleChange}
+        />
 
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Email Address"
-            className={styles.input}
-            value={formData.user_email}
-            onChange={handleChange}
-          />
-        </div>
-
+        {/* Phone */}
         <input
           type="tel"
           name="user_phone"
-          placeholder="Phone Number"
+          placeholder="Phone Number *"
           className={styles.input}
           value={formData.user_phone}
           onChange={handleChange}
-          required
         />
 
-        <textarea
-          rows="4"
-          name="message"
-          placeholder="Tell us about your project..."
-          className={styles.textarea}
-          value={formData.message}
+        {/* Email */}
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Email Address"
+          className={styles.input}
+          value={formData.user_email}
+          onChange={handleChange}
+        />
+
+        {/* Service (Disabled) */}
+        <input
+          type="text"
+          value={formData.user_service}
+          disabled
+          className={`${styles.input} ${styles.disabled}`}
+        />
+
+        {/* Company */}
+        <input
+          type="text"
+          name="company_name"
+          placeholder="Company Name *"
+          className={styles.input}
+          value={formData.company_name}
+          onChange={handleChange}
+        />
+
+        {/* City */}
+        <input
+          type="text"
+          name="city"
+          placeholder="City *"
+          className={styles.input}
+          value={formData.city}
           onChange={handleChange}
         />
 
@@ -159,13 +183,8 @@ export default function HeroContactForm() {
           className={styles.button}
           disabled={loading}
         >
-          {loading ? "Submitting..." : "Get Expert Consultation"}
+          {loading ? "Submitting..." : "Submit"}
         </button>
-
-        {/* <p className={styles.note}>
-          <FaLock className={styles.lockIcon} />
-          100% Confidential • No Obligations
-        </p> */}
       </form>
     </div>
   );

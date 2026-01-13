@@ -17,13 +17,17 @@ import { useRouter } from "next/navigation";
 
 const Form_Validation_Admin = () => {
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  service: "",
+  message: "",
+  companyName: "",
+  city: "",
+  referenceFrom: "website",
+});
+
 
   const [formErrors, setFormErrors] = useState({});
   const [message, setMessage] = useState("");
@@ -61,6 +65,11 @@ const Form_Validation_Admin = () => {
       errors.message = "Message is required";
     }
 
+    if (!formData.city.trim()) {
+  errors.city = "City is required";
+}
+
+
     // If there are errors, don't proceed with API request
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
@@ -71,44 +80,53 @@ const Form_Validation_Admin = () => {
     setLoading(true);
     setMessage("");
 
-    try {
-      const response = await axios.post(
-        "https://api.nakshatranamahacreations.in/api/enquiries",
-        {
-          name,
-          email,
-          phoneNo: phone,
-          service,
-          message: msg,
-          referenceFrom: "website",
-          city: "Bangalore",
-        }
-      );
+try {
+  const response = await axios.post(
+    "https://api.nakshatranamahacreations.in/api/enquiries",
+    {
+      name,
+      email,
+      phoneNo: phone,
+      service,
+      message: msg,
+      companyName: formData.companyName,
+      city: formData.city,
+      referenceFrom: "website",
 
-      if (response.status === 200 || response.status === 201) {
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-          referenceFrom: "website",
-          city: "Bangalore",
-        });
-        setFormErrors({});
-        setMessage("Form submitted successfully!");
-        setTimeout(() => {
-          router.push("/thankyou");
-        }, 500);
-      } else {
-        setMessage("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      console.error("Submission error:", error);
-      setMessage("Server error. Please try again later.");
-    } finally {
-      setLoading(false);
+      // ✅ category identifier
+      sourceDomain: "nakshatra.com",
     }
+  );
+
+  if (response.status === 200 || response.status === 201) {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+      companyName: "",
+      city: "",
+      referenceFrom: "website",
+    });
+
+    setFormErrors({});
+    setMessage("Form submitted successfully!");
+
+    setTimeout(() => {
+      router.push("/thankyou");
+    }, 500);
+  } else {
+    setMessage("Something went wrong. Please try again.");
+  }
+} catch (error) {
+  console.error("Submission error:", error);
+  setMessage("Server error. Please try again later.");
+} finally {
+  setLoading(false);
+}
+
+
   };
 
   const handleChange = (e) => {
@@ -194,109 +212,135 @@ const Form_Validation_Admin = () => {
 
         <Row>
           <Col sm={5}>
-            <Form onSubmit={handleSubmit} className="mt-4">
-              <FloatingLabel label="Name" className="mb-3">
-                <Form.Control
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  isInvalid={!!formErrors.name}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {formErrors.name}
-                </Form.Control.Feedback>
-              </FloatingLabel>
+           <Form onSubmit={handleSubmit} className="mt-4">
+  {/* Name */}
+  <Form.Control
+    type="text"
+    name="name"
+    placeholder="Name *"
+    value={formData.name}
+    onChange={handleChange}
+    isInvalid={!!formErrors.name}
+    className="mb-2"
+  />
+  <Form.Control.Feedback type="invalid">
+    {formErrors.name}
+  </Form.Control.Feedback>
 
-              <FloatingLabel label="Email" className="mb-3">
-                <Form.Control
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  isInvalid={!!formErrors.email}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {formErrors.email}
-                </Form.Control.Feedback>
-              </FloatingLabel>
+  {/* Email */}
+  <Form.Control
+    type="email"
+    name="email"
+    placeholder="Email Address *"
+    value={formData.email}
+    onChange={handleChange}
+    isInvalid={!!formErrors.email}
+    className="mb-2"
+  />
+  <Form.Control.Feedback type="invalid">
+    {formErrors.email}
+  </Form.Control.Feedback>
 
-              <FloatingLabel label="Phone Number" className="mb-3">
-                <Form.Control
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  isInvalid={!!formErrors.phone}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {formErrors.phone}
-                </Form.Control.Feedback>
-              </FloatingLabel>
+  {/* Phone */}
+  <Form.Control
+    type="text"
+    name="phone"
+    placeholder="Phone Number *"
+    value={formData.phone}
+    onChange={handleChange}
+    isInvalid={!!formErrors.phone}
+    className="mb-2"
+  />
+  <Form.Control.Feedback type="invalid">
+    {formErrors.phone}
+  </Form.Control.Feedback>
 
-              <FloatingLabel label="Service" className="mb-3">
-                <Form.Select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  isInvalid={!!formErrors.service}
-                >
-                  <option value="">Select a Service</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="App Development">App Development</option>
-                  <option value="Corporate Video Production">
-                    Corporate Video Production
-                  </option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Graphic Designing">Graphic Designing</option>
-                  <option value="2D Animations">2D Animations</option>
-                  <option value="B2B Marketing Service">
-                    B2B Marketing Service
-                  </option>
-                </Form.Select>
-                <Form.Control.Feedback type="invalid">
-                  {formErrors.service}
-                </Form.Control.Feedback>
-              </FloatingLabel>
+  {/* Service */}
+  <Form.Select
+    name="service"
+    value={formData.service}
+    onChange={handleChange}
+    isInvalid={!!formErrors.service}
+    className="mb-2"
+  >
+    <option value="">Select a Service *</option>
+    <option value="Web Development">Web Development</option>
+    <option value="App Development">App Development</option>
+    <option value="Corporate Video Production">
+      Corporate Video Production
+    </option>
+    <option value="Digital Marketing">Digital Marketing</option>
+    <option value="Graphic Designing">Graphic Designing</option>
+    <option value="2D Animations">2D Animations</option>
+    <option value="B2B Marketing Service">B2B Marketing Service</option>
+  </Form.Select>
+  <Form.Control.Feedback type="invalid">
+    {formErrors.service}
+  </Form.Control.Feedback>
 
-              <FloatingLabel label="Message" className="mb-3">
-                <Form.Control
-                  as="textarea"
-                  style={{ height: "120px" }}
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  isInvalid={!!formErrors.message}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {formErrors.message}
-                </Form.Control.Feedback>
-              </FloatingLabel>
+  {/* Company Name */}
+  <Form.Control
+    type="text"
+    name="companyName"
+    placeholder="Company Name *"
+    value={formData.companyName}
+    onChange={handleChange}
+    className="mb-2"
+  />
+  {formErrors.companyName && (
+    <div className="text-danger small">{formErrors.companyName}</div>
+  )}
 
-              <Button
-                variant="outline-dark"
-                className="popout-animation hover-button send-btn"
-                onClick={handleSubmit}
-                disabled={loading}
-                style={{
-                  borderRadius: "50px",
-                  padding: "10px 40px",
-                  fontWeight: "500",
-                  letterSpacing: "1px",
-                  fontSize: "25px",
-                  boxShadow: "3px 3px 1px 0px rgb(0, 0, 0)",
-                  transition: "box-shadow 0.2s ease-in-out",
-                }}
-              >
-                Send{" "}
-                <FontAwesomeIcon
-                  icon={faArrowRightLong}
-                  className="hover-icon"
-                />
-              </Button>
+  {/* City */}
+  <Form.Control
+    type="text"
+    name="city"
+    placeholder="City *"
+    value={formData.city}
+    onChange={handleChange}
+    isInvalid={!!formErrors.city}
+    className="mb-2"
+  />
+  <Form.Control.Feedback type="invalid">
+    {formErrors.city}
+  </Form.Control.Feedback>
 
-              {message && <p>{message}</p>}
-            </Form>
+  {/* Message */}
+  <Form.Control
+    as="textarea"
+    rows={4}
+    name="message"
+    placeholder="Message *"
+    value={formData.message}
+    onChange={handleChange}
+    isInvalid={!!formErrors.message}
+    className="mb-3"
+  />
+  <Form.Control.Feedback type="invalid">
+    {formErrors.message}
+  </Form.Control.Feedback>
+
+  {/* Submit */}
+  <Button
+    variant="outline-dark"
+    type="submit"
+    disabled={loading}
+    className="popout-animation hover-button send-btn"
+    style={{
+      borderRadius: "50px",
+      padding: "10px 40px",
+      fontWeight: "500",
+      letterSpacing: "1px",
+      fontSize: "25px",
+      boxShadow: "3px 3px 1px 0px rgb(0, 0, 0)",
+    }}
+  >
+    Send <FontAwesomeIcon icon={faArrowRightLong} />
+  </Button>
+
+  {message && <p className="mt-2">{message}</p>}
+</Form>
+
           </Col>
           <Col sm={7}>
             <img

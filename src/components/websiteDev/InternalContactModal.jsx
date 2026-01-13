@@ -140,7 +140,7 @@ const handleSubmit = async (e) => {
 
                     <Card.Body style={{ backgroundColor: 'white', padding: '20px', borderRadius: '10px' }}>
                         <h3 className="text-center mb-3" style={{ fontWeight: "bold", color: 'black' }}>
-                            Contact Us
+                            Contact Us  
                         </h3>
                         <Form onSubmit={handleSubmit} className="d-flex flex-column" style={{ color: 'black' }}>
                             <FloatingLabel controlId="floatingName" label="Name *" className="mb-3">
