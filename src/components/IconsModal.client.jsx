@@ -58,7 +58,7 @@ export default function IconsModal() {
             className="fw-bold"
             style={{ fontWeight: 600, fontSize: "52px", lineHeight: "1.5" }}
           >
-            Got <br /> a <br /> Project?
+            Got <br /> a <br /> Project
           </h2>
         </Col>
       </Row>

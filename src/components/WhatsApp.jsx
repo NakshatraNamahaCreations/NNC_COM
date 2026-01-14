@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 export default function WhatsAppButtons() {
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined") {
-      window.open("https://wa.me/919900566466", "_blank");
+      window.open("https://wa.me/919164566466", "_blank");
     }
   };
 

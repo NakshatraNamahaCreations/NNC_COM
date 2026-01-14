@@ -162,7 +162,7 @@ export default function Footer() {
       >
         <Row>
           {/* Quick Links */}
-          <Col sm={4} style={{ padding: "0 30px" }} className="col-first">
+          <Col sm={4}  className="col-first">
             <QuickLinks />
             <div>
               <h5
@@ -329,6 +329,20 @@ export default function Footer() {
                       </span>
                       64/2 RT, Prakashnagar, Begumpet, Hyderabad, Telangana -
                       500016
+                    </a>
+                  </li>
+                   <li style={{ marginBottom: "20px" }}>
+                   <a
+  href="https://www.google.com/maps/place/Lodha+Signet,+Kolshet+Road+Thane/@19.2339479,72.9854952,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b9d5e8737a41:0xbd231851659a1466!8m2!3d19.2339429!4d72.9880701!16s%2Fg%2F11kq99nbkp"
+  target="_blank"
+  rel="noopener noreferrer"
+                      style={{ textDecoration: "none", color: "white" }}
+                    >
+                      <span style={{ display: "flex", alignItems: "baseline" }}>
+                        <FaMapMarkerAlt style={{ marginRight: "10px" }} />
+                        <h6 style={{ fontWeight: "bold" }}>MUMBAI</h6>
+                      </span>
+                      Lodha Signet, 302, Kolshet Rd, Kolshet Industrial Area, Thane West, Thane, Maharashtra 400607
                     </a>
                   </li>
                 </ul>

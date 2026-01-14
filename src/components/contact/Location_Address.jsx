@@ -351,7 +351,11 @@ const MYSORE_MAP =
 const HYDERABAD_MAP =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7612.7355828092295!2d78.46998!3d17.442102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91cf429c8d33%3A0x354bddb11d7d6989!2sNakshatra%20Namaha%20Creations%20in%20Hyderabad!5e0!3m2!1sen!2sin!4v1754640150854!5m2!1sen!2sin";
 
-export default function LocationAddress() {
+  const MUMBAI_MAP =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.457691584264!2d72.98688157493395!3d19.233942899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9d5e8737a41%3A0xbd231851659a1466!2sLodha%20Signet%2C%20Kolshet%20Rd%2C%20Thane%20West!5e0!3m2!1sen!2sin!4v1757501500000!5m2!1sen!2sin";
+
+  
+  export default function LocationAddress() {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => setIsMounted(true), []);
 
@@ -661,6 +665,63 @@ export default function LocationAddress() {
             </Col>
           </Row>
         </div>
+
+
+                    {/* Hyderabad */}
+        <div style={{ marginBlock: "10%" }} ref={ref}>
+        {/* Mumbai */}
+<div style={{ marginBlock: "10%" }} ref={ref}>
+  <Row className="div-location-maps">
+    <Col sm={6}>
+      <iframe
+        title="Nakshatra Namaha Creations - Mumbai"
+        src={MUMBAI_MAP}
+        width="100%"
+        height={300}
+        style={{
+          border: "1px solid black",
+          boxShadow: "3px 3px 0px black",
+          borderRadius: "10px",
+        }}
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </Col>
+
+    <Col sm={6}>
+      <animated.h4
+        style={{
+          lineHeight: 1.5,
+          letterSpacing: "1px",
+          fontSize: "28px",
+          fontWeight: "900",
+          ...headingAnimation1,
+        }}
+      >
+        Mumbai
+      </animated.h4>
+
+      <animated.p
+        style={{
+          fontSize: "20px",
+          lineHeight: "1.7",
+          letterSpacing: "1px",
+          fontWeight: "500",
+          padding: "20px 0",
+          width: "90%",
+        }}
+      >
+        Lodha Signet, 302, Kolshet Rd, Kolshet Industrial Area, Thane West,
+        Thane, Maharashtra 400607
+      </animated.p>
+    </Col>
+  </Row>
+</div>
+
+        </div>
+
+
       </div>
     </Container>
   );

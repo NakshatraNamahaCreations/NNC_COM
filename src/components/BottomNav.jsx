@@ -7,7 +7,7 @@ export default function BottomNav() {
   const [activeTab, setActiveTab] = useState("");
 
   const tabs = [
-    { name: "whatsapp", label: "WhatsApp", icon: <FaWhatsapp size={20} />, action: () => window.open("https://wa.me/919900566466", "_blank") },
+    { name: "whatsapp", label: "WhatsApp", icon: <FaWhatsapp size={20} />, action: () => window.open("https://wa.me/919164566466", "_blank") },
     { name: "call", label: "Call", icon: <FaPhone size={20} />, action: () => (window.location.href = "tel:+919900566466") },
     { name: "more", label: "More", icon: <FaEllipsisH size={20} />, action: () => alert("Feature coming soon!") },
   ];
