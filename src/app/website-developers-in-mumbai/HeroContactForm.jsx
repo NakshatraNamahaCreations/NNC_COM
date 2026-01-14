@@ -8,15 +8,16 @@ import styles from "../../styles/HeroContactForm.module.css";
 export default function HeroContactForm() {
   const router = useRouter();
 
-  const [formData, setFormData] = useState({
-    user_name: "",
-    company_name: "",
-    user_email: "",
-    user_phone: "",
-    user_service: "",
-    city: "",
-    referenceFrom: "website",
-  });
+const [formData, setFormData] = useState({
+  user_name: "",
+  company_name: "",
+  user_email: "",
+  user_phone: "",
+  user_service: "",
+  city: "Bangalore",
+  referenceFrom: "blog",
+});
+
 
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
