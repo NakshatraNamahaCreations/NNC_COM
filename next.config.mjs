@@ -4,7 +4,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // You’re on cPanel/CDN today, so keep unoptimized:true.
   // (If you later deploy to Vercel/Netlify’s Next adapter, you can remove this.)
   images: {
     unoptimized: true,

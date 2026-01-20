@@ -363,40 +363,7 @@ const schemaMarkup = {
       }
     },
 
-    /* --- Reviews (software development specific) --- */
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://www.nakshatranamahacreations.com/software-development-company-in-bangalore#service" },
-      "author": { "@type": "Person", "name": "Arjun Mehta" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "Nakshatra Namaha Creations built a custom ERP system for our manufacturing business that streamlined operations and reporting. Seamless integration with our existing tools and exceptional attention to detail.",
-      "datePublished": "2025-05-01"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://www.nakshatranamahacreations.com/software-development-company-in-bangalore#service" },
-      "author": { "@type": "Person", "name": "Sneha Reddy" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "They delivered a scalable SaaS platform for our startup—secure, easy to use, and ready for future growth. Their software development expertise truly stands out.",
-      "datePublished": "2025-04-20"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://www.nakshatranamahacreations.com/software-development-company-in-bangalore#service" },
-      "author": { "@type": "Person", "name": "Karan Malhotra" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "They modernized our legacy systems and automated key workflows. Downtime was minimal and productivity improved significantly.",
-      "datePublished": "2025-03-15"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://www.nakshatranamahacreations.com/software-development-company-in-bangalore#service" },
-      "author": { "@type": "Person", "name": "Divya Patel" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1" },
-      "reviewBody": "Our custom booking application works flawlessly across devices. From UI to backend, the execution was professional and on time.",
-      "datePublished": "2025-05-10"
-    },
-
+ 
     /* --- FAQ (from your software development FAQ set) --- */
     {
       "@type": "FAQPage",

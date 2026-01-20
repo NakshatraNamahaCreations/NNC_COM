@@ -1,109 +1,118 @@
 .section {
   padding: 100px 0;
-  background: transparent;
+  background: #fff;
   text-align: center;
-  position: relative;
 }
 
 .heading {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 60px;
-  color: #000;
 }
 
+/* Slider wrapper */
 .slider {
   max-width: 1200px;
   margin: auto;
 }
 
+/* Force equal-height slides */
+.slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.slick-slide {
+  height: auto;
+  display: flex !important;
+}
+
+/* Slide padding */
+.slide {
+  padding: 0 15px;
+  display: flex;
+  height: 100%;
+}
+
+/* Card */
 .card {
-  transition: all 0.4s ease;
-  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.active {
-  opacity: 1;
+/* Center slide */
+.slick-center .card {
   transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
-.inactive {
-  opacity: 0.35;
-  filter: blur(1px);
-  transform: scale(0.9);
+/* Text */
+.text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #333;
 }
 
-.divider {
+/* Author */
+.meta {
+  margin-top: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.divider span {
-  width: 40px;
-  height: 1px;
-  background: #ddd;
-}
-
-.text {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 0 auto 30px;
-}
-
-.name {
-  font-size: 18px;
-  font-weight: 600;
-  color: #007bff;
-}
-
-.role {
-  font-size: 14px;
-  color: #888;
+  gap: 14px;
 }
 
 .avatar {
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-.avatar img {
   border-radius: 50%;
   object-fit: cover;
 }
 
-.arrow {
-  position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
-  background: #000;
-  color: #fff;
+.name {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Slick arrows */
+.slick-prev,
+.slick-next {
   width: 44px;
   height: 44px;
+  background: #000 !important;
   border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
+  z-index: 5;
 }
 
-.arrow:hover {
-  background: #007bff;
+.slick-prev:hover,
+.slick-next:hover {
+  background: #007bff !important;
 }
 
-.prev {
-  left: 60px;
+.slick-prev:before,
+.slick-next:before {
+  font-size: 18px;
+  color: #fff;
 }
 
-.next {
-  right: 60px;
+/* Dots */
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #aaa;
 }
 
+.slick-dots li.slick-active button:before {
+  color: #007bff;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .arrow {
-    display: none;
+  .heading {
+    font-size: 30px;
   }
 }

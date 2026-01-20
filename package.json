@@ -33,10 +33,10 @@
     "react-modal": "3.16.3",
     "react-player": "3.3.1",
     "react-simple-typewriter": "5.0.1",
-    "react-slick": "0.31.0",
+    "react-slick": "^0.31.0",
     "react-spring": "10.0.1",
     "react-type-animation": "3.2.0",
-    "slick-carousel": "1.8.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "12.0.3"
   },
   "devDependencies": {

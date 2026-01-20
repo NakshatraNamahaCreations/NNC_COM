@@ -126,3 +126,22 @@
 
 /* spacing similar to screenshot panel drop shadow */
 .section .panel { margin-bottom: 18px; }
+
+.heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #111;
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px;
+  }
+}
+
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+}

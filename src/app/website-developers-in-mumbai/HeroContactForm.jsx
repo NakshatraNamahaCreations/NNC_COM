@@ -14,7 +14,7 @@ const [formData, setFormData] = useState({
   user_email: "",
   user_phone: "",
   user_service: "",
-  city: "Bangalore",
+  city: "Mumbai",
   referenceFrom: "blog",
 });
 
