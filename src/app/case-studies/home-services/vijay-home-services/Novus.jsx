@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 
@@ -123,13 +124,17 @@ export default function Novus() {
       name: "Events Hospitality",
       link: "/case-studies/events-hospitality",
     },
+       {
+      name: "Vijaya Home Services",
+      link: "/case-studies/events-hospitality/vijay-home-services",
+    },
   ];
 
   return (
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="Vijaya Home Services – Scalable Website & Mobile App Development in Bangalore"
   date="September 2025"

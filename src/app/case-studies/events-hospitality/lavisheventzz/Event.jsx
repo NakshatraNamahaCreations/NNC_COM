@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 
@@ -123,13 +124,17 @@ export default function Event() {
       name: "Events Hospitality",
       link: "/case-studies/events-hospitality",
     },
+       {
+      name: "Lavish Events",
+      link: "/case-studies/events-hospitality/lavisheventzz",
+    },
   ];
 
   return (
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="Lavish Events – SEO-Focused Website Development for Event Businesses in Bangalore"
   date="September 2025"
