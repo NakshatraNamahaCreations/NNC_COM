@@ -61,7 +61,7 @@ export default function CaseStudyLayout() {
             </div>
 
             {/* OVERVIEW */}
-            <div className={styles.contentBlock}>
+            {/* <div className={styles.contentBlock}>
               <h2>Overview</h2>
               <p>
                 Vijaya Home Services required a scalable digital platform to
@@ -70,28 +70,50 @@ export default function CaseStudyLayout() {
                 handling high traffic, service bookings, and lead management
                 efficiently.
               </p>
+            </div> */}
+
+              {/* STRATEGY */}
+            <div className={styles.contentBlock}>
+              <h2>Technology Stack : </h2> React, Node.js, Scalable Backend Architecture
+
+              <p>
+               Vijaya Home Services is a fast-growing home services provider catering to urban customers who expect quick bookings, seamless communication, and reliable service delivery.
+               </p>
             </div>
 
             {/* BUSINESS CHALLENGE */}
             <div className={styles.contentBlock}>
               <h2>Business Challenge</h2>
               <p>
-                The existing online presence was not equipped to manage
-                increasing traffic, app-based service bookings, or structured
-                lead tracking. Vijaya Home Services needed a technology partner
-                who could build a scalable ecosystem—not just a basic website.
+                As customer demand increased, Vijaya Home Services began facing operational and digital limitations. Their existing online presence was not designed to scale and struggled with:
+
               </p>
+               <ul>
+                <li> Handling high traffic volumes during peak demand</li>
+                 <li> Supporting app-based service bookings</li>
+                  <li> Tracking leads effectively across channels</li>
+              </ul>
             </div>
 
             {/* STRATEGY */}
             <div className={styles.contentBlock}>
-              <h2>Our Strategy</h2>
-              <ul>
-                <li>Conversion-focused website structure</li>
-                <li>Mobile-first architecture for scalability</li>
-                <li>SEO-ready service pages from day one</li>
-                <li>Integrated booking and enquiry workflows</li>
+              <h2>Converting website visitors into qualified enquiries</h2>
+              <p>
+                The client was not looking for just another website vendor they needed a long-term technology partner who could build a scalable digital ecosystem.
+              </p>
+            </div>
+
+                <div className={styles.contentBlock}>
+              <h2>Project Objectives</h2>
+               <h2>The primary goals of this project were to:</h2>
+             <ul>
+                <li>Create a high-performance, scalable website </li>
+                 <li>Develop a mobile application for seamless service bookings </li>
+                 <li>Improve lead generation and enquiry tracking </li>
+                 <li>Build SEO-ready service pages to drive organic traffic </li>
+                 <li> Enable future expansion without rebuilding the platform</li>
               </ul>
+
             </div>
 
             {/* RESULTS */}
@@ -113,7 +135,15 @@ export default function CaseStudyLayout() {
               </ul>
             </div>
 
-            <TechStackTabsPremium />
+                 <div className={styles.contentBlock}>
+              <h2>Our Strategy</h2>
+              <p>
+                As a website and app development company in Bangalore, Nakshatra Namaha Creations approached this project with a product-driven mindset rather than a short-term development approach.
+                </p>
+            </div>
+            
+
+            {/* <TechStackTabsPremium /> */}
 
             {/* SEO PERFORMANCE */}
             <section className={styles.lavishSeoSection}>
@@ -282,6 +312,135 @@ export default function CaseStudyLayout() {
                   </div>
                 </div>
               </div>
+
+               <div className={styles.contentBlock}>
+              <h2>Strategic Focus Areas</h2>
+               <ul className={styles.resultsList}>
+                <li>
+                 • Designed a conversion-focused website structure with clear service pathways
+                </li>
+                <li>
+                 • Planned a mobile-first architecture to support rapid user growth
+                </li>
+                <li>
+               • Built SEO-structured service pages from day one
+                </li>
+                  <li>
+                 • Ensured backend scalability to handle increasing bookings and enquiries
+                </li>
+                <li>
+               • Every decision was aligned with performance, usability, and long-term business growth.
+                </li>
+                <li>
+               • Execution & Implementation
+
+                </li>
+              </ul>
+
+            </div>
+             <div className={styles.contentBlock}>
+              <h2>Website Development</h2>
+              <ul className={styles.resultsList}>
+                <li>
+                • Developed a fast, responsive business website
+                </li>
+            <li>
+                • Optimized for speed, usability, and cross-device compatibility
+                </li>
+                <li>
+                • Implemented clear enquiry and booking workflows
+                </li>
+                <li>
+                • Structured content for SEO visibility and lead conversion
+                </li>
+          
+              </ul>
+            </div>
+             <div className={styles.contentBlock}>
+              <h2>Mobile App Development</h2>
+                <ul className={styles.resultsList}>
+                <li>
+                • Built a customer-friendly mobile application
+                </li>
+            <li>
+              • Simplified service booking and request flow  
+                </li>
+                <li>
+                • Ensured smooth performance even during high user activity
+                </li>
+                
+          
+              </ul>
+            </div>
+             <div className={styles.contentBlock}>
+              <h2>SEO & Lead Enablement</h2>
+               <ul className={styles.resultsList}>
+                <li>
+               •  Implemented SEO-structured content and service pages
+                </li>
+            <li>
+                • Optimized site architecture for search engine crawling
+                </li>
+                <li>
+               •  Integrated enquiry tracking to improve lead quality
+                </li>
+                <li>
+                • Results & Business Impact
+
+                </li>
+          
+              </ul>
+            </div>
+
+                <div className={styles.contentBlock}>
+              <h2>The new digital platform delivered measurable results : </h2>
+               <ul className={styles.resultsList}>
+                <li>
+                 • 1,00,000+ mobile app downloads
+                </li>
+            <li>
+                 • Improved lead flow through website and mobile app
+                </li>
+                <li>
+                 • Strong organic visibility for competitive service keywords
+                </li>
+                <li>
+                 • Enhanced customer experience and engagement
+                </li>
+                <li>
+                 • Scalable infrastructure ready for future growth
+                </li>
+          
+              </ul>
+            </div>
+            <div className={styles.contentBlock}>
+              <h2>Why This Case Study Matters</h2>
+               <ul className={styles.resultsList}>
+                <li>
+                 • This project highlights Nakshatra Namaha Creations’ strength in building scalable digital ecosystems, not just websites or apps.
+                </li>
+               <li>
+                 • We combine technology, SEO, and conversion strategy
+                </li>
+                <li>
+                 • We design platforms that grow with the business
+                </li>
+                 <li>
+                 • We focus on performance, stability, and long-term ROI
+                </li>
+          
+              </ul>
+            </div>
+
+                 <div className={styles.contentBlock}>
+              <h2>Conclusion</h2>
+              <p>
+                    By partnering with Nakshatra Namaha Creations, Vijaya Home Services successfully transformed its digital presence into a high-performance website and mobile app ecosystem capable of supporting rapid growth and increasing customer demand.
+                    </p>
+                    <p>
+                    If your business requires a scalable website, mobile app, or full digital transformation, this case study demonstrates what the right strategy and execution can achieve.
+                    </p>
+            </div>
 
               {/* CTA */}
               <div className={styles.kaCtaSection}>

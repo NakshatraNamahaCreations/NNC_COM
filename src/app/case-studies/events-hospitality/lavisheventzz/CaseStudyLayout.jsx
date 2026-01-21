@@ -58,51 +58,114 @@ export default function CaseStudyLayout() {
 
           {/* Content Sections */}
           <div className={styles.contentBlock}>
-            <h2>Overview</h2>
+            <h2>Client Overview</h2>
             <p>
-              Lavish Events had a strong brand presence but limited search
-              visibility. Their website failed to rank for high-intent
-              event-related keywords, resulting in low organic enquiries.
+             Lavish Events is a professional event management company catering to weddings, corporate events, and private celebrations in Bangalore. While the brand had a strong offline reputation and creative portfolio, their digital presence was not contributing meaningfully to business growth.
             </p>
           </div>
 
           <div className={styles.contentBlock}>
             <h2>Business Challenge</h2>
             <p>
-              The website lacked SEO-friendly architecture, local intent
-              optimisation, and clear enquiry funnels—limiting discoverability
-              in Bangalore-based searches.
+             Despite having a functional website, Lavish Events faced a major visibility gap in search engines. Their website was not ranking for high-intent, event-related keywords that potential clients actively search for.
+            </p>
+            <p>
+             Key challenges included:
+            </p>
+            <ul>
+              <li> Low search engine visibility for event services in Bangalore</li>
+              <li> No structured service pages targeting specific event categories</li>
+               <li> Poor keyword mapping and content optimisation</li>
+              <li> Inconsistent organic enquiries despite strong brand credibility</li>
+            </ul>
+            <p>
+              The client needed more than just a design refresh. They required an SEO-driven website strategy that could generate long-term organic leads without depending heavily on paid advertising.
             </p>
           </div>
 
           <div className={styles.contentBlock}>
-            <h2>Our Strategy</h2>
-            <ul>
-              <li>SEO-first website architecture</li>
-              <li>Keyword-mapped service pages</li>
-              <li>Local SEO optimisation for Bangalore</li>
-              <li>Conversion-focused enquiry funnels</li>
+            <h2>Project Objectives</h2>
+            <p>
+              The primary goals of this project were to : 
+            </p>
+              <ul>
+              <li> Build an SEO-ready website structure aligned with search intent</li>
+              <li> Improve rankings for event-related keywords in Bangalore</li>
+               <li> Increase organic enquiries through search engines</li>
+              <li> Strengthen local visibility for competitive event searches</li>
+               <li> Create a scalable foundation for ongoing SEO growth</li>
             </ul>
           </div>
 
+           <div className={styles.contentBlock}>
+            <h2>Our Strategy</h2>
+            <p>
+              As a website development company specialising in SEO-focused builds, Nakshatra Namaha Creations approached this project with a clear understanding that structure and content drive rankings, not just design.
+            </p>
+            <p>
+              <strong>Strategic Focus Areas</strong>
+            </p>
+                <ul>
+              <li> Rebuilt the website with keyword-mapped service pages</li>
+              <li> Structured content around local SEO intent (Bangalore searches)</li>
+              <li> Designed clear enquiry funnels to convert organic visitors</li>
+              <li> Optimised on-page SEO elements without keyword stuffing</li>
+              <li> Created a scalable architecture to support continuous SEO efforts</li>
+            </ul>
+            <p>
+              Every decision was made to align search visibility with user intent and enquiry conversion.
+            </p>
+          </div>
+
+             <div className={styles.contentBlock}>
+            <h2>Execution & Implementation</h2>
+           
+            <p>
+              <strong>Website Development</strong>
+            </p>
+               <ul>
+              <li> Developed a clean, professional website aligned with the events industry</li>
+              <li> Created dedicated service pages for better keyword targeting</li>
+               <li> Improved internal linking for SEO crawlability</li>
+              <li> Ensured mobile responsiveness and fast page load performance</li>
+            </ul>
+
+              <p>
+              <strong>SEO Implementation</strong>
+            </p>
+               <ul>
+              <li> Optimised service pages for high-intent event keywords</li>
+              <li> Structured headings and content for better search relevance</li>
+               <li> Implemented local SEO best practices for Bangalore-based searches</li>
+              <li> Continuously refined content to improve ranking stability</li>
+            </ul>
+         
+          </div>
+
           <div className={styles.contentBlock}>
-            <h2>Results</h2>
+            <h2>Results & Business Impact</h2>
+            <p>
+              The SEO-focused website development delivered strong, measurable outcomes:
+            </p>
          <ul className={styles.resultsList}>
   <li>
     <FaTrophy className={styles.resultIcon} />
-    Top-1 Google rankings for 5–6 keywords
+    Top-1 Google rankings for 5–6 competitive event-related keywords
   </li>
   <li>
     <FaChartLine className={styles.resultIcon} />
-    Significant increase in organic enquiries
+   Significant increase in organic enquiries
   </li>
   <li>
     <FaMapMarkerAlt className={styles.resultIcon} />
-    Strong local visibility in Bangalore
+    Improved local visibility in Bangalore search results
   </li>
 </ul>
+<p>
+  The website transitioned from a static brand presence into a reliable business acquisition channel.
+</p>
           </div>
-          <TechStackTabsPremium/>
+          {/* <TechStackTabsPremium/> */}
 
     <section className={styles.lavishSeoSection}>
       <div className={styles.lavishSeoContainer}>
@@ -300,6 +363,31 @@ export default function CaseStudyLayout() {
             ))}
           </div>
         </div>
+
+
+     <div className={styles.contentBlock}>
+            <h2>Why This Case Study Matters</h2>
+            <p>
+           This project demonstrates how SEO-first website development can create long-term growth for service-based businesses.
+           </p>
+             <ul>
+              <li>• Rankings are built into the foundation, not added later </li>
+              <li>• Content is designed for both users and search engines</li>
+               <li>• Websites become lead-generating assets, not brochures</li>
+              <li>• SEO delivers compounding results over time</li>
+            </ul>
+          </div>
+ <div className={styles.contentBlock}>
+            <h2>Conclusion</h2>
+            <p>
+          By partnering with Nakshatra Namaha Creations, Lavish Events transformed their website into a search-optimised platform capable of driving consistent organic enquiries and strong local visibility.
+           </p>
+           <p>
+          This case study highlights how the right SEO strategy, combined with purposeful website development, can help event businesses dominate search results and attract high-intent customers.
+          If your business needs an SEO-ready website built for long-term growth, this project clearly shows what a structured, search-driven approach can achieve.
+           </p>
+         
+          </div>
 
     
       </div>

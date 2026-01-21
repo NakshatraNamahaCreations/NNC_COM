@@ -131,11 +131,11 @@ export default function Event() {
 
       {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
 <CaseStudyHeader
-  title="SEO-Focused Website Development for Event Businesses to Drive High-Intent Enquiries"
+  title="Lavish Events – SEO-Focused Website Development for Event Businesses in Bangalore"
   date="September 2025"
   industry="Events & Hospitality"
   platforms="SEO-Optimized Business Website"
-  services="Website development, SEO strategy, local SEO optimisation, conversion-focused UI design"
+  services="Website Development, SEO"
 />
 
 

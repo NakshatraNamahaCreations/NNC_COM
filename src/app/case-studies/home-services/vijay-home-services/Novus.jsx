@@ -131,11 +131,11 @@ export default function Novus() {
 
       {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
 <CaseStudyHeader
-  title="Scalable Website & Mobile App Development to Drive High-Intent Service Bookings"
+  title="Vijaya Home Services – Scalable Website & Mobile App Development in Bangalore"
   date="September 2025"
   industry="Home Services"
   platforms="Website & Mobile Application Platform"
-  services="Website development, mobile app development, SEO, Google Ads, booking & lead management"
+  services="Website Development, Mobile App Development, SEO, Google Ads"
 />
 
 

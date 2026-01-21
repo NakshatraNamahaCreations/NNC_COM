@@ -1,36 +1,45 @@
-
-
 // src/app/page.js
 import Event from "./Event.jsx";
 
 export const metadata = {
-    title: "Digital Marketing Company in Bangalore | Contact Us",
+  title: "Lavish Events | SEO Website Development for Event Businesses",
+  description:
+    "A case study on SEO-focused website development for an event business in Bangalore, driving higher rankings, enquiries, and long-term growth.",
+
+  keywords:
+    "Lavish Events case study, SEO website development Bangalore, event website SEO, SEO-focused website development, website development for event business",
+
+  alternates: {
+    canonical: "https://www.nakshatranamahacreations.com/case-studies/events-hospitality/lavisheventzz",
+  },
+
+  openGraph: {
+    title: "Lavish Events | SEO Website Development for Event Businesses",
     description:
-      "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-    keywords:
-      "Digital Marketing Company in Bangalore, Digital Marketing Company Near Me, Website Development Company in Bangalore, Mobile App Development Company in Bangalore",
-    canonical: "https://www.nakshatranamahacreations.com/case-studies",
-    openGraph: {
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      type: "website",
-      url: "https://www.nakshatranamahacreations.com/case-studies",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site_name: "Nakshatra Namaha Creations",
-    },
-    twitterCard: {
-      card: "summary_large_image",
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site: "@nnc_creations",
-      creator: "@nnc_creations",
-    },
- 
-  };
-  
+      "A case study on SEO-focused website development for an event business in Bangalore, driving higher rankings, enquiries, and long-term growth.",
+    url: "https://www.nakshatranamahacreations.com/case-studies/events-hospitality/lavisheventzz",
+    type: "website",
+    images: [
+      {
+        url: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
+      },
+    ],
+    siteName: "Nakshatra Namaha Creations",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Lavish Events | SEO Website Development for Event Businesses",
+    description:
+      "A case study on SEO-focused website development for an event business in Bangalore, driving higher rankings, enquiries, and long-term growth.",
+    images: [
+      "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
+    ],
+    site: "@nnc_creations",
+    creator: "@nnc_creations",
+  },
+};
+
 export default function ContactPage() {
   return <Event />;
 }

@@ -32,6 +32,7 @@ export default function Navbar_Menu1({ isHomePage }) {
     { path: "/our-works", label: "Our Works" },
     { path: "/blog", label: "Blogs" },
     { path: "/careers", label: "Careers" },
+        { path: "/case-studies", label: "Case Studies" },
     { path: "/contact-us", label: "Contact Us" },
   ];
 

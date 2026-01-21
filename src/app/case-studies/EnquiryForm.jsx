@@ -5,17 +5,20 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import styles from "../../styles/CaseStudiesGrid2.module.css";
 import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function EnquiryForm() {
   const router = useRouter();
 
   const [formData, setFormData] = useState({
     name: "",
+    companyName: "",           // ✅ added (same format)
     email: "",
     phone: "",
     service: "Case Study Enquiry",
-    referenceFrom: "website",
-    city: "Bangalore",
+    city: "Bangalore",         // ✅ same as popup
+    referenceFrom: "website",  // ✅ same as popup
+    sourceDomain: "nakshatra.com", // ✅ same as popup
   });
 
   const [errors, setErrors] = useState({});
@@ -29,7 +32,7 @@ export default function EnquiryForm() {
     if (name === "phone") {
       const digits = value.replace(/\D/g, "");
       if (digits.length <= 10) {
-        setFormData({ ...formData, phone: digits });
+        setFormData((prev) => ({ ...prev, phone: digits }));
       }
       return;
     }
@@ -37,11 +40,11 @@ export default function EnquiryForm() {
     // Name: letters & spaces only
     if (name === "name") {
       const lettersOnly = value.replace(/[^A-Za-z\s]/g, "");
-      setFormData({ ...formData, name: lettersOnly });
+      setFormData((prev) => ({ ...prev, name: lettersOnly }));
       return;
     }
 
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   // Submit handler
@@ -50,18 +53,14 @@ export default function EnquiryForm() {
 
     const newErrors = {};
 
-    // Name validation
-    if (!formData.name || formData.name.trim().length < 3) {
+    if (!/^[A-Za-z\s]{3,}$/.test(formData.name)) {
       newErrors.name = "Please enter a valid name";
     }
 
-    // Phone validation (India)
-    const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(formData.phone)) {
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit mobile number";
     }
 
-    // Optional email validation
     if (
       formData.email &&
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
@@ -69,7 +68,7 @@ export default function EnquiryForm() {
       newErrors.email = "Enter a valid email address";
     }
 
-    if (Object.keys(newErrors).length > 0) {
+    if (Object.keys(newErrors).length) {
       setErrors(newErrors);
       return;
     }
@@ -81,11 +80,13 @@ export default function EnquiryForm() {
         "https://api.nakshatranamahacreations.in/api/enquiries",
         {
           name: formData.name,
+          companyName: formData.companyName || "Case Study Lead", // ✅ fallback
           email: formData.email,
           phoneNo: formData.phone,
           service: formData.service,
-          referenceFrom: formData.referenceFrom,
           city: formData.city,
+          referenceFrom: formData.referenceFrom,
+          sourceDomain: formData.sourceDomain,
         }
       );
 
@@ -126,7 +127,7 @@ export default function EnquiryForm() {
           <input
             type="email"
             name="email"
-            placeholder="Email Address (Optional)"
+            placeholder="Email Address "
             value={formData.email}
             onChange={handleChange}
           />
@@ -147,13 +148,41 @@ export default function EnquiryForm() {
         </div>
         {errors.phone && <small className={styles.error}>{errors.phone}</small>}
 
+        {/* COMPANY NAME */}
+<div className={styles.field}>
+  <FaUser className={styles.icon} />
+  <input
+    type="text"
+    name="companyName"
+    placeholder="Company Name"
+    value={formData.companyName}
+    onChange={handleChange}
+    required
+  />
+</div>
+{errors.companyName && (
+  <small className={styles.error}>{errors.companyName}</small>
+)}
+
+{/* CITY */}
+<div className={styles.field}>
+<FaMapMarkerAlt className={styles.icon} />
+
+  <input
+    type="text"
+    name="city"
+    placeholder="City"
+    value={formData.city}
+    onChange={handleChange}
+    required
+  />
+</div>
+{errors.city && <small className={styles.error}>{errors.city}</small>}
+
+
         <button className={styles.button} disabled={loading}>
           {loading ? "Sending..." : "Send Enquiry"}
         </button>
-
-        <p className={styles.note}>
-          🔒 We respect your privacy. No spam.
-        </p>
       </form>
     </div>
   );

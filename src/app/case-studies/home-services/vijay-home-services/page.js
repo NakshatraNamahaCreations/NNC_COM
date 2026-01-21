@@ -1,36 +1,52 @@
-
-
 // src/app/page.js
 import Novus from "./Novus.jsx";
 
 export const metadata = {
-    title: "Digital Marketing Company in Bangalore | Contact Us",
+  title:
+    "Vijaya Home Services Case Study – Website & App Development Bangalore",
+
+  description:
+    "Discover how Nakshatra Namaha Creations built a scalable website and mobile app for Vijaya Home Services, boosting leads and SEO visibility.",
+
+  keywords:
+    "Vijaya Home Services case study, home services website development, mobile app development for home services, SEO-ready service pages, home services app development Bangalore",
+
+  // ✅ Proper canonical placement
+  alternates: {
+    canonical:
+      "https://www.nakshatranamahacreations.com/case-studies/home-services/vijay-home-services",
+  },
+
+  openGraph: {
+    title:
+      "Vijaya Home Services Case Study – Website & App Development Bangalore",
     description:
-      "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-    keywords:
-      "Digital Marketing Company in Bangalore, Digital Marketing Company Near Me, Website Development Company in Bangalore, Mobile App Development Company in Bangalore",
-    canonical: "https://www.nakshatranamahacreations.com/case-studies",
-    openGraph: {
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      type: "website",
-      url: "https://www.nakshatranamahacreations.com/case-studies",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site_name: "Nakshatra Namaha Creations",
-    },
-    twitterCard: {
-      card: "summary_large_image",
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site: "@nnc_creations",
-      creator: "@nnc_creations",
-    },
- 
-  };
-  
+      "Discover how Nakshatra Namaha Creations built a scalable website and mobile app for Vijaya Home Services, boosting leads and SEO visibility.",
+    url:
+      "https://www.nakshatranamahacreations.com/case-studies/home-services/vijay-home-services",
+    type: "website",
+    images: [
+      {
+        url: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
+      },
+    ],
+    siteName: "Nakshatra Namaha Creations",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Vijaya Home Services Case Study – Website & App Development Bangalore",
+    description:
+      "Discover how Nakshatra Namaha Creations built a scalable website and mobile app for Vijaya Home Services, boosting leads and SEO visibility.",
+    images: [
+      "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
+    ],
+    site: "@nnc_creations",
+    creator: "@nnc_creations",
+  },
+};
+
 export default function ContactPage() {
   return <Novus />;
 }
