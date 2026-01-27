@@ -14,7 +14,7 @@ const [formData, setFormData] = useState({
   user_email: "",
   user_phone: "",
   user_service: "",
-  city: "Bangalore",
+  city: "Mumbai",
   referenceFrom: "blog",
 });
 
@@ -35,7 +35,7 @@ const [formData, setFormData] = useState({
 
     setFormData((prev) => ({
       ...prev,
-      user_service: serviceMap[path] || "App Development",
+      user_service: serviceMap[path] || "Website Designer",
     }));
   }, []);
 

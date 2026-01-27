@@ -35,7 +35,7 @@ const [formData, setFormData] = useState({
 
     setFormData((prev) => ({
       ...prev,
-      user_service: serviceMap[path] || "General Enquiry",
+      user_service: serviceMap[path] || "Website Development",
     }));
   }, []);
 
