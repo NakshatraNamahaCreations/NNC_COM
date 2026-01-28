@@ -111,7 +111,7 @@
 }
 
 /* Decorative diagonal stripes – keep from your original if present */
-.stripes {
+/* .stripes {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -120,4 +120,4 @@
     linear-gradient(120deg, transparent 0% 40%, rgba(255,255,255,0.03) 40% 46%, transparent 46% 52%);
   background-size: 48px 48px, 64px 64px;
   opacity: .35;
-}
+} */

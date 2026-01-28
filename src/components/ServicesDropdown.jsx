@@ -888,8 +888,16 @@ const ServicesDropdown = ({ textColor }) => {
                     <li onClick={handleItemClick}>Motion Graphic Service</li>
                   </Link> 
                   <li onClick={handleItemClick}>Character Animation</li>
-                  <li onClick={handleItemClick}>Puppet Animation</li>
-                  <li onClick={handleItemClick}>Motion Graphics</li>
+                     <Link
+                    href="/puppet-animation-services"
+                    className="removelinkStyle"
+                    onClick={handleItemClick}
+                  >
+                    {" "}
+                    <li onClick={handleItemClick}>Puppet Animation</li>
+                  </Link> 
+                
+                  {/* <li onClick={handleItemClick}>Motion Graphics</li> */}
                 </ul>
               </div>
 
