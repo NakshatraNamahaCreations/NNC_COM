@@ -31,7 +31,7 @@ export const metadata = {
     site: "@nncbengaluru",
     title: "Corporate Film Makers in Mumbai | Professional Corporate Films",
     description:
-      "Looking for reliable corporate film makers in Mumbai? We create professional corporate films that help businesses tell their story and build credibility.",
+      "Looking for reliable corporate film makers in Mumbai We create professional corporate films that help businesses tell their story and build credibility.",
     images: [
       "https://www.nakshatranamahacreations.com/media/og/corporate-film-makers-mumbai-1200x630.jpg",
     ],
