@@ -32,22 +32,23 @@ export default function HeroBanner() {
               Looking for Flutter App Development in Mumbai. We build fast, scalable, and visually consistent cross-platform mobile applications using a single codebase for Android and iOS.
             </p>
 
-            <div className={styles.features}>
-              <div className={styles.featureCard}>
-                <FaBolt className={styles.featureIcon} />
-                <span>Faster Time-to-Market</span>
-              </div>
+                <div className={styles.features}>
+  <div className={styles.featureCard}>
+    <FaBolt className={styles.featureIcon} />
+    <span>Fast Delivery</span>
+  </div>
 
-              <div className={styles.featureCard}>
-                <FaCogs className={styles.featureIcon} />
-                <span>Single Codebase for Android & iOS</span>
-              </div>
+  <div className={styles.featureCard}>
+    <FaCogs className={styles.featureIcon} />
+    <span>Custom Features</span>
+  </div>
 
-              <div className={styles.featureCard}>
-                <FaCloud className={styles.featureIcon} />
-                <span>Scalable & High-Performance Apps</span>
-              </div>
-            </div>
+  <div className={styles.featureCard}>
+    <FaCloud className={styles.featureIcon} />
+    <span>Scalable & Secure</span>
+  </div>
+</div>
+
           </div>
 
           {/* RIGHT FORM */}

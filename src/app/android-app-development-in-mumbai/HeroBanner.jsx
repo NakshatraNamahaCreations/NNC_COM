@@ -32,22 +32,23 @@ export default function HeroBanner() {
               We design and develop high-performance Android applications for startups, enterprises, and growing businesses in Mumbai, focused on speed, stability, and real user engagement.
             </p>
 
-            <div className={styles.features}>
-              <div className={styles.featureCard}>
-                <FaBolt className={styles.featureIcon} />
-                <span>Fast Android App Delivery</span>
-              </div>
+           <div className={styles.features}>
+  <div className={styles.featureCard}>
+    <FaBolt className={styles.featureIcon} />
+    <span>Fast Delivery</span>
+  </div>
 
-              <div className={styles.featureCard}>
-                <FaCogs className={styles.featureIcon} />
-                <span>Custom App Functionality</span>
-              </div>
+  <div className={styles.featureCard}>
+    <FaCogs className={styles.featureIcon} />
+    <span>Custom Features</span>
+  </div>
 
-              <div className={styles.featureCard}>
-                <FaCloud className={styles.featureIcon} />
-                <span>Scalable & Secure Apps</span>
-              </div>
-            </div>
+  <div className={styles.featureCard}>
+    <FaCloud className={styles.featureIcon} />
+    <span>Scalable & Secure</span>
+  </div>
+</div>
+
           </div>
 
           {/* RIGHT FORM */}

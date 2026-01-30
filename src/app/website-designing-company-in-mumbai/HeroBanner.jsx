@@ -20,35 +20,36 @@ export default function HeroBanner() {
           <div className={styles.content}>
             <span className={styles.badge}>
               <FaBolt className={styles.badgeIcon} />
-              Build • Power • Scale Backend Systems
+              Design • Build • Elevate Your Online Presence
             </span>
 
             <h1 className={styles.heading}>
-              Node JS Development Company <br />
+              Website Designing Company <br />
               <span>in Mumbai</span>
             </h1>
 
             <p className={styles.subText}>
-              We build fast, secure, and scalable Node JS backend applications in Mumbai that support high traffic, real-time data, and modern web and mobile platforms.
+              We are a professional website designing company in Mumbai creating
+              visually engaging, user-friendly, and responsive websites that
+              help businesses build trust, attract customers, and grow online.
             </p>
 
-                <div className={styles.features}>
-  <div className={styles.featureCard}>
-    <FaBolt className={styles.featureIcon} />
-    <span>Fast Delivery</span>
-  </div>
+            <div className={styles.features}>
+              <div className={styles.featureCard}>
+                <FaBolt className={styles.featureIcon} />
+                <span>Creative UI/UX Design</span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCogs className={styles.featureIcon} />
-    <span>Custom Features</span>
-  </div>
+              <div className={styles.featureCard}>
+                <FaCogs className={styles.featureIcon} />
+                <span>User-Centric Layouts</span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCloud className={styles.featureIcon} />
-    <span>Scalable & Secure</span>
-  </div>
-</div>
-
+              <div className={styles.featureCard}>
+                <FaCloud className={styles.featureIcon} />
+                <span>Responsive & Scalable Design</span>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT FORM */}

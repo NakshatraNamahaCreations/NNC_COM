@@ -20,35 +20,34 @@ export default function HeroBanner() {
           <div className={styles.content}>
             <span className={styles.badge}>
               <FaBolt className={styles.badgeIcon} />
-              Design • Build • Scale iOS Applications
+              Build • Launch • Scale Online Stores
             </span>
 
             <h1 className={styles.heading} style={{ fontSize: "2.7rem" }}>
-              iOS App Development <br />
-              <span>in Mumbai</span>
+              Ecommerce Website Development <br />
+              <span>Company in Mumbai</span>
             </h1>
 
             <p className={styles.subText}>
-              Looking for iOS App Development in Mumbai? We build secure, high-performance iPhone and iPad applications for startups and enterprises, focused on speed, stability, and exceptional user experience.
+              We design and develop high-performing ecommerce websites for startups, brands, and growing businesses in Mumbai, focused on speed, security, and seamless shopping experiences.
             </p>
 
-                <div className={styles.features}>
-  <div className={styles.featureCard}>
-    <FaBolt className={styles.featureIcon} />
-    <span>Fast Delivery</span>
-  </div>
+            <div className={styles.features}>
+              <div className={styles.featureCard}>
+                <FaBolt className={styles.featureIcon} />
+                <span>Fast Store Launch</span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCogs className={styles.featureIcon} />
-    <span>Custom Features</span>
-  </div>
+              <div className={styles.featureCard}>
+                <FaCogs className={styles.featureIcon} />
+                <span>Custom Ecommerce </span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCloud className={styles.featureIcon} />
-    <span>Scalable & Secure</span>
-  </div>
-</div>
-
+              <div className={styles.featureCard}>
+                <FaCloud className={styles.featureIcon} />
+                <span>Scalable & Secure</span>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT FORM */}

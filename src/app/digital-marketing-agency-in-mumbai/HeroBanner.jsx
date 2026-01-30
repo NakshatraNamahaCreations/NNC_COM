@@ -20,35 +20,34 @@ export default function HeroBanner() {
           <div className={styles.content}>
             <span className={styles.badge}>
               <FaBolt className={styles.badgeIcon} />
-              Design • Build • Scale iOS Applications
+              Plan • Execute • Scale Digital Growth
             </span>
 
             <h1 className={styles.heading} style={{ fontSize: "2.7rem" }}>
-              iOS App Development <br />
-              <span>in Mumbai</span>
+              Digital Marketing <br />
+              <span>Agency in Mumbai</span>
             </h1>
 
             <p className={styles.subText}>
-              Looking for iOS App Development in Mumbai? We build secure, high-performance iPhone and iPad applications for startups and enterprises, focused on speed, stability, and exceptional user experience.
+              We help startups, brands, and growing businesses in Mumbai increase visibility, generate quality leads, and boost conversions through result-driven digital marketing strategies.
             </p>
 
-                <div className={styles.features}>
-  <div className={styles.featureCard}>
-    <FaBolt className={styles.featureIcon} />
-    <span>Fast Delivery</span>
-  </div>
+            <div className={styles.features}>
+              <div className={styles.featureCard}>
+                <FaBolt className={styles.featureIcon} />
+                <span>Faster Lead Generation</span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCogs className={styles.featureIcon} />
-    <span>Custom Features</span>
-  </div>
+              <div className={styles.featureCard}>
+                <FaCogs className={styles.featureIcon} />
+                <span>Data-Driven Campaigns</span>
+              </div>
 
-  <div className={styles.featureCard}>
-    <FaCloud className={styles.featureIcon} />
-    <span>Scalable & Secure</span>
-  </div>
-</div>
-
+              <div className={styles.featureCard}>
+                <FaCloud className={styles.featureIcon} />
+                <span>Scalable Growth </span>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT FORM */}

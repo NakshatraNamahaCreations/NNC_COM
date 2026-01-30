@@ -32,22 +32,23 @@ export default function HeroBanner() {
               Looking for React Native Mobile App Development in Mumbai? We build fast, scalable, and high-performance mobile applications using a single codebase for both Android and iOS platforms.
             </p>
 
-           <div className={styles.features}>
+          <div className={styles.features}>
   <div className={styles.featureCard}>
     <FaBolt className={styles.featureIcon} />
-    <span>Faster Development</span>
+    <span>Fast Build</span>
   </div>
 
   <div className={styles.featureCard}>
     <FaCogs className={styles.featureIcon} />
-    <span>Single Codebase</span>
+    <span>Unified Code</span>
   </div>
 
   <div className={styles.featureCard}>
     <FaCloud className={styles.featureIcon} />
-    <span>Scalable Performance</span>
+    <span>Scalable</span>
   </div>
 </div>
+    
 
           </div>
 
