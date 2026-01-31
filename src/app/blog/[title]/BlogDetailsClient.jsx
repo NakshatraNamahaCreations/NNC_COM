@@ -6,10 +6,10 @@ import axios from "axios";
 import { Col, Container, Row } from "react-bootstrap";
 import Breadcrumbs from "@/components/BreadCrumbs";
 import BlogContactForm from "@/components/blogs/BlogContactForm";
-import Icons from "@/components/Icons";
+import Icons from "@/components/Icons.client";
 import Script from "next/script";
 import "@/styles/BlogsFaqStyle.css";
-
+import ContactFrom from "@/components/ContactForm";
 // SAME API as grid
 const API_URL = "https://api.nakshatranamahacreations.in/api/blogs";
 const ASSET_BASE = "https://api.nakshatranamahacreations.in";
@@ -251,8 +251,8 @@ export default function BlogDetailsPage() {
           </Col>
 
           <Col sm={3} className="p-lg-0 p-4">
-            <div style={{ position: "sticky", top: "20px" }}>
-              <BlogContactForm />
+            <div style={{ position: "sticky", top: "150px" }}>
+              <ContactFrom />
             </div>
           </Col>
         </Row>

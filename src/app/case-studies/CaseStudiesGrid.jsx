@@ -59,6 +59,18 @@ const caseStudies = [
       { value: "60%", label: "Increase in Enquiry Conversions" },
     ],
   },
+  {
+  title: "Shreem Marmo",
+  desc: "Enhanced digital presence and lead generation for a premium marble and natural stone manufacturer.",
+  image: "/media/casestudies/shreemarmoo2.png",
+  link: "/case-studies/home-services/shreem-marmo",
+  results: [
+    { value: "85%", label: "Brand Visibility" },
+    { value: "60%", label: "Qualified Leads" },
+    { value: "70%", label: "Project Enquiry Growth" },
+  ],
+}
+
 ];
 
 

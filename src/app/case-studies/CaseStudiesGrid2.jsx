@@ -43,6 +43,8 @@ const industries = [
       "Secure handling of sensitive data",
     ],
   },
+
+  
 ];
 
 
