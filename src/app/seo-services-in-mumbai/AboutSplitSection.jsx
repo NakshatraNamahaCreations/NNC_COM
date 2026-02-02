@@ -5,9 +5,9 @@ import styles from "../../styles/aboutSplit.module.css";
 export default function AboutSplitSection() {
   return (
     <>
-      <section className={styles.section} style={{ padding: "10px 0" }}>
+      <section className={styles.section} >
         <div className={styles.container}>
-
+          
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
