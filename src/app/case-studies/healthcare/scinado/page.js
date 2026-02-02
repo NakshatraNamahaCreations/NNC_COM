@@ -7,11 +7,11 @@ export const metadata = {
   keywords:
     "Scinado skincare, Scinado soap, personal care products, skincare brand in India, moisturizing soap, skin glow soap, daily skincare products",
   alternates: {
-    canonical: "https://www.nakshatranamahacreations.com/case-studies/scinado",
+    canonical: "https://www.nakshatranamahacreations.com/healthcare/case-studies/scinado",
   },
   openGraph: {
     type: "website",
-    url: "https://www.nakshatranamahacreations.com/case-studies/scinado",
+    url: "https://www.nakshatranamahacreations.com/healthcare/case-studies/scinado",
     title: "Scinado | Premium Skincare & Personal Care Products",
     description:
       "Explore Scinado’s range of skincare and personal care products designed to cleanse, nourish, and protect your skin every day.",
