@@ -1,36 +1,42 @@
-
-
 // src/app/page.js
 import Health from "./Health.jsx";
 
 export const metadata = {
-    title: "Digital Marketing Company in Bangalore | Contact Us",
+  title: "Healthcare Case Studies | Medical & Wellness Project Success Stories",
+  description:
+    "Explore healthcare case studies showcasing successful medical, wellness, and health-focused projects that highlight innovation, patient-centric solutions, and measurable results.",
+  keywords:
+    "healthcare case studies, medical case studies, healthcare success stories, wellness project case studies, health industry case studies, medical solutions case studies",
+  alternates: {
+    canonical: "https://www.nakshatranamahacreations.com/healthcare",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.nakshatranamahacreations.com/healthcare",
+    title: "Healthcare Case Studies | Medical & Wellness Success Stories",
     description:
-      "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-    keywords:
-      "Digital Marketing Company in Bangalore, Digital Marketing Company Near Me, Website Development Company in Bangalore, Mobile App Development Company in Bangalore",
-    canonical: "https://www.nakshatranamahacreations.com/case-studies",
-    openGraph: {
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      type: "website",
-      url: "https://www.nakshatranamahacreations.com/case-studies",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site_name: "Nakshatra Namaha Creations",
-    },
-    twitterCard: {
-      card: "summary_large_image",
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site: "@nnc_creations",
-      creator: "@nnc_creations",
-    },
- 
-  };
-  
+      "Discover real-world healthcare case studies highlighting impactful medical and wellness projects with proven results.",
+    siteName: "Nakshatra Namaha Creations",
+    images: [
+      {
+        url: "https://www.nakshatranamahacreations.com/media/og/healthcare-1200x630.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Healthcare Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Healthcare Case Studies | Medical & Wellness Success Stories",
+    description:
+      "Real healthcare case studies showcasing medical, wellness, and patient-focused project success.",
+    images: [
+      "https://www.nakshatranamahacreations.com/media/og/healthcare-1200x630.jpg",
+    ],
+  },
+};
+
 export default function ContactPage() {
   return <Health />;
 }

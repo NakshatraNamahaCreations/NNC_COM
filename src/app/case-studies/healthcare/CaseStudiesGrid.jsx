@@ -27,6 +27,17 @@ const caseStudies = [
       { value: "60%", label: "Increase in Enquiry Conversions" },
     ],
   },
+   {
+    title: "Scinado",
+    desc: "Built a modern skincare brand website focused on product clarity, discoverability, and consumer trust.",
+    image: "/media/casestudies/scinado.png",
+    link: "/case-studies/healthcare/scinado",
+    results: [
+      { value: "Strong", label: "Brand Presentation" },
+      { value: "Clear", label: "Product Communication" },
+      { value: "Optimised", label: "Search Visibility Foundation" },
+    ],
+  },
 ];
 
 

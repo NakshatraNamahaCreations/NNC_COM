@@ -1,36 +1,42 @@
-
-
 // src/app/page.js
 import Event from "./Event.jsx";
 
 export const metadata = {
-    title: "Digital Marketing Company in Bangalore | Contact Us",
+  title: "Events & Hospitality Case Studies | Corporate & Brand Event Success Stories",
+  description:
+    "Explore events and hospitality case studies showcasing successful corporate events, brand activations, exhibitions, and guest experiences delivered with precision and creativity.",
+  keywords:
+    "events case studies, hospitality case studies, corporate event case studies, brand activation case studies, exhibition case studies, event management success stories",
+  alternates: {
+    canonical: "https://www.nakshatranamahacreations.com/events-hospitality",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.nakshatranamahacreations.com/events-hospitality",
+    title: "Events & Hospitality Case Studies",
     description:
-      "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-    keywords:
-      "Digital Marketing Company in Bangalore, Digital Marketing Company Near Me, Website Development Company in Bangalore, Mobile App Development Company in Bangalore",
-    canonical: "https://www.nakshatranamahacreations.com/case-studies",
-    openGraph: {
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      type: "website",
-      url: "https://www.nakshatranamahacreations.com/case-studies",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site_name: "Nakshatra Namaha Creations",
-    },
-    twitterCard: {
-      card: "summary_large_image",
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site: "@nnc_creations",
-      creator: "@nnc_creations",
-    },
- 
-  };
-  
+      "Real-world case studies highlighting impactful corporate events, hospitality management, exhibitions, and brand experiences.",
+    siteName: "Nakshatra Namaha Creations",
+    images: [
+      {
+        url: "https://www.nakshatranamahacreations.com/media/og/events-hospitality-1200x630.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Events and Hospitality Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Events & Hospitality Case Studies",
+    description:
+      "Successful event and hospitality case studies showcasing corporate events, exhibitions, and brand activations.",
+    images: [
+      "https://www.nakshatranamahacreations.com/media/og/events-hospitality-1200x630.jpg",
+    ],
+  },
+};
+
 export default function ContactPage() {
   return <Event />;
 }

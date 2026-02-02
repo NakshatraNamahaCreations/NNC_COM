@@ -113,7 +113,6 @@ export default function CaseStudyLayout() {
               </ul>
             </div>
 
-            <TechStackTabsPremium />
 
             {/* SEO PERFORMANCE */}
             <section className={styles.lavishSeoSection}>
@@ -261,7 +260,7 @@ export default function CaseStudyLayout() {
                 </div>
               </div>
             </section>
-
+<TechStackTabsPremium />
             {/* KEY ACHIEVEMENTS */}
             <section className={styles.kaSection}>
               <div className={styles.kaContainer}>

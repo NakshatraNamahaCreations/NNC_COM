@@ -11,7 +11,7 @@ export default function AboutSplitSection() {
         {/* LEFT CONTENT */}
         <div className={styles.left}>
        <h2 className={styles.heading}>
-  Best Website Designer
+  Trusted Best Website Designer
   <span> in Mumbai </span>
 </h2>
 

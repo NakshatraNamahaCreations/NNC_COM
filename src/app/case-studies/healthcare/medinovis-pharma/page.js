@@ -1,36 +1,42 @@
-
-
 // src/app/page.js
 import Novus from "./Novus.jsx";
 
 export const metadata = {
-    title: "Digital Marketing Company in Bangalore | Contact Us",
+  title: "Medinovis Pharma | Innovative Pharmaceutical Solutions",
+  description:
+    "Medinovis Pharma is a pharmaceutical company focused on delivering high-quality, research-driven medicines that support better health and patient care.",
+  keywords:
+    "Medinovis Pharma, pharmaceutical company in India, pharma manufacturing, healthcare medicines, pharmaceutical products, drug formulation company, quality medicines",
+  alternates: {
+    canonical: "https://www.nakshatranamahacreations.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.nakshatranamahacreations.com/",
+    title: "Medinovis Pharma | Innovative Pharmaceutical Solutions",
     description:
-      "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-    keywords:
-      "Digital Marketing Company in Bangalore, Digital Marketing Company Near Me, Website Development Company in Bangalore, Mobile App Development Company in Bangalore",
-    canonical: "https://www.nakshatranamahacreations.com/case-studies",
-    openGraph: {
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      type: "website",
-      url: "https://www.nakshatranamahacreations.com/case-studies",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site_name: "Nakshatra Namaha Creations",
-    },
-    twitterCard: {
-      card: "summary_large_image",
-      title: "Digital Marketing Company in Bangalore | Contact Us",
-      description:
-        "Get in touch with Nakshatra Namaha Creations, a leading digital marketing company in Bangalore. Let us discuss your business project and grow your business.",
-      image: "https://www.nakshatranamahacreations.com/media/NNCWebsite_ContactV2_Needthis.png",
-      site: "@nnc_creations",
-      creator: "@nnc_creations",
-    },
- 
-  };
-  
+      "Discover Medinovis Pharma, a trusted pharmaceutical company committed to innovation, quality manufacturing, and reliable healthcare solutions.",
+    siteName: "Medinovis Pharma",
+    images: [
+      {
+        url: "https://www.nakshatranamahacreations.com/wp-content/uploads/2023/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Medinovis Pharma",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Medinovis Pharma | Innovative Pharmaceutical Solutions",
+    description:
+      "A pharmaceutical company dedicated to quality, research, and reliable healthcare products.",
+    images: [
+      "https://www.nakshatranamahacreations.com/wp-content/uploads/2023/og-image.jpg",
+    ],
+  },
+};
+
 export default function ContactPage() {
   return <Novus />;
 }
