@@ -1,5 +1,5 @@
 // src/app/page.js
-import ContactClient from "./ContactClient.jsx";
+import Itservices from "./Itservices.jsx";
 
 export const metadata = {
   title: "Case Studies | Real Success Stories in Passport & Document Services",
@@ -34,5 +34,5 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return <Itservices />;
 }
