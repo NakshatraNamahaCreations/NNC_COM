@@ -11,8 +11,8 @@ export default function AboutSplitSection() {
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-              Android App Development
-               <span>  in Mumbai</span>
+              Android App Solutions Designed for 
+               <span>  Real Business Growth</span>
             </h2>
 
             <p className={styles.description}>

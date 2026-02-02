@@ -2,40 +2,67 @@
 import { FaArrowRight } from "react-icons/fa";
 import styles from "../../styles/aboutSplit.module.css";
 
-export default function AboutSplitSection1() {
+export default function AboutSplitSection() {
   return (
     <>
       <section className={styles.section}>
-        <div className={styles.container1}>
+        <div className={styles.container}>
 
-          {/* LEFT IMAGE */}
-          <div className={styles.right1}>
+          {/* LEFT CONTENT */}
+          <div className={styles.left}>
+            <h2 className={styles.heading}>
+              React Native App Solutions Designed for
+              <span> Real Business Growth</span>
+            </h2>
+
+            <p className={styles.description}>
+              A successful mobile application goes beyond functionality—it must be fast, reliable, and scalable. As a trusted React Native mobile app development company in Mumbai, we build cross-platform applications that deliver native-like performance on both Android and iOS while aligning with real business objectives.
+            </p>
+
+            <p className={styles.description}>
+              Whether you’re a startup launching your first React Native app or an established business upgrading an existing product, we turn your idea into a reliable, market-ready application. From planning and UI design to development, testing, and app store deployment, our React Native mobile app development services in Mumbai are structured to help your app scale, adapt, and deliver measurable results.
+            </p>
+
+            <br />
+
+            <a href="/contact-us" className={styles.cta}>
+              Book Free Consultation <FaArrowRight color="#fff" size={16} />
+            </a>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className={styles.right}>
             <img
-              src="/media/tech/25.png"
+              src="/media/tech/mobileapp.png"
               alt="React Native Mobile App Development in Mumbai"
               className={styles.image}
             />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className={styles.left1}>
-            <h2 className={styles.heading}>
-              Build Powerful <span>React Native Apps With</span> Expert Developers in Mumbai
-            </h2>
+        </div>
+      </section>
 
-            <p className={styles.description}>
-              Partner with an experienced team specializing in <strong>React Native Mobile App Development in Mumbai</strong> that understands cross-platform performance and real business needs. Our developers build fast, scalable, and reliable mobile applications using a single codebase for both Android and iOS.
-            </p>
+      <section
+        className={styles.ctaWrapper}
+        style={{
+          backgroundImage: "url('/media/tech/banner32.jpg')",
+        }}
+      >
+        <div className={styles.overlay}></div>
 
-            <p className={styles.description}>
-              From selecting the right React Native architecture and planning core features to development, testing, and Play Store & App Store deployment, we manage the complete development lifecycle. Our expertise in <strong>React Native Mobile App Development in Mumbai</strong> ensures faster releases, smooth performance, and long-term scalability.
-            </p>
+        <div className={styles.content}>
+          <h2>
+            <span>Build What Matters</span> <br />
+            Your React Native App Development Partner in Mumbai
+          </h2>
 
-            {/* <button className={styles.cta}>
-              Book Free Consultation <FaArrowRight color="#fff" size={16} />
-            </button> */}
-          </div>
+          <p>
+            Transform your mobile app idea into a secure, scalable, and high-performance cross-platform solution with a Mumbai-based React Native development team focused on long-term success.
+          </p>
 
+          <a href="/contact-us" className={styles.ctaBtn}>
+            Book Free Call <FaArrowRight color="#fff" size={16} />
+          </a>
         </div>
       </section>
     </>

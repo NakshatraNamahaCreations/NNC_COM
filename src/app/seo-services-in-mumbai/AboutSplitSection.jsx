@@ -11,17 +11,17 @@ export default function AboutSplitSection() {
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-             Trusted React JS Development Company
+           Trusted   SEO Services
               <span> in Mumbai </span>
             </h2>
 
             <p className={styles.description}>
-              Modern web applications demand speed, flexibility, and seamless user experiences. As a trusted React JS development company in Mumbai, we build dynamic, component-driven applications that are fast, scalable, and easy to maintain.
+              Ranking on Google is no longer optional for growing businesses. As a results-driven SEO services company in Mumbai, we help brands increase visibility, attract quality traffic, and generate consistent leads through proven search engine optimization strategies.
             </p>
 
             <p className={styles.description}>
-              Our React developers in Mumbai create high-performance frontends for startups, growing businesses, and enterprises. Whether you need a single-page application, a complex dashboard, or a scalable web platform, we focus on clean architecture, reusable components, and smooth performance across devices.
-              Every React solution we build is optimized for long-term growth, easy updates, and real business outcomes.
+              Our SEO experts in Mumbai work with startups, local businesses, and enterprises to improve rankings across competitive keywords. From technical SEO and on-page optimization to content strategy and link building, we focus on sustainable growth that delivers measurable business impact.
+              Every SEO campaign is designed to strengthen your online presence and drive long-term results.
             </p>
 
             <br />
@@ -33,9 +33,9 @@ export default function AboutSplitSection() {
 
           {/* RIGHT IMAGE */}
           <div className={styles.right}>
-            <img
-              src="/media/tech/website-mumbai9.png"
-              alt="React JS Development Company in Mumbai"
+           <img
+              src="/media/tech/seo9.jpg"
+              alt="Digital Marketing Agency in Mumbai"
               className={styles.image}
             />
           </div>
@@ -54,12 +54,12 @@ export default function AboutSplitSection() {
         <div className={styles.content}>
           <div className={styles.content}>
             <h2>
-              <span>Build Scalable React Applications</span> <br />
-              React JS Development Company in Mumbai
+              <span>Improve Your Search Rankings</span> <br />
+              SEO Services in Mumbai
             </h2>
 
             <p>
-              Partner with a Mumbai-based React JS development team that delivers fast, responsive, and future-ready web applications tailored to your business goals.
+              Work with a Mumbai-based SEO team that focuses on higher rankings, better visibility, and real business growth through ethical and performance-focused SEO practices.
             </p>
           </div>
 

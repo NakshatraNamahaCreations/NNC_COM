@@ -20,34 +20,32 @@ export default function HeroBanner() {
           <div className={styles.content}>
             <span className={styles.badge}>
               <FaBolt className={styles.badgeIcon} />
-              Design • Build • Elevate Your Online Presence
+              Analyze • Optimize • Grow Search Visibility
             </span>
 
             <h1 className={styles.heading}>
-              Website Designing Company
+              SEO Services 
               <span> in Mumbai</span>
             </h1>
 
             <p className={styles.subText}>
-              We are a professional website designing company in Mumbai creating
-              visually engaging, user-friendly, and responsive websites that
-              help businesses build trust, attract customers, and grow online.
+              We deliver result-driven SEO services in Mumbai that improve Google rankings, increase organic traffic, and generate consistent, high-quality leads for your business.
             </p>
 
             <div className={styles.features}>
               <div className={styles.featureCard}>
                 <FaBolt className={styles.featureIcon} />
-                <span>Creative UI/UX Design</span>
+                <span>Higher Google Rankings</span>
               </div>
 
               <div className={styles.featureCard}>
                 <FaCogs className={styles.featureIcon} />
-                <span>User-Centric Layouts</span>
+                <span>Data-Driven SEO Strategy</span>
               </div>
 
               <div className={styles.featureCard}>
                 <FaCloud className={styles.featureIcon} />
-                <span>Responsive  Design</span>
+                <span>Long-Term Organic Growth</span>
               </div>
             </div>
           </div>

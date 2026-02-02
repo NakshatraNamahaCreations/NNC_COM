@@ -24,8 +24,8 @@ export default function HeroBanner() {
             </span>
 
             <h1 className={styles.heading} style={{ fontSize: "2.7rem" }}>
-              React Native Mobile App Development <br />
-              <span>in Mumbai</span>
+              React Native Mobile App Development 
+              <span> in Mumbai</span>
             </h1>
 
             <p className={styles.subText}>

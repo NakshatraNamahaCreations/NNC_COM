@@ -10,10 +10,11 @@ export default function AboutSplitSection() {
 
           {/* LEFT CONTENT */}
           <div className={styles.left}>
-            <h2 className={styles.heading}>
-              Digital Marketing Agency
-              <span> in Mumbai </span>
-            </h2>
+         <h2 className={styles.heading}>
+ Trusted Digital Marketing Services
+  <span> in Mumbai </span>
+</h2>
+
 
             <p className={styles.description}>
               Growing a business online requires the right mix of strategy, creativity, and performance-driven execution. As a reliable digital marketing agency in Mumbai, we help brands increase visibility, attract qualified leads, and convert traffic into real customers through data-backed marketing solutions.
@@ -54,7 +55,7 @@ export default function AboutSplitSection() {
         <div className={styles.content}>
           <div className={styles.content}>
             <h2>
-              <span>Drive Growth with Result-Oriented Marketing</span> <br />
+              <span>Marketing That Delivers Results</span> <br />
               Digital Marketing Agency in Mumbai
             </h2>
 

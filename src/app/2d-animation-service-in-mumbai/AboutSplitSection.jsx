@@ -10,10 +10,10 @@ export default function AboutSplitSection() {
 
           {/* LEFT CONTENT */}
           <div className={styles.left}>
-            <h2 className={styles.heading}>
-              2D Animation Service
-              <span> In Mumbai </span>
-            </h2>
+           <h2 className={styles.heading}>
+  Engaging 2D Animation Solutions
+  <span> In Mumbai </span>
+</h2>
 
             <p className={styles.description}>
               2D animation is one of the most effective ways for businesses to

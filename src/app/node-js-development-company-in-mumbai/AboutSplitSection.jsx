@@ -11,7 +11,7 @@ export default function AboutSplitSection() {
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-              Node JS Development Company
+            Trusted  Node JS Development Company
               <span> in Mumbai </span>
             </h2>
 

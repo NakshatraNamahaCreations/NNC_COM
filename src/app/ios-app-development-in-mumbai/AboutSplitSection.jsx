@@ -11,7 +11,7 @@ export default function AboutSplitSection() {
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-              iOS App Development
+             Trusted iOS App Development
               <span> in Mumbai</span>
             </h2>
 

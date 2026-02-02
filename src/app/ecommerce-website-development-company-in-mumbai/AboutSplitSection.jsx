@@ -11,7 +11,7 @@ export default function AboutSplitSection() {
           {/* LEFT CONTENT */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-              Ecommerce Website Development Company
+              Trusted Ecommerce Website Development Company
               <span> in Mumbai </span>
             </h2>
 

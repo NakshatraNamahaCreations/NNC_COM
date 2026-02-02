@@ -83,7 +83,7 @@ const PremiumTestimonials = () => {
     <section className="tr-section">
       <Container>
         <div className="tr-heading text-center">
-          <h2 className="tr-title">What Our React JS Clients Say</h2>
+          <h2 className="tr-title">What Our  Clients Say</h2>
         </div>
 
         <div className="tr-slider-wrapper">

@@ -2,40 +2,67 @@
 import { FaArrowRight } from "react-icons/fa";
 import styles from "../../styles/aboutSplit.module.css";
 
-export default function AboutSplitSection1() {
+export default function AboutSplitSection() {
   return (
     <>
       <section className={styles.section}>
-        <div className={styles.container1}>
+        <div className={styles.container}>
 
-          {/* LEFT IMAGE */}
-          <div className={styles.right1}>
+          {/* LEFT CONTENT */}
+          <div className={styles.left}>
+            <h2 className={styles.heading}>
+              Flutter App Solutions Designed for
+              <span> Real Business Growth</span>
+            </h2>
+
+            <p className={styles.description}>
+              A successful mobile application is more than just functionality—it’s about performance, usability, and scalability. As a trusted Flutter app development company in Mumbai, we build high-quality cross-platform applications that run smoothly on both Android and iOS while aligning with real business objectives.
+            </p>
+
+            <p className={styles.description}>
+              Whether you’re a startup launching your first Flutter app or an established business modernizing an existing product, we turn your ideas into reliable, market-ready applications. From planning and UI design to development, testing, and deployment, our Flutter app development services in Mumbai are structured to help your app scale, adapt, and deliver measurable results.
+            </p>
+
+            <br />
+
+            <a href="/contact-us" className={styles.cta}>
+              Book Free Consultation <FaArrowRight color="#fff" size={16} />
+            </a>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className={styles.right}>
             <img
-              src="/media/tech/25.png"
+              src="/media/tech/mobileapp.png"
               alt="Flutter App Development in Mumbai"
               className={styles.image}
             />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className={styles.left1}>
-            <h2 className={styles.heading}>
-              Build Powerful <span>Flutter Apps With</span> Expert Developers in Mumbai
-            </h2>
+        </div>
+      </section>
 
-            <p className={styles.description}>
-              Partner with a skilled team specializing in Flutter App Development in Mumbai that understands both cross-platform technology and real business goals. Our developers build fast, responsive, and visually consistent Flutter applications using a single codebase for Android and iOS.
-            </p>
+      <section
+        className={styles.ctaWrapper}
+        style={{
+          backgroundImage: "url('/media/tech/banner32.jpg')",
+        }}
+      >
+        <div className={styles.overlay}></div>
 
-            <p className={styles.description}>
-              From choosing the right Flutter architecture and planning core features to development, testing, and app store deployment, we manage the complete lifecycle. Our expertise in Flutter App Development in Mumbai ensures your app delivers smooth performance, faster time-to-market, and long-term scalability.
-            </p>
+        <div className={styles.content}>
+          <h2>
+            <span>Build What Matters</span> <br />
+            Your Flutter App Development Partner in Mumbai
+          </h2>
 
-            {/* <button className={styles.cta}>
-              Book Free Consultation <FaArrowRight color="#fff" size={16} />
-            </button> */}
-          </div>
+          <p>
+            Transform your app idea into a fast, secure, and scalable cross-platform solution with a Mumbai-based Flutter development team focused on long-term success.
+          </p>
 
+          <a href="/contact-us" className={styles.ctaBtn}>
+            Book Free Call <FaArrowRight color="#fff" size={16} />
+          </a>
         </div>
       </section>
     </>
