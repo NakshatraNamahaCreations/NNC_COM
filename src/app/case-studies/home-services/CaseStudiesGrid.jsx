@@ -36,6 +36,17 @@ const caseStudies = [
     { value: "Consistent", label: "Qualified Enquiries" },
     { value: "Strong", label: "Client Engagement" },
   ],
+},
+{
+  title: "Avyakth Roofing Solutions",
+  desc: "Enhanced brand visibility and lead flow for a premium roofing solutions provider serving residential, commercial, and institutional projects.",
+  image: "/media/casestudies/avyakthroofing.png",
+  link: "/case-studies/home-services/avyakthroofing",
+  results: [
+    { value: "High", label: "Brand Trust" },
+    { value: "Steady", label: "Project Enquiries" },
+    { value: "Strong", label: "Market Presence" },
+  ],
 }
 
 
