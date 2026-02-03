@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 
@@ -120,16 +121,21 @@ export default function Novus() {
       link: "/case-studies",
     },
         {
-      name: "Events Hospitality",
-      link: "/case-studies/events-hospitality",
+      name: "Home Services",
+      link: "/case-studies/healthcare",
+    },
+       {
+      name: "Medinovis Pharma",
+      link: "/case-studies/healthcare/medinovis-pharma",
     },
   ];
+
 
   return (
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="Pharmaceutical Website Development Focused on Product Transparency, Research & Quality Assurance"
   date="October 2025"

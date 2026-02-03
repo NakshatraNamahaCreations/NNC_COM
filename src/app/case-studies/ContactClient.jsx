@@ -114,8 +114,8 @@ export default function ContactClient() {
   const breadcrumbPaths = [
     { name: "Home", link: "/" },
     {
-      name: "Contact Us",
-      link: "/contact-us",
+      name: "Case Studies",
+      link: "/case-studies",
     },
   ];
 

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
-
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 export default function Novus() {
@@ -120,16 +120,21 @@ export default function Novus() {
       link: "/case-studies",
     },
         {
-      name: "Events Hospitality",
-      link: "/case-studies/events-hospitality",
+      name: "Home Services",
+      link: "/case-studies/healthcare",
+    },
+       {
+      name: "Novus Health ",
+      link: "/case-studies/healthcare/novus-health",
     },
   ];
+
 
   return (
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="SEO-Driven Healthcare Website Development for Building Patient Trust & Enquiry Confidence"
   date="October 2025"

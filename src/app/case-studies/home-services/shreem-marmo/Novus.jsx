@@ -121,12 +121,12 @@ export default function Novus() {
       link: "/case-studies",
     },
         {
-      name: "Events Hospitality",
-      link: "/case-studies/events-hospitality",
+      name: "Home Services",
+      link: "/case-studies/home-services",
     },
        {
-      name: "Vijaya Home Services",
-      link: "/case-studies/events-hospitality/vijay-home-services",
+      name: "Shree Marmo",
+      link: "/case-studies/home-services/shreem-marmo",
     },
   ];
 

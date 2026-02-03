@@ -25,6 +25,17 @@ const caseStudies = [
     { value: "60%", label: "Qualified Leads" },
     { value: "70%", label: "Project Enquiry Growth" },
   ],
+},
+{
+  title: "Ganesh Interior Designs",
+  desc: "Strengthened digital presence and enquiry flow for a residential and commercial interior design and renovation studio.",
+  image: "/media/casestudies/ganesh-interiors.png",
+  link: "/case-studies/home-services/ganesh-interior",
+  results: [
+    { value: "High", label: "Design Visibility" },
+    { value: "Consistent", label: "Qualified Enquiries" },
+    { value: "Strong", label: "Client Engagement" },
+  ],
 }
 
 

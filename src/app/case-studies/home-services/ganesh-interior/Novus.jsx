@@ -125,8 +125,8 @@ export default function Novus() {
       link: "/case-studies/home-services",
     },
        {
-      name: "Vijay Home Services",
-      link: "/case-studies/home-services/vijay-home-services",
+      name: "Ganesh Interior Designs ",
+      link: "/case-studies/home-services/ganesh-interior",
     },
   ];
 
@@ -136,11 +136,11 @@ export default function Novus() {
 
       <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
-  title="Vijaya Home Services – Scalable Website & Mobile App Development in Bangalore"
-  date="September 2025"
-  industry="Home Services"
-  platforms="Website & Mobile Application Platform"
-  services="Website Development, Mobile App Development, SEO, Google Ads"
+  title="Ganesh Interior Designs – Residential & Commercial Interior Design and Renovation"
+  date="Interior Design Case Study"
+  industry="Interior Design & Renovation"
+  platforms="Design Planning & Turnkey Execution"
+  services="Residential Interiors, Commercial Interiors, Modular Kitchens & Wardrobes, Renovation Services"
 />
 
 

@@ -120,8 +120,12 @@ export default function Event() {
       link: "/case-studies",
     },
         {
-      name: "Events Hospitality",
-      link: "/case-studies/events-hospitality",
+      name: "It Services",
+      link: "/case-studies/it-services",
+    },
+       {
+      name: "Make My Documents ",
+       link: "/case-studies/it-services/makemydocuments",
     },
   ];
 
@@ -129,7 +133,7 @@ export default function Event() {
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="SEO-Focused Website Development for Event Businesses to Drive High-Intent Enquiries"
   date="September 2025"

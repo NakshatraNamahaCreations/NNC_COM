@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
-
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 export default function Novus() {
@@ -120,8 +120,12 @@ export default function Novus() {
       link: "/case-studies",
     },
         {
-      name: "Events Hospitality",
-      link: "/case-studies/events-hospitality",
+      name: "Home Services",
+      link: "/case-studies/healthcare",
+    },
+       {
+      name: "Scinado ",
+      link: "/case-studies/healthcare/scinado",
     },
   ];
 
@@ -129,7 +133,7 @@ export default function Novus() {
     <div>
 
 
-      {/* <Breadcrumbs paths={breadcrumbPaths} /> */}
+      <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
   title="SEO-Ready Skincare Website Development for Brand Visibility & Consumer Trust"
   date="October 2025"
