@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import CaseStudyHeader from "./CaseStudyHeader";
 import CaseStudyLayout from "./CaseStudyLayout";
-
+import Breadcrumbs from "@/components/BreadCrumbs";
 
 
 export default function Event() {
