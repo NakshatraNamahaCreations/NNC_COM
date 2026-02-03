@@ -1,5 +1,5 @@
 // src/app/page.js
-import Event from "./Event.jsx";
+import Itservices from "./Itservices.jsx";
 
 export const metadata = {
   title: "IT Services Case Studies | Web, App & Digital Solutions",
@@ -46,5 +46,5 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <Event />;
+  return <Itservices />;
 }
