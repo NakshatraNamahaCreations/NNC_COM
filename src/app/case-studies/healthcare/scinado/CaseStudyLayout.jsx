@@ -55,7 +55,7 @@ export default function CaseStudyLayout() {
             {/* Banner */}
             <div className={styles.banner}>
               <img
-                src="/media/casestudies/scinado1.png"
+                src="/media/casestudies/scinado2.png"
                 alt="Scinado Skincare Website Case Study"
               />
             </div>

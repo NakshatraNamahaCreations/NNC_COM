@@ -272,8 +272,7 @@ export default function Footer() {
                     +91 9900566466
                   </li>
                   <li style={{ marginBottom: "20px" }}>
-                    <a
-                      href="mailto:info@nakshatranamahacreations.com"
+                   <a href="mailto:info@nakshatranamahacreations.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
