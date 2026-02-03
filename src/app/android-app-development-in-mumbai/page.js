@@ -1,9 +1,9 @@
 import CoporateVideoProd from "./CoporateVideoProd";
 
 export const metadata = {
-  title: "Android App Development in Mumbai | Expert Android Developers",
-  description:
-    "Looking for Android app development in Mumbai Hire expert Android developers to build secure, scalable, and high-performance mobile applications for startups and enterprises.",
+  title: "Android App Development in Mumbai | Expert Android App Developers",
+description:
+  "Trusted Android app development company in Mumbai building secure, scalable, and performance-driven mobile applications for startups and enterprises.",
   keywords:
     "android app development in mumbai, android app developers in mumbai, android app development company in mumbai, android application development mumbai, best android app developers mumbai, top android app development companies in mumbai",
   alternates: {
@@ -13,9 +13,9 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "https://www.nakshatranamahacreations.com/android-app-development-in-mumbai",
-    title: "Android App Development in Mumbai | Expert Android Developers",
+    title: "Android App Development in Mumbai | Expert Android App Developers",
     description:
-      "Hire a trusted Android app development company in Mumbai delivering scalable, secure, and performance-driven Android applications.",
+      "Trusted Android app development company in Mumbai delivering secure, scalable, and performance-driven mobile applications for businesses.",
     siteName: "Nakshatra Namaha Creations",
     images: [
       {
@@ -29,9 +29,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@nncbengaluru",
-    title: "Android App Development in Mumbai | Expert Android Developers",
+    title: "Android App Development in Mumbai | Expert Android App Developers",
     description:
-      "Looking for Android app development in Mumbai We build secure, scalable, and high-performance Android apps for businesses.",
+      "Hire expert Android app developers in Mumbai to build secure, scalable, and high-performance mobile applications for your business.",
     images: [
       "https://www.nakshatranamahacreations.com/media/og/android-app-development-in-mumbai-1200x630.jpg",
     ],

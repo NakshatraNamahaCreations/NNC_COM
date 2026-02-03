@@ -2,8 +2,8 @@ import CoporateVideoProd from "./CoporateVideoProd";
 
 export const metadata = {
   title: "Social Media Marketing In Mumbai | Creative Social Media Services",
-  description:
-    "Professional Social Media Marketing In Mumbai offering content creation, social media campaigns, brand promotions, audience engagement, and result-driven marketing solutions for businesses.",
+ description:
+  "Professional social media marketing in Mumbai offering content creation, paid campaigns, brand promotion, audience engagement, and proven growth for businesses.",
   keywords:
     "social media marketing in mumbai, social media marketing company in mumbai, social media agency mumbai, social media management services mumbai, digital marketing agency mumbai",
   alternates: {

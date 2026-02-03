@@ -3,7 +3,7 @@ import CoporateVideoProd from "./CoporateVideoProd";
 export const metadata = {
   title: "Best Website Design and Development In Mumbai | Professional Web Solutions",
   description:
-    "Looking for the best website design and development in Mumbai? We build fast, responsive, secure, and SEO-friendly websites that help businesses grow, engage users, and convert leads.",
+    "Looking for the best website design and development in Mumbai. We create fast, responsive, secure, and SEO-friendly websites that help businesses grow online.",
   keywords:
     "best website design and development in mumbai, website design and development company in mumbai, professional website developers in mumbai, responsive website development mumbai, seo friendly website development mumbai, custom website development in mumbai, business website development mumbai",
   alternates: {
@@ -15,7 +15,7 @@ export const metadata = {
     url: "https://www.nakshatranamahacreations.com/best-website-design-and-development-in-mumbai",
     title: "Best Website Design and Development In Mumbai | Professional Web Solutions",
     description:
-      "Professional website design and development company in Mumbai delivering fast, responsive, and conversion-focused websites for growing businesses.",
+      "Professional website design and development company in Mumbai building fast, responsive, and conversion-focused websites for business growth.",
     siteName: "Nakshatra Namaha Creations",
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata = {
     site: "@nncbengaluru",
     title: "Best Website Design and Development In Mumbai | Professional Web Solutions",
     description:
-      "Hire a professional website design and development company in Mumbai to build scalable, responsive, and SEO-ready websites that drive real business results.",
+      "Hire expert website designers and developers in Mumbai to build responsive, SEO-ready websites that convert visitors into customers.",
     images: [
       "https://www.nakshatranamahacreations.com/media/og/best-website-design-and-development-in-mumbai-1200x630.jpg",
     ],

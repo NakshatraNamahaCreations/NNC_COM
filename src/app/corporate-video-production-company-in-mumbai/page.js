@@ -2,8 +2,9 @@ import CoporateVideoProd from "./CoporateVideoProd";
 
 export const metadata = {
   title: "Corporate Video Production Company in Mumbai | Professional Corporate Videos",
-  description:
-    "Trusted corporate video production company in Mumbai creating professional brand films, company profile videos, promotional videos, and business-focused video content.",
+ description:
+  "Trusted corporate video production company in Mumbai creating professional brand films, company profile videos, and result-driven business video content.",
+
   keywords:
     "corporate video production company in mumbai, corporate video makers in mumbai, corporate video services mumbai, corporate film production mumbai, business video production company mumbai, professional corporate videos mumbai",
   alternates: {
