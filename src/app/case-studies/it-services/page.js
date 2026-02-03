@@ -1,38 +1,50 @@
 // src/app/page.js
-import Itservices from "./Itservices.jsx";
+import Event from "./Event.jsx";
 
 export const metadata = {
-  title: "Case Studies | Real Success Stories in Passport & Document Services",
+  title: "IT Services Case Studies | Web, App & Digital Solutions",
+
   description:
-    "Explore detailed case studies highlighting real client success stories in passport, visa, and documentation services delivered across India.",
+    "Explore IT services case studies showcasing real-world website development, mobile app solutions, SEO strategies, and digital platforms delivered for growing businesses.",
+
   keywords:
-    "case studies, passport service case studies, visa assistance success stories, documentation services case study, passport agent results",
-  canonical: "https://www.nakshatranamahacreations.com/case-studies",
+    "IT services case studies, website development case studies, mobile app development case studies, software solutions case studies, digital transformation case studies",
+
+  // ✅ Correct canonical placement (App Router)
+  alternates: {
+    canonical:
+      "https://www.nakshatranamahacreations.com/case-studies/it-services",
+  },
+
   openGraph: {
-    title: "Case Studies | Real Client Success Stories",
+    title: "IT Services Case Studies | Real Project Implementations",
     description:
-      "Read real-world case studies showcasing how passport, visa, and document services were successfully delivered for clients across India.",
+      "Discover how modern IT services including websites, mobile apps, and digital platforms are built and executed through real case studies.",
+    url:
+      "https://www.nakshatranamahacreations.com/case-studies/it-services",
     type: "website",
-    url: "https://www.nakshatranamahacreations.com/case-studies",
+    siteName: "Nakshatra Namaha Creations",
     images: [
       {
-        url: "https://www.nakshatranamahacreations.com/media/mmd-case-studies-banner.png",
+        url: "https://www.nakshatranamahacreations.com/media/it-services-case-studies.png",
         width: 1200,
         height: 630,
-        alt: "Case Studies – Make My Documents",
+        alt: "IT Services Case Studies",
       },
     ],
-    site_name: "Make My Documents",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Case Studies | Passport & Documentation Service Results",
+    title: "IT Services Case Studies | Web & App Development Projects",
     description:
-      "Discover real success stories from passport, visa, and documentation services through detailed case studies.",
-    images: ["https://www.nakshatranamahacreations.com/media/mmd-case-studies-banner.png"],
+      "Browse IT services case studies highlighting website development, mobile applications, and digital solutions for businesses.",
+    images: [
+      "https://www.nakshatranamahacreations.com/media/it-services-case-studies.png",
+    ],
   },
 };
 
 export default function ContactPage() {
-  return <Itservices />;
+  return <Event />;
 }

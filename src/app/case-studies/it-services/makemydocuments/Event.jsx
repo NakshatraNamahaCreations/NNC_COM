@@ -135,11 +135,11 @@ export default function Event() {
 
       <Breadcrumbs paths={breadcrumbPaths} />
 <CaseStudyHeader
-  title="SEO-Focused Website Development for Event Businesses to Drive High-Intent Enquiries"
-  date="September 2025"
-  industry="Events & Hospitality"
+  title="SEO-Driven Website Development for Document & Passport Services"
+  date="January 2025"
+  industry="Document Services & Legal Assistance"
   platforms="SEO-Optimized Business Website"
-  services="Website development, SEO strategy, local SEO optimisation, conversion-focused UI design"
+  services="Website Development, SEO Strategy, Local SEO Optimisation, Conversion-Focused UI Design"
 />
 
 

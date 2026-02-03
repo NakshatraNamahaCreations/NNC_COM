@@ -371,10 +371,10 @@ export default function CaseStudyLayout() {
            This project demonstrates how SEO-first website development can create long-term growth for service-based businesses.
            </p>
              <ul>
-              <li>• Rankings are built into the foundation, not added later </li>
-              <li>• Content is designed for both users and search engines</li>
-               <li>• Websites become lead-generating assets, not brochures</li>
-              <li>• SEO delivers compounding results over time</li>
+              <li> Rankings are built into the foundation, not added later </li>
+              <li> Content is designed for both users and search engines</li>
+               <li> Websites become lead-generating assets, not brochures</li>
+              <li> SEO delivers compounding results over time</li>
             </ul>
           </div>
  <div className={styles.contentBlock}>

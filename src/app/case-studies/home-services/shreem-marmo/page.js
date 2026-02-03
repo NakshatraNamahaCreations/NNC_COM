@@ -14,7 +14,7 @@ export const metadata = {
   // ✅ Proper canonical placement
   alternates: {
     canonical:
-      "https://www.nakshatranamahacreations.com/case-studies/shreem-marmo",
+      "https://www.nakshatranamahacreations.com/case-studies/home-services/shreem-marmo",
   },
 
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata = {
     description:
       "See how a premium marble brand improved organic visibility through SEO-focused website and content strategy.",
     url:
-      "https://www.nakshatranamahacreations.com/case-studies/shreem-marmo",
+      "https://www.nakshatranamahacreations.com/case-studies/home-services/shreem-marmo",
     type: "website",
     images: [
       {

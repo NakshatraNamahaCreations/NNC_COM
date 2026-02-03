@@ -16,7 +16,7 @@ export default function EnquiryForm() {
     email: "",
     phone: "",
     service: "Case Study Enquiry",
-    city: "Bangalore",         // ✅ same as popup
+    city: "",         // ✅ same as popup
     referenceFrom: "website",  // ✅ same as popup
     sourceDomain: "nakshatra.com", // ✅ same as popup
   });

@@ -355,25 +355,9 @@ improving enquiry potential.
 </ul>
 
             </div>
-             <div className={styles.contentBlock}>
-             <h2>SEO & Lead Enablement</h2>
-<ul className={styles.resultsList}>
-  <li>• Implemented SEO-structured marble content</li>
-  <li>• Optimised site architecture for search engines</li>
-  <li>• Improved enquiry quality through intent-based pages</li>
-</ul>
+          
 
-            </div>
-
-                <div className={styles.contentBlock}>
-              <h2>SEO & Lead Enablement</h2>
-<ul className={styles.resultsList}>
-  <li>• Implemented SEO-structured marble content</li>
-  <li>• Optimised site architecture for search engines</li>
-  <li>• Improved enquiry quality through intent-based pages</li>
-</ul>
-
-            </div>
+        
             <div className={styles.contentBlock}>
              <h2>The new digital platform delivered measurable results :</h2>
 <ul className={styles.resultsList}>
