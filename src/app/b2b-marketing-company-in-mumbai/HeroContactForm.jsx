@@ -31,12 +31,13 @@ const [formData, setFormData] = useState({
       "/website-development-company-in-bangalore": "Website Development",
       "/mobile-app-development-company-in-bangalore": "Mobile App Development",
       "/website-developers-in-mumbai": "Website Development",
-      "/mobile-app-developers-in-mumbai": "App Development",
+      "/website-designer-in-mumbai": "Website Designer",
+       "/b2b-marketing-company-in-mumbai": "B2B Marketing",
     };
 
     setFormData((prev) => ({
       ...prev,
-      user_service: serviceMap[path] || "App Development",
+      user_service: serviceMap[path] || "Website Designer",
     }));
   }, []);
 
