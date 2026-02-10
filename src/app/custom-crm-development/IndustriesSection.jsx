@@ -6,18 +6,18 @@ const industries = [
     title: "Healthcare",
     image: "/media/tech/44.jpg",
     points: [
-      "CRM solutions for patient and appointment management",
-      "Centralized communication and follow-up tracking",
-      "Improved coordination across medical and support teams",
+      "Custom CRM for patient data and appointment workflows",
+      "Automated follow-ups and communication management",
+      "Centralized systems for medical and support teams",
     ],
   },
   {
     title: "ECommerce",
     image: "/media/tech/45.jpg",
     points: [
-      "Customer data management and purchase tracking",
-      "Automated follow-ups and customer engagement workflows",
-      "CRM integration with sales and marketing platforms",
+      "Custom CRM for customer lifecycle management",
+      "Order history and engagement tracking",
+      "Automated marketing and sales workflows",
     ],
   },
   {
@@ -25,17 +25,17 @@ const industries = [
     image: "/media/tech/46.jpg",
     points: [
       "Lead tracking and property inquiry management",
-      "Automated follow-ups for buyers and prospects",
-      "Centralized customer communication and sales pipeline",
+      "Custom sales pipeline for agents and teams",
+      "Automated follow-ups and customer communication",
     ],
   },
   {
     title: "Education & eLearning",
     image: "/media/tech/47.jpg",
     points: [
-      "Student inquiry and admission lead management",
-      "Automated communication and follow-up workflows",
-      "Centralized data for courses and student interactions",
+      "Student inquiry and admission management systems",
+      "Automated communication and follow-up tracking",
+      "Centralized CRM for courses and student data",
     ],
   },
   {
@@ -44,7 +44,7 @@ const industries = [
     points: [
       "Customer engagement and loyalty management",
       "Feedback tracking and repeat customer insights",
-      "CRM systems for promotions and communication",
+      "Custom CRM for promotions and communication",
     ],
   },
   {
@@ -52,17 +52,17 @@ const industries = [
     image: "/media/tech/49.jpg",
     points: [
       "Member management and engagement tracking",
-      "Automated reminders and follow-up communication",
-      "Centralized customer and subscription management",
+      "Automated reminders and subscription management",
+      "Centralized customer and service tracking",
     ],
   },
   {
     title: "Travel & Tourism",
     image: "/media/tech/50.jpg",
     points: [
-      "Customer inquiry and booking management",
-      "Automated communication for travel updates",
-      "CRM systems for managing repeat customers",
+      "Customer inquiry and booking workflow management",
+      "Automated communication and follow-ups",
+      "Custom CRM for repeat customer management",
     ],
   },
   {
@@ -70,12 +70,11 @@ const industries = [
     image: "/media/tech/51.jpg",
     points: [
       "Client data and interaction management",
-      "Sales pipeline and policy tracking",
-      "Secure and structured customer relationship management",
+      "Custom sales and policy tracking workflows",
+      "Secure and structured CRM implementation",
     ],
   },
 ];
-
 
 export default function IndustriesSection() {
   return (
@@ -85,11 +84,11 @@ export default function IndustriesSection() {
         {/* HEADING */}
         <h2 className={styles.heading}>
           Industries We Serve
-          <span> With CRM Solutions</span>
+          <span> With Custom CRM Development</span>
         </h2>
 
         <p className={styles.subText}>
-          Our CRM services support businesses across multiple industries by helping teams manage customer interactions, improve communication, and streamline operational workflows. CRM solutions are adapted based on industry-specific requirements and business objectives.
+          As a custom CRM development company, we build industry-focused CRM systems that help businesses manage customer relationships, automate workflows, and improve operational efficiency. Each CRM solution is designed to match specific business processes and long-term growth requirements.
         </p>
 
         {/* GRID */}
@@ -98,12 +97,10 @@ export default function IndustriesSection() {
             <div className={styles.card} key={index}>
               <img src={item.image} alt={item.title} />
 
-              {/* Default title */}
               <div className={styles.titleBar}>
                 <h4>{item.title}</h4>
               </div>
 
-              {/* Hover overlay */}
               <div className={styles.overlay}>
                 <h4>{item.title}</h4>
                 <ul>

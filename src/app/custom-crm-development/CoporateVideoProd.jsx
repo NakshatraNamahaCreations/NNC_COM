@@ -36,7 +36,7 @@ export default function CoporateVideoProd() {
           "latitude": 12.900525119796741,
           "longitude": 77.52318771928213
         },
-        "url": "https://www.nakshatranamahacreations.com/crm-solutions",
+        "url": "https://www.nakshatranamahacreations.com/custom-crm-development",
         "telephone": "+91-9900566466",
         "email": "info@nakshatranamahacreations.com",
         "areaServed": {
@@ -53,13 +53,13 @@ export default function CoporateVideoProd() {
         "@type": "Organization",
         "@id": "https://www.nakshatranamahacreations.com/#organization",
         "name": "Nakshatra Namaha Creations",
-        "url": "https://www.nakshatranamahacreations.com/crm-solutions",
+        "url": "https://www.nakshatranamahacreations.com/custom-crm-development",
         "logo": "https://www.nakshatranamahacreations.com/media/nnclogo.png"
       },
       {
         "@type": "WebPage",
-        "@id": "https://www.nakshatranamahacreations.com/crm-solutions#webpage",
-        "url": "https://www.nakshatranamahacreations.com/crm-solutions",
+        "@id": "https://www.nakshatranamahacreations.com/custom-crm-development#webpage",
+        "url": "https://www.nakshatranamahacreations.com/custom-crm-development",
         "name": "Corporate Film Makers in Mumbai",
         "description":
           "Professional corporate film makers in Mumbai creating brand films, company profile films, promotional corporate films, and business-focused visual storytelling."
@@ -77,7 +77,7 @@ export default function CoporateVideoProd() {
             "@type": "ListItem",
             "position": 2,
             "name": "Corporate Film Makers in Mumbai",
-            "item": "https://www.nakshatranamahacreations.com/crm-solutions"
+            "item": "https://www.nakshatranamahacreations.com/custom-crm-development"
           }
         ]
       },
@@ -86,20 +86,20 @@ export default function CoporateVideoProd() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How long does CRM implementation take?",
+            "name": "How long does custom CRM development take?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "Implementation timelines depend on customization, integrations, and workflow complexity. Most CRM setups are completed in structured phases after requirement analysis."
+                "Timelines depend on customization level, integrations, and workflow complexity. Most projects are completed in structured phases after requirement analysis."
             }
           },
           {
             "@type": "Question",
-            "name": "Can CRM improve lead conversion rates?",
+            "name": "Can custom CRM improve lead conversion rates?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "Yes, CRM systems help track leads, automate follow-ups, and improve response time, which directly supports better conversion rates."
+                "Yes, custom CRM development helps track leads, automate follow-ups, and improve response time, which supports better conversion rates."
             }
           },
           {
@@ -108,36 +108,36 @@ export default function CoporateVideoProd() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "Yes, CRM systems are customized to match your business workflows, sales processes, and customer management requirements."
+                "Yes, every custom CRM development project is designed according to business workflows and operational requirements."
             }
           },
           {
             "@type": "Question",
-            "name": "Can CRM integrate with our existing tools?",
+            "name": "Can CRM integrate with existing tools?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "Yes, CRM systems can integrate with websites, email platforms, marketing tools, and other business software."
+                "Yes, CRM systems can integrate with websites, marketing tools, email platforms, and other business applications"
             }
           },
           {
             "@type": "Question",
-            "name": "Is CRM suitable for small and growing businesses?",
+            "name": "Is custom CRM suitable for small businesses?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "Yes, CRM helps businesses of all sizes organize customer data and improve operational efficiency."
+                "Yes, custom CRM development helps businesses of all sizes organize customer data and improve operational efficiency."
             }
           },
           {
             "@type": "Question",
-            "name": "Do you provide support after CRM implementation?",
+            "name": "Do you provide support after development?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
                 "Yes, ongoing optimization and support services are available to ensure long-term CRM performance."
             }
-          }
+          },
         ]
       }
     ]
@@ -146,7 +146,7 @@ export default function CoporateVideoProd() {
   return (
     <>
       <Script
-          id="nnc-corporate-solutions-jsonld"
+        id="nnc-custom-crm-development-jsonld"
         type="application/ld+json"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
