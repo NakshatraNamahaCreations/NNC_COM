@@ -119,8 +119,8 @@ export default function Novus() {
       name: "Case Studies",
       link: "/case-studies",
     },
-        {
-      name: "Home Services",
+         {
+      name: "Health Care ",
       link: "/case-studies/healthcare",
     },
        {
