@@ -100,13 +100,14 @@
         <body suppressHydrationWarning>
     {/* Google Tag Manager (noscript) — MUST BE FIRST */}
     <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PCD7NQBM"
-        height="0"
-        width="0"
-        style={{ display: "none", visibility: "hidden" }}
-      />
-    </noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-PB7CNFK7"
+    height="0"
+    width="0"
+    style={{ display: "none", visibility: "hidden" }}
+  />
+</noscript>
+
 
     {/* SITE UI */}
     <ClientShell>{children}</ClientShell>
@@ -210,20 +211,18 @@
       
             {/* Google Tag Manager */}
         
-  <Script
-    id="gtm"
-    strategy="beforeInteractive"
-  >
-    {`
-      (function(w,d,s,l,i){w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PCD7NQBM');
-    `}
-  </Script>
+  <Script id="gtm" strategy="beforeInteractive">
+{`
+(function(w,d,s,l,i){w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PB7CNFK7');
+`}
+</Script>
+
 
 {/* Microsoft Bing UET */}
 <Script
