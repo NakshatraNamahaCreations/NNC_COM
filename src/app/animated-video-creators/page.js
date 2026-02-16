@@ -2,7 +2,7 @@ import MobileAppDevelopmentCompany from "./MobileAppDevelopmentCompany";
 
 
 export const metadata = {
-  title: "Meta Title Animated Video Creators | Brand Storytelling",
+  title: "Animated Video Creators | Brand Storytelling",
   description:
     "Professional animated video creators in offering branded content, explainer videos, and custom motion visuals to boost marketing and engagement.",
   keywords:
@@ -12,7 +12,7 @@ export const metadata = {
       "https://www.nakshatranamahacreations.com/animated-video-creators",
   },
   openGraph: {
-    title: "Meta Title Animated Video Creators | Brand Storytelling",
+    title: "Animated Video Creators | Brand Storytelling",
     description:
       "Professional animated video creators in offering branded content, explainer videos, and custom motion visuals to boost marketing and engagement.",
     type: "website",
@@ -22,14 +22,14 @@ export const metadata = {
         url: "https://www.nakshatranamahacreations.com/media/animated-video-creators.png",
         width: 1200,
         height: 630,
-        alt: "Meta Title Animated Video Creators ",
+        alt: "Animated Video Creators ",
       },
     ],
     siteName: "Nakshatra Namaha Creations",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meta Title Animated Video Creators | Brand Storytelling",
+    title: "Animated Video Creators | Brand Storytelling",
     description:
       "Professional animated video creators in offering branded content, explainer videos, and custom motion visuals to boost marketing and engagement.",
     images: [
