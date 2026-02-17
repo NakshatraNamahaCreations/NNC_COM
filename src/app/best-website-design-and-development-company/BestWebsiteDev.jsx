@@ -58,6 +58,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import axios from "axios";
 import Header from "@/components/Header";
 import LandingFooter from "@/components/LandingFooter";
+import HeroContactForm from "../app-developers-in-mumbai/HeroContactForm";
 // ✅ Brands
 const brands = [
   { name: "Brigade", src: "/logo1.webp" },
@@ -182,7 +183,7 @@ const testimonials = [
 const faqs = [
   {
     question:
-      "What services does your Website Development Company in Bangalore provide?",
+      "What services does your Website Development Company provide?",
     answer:
       "We offer static and dynamic website development, e-commerce solutions, React/Next.js development, and custom web applications along with ongoing support.",
   },
@@ -585,12 +586,12 @@ export default function HeroSection() {
               </h2>
             </Col>
 
-            {/* Right Form */}
+            
             <Col lg={4} md={10}>
-              <Card className="shadow-lg p-4">
+              {/* <Card className="shadow-lg p-4">
                 <h4 className="fw-bold mb-3 text-center">Get in Touch</h4>
                 <Form onSubmit={handleSubmit}>
-                  {/* Name */}
+                 
                   <Form.Group className="mb-3">
                     <Form.Control
                       type="text"
@@ -605,7 +606,7 @@ export default function HeroSection() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  {/* Email */}
+                 
                   <Form.Group className="mb-3">
                     <Form.Control
                       type="email"
@@ -620,7 +621,7 @@ export default function HeroSection() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  {/* Phone */}
+                
                   <Form.Group className="mb-3">
                     <Form.Control
                       type="text"
@@ -635,7 +636,7 @@ export default function HeroSection() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  {/* Service Dropdown */}
+                  
                   <Form.Group className="mb-3">
                     <Form.Select
                       name="service"
@@ -655,7 +656,7 @@ export default function HeroSection() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  {/* Message */}
+                 
                   <Form.Group className="mb-3">
                     <Form.Control
                       as="textarea"
@@ -671,7 +672,7 @@ export default function HeroSection() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  {/* Submit Button */}
+                  
                   <Button
                     type="submit"
                     variant="primary"
@@ -682,13 +683,13 @@ export default function HeroSection() {
                   </Button>
                 </Form>
 
-                {/* Success/Error Message */}
                 {msg && (
                   <p className="mt-3 text-center text-success fw-semibold">
                     {msg}
                   </p>
                 )}
-              </Card>
+              </Card> */}
+              <HeroContactForm/>
             </Col>
           </Row>
         </div>
@@ -914,7 +915,7 @@ export default function HeroSection() {
               className="fw-bold text-dark"
               style={{ fontSize: "30px", margin: 0 }}
             >
-              Best Website Design and Development Company in Bangalore
+              Best Website Design and Development Company 
             </h1>
 
             <div
@@ -933,7 +934,7 @@ export default function HeroSection() {
             <Col lg={6} className="mb-4 mb-lg-0">
               <p className="text-muted fs-6 lh-lg">
                 Nakshatra Namaha Creations is a trusted Website Development
-                Company in Bangalore with over 8+ years of experience and 500+
+                Company with over 8+ years of experience and 500+
                 successful projects delivered across industries. We help
                 businesses build scalable, user-friendly, and high-performance
                 websites that strengthen their digital presence. From crafting
@@ -943,7 +944,7 @@ export default function HeroSection() {
                 business results.
               </p>
               <p className="text-muted fs-6 lh-lg">
-                As a leading Website Development Company in Bangalore, we work
+                As a leading Website Development Company, we work
                 closely with startups, SMEs, and enterprises to understand their
                 unique requirements and provide solutions that align with their
                 goals. Our team combines creativity with technology to build
@@ -955,7 +956,7 @@ export default function HeroSection() {
               <p className="text-muted fs-6 lh-lg">
                 Whether you are looking to establish your brand online or
                 upgrade your existing website, Nakshatra Namaha Creations is
-                your reliable partner for driving digital success in Bangalore
+                your reliable partner for driving digital success 
                 and beyond.
               </p>
             </Col>
@@ -1272,7 +1273,7 @@ export default function HeroSection() {
       {/* ================= INDUSTRIES ================= */}
       <div className="py-5 bg-white text-center">
         <h2 className="fw-bold fs-3 text-dark mb-4 position-relative">
-          Industries Empowered by Our Website Designing Company in Bangalore
+          Industries Empowered by Our Website Designing Company 
           <div
             className="mx-auto mt-3 rounded-pill"
             style={{

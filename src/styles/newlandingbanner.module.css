@@ -242,3 +242,68 @@
     padding: 6px 12px;
   }
 }
+
+
+/* ================= LEFT SLIDING BADGE ================= */
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.15);
+  padding: 10px 18px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  width: 100%;
+  max-width: 620px;   /* <<< expanded width */
+}
+
+.badgeSlider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.badgeTrack {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: badgeScroll 18s linear infinite;
+}
+
+.badgeText {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+@keyframes badgeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ctaGroup {
+  margin-top: 22px;
+}
+
+.knowMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #4fa3ff;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.knowMoreBtn:hover {
+  background: #2d8df7;
+  transform: translateY(-2px);
+}
