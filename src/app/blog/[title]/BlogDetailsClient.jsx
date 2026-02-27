@@ -208,7 +208,7 @@ export default function BlogDetailsPage() {
                 src={blog.bannerImage}
                 alt={blog.title}
                 width="100%"
-                style={{ height: "400px", objectFit: "cover" }}
+                style={{ height: "500px", objectFit: "cover" }}
               />
               <h1
                 className="blogHeading1 bg-white shadow mx-4 text-center position-absolute p-2"
